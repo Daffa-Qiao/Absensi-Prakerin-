@@ -5,6 +5,7 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\Instansi;
 use App\Models\MemberModel;
+use App\Models\Laporan;
 use App\Models\Absensi;
 
 class Admin extends BaseController
@@ -436,5 +437,54 @@ class Admin extends BaseController
         ];
         session()->setFlashdata('data', $data);
         return redirect()->to('admin/rekap-mahasiswa');
+    }
+
+    public function data_laporan_filter()
+    {
+        $startDate = $this->request->getPost('start_date');
+        $endDate = $this->request->getPost('end_date');
+
+        // Load model
+        $laporan = new Laporan();
+        $dataLaporan = $laporan->getDataByDateRange($startDate, $endDate);
+
+        $data = [
+            'dataFilter' => $dataLaporan,
+            'start_date' => $startDate,
+            'end_date' => $endDate
+        ];
+        session()->setFlashdata('data', $data);
+
+        return redirect()->to('admin/data-laporan');
+    }
+    public function data_laporan()
+    {
+        $laporan = new Laporan();
+        $user = new MemberModel();
+        $jumlahBaris = 10;
+        $currentPage = $this->request->getVar('page_laporan');
+        $dataLaporan = $laporan->orderBy('waktu_laporan', 'desc')->orderBy('id_laporan', 'desc')->findAll();
+        $nama_lengkap = [];
+        foreach ($dataLaporan as $v) {
+            $nimUser = $v['nim_nis'];
+            $data = $user->where('nim_nis', $nimUser)->get()->getRowArray();
+            $nama_lengkap[$nimUser] = $data ? $data['nama_lengkap'] : $v['nama_lengkap'];
+        }
+        $dataUser = $user->orderBy('nama_lengkap', 'asc')->where('is_verifikasi', 'yes')->findAll();
+        $nomor = nomor($currentPage, $jumlahBaris);
+        $halaman = 'Admin | Data Laporan';
+        $title = 'Data Laporan';
+
+        $data = [
+            'nama_lengkap' => $nama_lengkap,
+            'dataUser' => $dataUser,
+            'dataLaporan' => $dataLaporan,
+            'nomor' => $nomor,
+            'halaman' => $halaman,
+            'title' => $title,
+            'titleSuperAdmin' => 'Super Admin',
+        ];
+
+        return view('Admin/v_dataLaporan', $data);
     }
 }

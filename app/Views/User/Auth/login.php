@@ -77,7 +77,7 @@
                         <a href="<?= base_url('/forgetpassword') ?>">Lupa Password ?</a>
                     </div>
                 </div>
-		<div class="g-recaptcha mt-1" data-sitekey="<?= getenv('SITEKEY'); ?>"></div>
+		<!-- <div class="g-recaptcha mt-1" data-sitekey="<?= getenv('SITEKEY'); ?>"></div> -->
                 <div class="containerFooter">
                     <input type="submit" name="submit" class="login" value="Login">
                     <div class="wrapperText">

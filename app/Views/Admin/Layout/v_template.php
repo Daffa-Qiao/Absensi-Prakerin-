@@ -254,7 +254,7 @@
                 <a class="nav-link" href="<?= site_url('admin/dashboard'); ?>">
                     <i class="fa-solid fa-gauge-high"></i>
                     <span>Dashboard</span></a>
-            </li>
+            </li> 
 
             <!-- Divider -->
 
@@ -265,6 +265,13 @@
                     <i class="fa-solid fa-file-pen" aria-hidden="true"></i>
                     <!-- <i class="fas fa-fw fa-tachometer-alt" aria-hidden="true"></i> -->
                     <span>Data Absensi</span></a>
+            </li>
+
+            <li class="nav-item <?= (isset($aktif_dataLaporan)) ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= site_url('admin/data-laporan'); ?>">
+                <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
+                    <!-- <i class="fas fa-fw fa-tachometer-alt" aria-hidden="true"></i> -->
+                    <span>Data Laporan</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -321,6 +328,7 @@
                             href="<?= site_url('admin/rekap-mahasiswa'); ?>">Mahasiswa</a>
                     </div>
                 </div>
+
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->

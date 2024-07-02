@@ -64,6 +64,7 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->post('rekap-mahasiswa', 'Admin\Admin::rekap_mahasiswaFilter');
     $routes->get('super-admin', 'Admin\SuperAdmin::super_admin', ['filter' => 'superadmin']);
     $routes->get('list-super-admin', 'Admin\SuperAdmin::list_super_admin');
+    $routes->get('data-laporan', 'Admin\Admin::data_laporan');
 });
 
 $routes->add('data-absenProcess', 'Admin\Modal::tambahAbsensiProcess');
