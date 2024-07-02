@@ -1,0 +1,398 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --background-color: linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%);
+}
+
+body.kontainer {
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Navbar Side */
+.navigasi {
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 18.5%;
+    position: fixed;
+    height: 100%;
+    transition: all 2s ease;
+    z-index: 2;
+}
+
+.wrapperNav {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+nav header {
+    height: 22.1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav header .text .nama-lengkap {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.5vh;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+nav header .text .sekolah {
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+nav main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav main .menu-links {
+    border-top: 0.4vh solid black;
+    width: 100%;
+    padding: 0px;
+}
+
+nav main .menu-links .nav-link {
+    width: 100%;
+    margin-top: 10%;
+    border-bottom: 0.4vh solid black;
+    transition: 1s;
+}
+
+nav main .menu-links .nav-link a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 2.7vh;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav main .menu-links .nav-link:hover {
+    box-shadow: 5px 5px 20px 5px black;
+    border-radius: 50px;
+    transition: 0.8s;
+}
+
+nav main .menu-links .nav-link#aktif {
+    box-shadow: 5px 5px 20px 5px black;
+    border-radius: 50px;
+    width: 100%;
+    background: var(--background-color);
+}
+
+/* Main Content */
+main.kontainer-content {
+    display: flex;
+    flex-direction: column;
+    width: 81.5%;
+    box-sizing: border-box;
+    height: 100vh;
+    margin-left: 18.5%;
+}
+
+main.kontainer-content header.first {
+    background-color: white;
+    display: flex;
+    justify-content: right;
+    height: 15vh;
+    align-items: center;
+    padding: 0px 10px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    top: 0;
+    position: sticky;
+    z-index: 1 !important;
+}
+
+main.kontainer-content header.first .dropdownMenu {
+    position: absolute;
+    display: flex;
+    width: 270px;
+    height: auto;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    top: 0px;
+    opacity: 0;
+    box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+
+main.kontainer-content header.first .dropdownMenu.active {
+    top: 95px;
+    opacity: 1;
+    visibility: visible;
+    cursor:default;
+}
+
+main.kontainer-content header.first .dropdownMenu::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: 20px;
+    width: 25px;
+    height: 30px;
+    background: #f5f5f5;
+    transform: rotate(45deg);
+}
+
+main.kontainer-content header.first .dropdownMenu img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+    border: 2px solid;
+}
+
+main.kontainer-content header.first .dropdownMenu .wrapper-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    padding: 10px 5px;
+    border-bottom: 2px solid;
+}
+
+main.kontainer-content header.first .dropdownMenu .wrapper-a {
+    padding: 5px 10px;
+    border-bottom: 2px solid;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+main.kontainer-content header.first .dropdownMenu .wrapper-a a {
+    text-decoration: none;
+    color: #00a2e9;
+}
+
+main.kontainer-content header.first .dropdownMenu .wrapper-logout {
+    font-size: 20px;
+    gap: 10px;
+    padding: 5px 10px;
+    display: flex;
+    width: 35%;
+    height: 40px;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+main.kontainer-content header.first .dropdownMenu .wrapper-logout a {
+    text-decoration: none;
+    color: #4e4e4e;
+    font-weight: 800;
+}
+
+main.kontainer-content header.first .wrapper-name {
+    display: flex;
+}
+
+.wrapper-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+
+.wrapper-icon i {
+    display: none;
+}
+
+nav .wrapper-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+
+nav .wrapper-icon i {
+    display: none;
+}
+
+main.kontainer-content header.first .user-text {
+    display: flex;
+    align-items: center;
+    border-right: 0.4vh solid;
+    padding-right: 15px;
+    font-weight: bold;
+    font-size: 2em; 
+    text-align: right;
+}
+
+main.kontainer-content header.first .user-text.long-name{
+    font-size: 25px;
+}
+
+main.kontainer-content header.first .wrapper-name .user-profile img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 14px;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+main.kontainer-content header.second {
+    background-color: #dfdfdf;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 13.3vh;
+    /* min-height: 70px; */
+    z-index: -1;
+}
+
+main.kontainer-content header.second .text{
+    position: absolute;
+    left: 7vw;
+    font-size: 3.5vh;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 4;
+}
+
+#popup img {
+    width: 35%;
+    height: 80%;
+    cursor: default;
+    filter: none;
+    z-index: 4;
+}
+
+/* Responsive */
+@media screen and (max-width: 1300px) {
+    #popup img {
+        min-width: 80%;
+        max-height: 40%;
+    }
+
+    body.kontainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .navigasi {
+        left: -1000px;
+        max-width: 400px;
+        min-width: 250px;
+        width: 60%;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        z-index: 2;
+    }
+
+    nav.close {
+        left: 0;
+        height: 100vh;
+        display: flex;
+        background: linear-gradient(87deg, #00a2e9 60%, rgba(255, 255, 255, 0.63) 120%);
+        z-index: 2;
+    }
+    nav header .text .nama-lengkap{
+        font-size: 28px;
+    }
+
+    nav header .text .sekolah{
+        font-size: 18px;
+    }
+
+
+    main.kontainer-content {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    main.kontainer-content header.first {
+        position: sticky;
+        top: 0;
+        display: flex;
+        z-index: 1;
+        min-height: 80px !important;
+    }
+
+    main.kontainer-content header.first .wrapper-first {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 1;
+    }
+
+    main.kontainer-content header.first .wrapper-name .user-profile img{
+        min-width: 55px;
+        min-height: 55px;
+    }
+
+    main.kontainer-content header.second {
+        display: none;
+    }
+
+    .wrapper-icon {
+        position: absolute;
+        height: 80px;
+        width: 60px;
+    }
+
+    .wrapper-icon i {
+        display: flex;
+        cursor: pointer;
+        z-index: 4;
+        position: fixed;
+        font-size: 28px;
+    }
+
+    nav .wrapper-icon i {
+        display: flex;
+        cursor: pointer;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    main.kontainer-content header.first .user-text {
+        max-width: 250px;
+    }
+}

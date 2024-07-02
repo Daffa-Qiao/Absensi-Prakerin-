@@ -1,0 +1,289 @@
+.profile-body img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.wrapper-content-profile {
+    display: flex;
+    justify-content: space-around;
+    background: var(--background-color);
+    height: 100vh;
+    border-top: 0.4vh solid;
+    z-index: 0;
+}
+
+.wrapper-content-profile .kontainer-profile {
+    display: flex;
+    height: 40vh;
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.wrapper-content-profile .wrapper-profile {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper-content-profile .wrapper-profile .profile-body {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px 10px;
+    height: 13vw;
+    width: 14vw;
+}
+
+.wrapper-content-profile .wrapper-profile img {
+    height: 10.346vw;
+    width: 10.346vw;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.wrapper-content-profile .wrapper-identity-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+}
+
+.wrapper-content-profile .wrapper-identity-profile form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 70vh;
+}
+
+form .identitas-profile {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+form .identitas-profile label {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 2.4vh;
+}
+
+form .identitas-profile input {
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 2.4vh;
+    padding: 0px 5px;
+    cursor: unset;
+}
+
+form .identitas-profile input:focus {
+    outline: none;
+}
+
+form .identitas-profile select {
+    font-size: 2.4vh;
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+}
+
+form .identitas-profile select:focus {
+    outline: none;
+}
+
+form .identitas-profileInstansi input:focus {
+    outline: none;
+}
+
+form .identitas-profileInstansi select:focus {
+    outline: none;
+}
+
+form .identitas-profileInstansi {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form .identitas-profileInstansi .instansiAsal {
+    display: flex;
+    flex-direction: column;
+}
+
+form .identitas-profileInstansi .instansiAsal label {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 2.4vh;
+}
+
+form .identitas-profileInstansi input {
+    font-size: 2.4vh;
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    padding: 0px 5px;
+    cursor: unset;
+}
+
+form .identitas-profileInstansi .instansiNama {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+form .identitas-profileInstansi .instansiNama label {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 2.4vh;
+}
+
+form .identitas-profileInstansi .instansiNama input {
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 2.4vh;
+    padding: 0px 5px;
+    outline: none;
+}
+
+nav.close {
+    z-index: 2;
+}
+
+main.kontainer-content header.first {
+    z-index: 1;
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    main.kontainer-content header.first {
+        max-height: 92px;
+        top: 0px;
+        position: sticky;
+    }
+
+    .wrapper-content-profile {
+        z-index: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(181deg, #00a2e9 90%, rgba(255, 255, 255, 0.63) 100%);
+    }
+
+    .wrapper-content-profile .kontainer-profile {
+        margin: 0;
+        height: 270px !important;
+        width: auto;
+    }
+
+    .wrapper-content-profile .wrapper-profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-content-profile .wrapper-profile img {
+        height: 140px;
+        width: 140px;
+    }
+
+    .wrapper-content-profile .wrapper-profile .profile-body {
+        height: 170px;
+        width: 185px;
+    }
+
+    .wrapper-content-profile .wrapper-identity-profile {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .wrapper-content-profile .wrapper-identity-profile form{
+        height: 95%;
+        width: 90%;
+    }
+
+    form .identitas-profile input{
+        font-size: 18px;
+        height: 5vh;
+    }
+
+    form .identitas-profile label{
+        font-size: 18px;
+    }
+
+    form .identitas-profileInstansi {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    form .identitas-profileInstansi .instansiAsal label {
+        font-size: 18px;
+    }
+
+    form .identitas-profileInstansi .instansiAsal input {
+        font-size: 18px;
+        height: 5vh;
+    }
+
+    .wrapper-content-profile {
+        height: 120vh;
+        padding-top: 10px;
+    }
+
+    form .identitas-profileInstansi .instansiNama{
+        flex-grow: 0;
+    }
+
+    form .identitas-profileInstansi .instansiNama label{
+        font-size: 18px;
+    }
+
+    form .identitas-profileInstansi .instansiNama input{
+        font-size: 18px;
+        height: 5vh;
+    }
+
+}
+
+@media screen and (max-width: 1300px){
+    .wrapper-content-profile .kontainer-profile {
+        margin: 0;
+        height: 25vw;
+        min-height: 285px;
+    }
+
+    .wrapper-content-profile .wrapper-profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-content-profile .wrapper-profile img {
+        height: 140px;
+        width: 140px;
+    }
+
+    .wrapper-content-profile .wrapper-profile .profile-body {
+        height: 170px;
+        width: 185px;
+    }
+
+    .wrapper-content-profile .wrapper-identity-profile form {
+        height: 75vh;
+    }
+}

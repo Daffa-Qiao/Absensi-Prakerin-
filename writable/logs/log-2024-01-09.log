@@ -1,0 +1,80 @@
+ERROR - 2024-01-09 16:22:45 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/server/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/server/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect()
+#1 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/server/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/server/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /var/www/html/server/app/Filters/NoAuthFilter.php(17): CodeIgniter\BaseModel->first()
+#7 /var/www/html/server/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\NoAuthFilter->before()
+#8 /var/www/html/server/vendor/codeigniter4/framework/system/CodeIgniter.php(466): CodeIgniter\Filters\Filters->run()
+#9 /var/www/html/server/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/server/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/server/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/server/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/server/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /var/www/html/server/app/Filters/NoAuthFilter.php(17): CodeIgniter\BaseModel->first()
+#6 /var/www/html/server/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\NoAuthFilter->before()
+#7 /var/www/html/server/vendor/codeigniter4/framework/system/CodeIgniter.php(466): CodeIgniter\Filters\Filters->run()
+#8 /var/www/html/server/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/server/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-09 16:22:45 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Filters/NoAuthFilter.php(17): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/Filters/Filters.php(182): App\Filters\NoAuthFilter->before()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\Filters\Filters->run()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-09 16:22:45 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/server/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/server/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect()
+#1 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/server/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/server/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /var/www/html/server/app/Filters/AuthFilterUser.php(19): CodeIgniter\BaseModel->first()
+#7 /var/www/html/server/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\AuthFilterUser->before()
+#8 /var/www/html/server/vendor/codeigniter4/framework/system/CodeIgniter.php(466): CodeIgniter\Filters\Filters->run()
+#9 /var/www/html/server/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/server/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/server/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/server/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/server/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/server/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /var/www/html/server/app/Filters/AuthFilterUser.php(19): CodeIgniter\BaseModel->first()
+#6 /var/www/html/server/vendor/codeigniter4/framework/system/Filters/Filters.php(182): App\Filters\AuthFilterUser->before()
+#7 /var/www/html/server/vendor/codeigniter4/framework/system/CodeIgniter.php(466): CodeIgniter\Filters\Filters->run()
+#8 /var/www/html/server/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/server/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-09 16:22:45 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Filters/AuthFilterUser.php(19): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/Filters/Filters.php(182): App\Filters\AuthFilterUser->before()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\Filters\Filters->run()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

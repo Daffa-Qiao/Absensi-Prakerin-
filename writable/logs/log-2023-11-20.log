@@ -1,0 +1,1211 @@
+INFO - 2023-11-20 20:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 20:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 20:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-20 20:56:26 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 20:56:26 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` IS NULL
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 20:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 20:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 20:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 20:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-20 20:56:28 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 20:56:28 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` IS NULL
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-20 20:56:28 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 20:56:28 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` IS NULL
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-20 20:56:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 20:56:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` IS NULL
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-20 20:56:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 20:56:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` IS NULL
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-20 20:56:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 20:56:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` IS NULL
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-20 20:56:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 20:56:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` IS NULL
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 20:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-20 20:56:50 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=14232 in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 185)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#10 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 20:56:50 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` IS NULL
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 20:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-20 20:56:58 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4login', 3306, '', 0)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#9 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\projek_pkl\app\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+#8 C:\xampp\htdocs\projek_pkl\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\projek_pkl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 20:56:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` IS NULL
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('admin/profile', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 20:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 20:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 20:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 21:36:13 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 21:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 21:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:19:52 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:19:52 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:19:53 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:19:53 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:19:54 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:19:54 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:27 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:27 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:27 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:27 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:28 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:45 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:45 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:47 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:47 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:59 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:20:59 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:21:30 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:21:30 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:21:31 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:21:31 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:21:31 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:21:31 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:09 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:09 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:10 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:10 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:10 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:10 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:11 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:11 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:11 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:11 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:11 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:11 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:33 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:33 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:33 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:41 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:41 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:48 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:22:48 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:23 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:23 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:23 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:23 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:25 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:25 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:25 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:25 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:25 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:25 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:56 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:24:56 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:27:12 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:27:12 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:29:24 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:29:25 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:29:25 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:29:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:30:13 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:30:14 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:30:14 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:30:53 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:31:09 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:31:10 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 22:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 22:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 22:31:10 --> Undefined variable $hasil_edit
+in APPPATH\Controllers\Admin\SuperAdmin.php on line 145.
+ 1 APPPATH\Controllers\Admin\SuperAdmin.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hasil_edit', 'C:\\xampp\\htdocs\\projek_pkl\\app\\Controllers\\Admin\\SuperAdmin.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin\SuperAdmin->super_admin_modal()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SuperAdmin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

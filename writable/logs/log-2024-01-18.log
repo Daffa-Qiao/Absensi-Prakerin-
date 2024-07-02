@@ -1,0 +1,14 @@
+CRITICAL - 2024-01-18 11:07:01 --> Undefined variable $email
+in APPPATH/Controllers/User/Auth.php on line 416.
+ 1 APPPATH/Controllers/User/Auth.php(416): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\User\Auth->verifikasiProcess()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-18 11:07:15 --> Undefined variable $email
+in APPPATH/Controllers/User/Auth.php on line 416.
+ 1 APPPATH/Controllers/User/Auth.php(416): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\User\Auth->verifikasiProcess()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

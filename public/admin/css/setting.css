@@ -1,0 +1,250 @@
+.invalid-feedbak {
+    width: auto;
+    display: block;
+    position: absolute;
+    font-style: italic;
+}
+
+.invalid-feedbak h3 {
+    margin-top: 0px;
+    color: red;
+    font-size: 17px;
+}
+
+.wrapper-content-setting {
+    display: flex;
+    justify-content: space-around;
+    background: var(--background-color);
+    border-top: 0.4vh solid;
+    height: 100vh;
+    z-index: 0;
+}
+
+.wrapper-content-setting .kontainer-profile {
+    display: flex;
+    height: 46vh;
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.wrapper-content-setting .wrapper-profile-setting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85%;
+}
+
+.wrapper-content-setting .wrapper-profile-setting .profile-body {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px 10px;
+    height: 13vw;
+    width: 14vw;
+
+}
+
+.wrapper-content-setting .wrapper-profile-setting img {
+    height: 10.346vw;
+    width: 10.346vw;
+    border: 2px solid;
+    border-radius: 100px;
+    cursor: auto;
+}
+
+.wrapper-content-setting .wrapper-profile-setting .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-top: 14px;
+}
+
+.wrapper-content-setting .wrapper-profile-setting .text label {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 110px;
+    background-color: #0063c2;
+    color: white;
+}
+
+.wrapper-content-setting .wrapper-identity-setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+}
+
+.wrapper-content-setting .wrapper-identity-setting form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 70vh;
+}
+
+form .identitas-setting {
+    z-index: 1;
+}
+
+form .identitas-setting label {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+form .identitas-setting input {
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 2.4vh;
+    padding: 0px 5px;
+}
+
+form .identitas-setting input:focus {
+    outline: none;
+}
+
+form .identitas-setting select {
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+}
+
+form .identitas-setting select:focus {
+    outline: none;
+}
+
+form .identitas-settingInstansi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form .identitas-settingInstansi .instansiAsal {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+form .identitas-settingInstansi .instansiAsal label {
+    font-size: 20px;
+}
+
+form .identitas-settingInstansi .instansiAsal input {
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    padding: 0px 5px;
+}
+
+form .identitas-settingInstansi .instansiNama {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    margin-left: 5px;
+}
+
+form .identitas-settingInstansi .instansiNama label {
+    font-size: 20px;
+}
+
+form .identitas-settingInstansi .instansiNama input {
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 16px;
+    padding: 0px 5px;
+    outline: none;
+}
+
+nav.close {
+    z-index: 2;
+}
+
+.wrapper-identity-setting .button {
+    display: flex;
+    width: 18%;
+    min-width: 137px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 8px;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+    main.kontainer-content header.first {
+        top: 0px;
+        position: sticky;
+        z-index: 2;
+    }
+
+    .wrapper-content-setting {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(181deg, #00a2e9 90%, rgba(255, 255, 255, 0.63) 100%);
+        height: auto;
+    }
+
+    .wrapper-content-setting .kontainer-profile {
+        margin: 0;
+        height: 265px;
+        width: auto;
+    }
+
+    .wrapper-content-setting .wrapper-profile-setting{
+        height: 270px;
+        width: 205px;
+    }
+    
+    .wrapper-content-setting .wrapper-profile-setting .profile-body{
+        width: 185px;
+        height: 200px;
+    }
+
+    .wrapper-content-setting .wrapper-profile-setting img {
+        height: 140px;
+        width: 140px;
+    }
+
+    .wrapper-content-setting .wrapper-profile-setting .profile-body {
+        height: 180px;
+        width: 195px;
+    }
+
+    .wrapper-content-setting .wrapper-identity-setting {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    form .identitas-setting {
+        margin-bottom: 20px;
+    }
+
+    form .identitas-setting input{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,437 @@
+.navigasi {
+    position: fixed;
+    height: 100vh;
+    overflow: auto;
+}
+
+nav.close {
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.wrapper-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--background-color);
+    border-top: 0.4vh solid;
+    height: auto;
+    width: 100%;
+    z-index: 0;
+}
+
+.wrapper-content header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    height: 60px;
+    width: 95%;
+    padding: 25px;
+    margin: 15px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.wrapper-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+}
+
+.wrapper-body .body-satu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper-body .wrapper-absen {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    padding-left: 30px;
+    width: 40%;
+}
+
+.wrapper-body .wrapper-absen select {
+    height: 50px;
+    margin-top: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 5px 3px;
+}
+
+.wrapper-body .wrapper-absen select option {
+    height: 100px;
+    padding: 15px;
+    margin: 5px;
+}
+
+.wrapper-body .date {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 20px;
+    width: 90%;
+}
+
+.wrapper-body .date .text {
+    display: flex;
+    justify-content: center;
+    font-size: 3.5vh;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.wrapper-body .date .date-time {
+    height: 58px;
+    width: 50%;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.date-time h3#current-time {
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.date-time h3#date-today {
+    display: flex;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.wrapper-body .body-dua {
+    background-color: white;
+    margin: 5px;
+    width: auto;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.wrapper-body .body-dua form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.body-dua .grid-satu {
+    display: flex;
+    margin: 15px;
+    gap: 15px;
+}
+
+.body-dua .wrapper-image {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.body-dua .wrapper-image .profile-body {
+    background-color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid;
+    height: 170px;
+    width: 200px;
+}
+
+.body-dua .wrapper-image .profile-body img {
+    display: none;
+    width: 100%;
+    /* max-height: 166px; */
+    border-radius: 0%;
+    height: 100%;
+}
+
+.body-dua .grid-satu .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-dua .grid-satu label {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 110px;
+    background-color: #1e90ff;
+    color: white;
+    box-shadow: -1px 3px 5px rgb(29, 29, 29);
+}
+
+.body-dua .wrapper-bukti {
+    padding: 16px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid 2px;
+    gap: 20px;
+    width: 40%;
+}
+
+.body-dua .wrapper-izin {
+    width: 100%;
+    /* height: 85%; */
+}
+
+.body-dua .wrapper-izin select {
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 100%;
+    background-color: #dfdfdf;
+    padding: 5px;
+}
+
+.body-dua .wrapper-image .text {
+    display: flex;
+    align-items: end;
+}
+
+.body-dua .wrapper-image .image {
+    background-color: white;
+    height: 218px;
+    width: 254px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.body-dua .image .imageWrapper {
+    border: 2px solid black;
+    position: relative;
+}
+
+
+
+.body-dua .wrapper-maps {
+    position: relative;
+    width: 60%;
+    border: 2px solid;
+    padding: 10px;
+    z-index: 1;
+}
+
+.body-dua .wrapper-maps #map {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.body-dua .grid-dua {
+    /* height: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.grid-dua .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid;
+    width: 700px;
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.grid-dua .wrapper .textareaWrapper {
+    height: 100%;
+    padding-right: 30px;
+}
+
+.grid-dua .wrapper .textareaWrapper h3 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.grid-dua textarea {
+    border: 2px solid;
+    padding: 7px;
+    font-size: 16px;
+    resize: none;
+    height: 70%;
+    width: 300px;
+}
+
+.grid-dua textarea:focus {
+    border: none;
+}
+
+.grid-dua .wrapper .kbWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.grid-dua .wrapper .kbWrapper .kordinatWrapper {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.grid-dua .wrapper .kbWrapper .kordinatWrapper>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+}
+
+.grid-dua .wrapper .kbWrapper .kordinatWrapper .lat input {
+    position: relative;
+    right: -13px;
+}
+
+.grid-dua .wrapper .kbWrapper .kordinatWrapper .lat span {
+    left: 13px;
+    position: relative;
+    padding-right: 2px;
+    padding-left: 3px;
+}
+
+.grid-dua .wrapper .kbWrapper .kordinatWrapper input {
+    border-radius: 5px;
+    height: 35px;
+    font-size: 16px;
+    padding: 0px 5px;
+}
+
+.grid-dua .wrapper .kbWrapper .buttonWrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.grid-dua .wrapper .kbWrapper .buttonWrapper input {
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: var(--background-color);
+    box-shadow: -1px 5px 5px rgb(29, 29, 29);
+}
+
+nav.close {
+    z-index: 2;
+}
+
+@media screen and (max-width: 900px) {
+    body.kontainer {
+        height: 100%;
+    }
+
+    main.kontainer-content {
+        margin-left: 0 !important;
+    }
+
+    .wrapper-content {
+    height: auto;
+    }
+
+    .navigasi {
+        left: -1000px;
+        width: 60%;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        z-index: 2;
+    }
+
+    nav.close {
+        left: 0;
+        height: 100vh;
+        display: flex;
+        background: linear-gradient(87deg, #00a2e9 60%, rgba(255, 255, 255, 0.63) 120%);
+        z-index: 2;
+    }
+
+    .wrapper-body .body-dua {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 5px;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .body-dua .wrapper-maps {
+        height: 190px;
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .body-dua .wrapper-bukti {
+        margin-bottom: 5px;
+        width: 90%;
+        height: 250px;
+    }
+
+    .body-dua .grid-satu {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 15px 0;
+    }
+
+    .body-dua .wrapper-image {
+        width: 90%;
+    }
+
+    .body-dua .grid-dua {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-dua .wrapper {
+        flex-direction: column;
+        height: 90%;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+
+    .grid-dua .wrapper .kbWrapper {
+        height: 200px;
+        width: 90%;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+
+    .grid-dua .wrapper .textareaWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 10px;
+        padding-right: 0px;
+    }
+}

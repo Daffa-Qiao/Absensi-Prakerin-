@@ -1,0 +1,297 @@
+main.kontainer-content header.second{
+    min-height: 80px;
+}
+
+.invalid-feedbak {
+    font-style: italic;
+    position: absolute;
+    width: 400px;
+    color: rgb(228, 62, 33);
+    margin-top: 4.8rem;
+}
+
+.wrapper-content-profile {
+    display: flex;
+    justify-content: space-around;
+    background: var(--background-color);
+    height: 100vh;
+    z-index: 0;
+}
+
+.wrapper-content-profile .kontainer-profile {
+    display: flex;
+    height: 320px;
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    z-index: 0;
+}
+
+.wrapper-content-profile .wrapper-profile {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    flex-direction: column;
+    width: 90%;
+    height: 300px;
+    margin-top: 6rem;
+}
+
+.wrapper-content-profile .wrapper-profile .profile-body {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px 10px;
+    height: 200px;
+    width: 220px;
+    z-index: 0;
+}
+
+.wrapper-content-profile .wrapper-profile img {
+    height: 150px;
+    width: 150px;
+    border: 2px solid;
+    border-radius: 100px;
+}
+
+.wrapper-content-profile .wrapper-profile .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-top: 14px;
+}
+
+.wrapper-content-profile .wrapper-profile label {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 110px;
+    background-color: #0063c2;
+    color: white;
+    /* margin-top: 20px; */
+}
+
+.wrapper-content-profile .wrapper-identity-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105vh;
+    margin-top: 1rem;
+}
+
+.wrapper-content-profile .wrapper-identity-profile form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 99%;
+    height: 90%;
+}
+
+.wrapper-content-profile button.submit {
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+form .identitas-profile {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    margin-bottom: 1rem;
+}
+
+form .identitas-profile label {
+    font-size: 2.4vh;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+form .identitas-profile input {
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 2.4vh;
+    padding: 0px 5px;
+}
+
+form .identitas-profile input:focus {
+    outline: none;
+}
+
+form .identitas-profile select {
+    height: 5vh;
+    font-size: 2.4vh;
+    border: none;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+form .identitas-profileInstansi .instansiAsal select {
+    height: 5vh;
+    font-size: 2.4vh;
+    border: none;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+form .identitas-profile select:focus {
+    outline: none;
+}
+
+form .identitas-profileInstansi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form .identitas-profileInstansi .instansiAsal {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+form .identitas-profileInstansi .instansiAsal label {
+    font-size: 2.4vh;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+form .identitas-profileInstansi .instansiNama {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    margin-left: 5px;
+}
+
+form .identitas-profileInstansi .instansiNama label {
+    font-size: 2.4vh;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+form .identitas-profileInstansi .instansiNama input {
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    font-size: 2.4vh;
+    padding: 0px 5px;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+nav.close {
+    z-index: 4;
+}
+
+main.kontainer-content header.first {
+    z-index: 0;
+
+}
+
+@media screen and (max-width: 576px) {
+    nav.close {
+        height: 141.5vh;
+    }
+
+    form .identitas-profile {
+        margin-bottom: 1rem;
+    }
+
+    .invalid-feedbak {
+        width: auto;
+        font-size: 14px;
+    }
+
+    .wrapper-content-profile .wrapper-submit {
+        margin-top: 1rem;
+        display: flex;
+
+    }
+
+    .wrapper-content-profile .wrapper-submit button {
+        width: 30%;
+    }
+
+    main.kontainer-content header.first {
+        z-index: 3;
+        top: 0px;
+        position: sticky;
+    }
+
+    .wrapper-content-profile {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(181deg, #00a2e9 90%, rgba(255, 255, 255, 0.63) 100%);
+        height: auto;
+    }
+
+    .wrapper-content-profile .kontainer-profile {
+        margin: 0;
+        height: 265px;
+        margin-bottom: 3rem;
+    }
+
+    .wrapper-content-profile .wrapper-profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-content-profile .wrapper-profile img {
+        height: 140px;
+        width: 140px;
+    }
+
+    .wrapper-content-profile .wrapper-profile .profile-body {
+        height: 180px;
+        width: 195px;
+    }
+
+    .wrapper-content-profile .wrapper-identity-profile {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .wrapper-content-profile .wrapper-identity-profile {
+        width: 90%;
+        height: 100%;
+    }
+
+    form .identitas-profileInstansi {
+        flex-direction: column;
+    }
+
+    form .identitas-profileInstansi .instansiNama {
+        margin: 0;
+    }
+
+    form .identitas-profileInstansi .instansiAsal {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+}

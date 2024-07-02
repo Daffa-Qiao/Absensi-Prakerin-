@@ -1,0 +1,271 @@
+#accordionSidebar {
+    background: linear-gradient(181deg, #00a2e9 90%, rgba(255, 255, 255, 0.63) 110%) !important;
+}
+
+#content {
+    background: linear-gradient(181deg, #00a2e9 95%, rgba(255, 255, 255, 0.63) 105%) !important;
+}
+
+.wrapper-addUser {
+    font-size: 20px;
+    font-weight: 400;
+    height: 50px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.wrapper-addUser label {
+    margin: 0;
+    cursor: pointer;
+}
+
+.sidebar-brand-text {
+    font-size: 24px;
+}
+
+a.nav-link>* {
+    font-size: 15px !important;
+    font-size: 240px;
+}
+
+
+nav.navbar.navbar-light.bg-light {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.navbar {
+    margin: 0;
+}
+
+h5 {
+    margin: 0 !important;
+}
+
+li>a>* {
+    font-size: 26px;
+}
+
+.title {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    background-color: #e5e5e5;
+}
+
+/* tabel */
+div#dataTable_length > label {
+    /* display: none; */
+    font-size: 0px;
+}
+
+
+td img {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+td img.capture {
+    width: 70px;
+    height: 70px;
+    margin-right: 0.5rem;
+    border-radius: 10%;
+    vertical-align: middle;
+}
+
+.table td {
+    vertical-align: middle !important;
+}
+
+.table td:nth-child(1) {
+    text-align: start;
+}
+
+.table th {
+    text-align: center;
+}
+
+.table td.dashboard:nth-child(1) {
+    text-align: start;
+    display: flex;
+    align-items: center;
+}
+
+.table td p.nama {
+    font-size: 18px;
+}
+
+.table td p.ssw {
+    color: red;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.table td p.mhs {
+    color: green;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p.dashboard {
+    margin: 0 !important;
+}
+
+p.dashboard .Mahasiswa {
+    color: #00ffff;
+}
+
+p.dashboard .Siswa {
+    color: red;
+}
+
+.checkin {}
+
+
+/* Css data Absensi */
+.table th.start:nth-child(1) {
+    text-align: start;
+}
+
+.table td {
+    text-align: center;
+}
+
+/* Css instansi */
+.title {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    background-color: #e5e5e5;
+}
+
+.wrapperCard {
+    background-color: #F5F5F5;
+    height: 100%;
+}
+
+.btn:active,
+.btn:hover,
+.btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.wrapperP {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapperP p {
+    font-weight: bold;
+    border-bottom: solid 1px;
+}
+
+.Mahasiswa {
+    color: #48689A
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#popup img {
+    width: 40%;
+    height: 80%;
+    cursor: default;
+    filter: none;
+    position: fixed;
+}
+
+.title {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    background-color: #e5e5e5;
+}
+
+.wrapperCard {
+    background-color: #F5F5F5;
+    height: 100%;
+}
+
+.wrapperP {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapperP p {
+    border-bottom: solid 2px;
+}
+
+.wrapperImg {
+    border: solid;
+    background-color: gray;
+}
+
+#display_c {
+    width: 120px;
+    height: 120px;
+}
+
+td .status {
+    border-radius: 1rem;
+    padding: .4rem 0;
+}
+
+td .status.hadir {
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+td .status.izin {
+    background-color: #ebc474;
+    color: #805b11;
+}
+
+td .status.sakit {
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+/* respomsive */
+@media screen and (max-width: 576px) {
+    .table td:nth-child(1) {
+        width: 300px;
+    }
+
+    .checkin {
+        width: 600px;
+    }
+
+    #popup img {
+        min-width: 80%;
+        max-height: 40%;
+    }
+
+    /* #accordionSidebar {
+        display: none;
+    } */
+}

@@ -1,0 +1,125 @@
+nav {
+    background-color: red;
+}
+
+main.table {
+    height: 99vh;
+    overflow: overlay;
+    background: linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%);
+    padding: 10px;
+    margin: 0px;
+    border-top: 3px solid;
+    z-index: 0;
+}
+
+main .table__body {
+    width: 100%;
+    height: auto;
+    overflow: overlay;
+}
+
+.table thead>tr>*{
+    border: 2px solid;
+}
+
+.table tbody>tr>*{
+    border: 2px solid;
+}
+
+thead,
+th {
+    background-color: #d5d1defe;
+    z-index: none;
+}
+
+td {
+    padding: 0.5rem !important;
+}
+
+tbody tr {
+    background-color: #fff;
+    vertical-align: middle;
+}
+
+tbody tr td {
+    text-align: center;
+
+}
+
+tbody tr:hover {
+    /* background-color: #2789da; */
+}
+
+nav.close {
+    z-index: 2;
+}
+
+.table {
+    background-color: red;
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+td .status {
+    border-radius: 5px;
+    padding: .4rem .3rem;
+    margin: 0 1rem;
+}
+
+td .status.hadir {
+    background-color: #86e49d;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+}
+
+td .status.izin {
+    background-color: #f6c23e;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+}
+
+td .status.sakit {
+    background-color: #d893a3;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+}
+
+@media screen and (max-width:576px) {
+
+    * {
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    li {
+        z-index: 0;
+    }
+
+    table.table__body {
+        width: auto;
+        height: 110vh;
+    }
+
+    table,
+    th,
+    td {
+        /* padding: 0rem !important; */
+        /* display: flex; */
+        align-items: center;
+        flex-direction: row;
+    }
+
+    main.table {
+        height: 90vh;
+    }
+}
