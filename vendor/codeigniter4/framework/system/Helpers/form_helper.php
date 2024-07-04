@@ -29,7 +29,7 @@ if (! function_exists('form_open')) {
     function form_open(string $action = '', $attributes = [], array $hidden = []): string
     {
         // If no action is provided then set to the current url
-        if (! $action) {
+        if ($action === '') {
             $action = current_url(true);
         } // If an action is not a full URL then turn it into one
         elseif (strpos($action, '://') === false) {
@@ -288,7 +288,7 @@ if (! function_exists('form_dropdown')) {
         }
 
         // If no selected state was submitted we will attempt to set it automatically
-        if (empty($selected)) {
+        if ($selected === []) {
             if (is_array($data)) {
                 if (isset($data['name'], $_POST[$data['name']])) {
                     $selected = [$_POST[$data['name']]];
@@ -312,7 +312,7 @@ if (! function_exists('form_dropdown')) {
             $key = (string) $key;
 
             if (is_array($val)) {
-                if (empty($val)) {
+                if ($val === []) {
                     continue;
                 }
 
@@ -456,10 +456,8 @@ if (! function_exists('form_label')) {
             $label .= ' for="' . $id . '"';
         }
 
-        if (is_array($attributes) && $attributes) {
-            foreach ($attributes as $key => $val) {
-                $label .= ' ' . $key . '="' . $val . '"';
-            }
+        foreach ($attributes as $key => $val) {
+            $label .= ' ' . $key . '="' . $val . '"';
         }
 
         return $label . '>' . $labelText . '</label>';
@@ -544,11 +542,11 @@ if (! function_exists('set_value')) {
      * Grabs a value from the POST array for the specified field so you can
      * re-populate an input field or textarea
      *
-     * @param string          $field      Field name
-     * @param string|string[] $default    Default value
-     * @param bool            $htmlEscape Whether to escape HTML special characters or not
+     * @param string              $field      Field name
+     * @param list<string>|string $default    Default value
+     * @param bool                $htmlEscape Whether to escape HTML special characters or not
      *
-     * @return string|string[]
+     * @return list<string>|string
      */
     function set_value(string $field, $default = '', bool $htmlEscape = true)
     {
@@ -656,13 +654,7 @@ if (! function_exists('set_radio')) {
 
         $postInput = $request->getPost($field);
 
-        if ($oldInput !== null) {
-            $input = $oldInput;
-        } elseif ($postInput !== null) {
-            $input = $postInput;
-        } else {
-            $input = $default;
-        }
+        $input = $oldInput ?? $postInput ?? $default;
 
         if (is_array($input)) {
             // Note: in_array('', array(0)) returns TRUE, do not use it
@@ -701,12 +693,12 @@ if (! function_exists('validation_errors')) {
      */
     function validation_errors()
     {
-        session();
+        $errors = session('_ci_validation_errors');
 
         // Check the session to see if any were
         // passed along from a redirect withErrors() request.
-        if (isset($_SESSION['_ci_validation_errors']) && (ENVIRONMENT === 'testing' || ! is_cli())) {
-            return $_SESSION['_ci_validation_errors'];
+        if ($errors !== null && (ENVIRONMENT === 'testing' || ! is_cli())) {
+            return $errors;
         }
 
         $validation = Services::validation();
@@ -784,7 +776,7 @@ if (! function_exists('parse_form_attributes')) {
                     unset($attributes[$key]);
                 }
             }
-            if (! empty($attributes)) {
+            if ($attributes !== []) {
                 $default = array_merge($default, $attributes);
             }
         }

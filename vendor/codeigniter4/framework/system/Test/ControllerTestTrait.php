@@ -105,11 +105,11 @@ trait ControllerTestTrait
         }
 
         if (empty($this->request)) {
-            // Do some acrobatics so we can use the Request service with our own URI
+            // Do some acrobatics, so we can use the Request service with our own URI
             $tempUri = Services::uri();
             Services::injectMock('uri', $this->uri);
 
-            $this->withRequest(Services::request($this->appConfig, false));
+            $this->withRequest(Services::incomingrequest($this->appConfig, false));
 
             // Restore the URI service
             Services::injectMock('uri', $tempUri);
@@ -215,7 +215,7 @@ trait ControllerTestTrait
     /**
      * Set controller's config, with method chaining.
      *
-     * @param mixed $appConfig
+     * @param App $appConfig
      *
      * @return $this
      */
@@ -229,7 +229,7 @@ trait ControllerTestTrait
     /**
      * Set controller's request, with method chaining.
      *
-     * @param mixed $request
+     * @param IncomingRequest $request
      *
      * @return $this
      */
@@ -260,7 +260,7 @@ trait ControllerTestTrait
     /**
      * Set controller's logger, with method chaining.
      *
-     * @param mixed $logger
+     * @param LoggerInterface $logger
      *
      * @return $this
      */

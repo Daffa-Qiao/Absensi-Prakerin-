@@ -19,6 +19,8 @@ use InvalidArgumentException;
 
 /**
  * Base class for cache handling
+ *
+ * @see \CodeIgniter\Cache\Handlers\BaseHandlerTest
  */
 abstract class BaseHandler implements CacheInterface
 {
@@ -74,10 +76,9 @@ abstract class BaseHandler implements CacheInterface
     /**
      * Get an item from the cache, or execute the given Closure and store the result.
      *
-     * @param string  $key      Cache item name
-     * @param int     $ttl      Time to live
-     * @param Closure $callback Callback return value
-     * @phpstan-param Closure(): mixed $callback
+     * @param string           $key      Cache item name
+     * @param int              $ttl      Time to live
+     * @param Closure(): mixed $callback Callback return value
      *
      * @return array|bool|float|int|object|string|null
      */

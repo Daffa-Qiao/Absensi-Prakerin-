@@ -20,6 +20,9 @@ use CodeIgniter\HTTP\ResponseInterface;
 use Config\Paths;
 use Throwable;
 
+/**
+ * @see \CodeIgniter\Debug\ExceptionHandlerTest
+ */
 final class ExceptionHandler extends BaseExceptionHandler implements ExceptionHandlerInterface
 {
     use ResponseTrait;
@@ -94,8 +97,8 @@ final class ExceptionHandler extends BaseExceptionHandler implements ExceptionHa
             . DIRECTORY_SEPARATOR . 'errors' . DIRECTORY_SEPARATOR . $addPath;
 
         // Determine the views
-        $view    = $this->determineView($exception, $path);
-        $altView = $this->determineView($exception, $altPath);
+        $view    = $this->determineView($exception, $path, $statusCode);
+        $altView = $this->determineView($exception, $altPath, $statusCode);
 
         // Check if the view exists
         $viewFile = null;
@@ -116,17 +119,26 @@ final class ExceptionHandler extends BaseExceptionHandler implements ExceptionHa
     }
 
     /**
-     * Determines the view to display based on the exception thrown,
-     * whether an HTTP or CLI request, etc.
+     * Determines the view to display based on the exception thrown, HTTP status
+     * code, whether an HTTP or CLI request, etc.
      *
      * @return string The filename of the view file to use
      */
-    protected function determineView(Throwable $exception, string $templatePath): string
-    {
+    protected function determineView(
+        Throwable $exception,
+        string $templatePath,
+        int $statusCode = 500
+    ): string {
         // Production environments should have a custom exception file.
         $view = 'production.php';
 
-        if (str_ireplace(['off', 'none', 'no', 'false', 'null'], '', ini_get('display_errors'))) {
+        if (
+            in_array(
+                strtolower(ini_get('display_errors')),
+                ['1', 'true', 'on', 'yes'],
+                true
+            )
+        ) {
             $view = 'error_exception.php';
         }
 
@@ -138,8 +150,8 @@ final class ExceptionHandler extends BaseExceptionHandler implements ExceptionHa
         $templatePath = rtrim($templatePath, '\\/ ') . DIRECTORY_SEPARATOR;
 
         // Allow for custom views based upon the status code
-        if (is_file($templatePath . 'error_' . $exception->getCode() . '.php')) {
-            return 'error_' . $exception->getCode() . '.php';
+        if (is_file($templatePath . 'error_' . $statusCode . '.php')) {
+            return 'error_' . $statusCode . '.php';
         }
 
         return $view;

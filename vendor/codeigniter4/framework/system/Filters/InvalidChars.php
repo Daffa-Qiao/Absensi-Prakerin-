@@ -23,6 +23,8 @@ use CodeIgniter\Security\Exceptions\SecurityException;
  * invalid characters:
  *   - invalid UTF-8 characters
  *   - control characters except line break and tab code
+ *
+ * @see \CodeIgniter\Filters\InvalidCharsTest
  */
 class InvalidChars implements FilterInterface
 {
@@ -43,7 +45,7 @@ class InvalidChars implements FilterInterface
     /**
      * Check invalid characters.
      *
-     * @param array|null $arguments
+     * @param list<string>|null $arguments
      *
      * @return void
      */
@@ -70,7 +72,7 @@ class InvalidChars implements FilterInterface
     /**
      * We don't have anything to do here.
      *
-     * @param array|null $arguments
+     * @param list<string>|null $arguments
      *
      * @return void
      */

@@ -15,6 +15,8 @@ use InvalidArgumentException;
 
 /**
  * Environment-specific configuration
+ *
+ * @see \CodeIgniter\Config\DotEnvTest
  */
 class DotEnv
 {
@@ -138,7 +140,7 @@ class DotEnv
      */
     protected function sanitizeValue(string $value): string
     {
-        if (! $value) {
+        if ($value === '') {
             return $value;
         }
 

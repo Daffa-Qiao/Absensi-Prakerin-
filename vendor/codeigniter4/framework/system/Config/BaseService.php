@@ -170,7 +170,7 @@ class BaseService
     /**
      * A cache of the names of services classes found.
      *
-     * @var array<string>
+     * @var list<string>
      */
     private static array $serviceNames = [];
 
@@ -330,9 +330,7 @@ class BaseService
     protected static function discoverServices(string $name, array $arguments)
     {
         if (! static::$discovered) {
-            $config = config(Modules::class);
-
-            if ($config->shouldDiscover('services')) {
+            if ((new Modules())->shouldDiscover('services')) {
                 $locator = static::locator();
                 $files   = $locator->search('Config/Services');
 
@@ -345,7 +343,7 @@ class BaseService
                 foreach ($files as $file) {
                     $classname = $locator->getClassname($file);
 
-                    if (! in_array($classname, [Services::class], true)) {
+                    if ($classname !== Services::class) {
                         static::$services[] = new $classname();
                     }
                 }
@@ -372,9 +370,7 @@ class BaseService
     protected static function buildServicesCache(): void
     {
         if (! static::$discovered) {
-            $config = config(Modules::class);
-
-            if ($config->shouldDiscover('services')) {
+            if ((new Modules())->shouldDiscover('services')) {
                 $locator = static::locator();
                 $files   = $locator->search('Config/Services');
 

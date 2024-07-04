@@ -17,6 +17,8 @@ use Config\Services;
 
 /**
  * Displays a list of all migrations and whether they've been run or not.
+ *
+ * @see \CodeIgniter\Commands\Database\MigrateStatusTest
  */
 class MigrateStatus extends BaseCommand
 {
@@ -61,7 +63,7 @@ class MigrateStatus extends BaseCommand
     /**
      * Namespaces to ignore when looking for migrations.
      *
-     * @var string[]
+     * @var list<string>
      */
     protected $ignoredNamespaces = [
         'CodeIgniter',
@@ -142,7 +144,7 @@ class MigrateStatus extends BaseCommand
             }
         }
 
-        if (! $status) {
+        if ($status === []) {
             // @codeCoverageIgnoreStart
             CLI::error(lang('Migrations.noneFound'), 'light_gray', 'red');
             CLI::newLine();

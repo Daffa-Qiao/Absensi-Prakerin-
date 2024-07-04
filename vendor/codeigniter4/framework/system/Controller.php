@@ -11,7 +11,9 @@
 
 namespace CodeIgniter;
 
+use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\Exceptions\HTTPException;
+use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Validation\Exceptions\ValidationException;
@@ -22,20 +24,22 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Class Controller
+ *
+ * @see \CodeIgniter\ControllerTest
  */
 class Controller
 {
     /**
      * Helpers that will be automatically loaded on class instantiation.
      *
-     * @var array
+     * @var list<string>
      */
     protected $helpers = [];
 
     /**
      * Instance of the main Request object.
      *
-     * @var RequestInterface
+     * @var CLIRequest|IncomingRequest
      */
     protected $request;
 
@@ -63,7 +67,7 @@ class Controller
     /**
      * Once validation has been run, will hold the Validation instance.
      *
-     * @var ValidationInterface
+     * @var ValidationInterface|null
      */
     protected $validator;
 
@@ -130,7 +134,7 @@ class Controller
      */
     protected function loadHelpers()
     {
-        if (empty($this->helpers)) {
+        if ($this->helpers === []) {
             return;
         }
 
@@ -183,7 +187,7 @@ class Controller
             }
 
             // If no error message is defined, use the error message in the Config\Validation file
-            if (! $messages) {
+            if ($messages === []) {
                 $errorName = $rules . '_errors';
                 $messages  = $validation->{$errorName} ?? [];
             }

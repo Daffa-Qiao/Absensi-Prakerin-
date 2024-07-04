@@ -42,6 +42,8 @@ use stdClass;
  * - Query string arguments (generally via $_GET, or as parsed via parse_str())
  * - Upload files, if any (as represented by $_FILES)
  * - Deserialized body binds (generally from $_POST)
+ *
+ * @see \CodeIgniter\HTTP\IncomingRequestTest
  */
 class IncomingRequest extends Request
 {
@@ -106,7 +108,7 @@ class IncomingRequest extends Request
 
     /**
      * The current locale of the application.
-     * Default value is set in Config\App.php
+     * Default value is set in app/Config/App.php
      *
      * @var string
      */
@@ -150,7 +152,7 @@ class IncomingRequest extends Request
      */
     public function __construct($config, ?URI $uri = null, $body = 'php://input', ?UserAgent $userAgent = null)
     {
-        if (empty($uri) || empty($userAgent)) {
+        if (! $uri instanceof URI || ! $userAgent instanceof UserAgent) {
             throw new InvalidArgumentException('You must supply the parameters: uri, userAgent.');
         }
 
@@ -167,9 +169,14 @@ class IncomingRequest extends Request
             $body = file_get_contents('php://input');
         }
 
+        // If file_get_contents() returns false or empty string, set null.
+        if ($body === false || $body === '') {
+            $body = null;
+        }
+
         $this->config       = $config;
         $this->uri          = $uri;
-        $this->body         = ! empty($body) ? $body : null;
+        $this->body         = $body;
         $this->userAgent    = $userAgent;
         $this->validLocales = $config->supportedLocales;
 
@@ -249,7 +256,7 @@ class IncomingRequest extends Request
      */
     public function detectPath(string $protocol = ''): string
     {
-        if (empty($protocol)) {
+        if ($protocol === '') {
             $protocol = 'REQUEST_URI';
         }
 
@@ -393,7 +400,7 @@ class IncomingRequest extends Request
     /**
      * Checks this request type.
      *
-     * @param string $type HTTP verb or 'json' or 'ajax'
+     * @param         string                                                                    $type HTTP verb or 'json' or 'ajax'
      * @phpstan-param string|'get'|'post'|'put'|'delete'|'head'|'patch'|'options'|'json'|'ajax' $type
      */
     public function is(string $type): bool
@@ -522,7 +529,7 @@ class IncomingRequest extends Request
     }
 
     /**
-     * Returns the default locale as set in Config\App.php
+     * Returns the default locale as set in app/Config/App.php
      */
     public function getDefaultLocale(): string
     {
@@ -566,10 +573,22 @@ class IncomingRequest extends Request
      * @see http://php.net/manual/en/function.json-decode.php
      *
      * @return array|bool|float|int|stdClass|null
+     *
+     * @throws HTTPException When the body is invalid as JSON.
      */
     public function getJSON(bool $assoc = false, int $depth = 512, int $options = 0)
     {
-        return json_decode($this->body ?? '', $assoc, $depth, $options);
+        if ($this->body === null) {
+            return null;
+        }
+
+        $result = json_decode($this->body, $assoc, $depth, $options);
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            throw HTTPException::forInvalidJSON(json_last_error_msg());
+        }
+
+        return $result;
     }
 
     /**
@@ -825,35 +844,42 @@ class IncomingRequest extends Request
      */
     public function getOldInput(string $key)
     {
-        // If the session hasn't been started, or no
-        // data was previously saved, we're done.
-        if (empty($_SESSION['_ci_old_input'])) {
+        // If the session hasn't been started, we're done.
+        if (! isset($_SESSION)) {
+            return null;
+        }
+
+        // Get previously saved in session
+        $old = session('_ci_old_input');
+
+        // If no data was previously saved, we're done.
+        if ($old === null) {
             return null;
         }
 
         // Check for the value in the POST array first.
-        if (isset($_SESSION['_ci_old_input']['post'][$key])) {
-            return $_SESSION['_ci_old_input']['post'][$key];
+        if (isset($old['post'][$key])) {
+            return $old['post'][$key];
         }
 
         // Next check in the GET array.
-        if (isset($_SESSION['_ci_old_input']['get'][$key])) {
-            return $_SESSION['_ci_old_input']['get'][$key];
+        if (isset($old['get'][$key])) {
+            return $old['get'][$key];
         }
 
         helper('array');
 
         // Check for an array value in POST.
-        if (isset($_SESSION['_ci_old_input']['post'])) {
-            $value = dot_array_search($key, $_SESSION['_ci_old_input']['post']);
+        if (isset($old['post'])) {
+            $value = dot_array_search($key, $old['post']);
             if ($value !== null) {
                 return $value;
             }
         }
 
         // Check for an array value in GET.
-        if (isset($_SESSION['_ci_old_input']['get'])) {
-            $value = dot_array_search($key, $_SESSION['_ci_old_input']['get']);
+        if (isset($old['get'])) {
+            $value = dot_array_search($key, $old['get']);
             if ($value !== null) {
                 return $value;
             }

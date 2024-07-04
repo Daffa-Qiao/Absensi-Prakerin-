@@ -15,6 +15,8 @@ use DateTime;
 
 /**
  * Format validation Rules.
+ *
+ * @see \CodeIgniter\Validation\FormatRulesTest
  */
 class FormatRules
 {
@@ -250,7 +252,7 @@ class FormatRules
      */
     public function valid_ip(?string $ip = null, ?string $which = null): bool
     {
-        if (empty($ip)) {
+        if ($ip === null || $ip === '') {
             return false;
         }
 
@@ -279,7 +281,7 @@ class FormatRules
      */
     public function valid_url(?string $str = null): bool
     {
-        if (empty($str)) {
+        if ($str === null || $str === '') {
             return false;
         }
 
@@ -303,7 +305,7 @@ class FormatRules
      */
     public function valid_url_strict(?string $str = null, ?string $validSchemes = null): bool
     {
-        if (empty($str)) {
+        if ($str === null || $str === '' || $str === '0') {
             return false;
         }
 
@@ -320,6 +322,8 @@ class FormatRules
 
     /**
      * Checks for a valid date and matches a given date format
+     *
+     * @param non-empty-string|null $format
      */
     public function valid_date(?string $str = null, ?string $format = null): bool
     {
@@ -327,7 +331,7 @@ class FormatRules
             return false;
         }
 
-        if (empty($format)) {
+        if ($format === null || $format === '') {
             return strtotime($str) !== false;
         }
 

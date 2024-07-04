@@ -166,7 +166,7 @@ class Builder extends BaseBuilder
      */
     public function delete($where = '', ?int $limit = null, bool $resetData = true)
     {
-        if (! empty($limit)) {
+        if ($limit !== null && $limit !== 0) {
             $this->QBLimit = $limit;
         }
 
@@ -222,7 +222,7 @@ class Builder extends BaseBuilder
         }
 
         $this->limitUsed    = true;
-        $limitTemplateQuery = 'SELECT * FROM (SELECT INNER_QUERY.*, ROWNUM RNUM FROM (%s) INNER_QUERY WHERE ROWNUM < %d)' . ($offset ? ' WHERE RNUM >= %d' : '');
+        $limitTemplateQuery = 'SELECT * FROM (SELECT INNER_QUERY.*, ROWNUM RNUM FROM (%s) INNER_QUERY WHERE ROWNUM < %d)' . ($offset !== 0 ? ' WHERE RNUM >= %d' : '');
 
         return sprintf($limitTemplateQuery, $sql, $offset + $this->QBLimit + 1, $offset);
     }

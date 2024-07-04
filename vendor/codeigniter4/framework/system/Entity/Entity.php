@@ -33,6 +33,8 @@ use ReturnTypeWillChange;
 
 /**
  * Entity encapsulation, for use with CodeIgniter\Model
+ *
+ * @see \CodeIgniter\Entity\EntityTest
  */
 class Entity implements JsonSerializable
 {
@@ -53,8 +55,7 @@ class Entity implements JsonSerializable
     /**
      * The date fields.
      *
-     * @var array<int, string>
-     * @phpstan-var list<string>
+     * @var list<string>
      */
     protected $dates = [
         'created_at',
@@ -318,7 +319,7 @@ class Entity implements JsonSerializable
      */
     protected function mapProperty(string $key)
     {
-        if (empty($this->datamap)) {
+        if ($this->datamap === []) {
             return $key;
         }
 

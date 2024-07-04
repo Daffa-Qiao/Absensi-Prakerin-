@@ -47,7 +47,7 @@ trait FeatureTestTrait
     {
         $collection = Services::routes();
 
-        if ($routes) {
+        if ($routes !== null) {
             $collection->resetRoutes();
 
             foreach ($routes as $route) {
@@ -289,7 +289,7 @@ trait FeatureTestTrait
 
         Services::injectMock('uri', $uri);
 
-        $request = Services::request($config, false);
+        $request = Services::incomingrequest($config, false);
 
         $request->setMethod($method);
         $request->setProtocolVersion('1.1');
@@ -326,7 +326,8 @@ trait FeatureTestTrait
      *
      * Always populate the GET vars based on the URI.
      *
-     * @param string $method HTTP verb
+     * @param string               $method HTTP verb
+     * @param non-empty-array|null $params
      *
      * @return Request
      *
@@ -336,7 +337,7 @@ trait FeatureTestTrait
     {
         // $params should set the query vars if present,
         // otherwise set it from the URL.
-        $get = (! empty($params) && $method === 'get')
+        $get = ($params !== null && $params !== [] && $method === 'get')
             ? $params
             : $this->getPrivateProperty($request->getUri(), 'query');
 

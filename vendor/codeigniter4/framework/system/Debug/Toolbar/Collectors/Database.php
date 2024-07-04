@@ -17,6 +17,8 @@ use Config\Toolbar;
 
 /**
  * Collector for the Database tab of the Debug Toolbar.
+ *
+ * @see \CodeIgniter\Debug\Toolbar\Collectors\DatabaseTest
  */
 class Database extends BaseCollector
 {
@@ -78,7 +80,6 @@ class Database extends BaseCollector
      * @internal
      *
      * @return void
-     * @phpstan-return never|void
      */
     public static function collect(Query $query)
     {
@@ -234,7 +235,7 @@ class Database extends BaseCollector
      */
     public function isEmpty(): bool
     {
-        return empty(static::$queries);
+        return static::$queries === [];
     }
 
     /**

@@ -27,6 +27,8 @@ use Throwable;
 
 /**
  * Exceptions manager
+ *
+ * @see \CodeIgniter\Debug\ExceptionsTest
  */
 class Exceptions
 {
@@ -115,7 +117,6 @@ class Exceptions
      * and fire an event that allows custom actions to be taken at this point.
      *
      * @return void
-     * @phpstan-return never|void
      */
     public function exceptionHandler(Throwable $exception)
     {
@@ -124,21 +125,30 @@ class Exceptions
         [$statusCode, $exitCode] = $this->determineCodes($exception);
 
         if ($this->config->log === true && ! in_array($statusCode, $this->config->ignoreCodes, true)) {
-            log_message('critical', "{message}\nin {exFile} on line {exLine}.\n{trace}", [
+            log_message('critical', get_class($exception) . ": {message}\nin {exFile} on line {exLine}.\n{trace}", [
                 'message' => $exception->getMessage(),
                 'exFile'  => clean_path($exception->getFile()), // {file} refers to THIS file
                 'exLine'  => $exception->getLine(), // {line} refers to THIS line
                 'trace'   => self::renderBacktrace($exception->getTrace()),
             ]);
+
+            // Get the first exception.
+            $last = $exception;
+
+            while ($prevException = $last->getPrevious()) {
+                $last = $prevException;
+
+                log_message('critical', '[Caused by] ' . get_class($prevException) . ": {message}\nin {exFile} on line {exLine}.\n{trace}", [
+                    'message' => $prevException->getMessage(),
+                    'exFile'  => clean_path($prevException->getFile()), // {file} refers to THIS file
+                    'exLine'  => $prevException->getLine(), // {line} refers to THIS line
+                    'trace'   => self::renderBacktrace($prevException->getTrace()),
+                ]);
+            }
         }
 
         $this->request  = Services::request();
         $this->response = Services::response();
-
-        // Get the first exception.
-        while ($prevException = $exception->getPrevious()) {
-            $exception = $prevException;
-        }
 
         if (method_exists($this->config, 'handler')) {
             // Use new ExceptionHandler
@@ -199,7 +209,7 @@ class Exceptions
             return $this->handleDeprecationError($message, $file, $line);
         }
 
-        if (error_reporting() & $severity) {
+        if ((error_reporting() & $severity) !== 0) {
             throw new ErrorException($message, 0, $severity, $file, $line);
         }
 
@@ -213,7 +223,6 @@ class Exceptions
      * @codeCoverageIgnore
      *
      * @return void
-     * @phpstan-return never|void
      */
     public function shutdownHandler()
     {
@@ -225,7 +234,7 @@ class Exceptions
 
         ['type' => $type, 'message' => $message, 'file' => $file, 'line' => $line] = $error;
 
-        if ($this->exceptionCaughtByExceptionHandler) {
+        if ($this->exceptionCaughtByExceptionHandler instanceof Throwable) {
             $message .= "\n【Previous Exception】\n"
                 . get_class($this->exceptionCaughtByExceptionHandler) . "\n"
                 . $this->exceptionCaughtByExceptionHandler->getMessage() . "\n"
@@ -251,7 +260,13 @@ class Exceptions
         $view         = 'production.php';
         $templatePath = rtrim($templatePath, '\\/ ') . DIRECTORY_SEPARATOR;
 
-        if (str_ireplace(['off', 'none', 'no', 'false', 'null'], '', ini_get('display_errors'))) {
+        if (
+            in_array(
+                strtolower(ini_get('display_errors')),
+                ['1', 'true', 'on', 'yes'],
+                true
+            )
+        ) {
             $view = 'error_exception.php';
         }
 
@@ -272,7 +287,6 @@ class Exceptions
      * Given an exception and status code will display the error to the client.
      *
      * @return void
-     * @phpstan-return never|void
      *
      * @deprecated 4.4.0 No longer used. Moved to BaseExceptionHandler.
      */
@@ -302,7 +316,7 @@ class Exceptions
             exit(1);
         }
 
-        echo(function () use ($exception, $statusCode, $viewFile): string {
+        echo (function () use ($exception, $statusCode, $viewFile): string {
             $vars = $this->collectVars($exception, $statusCode);
             extract($vars, EXTR_SKIP);
 
@@ -320,7 +334,14 @@ class Exceptions
      */
     protected function collectVars(Throwable $exception, int $statusCode): array
     {
-        $trace = $exception->getTrace();
+        // Get the first exception.
+        $firstException = $exception;
+
+        while ($prevException = $firstException->getPrevious()) {
+            $firstException = $prevException;
+        }
+
+        $trace = $firstException->getTrace();
 
         if ($this->config->sensitiveDataInTrace !== []) {
             $trace = $this->maskSensitiveData($trace, $this->config->sensitiveDataInTrace);
@@ -501,7 +522,7 @@ class Exceptions
      */
     public static function highlightFile(string $file, int $lineNumber, int $lines = 15)
     {
-        if (empty($file) || ! is_readable($file)) {
+        if ($file === '' || ! is_readable($file)) {
             return false;
         }
 

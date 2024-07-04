@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/attendance.css">
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/permission.css">
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/history.css">
+    <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/activity.css">
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/setting.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
@@ -51,8 +52,14 @@
                         <li class="nav-link" id="<?= (isset($aktif_permission)) ? 'aktif' : '' ?>">
                             <a href="<?= site_url('user/permission') ?>"> Permission Form</a>
                         </li>
+                        <li class="nav-link" id="<?= (isset($aktif_activity)) ? 'aktif' : '' ?>">
+                            <a href="<?= site_url('user/activity') ?>"> Activity Form</a>
+                        </li>
                         <li class="nav-link" id="<?= (isset($aktif_history)) ? 'aktif' : '' ?>">
                             <a href="<?= site_url('user/history') ?>"> History Absen </a>
+                        </li>
+                        <li class="nav-link" id="<?= (isset($aktif_history)) ? 'aktif' : '' ?>">
+                            <a href="<?= site_url('user/history') ?>"> History Activity </a>
                         </li>
                         <li class="nav-link" id="<?= (isset($aktif_setting)) ? 'aktif' : '' ?>">
                             <a href="<?= site_url('user/setting') ?>"> Settings & Privacy </a>

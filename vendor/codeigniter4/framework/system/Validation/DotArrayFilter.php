@@ -11,6 +11,9 @@
 
 namespace CodeIgniter\Validation;
 
+/**
+ * @see \CodeIgniter\Validation\DotArrayFilterTest
+ */
 final class DotArrayFilter
 {
     /**
@@ -41,7 +44,7 @@ final class DotArrayFilter
                 $segments
             );
 
-            $result = array_merge_recursive($result, self::filter($segments, $array));
+            $result = array_replace_recursive($result, self::filter($segments, $array));
         }
 
         return $result;
@@ -90,7 +93,7 @@ final class DotArrayFilter
 
         // If this is the last index, make sure to return it now,
         // and not try to recurse through things.
-        if (empty($indexes)) {
+        if ($indexes === []) {
             return [$currentIndex => $array[$currentIndex]];
         }
 

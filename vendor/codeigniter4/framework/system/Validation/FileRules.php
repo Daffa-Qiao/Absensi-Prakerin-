@@ -13,7 +13,6 @@ namespace CodeIgniter\Validation;
 
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
-use CodeIgniter\HTTP\Request;
 use CodeIgniter\HTTP\RequestInterface;
 use Config\Mimes;
 use Config\Services;
@@ -21,6 +20,8 @@ use InvalidArgumentException;
 
 /**
  * File validation rules
+ *
+ * @see \CodeIgniter\Validation\FileRulesTest
  */
 class FileRules
 {
@@ -241,7 +242,13 @@ class FileRules
             $allowedHeight = $params[1] ?? 0;
 
             // Get uploaded image size
-            $info       = getimagesize($file->getTempName());
+            $info = getimagesize($file->getTempName());
+
+            if ($info === false) {
+                // Cannot get the image size.
+                return false;
+            }
+
             $fileWidth  = $info[0];
             $fileHeight = $info[1];
 

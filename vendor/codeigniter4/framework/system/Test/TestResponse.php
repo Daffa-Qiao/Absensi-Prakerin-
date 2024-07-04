@@ -31,6 +31,7 @@ use PHPUnit\Framework\TestCase;
  * @internal
  *
  * @mixin DOMParser
+ * @see \CodeIgniter\Test\TestResponseTest
  */
 class TestResponse extends TestCase
 {
@@ -135,8 +136,10 @@ class TestResponse extends TestCase
             return false;
         }
 
+        $body = (string) $this->response->getBody();
+
         // Empty bodies are not considered valid, unless in redirects
-        return ! ($status < 300 && empty($this->response->getBody()));
+        return ! ($status < 300 && $body === '');
     }
 
     /**
@@ -160,7 +163,7 @@ class TestResponse extends TestCase
     }
 
     /**
-     * Asserts that the Response is considered OK.
+     * Asserts that the Response is considered not OK.
      *
      * @throws Exception
      */

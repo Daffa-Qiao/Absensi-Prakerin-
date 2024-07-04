@@ -397,6 +397,14 @@ class User extends BaseController
             notif_swal('success', 'Berhasil Update Data');
 
             return redirect()->back();
-        }
+        };
+    }
+    public function activity()
+    {
+        $data['halaman'] = 'User | activity';
+        $data['title'] = 'Activity';
+        $data['aktif_activity'] = 'aktif';
+        $data['namaFile'] = session()->get('member_foto');
+        return view('User/v_activity', $data);
     }
 }

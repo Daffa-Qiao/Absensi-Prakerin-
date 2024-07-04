@@ -22,6 +22,7 @@ use Config\ContentSecurityPolicy as ContentSecurityPolicyConfig;
  * @see http://www.html5rocks.com/en/tutorials/security/content-security-policy/
  * @see http://content-security-policy.com/
  * @see https://www.owasp.org/index.php/Content_Security_Policy
+ * @see \CodeIgniter\HTTP\ContentSecurityPolicyTest
  */
 class ContentSecurityPolicy
 {
@@ -642,7 +643,7 @@ class ContentSecurityPolicy
     /**
      * DRY method to add an string or array to a class property.
      *
-     * @param array|string $options
+     * @param list<string>|string $options
      *
      * @return void
      */
@@ -789,7 +790,7 @@ class ContentSecurityPolicy
         $reportSources = [];
 
         foreach ($values as $value => $reportOnly) {
-            if (is_numeric($value) && is_string($reportOnly) && ! empty($reportOnly)) {
+            if (is_numeric($value) && is_string($reportOnly) && ($reportOnly !== '')) {
                 $value      = $reportOnly;
                 $reportOnly = $this->reportOnly;
             }
@@ -805,11 +806,11 @@ class ContentSecurityPolicy
             }
         }
 
-        if (! empty($sources)) {
+        if ($sources !== []) {
             $this->tempHeaders[$name] = implode(' ', $sources);
         }
 
-        if (! empty($reportSources)) {
+        if ($reportSources !== []) {
             $this->reportOnlyHeaders[$name] = implode(' ', $reportSources);
         }
     }

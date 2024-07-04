@@ -19,6 +19,8 @@ use Config\Services;
 
 /**
  * Honeypot filter
+ *
+ * @see \CodeIgniter\Filters\HoneypotTest
  */
 class Honeypot implements FilterInterface
 {
@@ -26,7 +28,7 @@ class Honeypot implements FilterInterface
      * Checks if Honeypot field is empty, if not then the
      * requester is a bot
      *
-     * @param array|null $arguments
+     * @param list<string>|null $arguments
      *
      * @throws HoneypotException
      */
@@ -44,7 +46,7 @@ class Honeypot implements FilterInterface
     /**
      * Attach a honeypot to the current response.
      *
-     * @param array|null $arguments
+     * @param list<string>|null $arguments
      */
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {

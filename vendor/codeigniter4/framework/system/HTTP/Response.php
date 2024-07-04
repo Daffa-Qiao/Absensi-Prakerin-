@@ -28,6 +28,8 @@ use Config\Services;
  * - Status code and reason phrase
  * - Headers
  * - Message body
+ *
+ * @see \CodeIgniter\HTTP\ResponseTest
  */
 class Response extends Message implements ResponseInterface
 {
@@ -174,6 +176,7 @@ class Response extends Message implements ResponseInterface
      *
      * @return $this
      *
+     * @internal For testing purposes only.
      * @testTag only available to test code
      */
     public function pretend(bool $pretend = true)

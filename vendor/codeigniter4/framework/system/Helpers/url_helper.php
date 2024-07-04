@@ -23,9 +23,11 @@ if (! function_exists('site_url')) {
     /**
      * Returns a site URL as defined by the App config.
      *
-     * @param array|string $relativePath URI string or array of URI segments
-     * @param string|null  $scheme       URI scheme. E.g., http, ftp
-     * @param App|null     $config       Alternate configuration to use
+     * @param array|string $relativePath URI string or array of URI segments.
+     * @param string|null  $scheme       URI scheme. E.g., http, ftp. If empty
+     *                                   string '' is set, a protocol-relative
+     *                                   link is returned.
+     * @param App|null     $config       Alternate configuration to use.
      */
     function site_url($relativePath = '', ?string $scheme = null, ?App $config = null): string
     {
@@ -42,8 +44,10 @@ if (! function_exists('base_url')) {
      * Returns the base URL as defined by the App config.
      * Base URLs are trimmed site URLs without the index page.
      *
-     * @param array|string $relativePath URI string or array of URI segments
-     * @param string|null  $scheme       URI scheme. E.g., http, ftp
+     * @param array|string $relativePath URI string or array of URI segments.
+     * @param string|null  $scheme       URI scheme. E.g., http, ftp. If empty
+     *                                   string '' is set, a protocol-relative
+     *                                   link is returned.
      */
     function base_url($relativePath = '', ?string $scheme = null): string
     {
@@ -88,10 +92,12 @@ if (! function_exists('previous_url')) {
     {
         // Grab from the session first, if we have it,
         // since it's more reliable and safer.
-        // Otherwise, grab a sanitized version from $_SERVER.
-        $referer = $_SESSION['_ci_previous_url'] ?? Services::request()->getServer('HTTP_REFERER', FILTER_SANITIZE_URL);
+        if (isset($_SESSION)) {
+            $referer = session('_ci_previous_url');
+        }
 
-        $referer ??= site_url('/');
+        // Otherwise, grab a sanitized version from $_SERVER.
+        $referer ??= request()->getServer('HTTP_REFERER', FILTER_SANITIZE_URL) ?? site_url('/');
 
         return $returnObject ? new URI($referer) : $referer;
     }
@@ -288,7 +294,7 @@ if (! function_exists('safe_mailto')) {
             if ($ordinal < 128) {
                 $x[] = '|' . $ordinal;
             } else {
-                if (empty($temp)) {
+                if ($temp === []) {
                     $count = ($ordinal < 224) ? 2 : 3;
                 }
 
@@ -312,7 +318,7 @@ if (! function_exists('safe_mailto')) {
 
         // improve obfuscation by eliminating newlines & whitespace
         $cspNonce = csp_script_nonce();
-        $cspNonce = $cspNonce ? ' ' . $cspNonce : $cspNonce;
+        $cspNonce = $cspNonce !== '' ? ' ' . $cspNonce : $cspNonce;
         $output   = '<script' . $cspNonce . '>'
                 . 'var l=new Array();';
 
