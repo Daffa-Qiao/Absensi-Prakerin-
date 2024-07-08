@@ -30,36 +30,41 @@
         <div class="body-dua-activity">
             <form id="myForm" action="<?= site_url('user/activityProccess') ?>" method="post" enctype="multipart/form-data">
                 <div class="grid-satu-activity">
-                    <div class="wrapper-image">
-                        <h3>Dokumentasi</h3>
-                        <div class="image">
-                            <div id="my_camera" class="mx-auto rounded overflow-hidden"></div>
-                        </div>
-                        <div class="text">
-                            <button type="button" id="takephoto">
-                                <a href="#hasil">
-                                    <i class="fa-solid fa-camera"></i>
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-dua-activity">
-                    <div class="wrapper-activity">
-                        <div class="kbWrapper">
-                            <input class="keteranganWrapper" type="text" name="Keterangan" placeholder="Keterangan" id="keterangan">
-                            <div class="buttonWrapper">
-                                <input type="submit" name="mulai" value="Mulai" class="bg-success bg-gradient">
-                                <input type="submit" name="selesai" value="Selesai" class="bg-primary bg-gradient">
+                    <div class="row justify-content-md-center">
+                            <div class="container">
+                        <h3>Documentation</h3>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div id="my_camera" class="mx-auto rounded overflow-hidden col-lg"></div>
+                            </div>
+                            <div class="col">
+                                <button type="button" id="takephoto" style="border:2px solid black">
+                                    <a href="#hasil">
+                                        <i class="fa-solid fa-camera"></i>
+                                    </a>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="wrapper-activity">
-                        <div class="hasilWrapper" id="hasil">
-                            <h3>Hasil Dokumentasi :</h3>
-                            <div id="results" class=""></div>
-                            <input type="hidden" id="photoStore" name="photoStore" value="">
-                            <img name="foto" for="activity" class="screenshot" src="<?= base_url('uploadFoto/profile.png') ?>" alt="">
+                    </div>
+                </div>
+                <div class="grid-dua-activity">
+                    <div class="container">
+                            <div class="row mx-2">
+                                <div class="col" style="border:2px solid black">
+                                    <input class="keterangan" type="text" name="Keterangan" id="keterangan"/>
+                                    <div class="buttonWrapper">
+                                        <input type="submit" name="mulai" value="Start Time" class="bg-success bg-gradient">
+                                        <input type="submit" name="selesai" value="End Time" class="bg-primary bg-gradient">
+                                    </div>
+                                </div>
+                                <div class="col" style="border:2px solid black">
+                                    <h3>Hasil Dokumentasi :</h3>
+                                    <div id="results" class=""></div>
+                                        <input type="hidden" id="photoStore" name="photoStore" value="">
+                                        <!-- <img name="foto" for="activity" class="screenshot" src="<?= base_url('uploadFoto/profile.png') ?>" alt=""> -->
+                                    </div>
+                            </div>
                         </div>
                     </div>
                 </div>

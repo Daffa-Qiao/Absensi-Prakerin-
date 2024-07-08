@@ -16,7 +16,8 @@ $routes->group('user/', ['filter' => 'authuser'], function ($routes) {
     $routes->add('attendanceProccess', 'User\User::attendanceProcess');
     $routes->get('permission', 'User\User::permission');
     $routes->post('permission', 'User\User::permissionProcess');
-    $routes->add('history', 'User\User::history');
+    $routes->add('historyAttendace', 'User\User::historyAttendace');
+    $routes->add('historyActivity', 'User\User::historyActivity');
     $routes->get('setting', 'User\User::setting');
     $routes->post('setting', 'User\User::settingProcess');
     $routes->get('activity', 'User\User::activity');

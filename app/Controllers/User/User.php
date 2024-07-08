@@ -53,26 +53,26 @@ class User extends BaseController
 
         if ($this->request->getVar('checkin')) {
             if ($currentTime < '06:00:00') {
-                notif_swal('error', 'Belum masuk waktu absen');
+                notif_swal('error', 'The time of absence has not yet arrived');
                 return redirect()->back();
             }
             if ($currentTime > '10:00:00') {
-                notif_swal('error', 'Melewati batas waktu absen');
+                notif_swal('error', 'Missed the absence deadline');
                 return redirect()->back();
             } else {
                 $encoded_data = $_POST['photoStore'];
                 if ($encoded_data == null) {
-                    notif_swal('error', 'Harus absen dengan foto');
+                    notif_swal('error', 'Must be absent with photo');
                     return redirect()->back();
                 }
                 if ($absensiInfo != null) {
                     if ($absensiInfo['waktu_absen'] == $today) {
-                        notif_swal('error', 'Anda sudah checkin hari ini');
+                        notif_swal('error', 'you have Checkin today');
                         return redirect()->back();
                     }
                 }
                 if ($lat == '' && $long == '') {
-                    notif_swal('error', 'Aktifkan GPS / Lokasi anda');
+                    notif_swal('error', 'Enable GPS/Activated your Location');
                     return redirect()->back();
                 }
 
@@ -96,27 +96,27 @@ class User extends BaseController
                     'jenis_user' => $memberInfo['jenis_user'],
                 ];
                 $absensi->insert($updateData);
-                notif_swal_tiga('success', $currentTime, 'Berhasil Check-in');
+                notif_swal_tiga('success', $currentTime, 'Successful Check-in');
                 return redirect()->to('user/attendance');
             }
         }
 
         if ($this->request->getVar('checkout')) {
             if ($currentTime < '14:00:00') {
-                notif_swal('error', 'Belum masuk waktu checkout');
+                notif_swal('error', 'Checkout time has not yet arrived');
                 return redirect()->back();
             }
             if ($absensiInfo == null) {
-                notif_swal('error', 'Anda belum checkin hari ini');
+                notif_swal('error', 'You havent checked in today');
                 return redirect()->back();
             }
             if ($absensiInfo['checkout_time'] != null) {
-                notif_swal('error', 'Anda sudah checkout hari ini');
+                notif_swal('error', 'You checked in today');
                 return redirect()->back();
             }
             $encoded_data = $_POST['photoStore'];
             if ($encoded_data == null) {
-                notif_swal('error', 'Harus absen dengan foto');
+                notif_swal('error', 'Must be absent with photo');
                 return redirect()->back();
             }
             $binary_data = base64_decode($encoded_data, true);
@@ -164,20 +164,20 @@ class User extends BaseController
 
         if ($absensiInfo != null) {
             if ($absensiInfo['waktu_absen'] == $today) {
-                notif_swal('error', 'Anda sudah checkin hari ini');
+                notif_swal('error', 'You Have Check In Today');
                 return redirect()->back();
             }
         }
         if ($fotoAbsen == '') {
-            notif_swal('error', 'Foto Tidak Boleh Kosong');
+            notif_swal('error', 'Photo Cannot Be Empty');
             return redirect()->back();
         }
         if ($lat == '' && $long == '') {
-            notif_swal('error', 'Aktifkan GPS / Lokasi anda');
+            notif_swal('error', 'Enable GPS/Activated Your Location');
             return redirect()->back();
         }
         if ($keterangan == '' or $status == '') {
-            notif_swal('error', 'Status dan Keterangan Tidak Boleh Kosong');
+            notif_swal('error', 'Status And Description Cannot Be Empty');
             return redirect()->back();
         } else {
             $namaFile = date("Y.m.d") . " - " . date("H.i.s") . '.jpeg';
@@ -197,12 +197,12 @@ class User extends BaseController
                 'foto_absen' => $namaFile,
             ];
             $absensi->insert($updateData);
-            notif_swal_tiga('success', $currentTime, 'Berhasil Absen ' . $status);
+            notif_swal_tiga('success', $currentTime, 'Successful Absence ' . $status);
             return redirect()->back();
         }
 
     }
-    public function history()
+    public function historyAttendace()
     {
         $absensi = new Absensi();
         $user = new MemberModel();
@@ -217,8 +217,8 @@ class User extends BaseController
             $nama_lengkap = $dataUser ? $dataUser['nama_lengkap'] : '';
         }
         $data = [
-            'halaman' => 'User | Hitory Absen',
-            'title' => 'History Absen',
+            'halaman' => 'User | History Attendance',
+            'title' => 'History Attendance',
             'namaFile' => session()->get('member_foto'),
             'aktif_history' => 'aktif',
             'dataAbsen' => $dataAbsen,
@@ -226,7 +226,7 @@ class User extends BaseController
             'nomor' => nomor($currentPage, $jumlahBaris),
             'nama_lengkap' => $nama_lengkap
         ];
-        return view('User/v_history', $data);
+        return view('User/v_history_attendance', $data);
     }
     public function setting()
     {
@@ -288,16 +288,16 @@ class User extends BaseController
                 'email' => [
                     'rules' => 'required|is_unique[member.email, member_id, ' . $sesi_id . ']|valid_email',
                     'errors' => [
-                        'required' => 'Email harus diisi',
-                        'is_unique' => 'Email yang dimasukkan sudah terdaftar',
-                        'valid_email' => 'Email tidak valid'
+                        'required' => 'Email Required',
+                        'is_unique' => 'Email is already registered',
+                        'valid_email' => 'Invalid email'
                     ]
                 ],
                 'password_old' => [
                     'rules' => 'required|check_old_password[password_old]',
                     'errors' => [
-                        'required' => 'Current Password harus diisi',
-                        'check_old_password' => 'Current Password tidak sesuai'
+                        'required' => 'Current Password Required',
+                        'check_old_password' => 'Current Password is Not Correct'
                     ]
                 ],
             ]);
@@ -308,9 +308,9 @@ class User extends BaseController
                 'username' => [
                     'rules' => 'required|is_unique[member.username, member_id,' . $sesi_id . ']|regex_match[/^\S+$/]',
                     'errors' => [
-                        'required' => 'Username harus diisi',
-                        'is_unique' => 'Username yang dimasukkan sudah terdaftar',
-                        'regex_match' => 'Username tidak boleh menggunakan spasi'
+                        'required' => 'Username required',
+                        'is_unique' => 'Username already registered',
+                        'regex_match' => 'Username must not use spaces'
                     ]
                 ]
             ]);
@@ -323,21 +323,21 @@ class User extends BaseController
                 'password_old' => [
                     'rules' => 'required|check_old_password[password_old]',
                     'errors' => [
-                        'required' => 'Current Password harus diisi',
-                        'check_old_password' => 'Current Password tidak sesuai'
+                        'required' => 'Current Password required',
+                        'check_old_password' => 'Current password does not match'
                     ]
                 ],
                 'password_new' => [
                     'rules' => 'min_length[5]|regex_match[/^\S+$/]',
                     'errors' => [
-                        'min_length' => 'Minimun panjang password adalah 5 karakter',
-                        'regex_match' => 'Password tidak boleh menggunakan spasi'
+                        'min_length' => 'The minimum password length is 5 characters',
+                        'regex_match' => 'Password cannot use spaces'
                     ]
                 ],
                 'konfirmasi_password_new' => [
                     'rules' => 'matches[password_new]',
                     'errors' => [
-                        'matches' => 'Konfirmasi Password tidak sesuai'
+                        'matches' => "Confirmation Password doesn't match"
                     ]
                 ]
             ]);
@@ -361,7 +361,7 @@ class User extends BaseController
                     'password' => $password_new
                 ];
                 $member->where('member_id', $sesi_id)->set($dataUpdate)->update();
-                notif_swal('success', 'Berhasil Update Data');
+                notif_swal('success', 'Update Data Successfully');
             }
 
             if ($file != '' && $file->isValid()) {
@@ -382,7 +382,7 @@ class User extends BaseController
                 $member->where('member_id', $sesi_id)->set($update)->update();
                 // update sesi foto
                 session()->set('member_foto', $namaFile);
-                notif_swal('success', 'Berhasil Update Data');
+                notif_swal('success', 'Update Data Successfully');
             }
 
             $member->save([
@@ -394,7 +394,7 @@ class User extends BaseController
                 'member_username' => $username,
                 'member_email' => $email,
             ]);
-            notif_swal('success', 'Berhasil Update Data');
+            notif_swal('success', 'Update Data Successfully');
 
             return redirect()->back();
         };
@@ -406,5 +406,31 @@ class User extends BaseController
         $data['aktif_activity'] = 'aktif';
         $data['namaFile'] = session()->get('member_foto');
         return view('User/v_activity', $data);
+    }
+    public function historyActivity()
+    {
+        $activity = new Absensi();
+        $user = new MemberModel();
+        $sesi_nim = session()->get('member_nim_nis');
+        $jumlahBaris = 10;
+        $currentPage = $this->request->getVar('page_absensi');
+        $dataActivity = $activity->where('nim_nis', $sesi_nim)->orderBy('id', 'desc')->paginate($jumlahBaris, 'absensi');
+        $nama_lengkap = [];
+        foreach ($dataActivity as $v) {
+            $nimUser = $v['nim_nis'];
+            $dataUser = $user->where('nim_nis', $nimUser)->get()->getRowArray();
+            $nama_lengkap = $dataUser ? $dataUser['nama_lengkap'] : '';
+        }
+        $data = [
+            'halaman' => 'User | History Activity',
+            'title' => 'History Activity',
+            'namaFile' => session()->get('member_foto'),
+            'aktif_history_activity' => 'aktif',
+            'dataActivity' => $dataActivity ,
+            'pager' => $activity->pager,
+            'nomor' => nomor($currentPage, $jumlahBaris),
+            'nama_lengkap' => $nama_lengkap
+        ];
+        return view('User/v_historyActivity', $data);
     }
 }

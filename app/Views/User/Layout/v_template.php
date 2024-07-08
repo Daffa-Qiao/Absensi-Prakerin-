@@ -56,10 +56,10 @@
                             <a href="<?= site_url('user/activity') ?>"> Activity Form</a>
                         </li>
                         <li class="nav-link" id="<?= (isset($aktif_history)) ? 'aktif' : '' ?>">
-                            <a href="<?= site_url('user/history') ?>"> History Absen </a>
+                            <a href="<?= site_url('user/historyAttendace') ?>"> History Attendance </a>
                         </li>
-                        <li class="nav-link" id="<?= (isset($aktif_history)) ? 'aktif' : '' ?>">
-                            <a href="<?= site_url('user/history') ?>"> History Activity </a>
+                        <li class="nav-link" id="<?= (isset($aktif_history_activity)) ? 'aktif' : '' ?>">
+                            <a href="<?= site_url('user/historyActivity') ?>"> History Activity </a>
                         </li>
                         <li class="nav-link" id="<?= (isset($aktif_setting)) ? 'aktif' : '' ?>">
                             <a href="<?= site_url('user/setting') ?>"> Settings & Privacy </a>
@@ -91,11 +91,11 @@
                         </div>
                     </div>
                     <div class="wrapper-a">
-                        <a href="<?= site_url('user/my-profile'); ?>">Lihat Profile</a>
+                        <a href="<?= site_url('user/my-profile'); ?>">See Profile</a>
                     </div>
                     <?php if (session('redirected') == 'admin' or session('redirected') == 'superadmin') : ?>
                         <div class="wrapper-a">
-                            <a href="<?= site_url('admin/dashboard'); ?>">Halaman Admin</a>
+                            <a href="<?= site_url('admin/dashboard'); ?>">Admin Page</a>
                         </div>
                     <?php endif ?>
                     <a class="wrapper-logout" href="<?= site_url('user/logout') ?>">

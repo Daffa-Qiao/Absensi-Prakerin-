@@ -241,6 +241,7 @@
                             <?= 'Admin'; ?>
                         <?php endif ?>
                     </span>
+                    <span>
                 </div>
             </a>
 
@@ -404,7 +405,7 @@
                                 </a>
                                 <a class="dropdown-item" href="<?= site_url('user/my-profile'); ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400" aria-hidden="true"></i>
-                                    Halaman User
+                                    User Page
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" onclick="logout()">

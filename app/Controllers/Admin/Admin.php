@@ -136,7 +136,7 @@ class Admin extends BaseController
             'title' => $title,
             'titleSuperAdmin' => 'Super Admin',
         ];
-
+        
         return view('Admin/v_dataSiswa', $data);
     }
     public function data_mahasiswa()

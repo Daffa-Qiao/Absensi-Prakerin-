@@ -29,6 +29,7 @@
                             <th>Profil</th>
                             <th style="min-width: 100px">NIM / NIS</th>
                             <th style="min-width: 200px">Tanggal Bergabung</th>
+                            <th style="min-width: 100px; font-family: 'Times New Roman', Times, serif; font-size:14px"><strong>Status</strong></th>
                             <th style="min-width: 100px">Aksi</th>
                         </tr>
                     </thead>
@@ -62,6 +63,9 @@
                                 </td>
                                 <td>
                                     <?= tanggal_indo($v['tanggal_bergabung']) ?>
+                                </td>
+                                <td style="font-size:12px;background-color: #00FF7F;">
+                                    <?= $v['status']; ?>
                                 </td>
                                 <td>
                                     <?php if (session('member_id') != $v['member_id']): ?>

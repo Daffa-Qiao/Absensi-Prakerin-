@@ -25,57 +25,57 @@ class Modal extends BaseController
             'nama_lengkap' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama Lengkap harus diisi',
+                    'required' => 'Full name must be filled in',
                 ]
             ],
             'nim_nis' => [
                 'rules' => 'required|is_unique[member.nim_nis]|numeric',
                 'errors' => [
-                    'required' => 'NIM/NIS harus diisi',
-                    'is_unique' => 'NIM/NIS sudah terdaftar',
-                    'numeric' => 'NIM/NIS hanya boleh berisi angka',
+                    'required' => 'NIM/NIS must be filled in',
+                    'is_unique' => 'NIM/NIS is already registered',
+                    'numeric' => 'NIM/NIS must only contain numbers',
                 ]
             ],
             'username' => [
                 'rules' => 'required|is_unique[member.username]|regex_match[/^\S+$/]',
                 'errors' => [
-                    'required' => 'Username harus diisi',
-                    'is_unique' => 'Username sudah terdaftar',
-                    'regex_match' => 'Username tidak boleh menggunakan spasi'
+                    'required' => 'Username must be filled in',
+                    'is_unique' => 'Username is already registered',
+                    'regex_match' => 'Username must not use spaces'
                 ]
             ],
             'gender' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Jenis Kelamin harus diisi',
+                    'required' => 'Gender must be filled in',
                 ]
             ],
             'no_hp' => [
                 'rules' => 'required|is_unique[member.no_hp]|regex_match[/^08\d{8,12}$/]',
                 'errors' => [
-                    'required' => 'Nomor Telepon harus diisi',
-                    'is_unique' => 'Nomor Telepon sudah terdaftar',
-                    'regex_match' => 'Nomor Telepon tidak valid'
+                    'required' => 'Phone number must be filled in',
+                    'is_unique' => 'Phone number is already registered',
+                    'regex_match' => 'Invalid phone number'
                 ]
             ],
             'email' => [
                 'rules' => 'required|is_unique[member.email]|valid_email',
                 'errors' => [
-                    'required' => 'Email harus diisi',
-                    'is_unique' => 'Email sudah terdaftar',
-                    'valid_email' => 'Email tidak valid'
+                    'required' => 'Email must be filled in',
+                    'is_unique' => 'Email is already registered',
+                    'valid_email' => 'Email invalid'
                 ]
             ],
             'instansi' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Instansi Pendidikan harus diisi',
+                    'required' => 'Educational institutions must be filled in',
                 ]
             ],
             'nama_instansi' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama Instansi harus diisi',
+                    'required' => 'Educational Institutions must be filled in',
                 ]
             ],
         ];
@@ -108,7 +108,7 @@ class Modal extends BaseController
             $user->save($data);
 
             $hasil['sukses'] = true;
-            notif_swal('success', 'Berhasil Tambah User');
+            notif_swal('success', 'Successfully Add User');
         } else {
             // $hasil['sukses'] = false;
             $hasil = [
@@ -139,64 +139,64 @@ class Modal extends BaseController
             'edit_nama_lengkap' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama Lengkap harus diisi',
+                    'required' => 'Full name must be filled in',
                 ]
             ],
             'edit_nim_nis' => [
                 'rules' => 'required|is_unique[member.nim_nis, member_id,' . $id . ']',
                 'errors' => [
-                    'required' => 'NIM/NIS harus diisi',
-                    'is_unique' => 'NIM/NIS sudah terdaftar'
+                    'required' => 'NIM/NIS must be filled in',
+                    'is_unique' => 'NIM/NIS is already registered',
                 ]
             ],
             'edit_username' => [
                 'rules' => 'required|is_unique[member.username, member_id,' . $id . ']|regex_match[/^\S+$/]',
                 'errors' => [
-                    'required' => 'Username harus diisi',
-                    'is_unique' => 'Username sudah terdaftar',
-                    'regex_match' => 'Username tidak boleh menggunakan spasi'
+                    'required' => 'Username must be filled in',
+                    'is_unique' => 'Username is already registered',
+                    'regex_match' => 'Username must not use spaces'
                 ]
             ],
             'edit_password' => [
                 'rules' => 'required|regex_match[/^\S+$/]|min_length[5]',
                 'errors' => [
-                    'required' => 'Password harus diisi',
-                    'regex_match' => 'Password tidak boleh menggunakan spasi',
-                    'min_length' => 'Minimum panjang password adalah 5 karakter'
+                    'required' => 'Password must be filled in',
+                    'regex_match' => 'Password must not use spaces',
+                    'min_length' => 'Minimum password length is 5 characters'
                 ]
             ],
             'edit_gender' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Jenis Kelamin harus diisi',
+                    'required' => 'Gender must be filled in',
                 ]
             ],
             'edit_no_hp' => [
                 'rules' => 'required|is_unique[member.no_hp, member_id,' . $id . ']|regex_match[/^08\d{8,12}$/]',
                 'errors' => [
-                    'required' => 'Nomor Telepon harus diisi',
-                    'is_unique' => 'Nomor Telepon sudah terdaftar',
-                    'regex_match' => 'Nomor Telepon tidak valid'
+                    'required' => 'Phone number must be filled in',
+                    'is_unique' => 'Phone number is already registered',
+                    'regex_match' => 'Invalid phone number'
                 ]
             ],
             'edit_email' => [
                 'rules' => 'required|is_unique[member.email, member_id,' . $id . ']|valid_email',
                 'errors' => [
-                    'required' => 'Email harus diisi',
-                    'is_unique' => 'Email sudah terdaftar',
-                    'valid_email' => 'Email tidak valid'
+                    'required' => 'Email must be filled in',
+                    'is_unique' => 'Email is already registered',
+                    'valid_email' => 'Email invalid'
                 ]
             ],
             'edit_instansi' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Instansi Pendidikan harus diisi',
+                    'required' => 'Educational institutions must be filled in',
                 ]
             ],
             'edit_nama_instansi' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama Instansi harus diisi',
+                    'required' => 'Educational institutions must be filled in',
                 ]
             ],
         ];

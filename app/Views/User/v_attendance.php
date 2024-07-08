@@ -20,7 +20,7 @@
     <div class="wrapper-body-attendance">
         <div class="body-satu-attendance">
             <div class="date">
-                <div class="text">Waktu & Tanggal</div>
+                <div class="text">Time & Date</div>
                 <div class="date-time">
                     <h3 id="current-time"></h3>
                     <h3 id="date-today"></h3>
@@ -49,7 +49,7 @@
                 <div class="grid-dua-attendance">
                     <div class="wrapper-attendance">
                         <div class="hasilWrapper" id="hasil">
-                            <h3>Hasil Gambar :</h3>
+                            <h3>Image Results :</h3>
                             <div id="results" class=""></div>
                             <input type="hidden" id="photoStore" name="photoStore" value="">
                             <img name="foto" for="absen" class="screenshot" src="<?= base_url('uploadFoto/profile.png') ?>" alt="">

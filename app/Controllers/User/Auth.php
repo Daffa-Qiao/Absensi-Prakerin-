@@ -81,14 +81,14 @@ class Auth extends BaseController
                 'login_id' => [
                     'rules' => 'required|is_not_unique[member.username]',
                     'errors' => [
-                        'required' => 'Username atau Email harus diisi',
-                        'is_not_unique' => 'Username yang dimasukkan tidak terdaftar',
+                        'required' => 'Username or Email required',
+                        'is_not_unique' => 'Username is not registered',
                     ]
                 ],
                 'password' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required' => 'Password harus diisi',
+                        'required' => 'Password required',
                     ]
                 ],
 
@@ -98,14 +98,14 @@ class Auth extends BaseController
                 'login_id' => [
                     'rules' => 'required|is_not_unique[member.email]',
                     'errors' => [
-                        'required' => 'Username atau Email harus diisi',
-                        'is_not_unique' => 'Email yang dimasukkan tidak terdaftar',
+                        'required' => 'Username or Email required',
+                        'is_not_unique' => 'Email is not registered',
                     ]
                 ],
                 'password' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required' => 'Password harus diisi',
+                        'required' => 'Password required',
                     ]
                 ],
 
@@ -148,13 +148,13 @@ class Auth extends BaseController
             if (($password != $memberPassword)) {
                 session()->setFlashdata('login_id', $username);
                 session()->setFlashdata('password', $password);
-                $err = 'Password yang anda masukkan salah';
+                $err = 'Incorrect Password!';
                 return redirect()->back()->with('error', $err);
             }
             if (empty($err)) {
                 if ($memberInfo['is_verifikasi'] != 'yes') {
                     session()->set('member_email', $memberInfo['email']);
-                    $err = 'Akun anda belum diverifikasi, silahkan dapatkan OTP untuk verifikasi';
+                    $err = 'Your account has not been verified, please get OTP for verification.';
                     session()->setFlashdata('error', $err);
                     return redirect()->to('/verifikasi');
                 }
@@ -184,15 +184,15 @@ class Auth extends BaseController
 
                 if ($memberInfo['level'] == 'Super Admin') {
                     session()->set('redirected', 'superadmin');
-                    notif_swal('success', 'Selamat Datang');
+                    notif_swal('success', 'Welcome Super Admin');
                     return redirect()->to('admin/dashboard')->withCookies();
                 } else if ($memberInfo['level'] == 'Admin') {
                     session()->set('redirected', 'admin');
-                    notif_swal('success', 'Selamat Datang');
+                    notif_swal('success', 'Welcome Admin');
                     return redirect()->to('admin/dashboard')->withCookies();
                 } else if ($memberInfo['level'] == 'User') {
                     session()->set('redirected', 'user');
-                    notif_swal('success', 'Selamat Datang');
+                    notif_swal('success', 'Selamat Datang User');
                     return redirect()->to('user/my-profile')->withCookies();
                 }
             }
@@ -206,7 +206,7 @@ class Auth extends BaseController
         delete_cookie('cookie_password');
         /** Untuk session login */
         if (session()->get('logged_in') != '') {
-            session()->setFlashdata('success', 'Berhasil Logout');
+            session()->setFlashdata('success', 'Successfully Logout');
         }
         return view('User/Auth/login');
     }
@@ -230,30 +230,30 @@ class Auth extends BaseController
             'username' => [
                 'rules' => 'required|is_unique[member.username]|regex_match[/^\S+$/]',
                 'errors' => [
-                    'required' => 'Username harus diisi',
-                    'is_unique' => 'Username sudah terdaftar',
-                    'regex_match' => 'Username tidak boleh menggunakan spasi'
+                    'required' => 'Username required',
+                    'is_unique' => 'Username already registered',
+                    'regex_match' => 'Username must not use spaces'
                 ]
             ],
             'email' => [
                 'rules' => 'required|is_unique[member.email]',
                 'errors' => [
-                    'required' => 'Email harus diisi',
-                    'is_unique' => 'Email sudah terdaftar',
+                    'required' => 'Email required',
+                    'is_unique' => 'Email already registered',
                 ]
             ],
             'password' => [
                 'rules' => 'required|min_length[5]|regex_match[/^\S+$/]',
                 'errors' => [
-                    'required' => 'Password harus diisi',
-                    'min_length' => 'Minimum panjang password adalah 5 karakter',
-                    'regex_match' => 'Password tidak boleh menggunakan spasi'
+                    'required' => 'Password required',
+                    'min_length' => 'The minimum password length is 5 characters',
+                    'regex_match' => "Password can't use spaces"
                 ]
             ],
             'konfirmasi_password' => [
                 'rules' => 'matches[password]',
                 'errors' => [
-                    'matches' => 'Konfirmasi Password tidak sesuai',
+                    'matches' => 'Confirmation Password does not match',
                 ]
             ]
         ]);
@@ -288,7 +288,7 @@ class Auth extends BaseController
             if (!$status['success']) {
                 // session()->setFlashdata('error', 'Verifikasi CAPTCHA!');
                 return view('User/Auth/register', [
-                    'captcha' => 'Verifikasi CAPTCHA!'
+                    'captcha' => 'Verify the CAPTCHA!'
                 ]);
             }
 
@@ -300,12 +300,12 @@ class Auth extends BaseController
             $title = "Verifikasi Akun";
             $uniq_id = uniqid();
 
-            $message = ' <p>Berikut ini <a style="text-decoration: none; font-weight: bold;">' . $token . '</a> kode OTP untuk melakukan verifikasi akun anda, atau klik tombol di bawah ini :</p>
+            $message = ' <p>Berikut ini <a style="text-decoration: none; font-weight: bold;">' . $token . '</a> OTP code to verify your account, or click the button below:</p>
                     <div style="text-align: center;">
-                        <a href="' . $link . '" style="display: inline-block; padding: 10px 20px; background-color: #3498db; border-radius: 5px; text-decoration: none; color: white;">Verifikasi</a>
+                        <a href="' . $link . '" style="display: inline-block; padding: 10px 20px; background-color: #3498db; border-radius: 5px; text-decoration: none; color: white;">Verify</a>
                     </div>
                     <hr style="border-top: 2px solid ; margin-top: 2rem;">
-                    <h3 style="margin-top: 1rem;">CATATAN : Kode OTP akan kadaluwarsa dalam 15 menit. Harap segera gunakkan</h3>
+                    <h3 style="margin-top: 1rem;">NOTE: The OTP code will expire in 15 minutes. Please use it immediately</h3>
                     <div style="display: none;">' . $uniq_id . '</div>';
             kirim_email($attachment, $to, $title, $message);
 
@@ -325,7 +325,7 @@ class Auth extends BaseController
             ];
             session()->set($dataSesi);
             /**Pesan sukses */
-            session()->setFlashdata("success", "Berhasil register, kode OTP sudah dikirim ke Email anda");
+            session()->setFlashdata("success", "Successfully registered, OTP code has been sent to your Email");
             return redirect()->to('/verifikasi');
         }
     }
@@ -376,7 +376,7 @@ class Auth extends BaseController
                 'akun_username' => $dataAkun['username'],
                 'member_email' => $dataAkun['email']
             ]);
-            notif_swal_dua('info', 'Lengkapi data berikut untuk melanjutkan proses verifikasi');
+            notif_swal_dua('info', 'Complete the following data to continue the verification process');
             return redirect()->to('user/index');
         }
 
@@ -391,7 +391,7 @@ class Auth extends BaseController
                     'akun_username' => $dataAkun['username'],
                     'member_email' => $dataAkun['email'],
                 ]);
-                notif_swal_dua('info', 'Lengkapi data berikut untuk melanjutkan proses verifikasi');
+                notif_swal_dua('info', 'Complete the following data to continue the verification process');
                 return redirect()->to('user/index');
             }
         }
@@ -416,7 +416,7 @@ class Auth extends BaseController
         $dataUser = $user->where('email', $email)->get()->getRowArray();
 
         if ($dataUser['token'] != $token) {
-            session()->setFlashdata('error', 'Kode OTP tidak valid');
+            session()->setFlashdata('error', 'Invalid OTP code');
             return redirect()->back();
         } else {
             $user->save([
@@ -428,7 +428,7 @@ class Auth extends BaseController
                 'akun_username' => $dataUser['username'],
                 'member_email' => $dataUser['email'],
             ]);
-            notif_swal_dua('info', 'Lengkapi data berikut untuk melanjutkan proses verifikasi');
+            notif_swal_dua('info', 'Complete the following data to continue the verification process');
             return redirect()->to('user/index');
         }
     }
@@ -456,12 +456,12 @@ class Auth extends BaseController
         $title = "Verifikasi Akun";
         $uniq_id = uniqid();
 
-        $message = ' <p>Berikut ini <a style="text-decoration: none; font-weight: bold;">' . $token . '</a> kode OTP untuk melakukan verifikasi akun anda, atau klik tombol di bawah ini :</p>
+        $message = ' <p>Berikut ini <a style="text-decoration: none; font-weight: bold;">' . $token . '</a> OTP code to verify your account, or click the button below:</p>
                     <div style="text-align: center;">
-                        <a href="' . $link . '" style="display: inline-block; padding: 10px 20px; background-color: #3498db; border-radius: 5px; text-decoration: none; color: white;">Verifikasi</a>
+                        <a href="' . $link . '" style="display: inline-block; padding: 10px 20px; background-color: #3498db; border-radius: 5px; text-decoration: none; color: white;">Verify</a>
                     </div>
                     <hr style="border-top: 2px solid ; margin-top: 2rem;">
-                    <h3 style="margin-top: 1rem;">CATATAN : Kode OTP akan kadaluwarsa dalam 15 menit. Harap segera gunakkan</h3>
+                    <h3 style="margin-top: 1rem;">NOTE: The OTP code will expire in 15 minutes. Please use it immediately</h3>
                     <div style="display: none;">' . $uniq_id . '</div>';
         kirim_email($attachment, $to, $title, $message);
 
@@ -539,41 +539,41 @@ class Auth extends BaseController
             'nama_lengkap' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama Lengkap harus diisi',
+                    'required' => 'Full Name required',
                 ]
             ],
             'nim_nis' => [
                 'rules' => 'required|is_unique[member.nim_nis]',
                 'errors' => [
-                    'required' => 'NIS/NIM harus diisi',
-                    'is_unique' => 'NIS/NIM sudah terdaftar',
+                    'required' => 'NIS/NIM required',
+                    'is_unique' => 'NIS/NIM already registered',
                 ]
             ],
             'gender' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Jenis Kelamin harus diisi'
+                    'required' => 'Gender is required'
                 ]
             ],
             'instansi' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Instansi Pendidikan harus diisi'
+                    'required' => 'University Name required'
                 ]
             ],
             'nama_instansi' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama Instansi harus diisi',
+                    'required' => 'School Name required',
                 ]
             ],
             'no_hp' => [
                 'rules' => 'required|is_unique[member.no_hp]|numeric|regex_match[/^08\d{8,12}$/]',
                 'errors' => [
-                    'required' => 'Nomor Telepon harus diisi',
-                    'numeric' => 'Nomor Telepon hanya boleh berisi angka',
-                    'is_unique' => 'Nomor Telepon sudah terdaftar',
-                    'regex_match' => 'Nomor Telepon tidak valid'
+                    'required' => 'Phone Number required',
+                    'numeric' => 'Phone numbers can only contain numbers',
+                    'is_unique' => 'Phone number already registered',
+                    'regex_match' => 'Phone number not valid'
                 ]
             ]
         ]);
@@ -635,7 +635,7 @@ class Auth extends BaseController
                     $member = new MemberModel();
                     $memberInfo = $member->where($fieldType, $userInput)->first();
                     if (!$memberInfo) {
-                        $err = 'Email yang dimasukkan tidak terdaftar';
+                        $err = 'Email not registered';
                     }
                 }
             }
@@ -645,7 +645,7 @@ class Auth extends BaseController
                     $member = new MemberModel();
                     $memberInfo = $member->where($fieldType, $userInput)->first();
                     if (!$memberInfo) {
-                        $err = 'Username yang dimasukkan tidak terdaftar';
+                        $err = 'Username not registered';
                     }
                 }
             }
@@ -660,12 +660,12 @@ class Auth extends BaseController
                 $title = "Reset Password";
                 $uniq_id = uniqid();
 
-                $message = '<p>Berikut ini link untuk melakukan reset password anda, klik tombol di bawah ini :</p>
+                $message = '<p>Here is the link to reset your password, click the button below:</p>
                     <div style="text-align: center;">
                         <a href="' . $link . '" style="display: inline-block; padding: 10px 20px; background-color: #3498db; border-radius: 5px; text-decoration: none; color: white;">Reset Password</a>
                     </div>
                     <hr style="border-top: 2px solid ; margin-top: 2rem;">
-                    <h3 style="margin-top: 1rem;">CATATAN : Link Reset Password akan kadaluwarsa dalam 15 menit. Harap segera gunakkan</h3>
+                    <h3 style="margin-top: 1rem;">NOTES: The Password Reset link will expire in 15 minutes. Please use it immediately</h3>
                     <div style="display: none;">' . $uniq_id . '</div>';
                 kirim_email($attachment, $to, $title, $message);
 
@@ -676,7 +676,7 @@ class Auth extends BaseController
                 $member->where('email', $email)->set($dataUpdate)->update();
 
                 session()->set('email', $email);
-                session()->setFlashdata('success', 'Link reset password telah dikirim ke email anda');
+                session()->setFlashdata('success', 'Password reset link has been sent to your email');
                 return redirect()->back();
             }
 
@@ -697,7 +697,7 @@ class Auth extends BaseController
         $token = $this->request->getVar('token');
         $email = $this->request->getVar('email');
         if ($email == '' or $token == '') {
-            $err = 'Link reset password error, silahkan dapatkan link kembali';
+            $err = 'Password reset link error, please get the link backi';
             session()->setFlashdata('error', $err);
             return redirect()->to('forgetpassword');
         }
@@ -718,7 +718,7 @@ class Auth extends BaseController
         $dataToken = $memberInfo['token'];
 
         if ($dataToken != $token) {
-            $err = 'Link reset password error, silahkan dapatkan link kembali';
+            $err = 'Password reset link error, please get the link back';
             session()->setFlashdata('error', $err);
             return redirect()->to('/forgetpassword');
         }
@@ -727,15 +727,15 @@ class Auth extends BaseController
             'password' => [
                 'rules' => 'required|min_length[5]',
                 'errors' => [
-                    'required' => 'Password harus diisi',
-                    'min_length' => 'Minimum panjang untuk Password adalah 5 karakter'
+                    'required' => 'Password required',
+                    'min_length' => 'Minimum length for Password is 5 characters'
                 ]
             ],
             'konfirmasi_password' => [
                 'rules' => 'required|matches[password]',
                 'errors' => [
-                    'required' => 'Konfirmasi Password tidak sesuai',
-                    'matches' => 'Konfirmasi Password harus sama dengan Password'
+                    'required' => 'Confirmation Password does not match',
+                    'matches' => 'Confirmation Password must be the same as the Password'
                 ]
             ]
         ]);
@@ -749,7 +749,7 @@ class Auth extends BaseController
             $password = $this->request->getVar('password');
             $dataUser = $member->where('email', $email)->first();
             if ($password == $dataUser['password']) {
-                session()->setFlashdata('error', 'Password sudah digunakkan');
+                session()->setFlashdata('error', 'Password already used');
                 return redirect()->back();
             }
             $dataUpdate = [
@@ -758,7 +758,7 @@ class Auth extends BaseController
             ];
             $member->where('email', $email)->set($dataUpdate)->update();
             session()->remove('email');
-            session()->setFlashdata('success', 'Password berhasil direset, silahkan login');
+            session()->setFlashdata('success', 'Password reset successfully, please login again');
             return redirect()->to('/login');
         }
     }

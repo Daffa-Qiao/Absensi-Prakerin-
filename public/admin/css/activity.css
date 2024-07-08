@@ -104,8 +104,50 @@
   text-align: center;
 }
 
-.body-dua-activity .grid-satu-activity {
+.grid-satu-activity {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  max-width: 450px;
+  margin: 20px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+.container h3 {
+  text-align: start;
+}
+#my_camera {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+#takephoto {
+  position: relative;
+  right: 10px;
+  top: 35%;
+  transform: translateY(-50%);
+  background-color: #00bfff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#takephoto a {
+  color: white;
+  text-decoration: none;
+}
+#takephoto i {
+  font-size: 20px;
+}
+.keterangan{
   display: flex;
+  width: 100%;
+  height: 200px;
+  margin: 4px;
+  align-content: flex-start;
+  justify-content: flex-start;
 }
 
 .body-dua-activity .wrapper-image {
@@ -138,16 +180,10 @@
   height: auto !important;
 }
 
-div.wrapper-activity {
-  height: 220px;
-  width: 224px;
-}
-
 img.screenshot {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   position: relative;
-
   border: 2px solid;
 }
 
@@ -167,7 +203,7 @@ video {
   min-width: 297px;
   min-height: 224px;
   border: 2px solid;
-  object-fit: cover;
+  object-fit: contain;
   z-index: 1;
 }
 
@@ -232,7 +268,7 @@ nav.close {
 .body-dua-activity .grid-dua-activity {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   margin-bottom: 5px;
 }
 
@@ -342,7 +378,7 @@ nav.close {
 
   .body-dua-activity .wrapper-image {
     width: 90%;
-    /* height: 280px; */
+    height: 280px;
     display: grid;
     align-items: center;
     justify-items: center;
