@@ -5,6 +5,8 @@ namespace App\Controllers\User;
 use App\Controllers\BaseController;
 use App\Models\MemberModel;
 use App\Models\Absensi;
+use App\Models\Instansi;
+use App\Models\Laporan;
 use App\Validations\CustomRules;
 
 
@@ -21,12 +23,11 @@ class User extends BaseController
 
     public function index()
     {
-
         $data['halaman'] = 'User | My Profile';
         $data['title'] = 'My Profile';
         $data['aktif_profile'] = 'aktif';
         $data['namaFile'] = session()->get('member_foto');
-        echo view('User/v_my-profile', $data);
+        return view('User/v_my-profile', $data);
     }
     public function attendance()
     {
@@ -122,7 +123,7 @@ class User extends BaseController
             $binary_data = base64_decode($encoded_data, true);
             $photoname = date("Y.m.d") . " - " . date("H.i.s") . '.jpeg';
             $lokasi = ('lat: ' . $lat . ', long: ' . $long);
-            file_put_contents(FCPATH . 'uploadFoto/' . $photoname, $binary_data); 
+            file_put_contents(FCPATH . 'uploadFoto/' . $photoname, $binary_data);
             $updateData = [
                 'checkout_time' => $currentTime,
             ];
@@ -133,8 +134,6 @@ class User extends BaseController
             notif_swal_tiga('success', 'Berhasil Check-out', $currentTime);
             return redirect()->back();
         }
-
-
     }
     public function permission()
     {
@@ -200,7 +199,6 @@ class User extends BaseController
             notif_swal_tiga('success', $currentTime, 'Successful Absence ' . $status);
             return redirect()->back();
         }
-
     }
     public function historyAttendace()
     {
@@ -409,11 +407,11 @@ class User extends BaseController
     }
     public function historyActivity()
     {
-        $activity = new Absensi();
+        $activity = new Laporan();
         $user = new MemberModel();
         $sesi_nim = session()->get('member_nim_nis');
         $jumlahBaris = 10;
-        $currentPage = $this->request->getVar('page_absensi');
+        $currentPage = $this->request->getVar('page_activity');
         $dataActivity = $activity->where('nim_nis', $sesi_nim)->orderBy('id', 'desc')->paginate($jumlahBaris, 'absensi');
         $nama_lengkap = [];
         foreach ($dataActivity as $v) {
@@ -426,11 +424,19 @@ class User extends BaseController
             'title' => 'History Activity',
             'namaFile' => session()->get('member_foto'),
             'aktif_history_activity' => 'aktif',
-            'dataActivity' => $dataActivity ,
+            'dataActivity' => $dataActivity,
             'pager' => $activity->pager,
             'nomor' => nomor($currentPage, $jumlahBaris),
             'nama_lengkap' => $nama_lengkap
         ];
         return view('User/v_historyActivity', $data);
+    }
+
+    public function logoSekolah()
+    {
+        $instansi = new Instansi();
+        $user = new MemberModel();
+        $sesi_nim = session()->get('member_nim_nis');
+        
     }
 }

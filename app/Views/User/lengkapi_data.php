@@ -78,7 +78,7 @@
                     <!-- Untuk input file foto  -->
                     <input name="profile" type="file" id="upload" accept=".png, .jpg, .jpeg" hidden />
                     <div class="identitas-profile">
-                        <label for="nama_lengkap">Nama Lengkap : </label>
+                        <label for="nama_lengkap">Full Name : </label>
                         <input type="text" name="nama_lengkap"
                             class="form-control <?= ($validation->hasError('nama_lengkap')) ? 'is-invalid' : ''; ?>"
                             id="" value="<?= set_value('nama_lengkap') ?>" required />

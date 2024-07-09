@@ -31,45 +31,68 @@
             <form id="myForm" action="<?= site_url('user/activityProccess') ?>" method="post" enctype="multipart/form-data">
                 <div class="grid-satu-activity">
                     <div class="row justify-content-md-center">
-                            <div class="container">
-                        <h3>Documentation</h3>
-                        <div class="row">
-                            <div class="col-sm">
-                                <div id="my_camera" class="mx-auto rounded overflow-hidden col-lg"></div>
-                            </div>
-                            <div class="col">
-                                <button type="button" id="takephoto" style="border:2px solid black">
-                                    <a href="#hasil">
-                                        <i class="fa-solid fa-camera"></i>
-                                    </a>
-                                </button>
+                        <div class="container">
+                            <h3>Documentation</h3>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div id="my_camera" class="mx-auto rounded overflow-hidden col-lg"></div>
+                                </div>
+                                <div class="col">
+                                    <button type="button" id="takephoto" style="border:2px solid black">
+                                        <a href="#hasil">
+                                            <i class="fa-solid fa-camera"></i>
+                                        </a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <div class="grid-dua-activity">
-                    <div class="container">
-                            <div class="row mx-2">
-                                <div class="col" style="border:2px solid black">
-                                    <input class="keterangan" type="text" name="Keterangan" id="keterangan"/>
-                                    <div class="buttonWrapper">
-                                        <input type="submit" name="mulai" value="Start Time" class="bg-success bg-gradient">
-                                        <input type="submit" name="selesai" value="End Time" class="bg-primary bg-gradient">
-                                    </div>
+                    <div class="container" style="justIfy-content:start">
+                        <div class="row mt-5">
+                            <div class="col-6" style="border:2px solid black; width:49%">
+                                <textarea rows="8" placeholder="Description...." style="width: 100%; padding:12px 15px; margin-top:12px; border:2px solid black"></textarea>
+                                <select class="form-select border border-dark" aria-label="multiple select example">
+                                    <option selected>Location</option>
+                                    <optgroup label="Gedung Karya">
+                                        <option value="Gedung Karya Lantai 1">Lantai 1</option>
+                                        <option value="Gedung Karya Lantai 2">Lantai 2</option>
+                                        <option value="Gedung Karya Lantai 3">Lantai 3</option>
+                                    </optgroup>
+                                    <optgroup label="Gedung Karsa">
+                                        <option value="Gedung Karsa Lantai 1">Lantai 1</option>
+                                        <option value="Gedung Karsa Lantai 2">Lantai 2</option>
+                                        <option value="Gedung Karsa Lantai 3">Lantai 3</option>
+                                    </optgroup>
+                                    <optgroup label="Cipta">
+                                        <option value="Gedung Cipta Lantai 1">Lantai 1</option>
+                                        <option value="Gedung Cipta Lantai 2">Lantai 2</option>
+                                        <option value="Gedung Cipta Lantai 3">Lantai 3</option>
+                                        <option value="Gedung Cipta Lantai 4">Lantai 4</option>
+                                        <option value="Gedung Cipta Lantai 5">Lantai 5</option>
+                                        <option value="Gedung Cipta Lantai 6">Lantai 6</option>
+                                        <option value="Gedung Cipta Lantai 7">Lantai 7</option>
+                                        <option value="Gedung Cipta Lantai 8">Lantai 8</option>
+                                    </optgroup>
+                                </select>
+                                <div class="buttonWrapper">
+                                    <button type="submit" class="btn btn-primary" name="mulai" value="Start Time" style="border:2px solid black;">Start Time</button>
+                                    <button type="submit" class="btn btn-success" name="selesai" value="End Time" style="border:2px solid black;">End Time</button>
                                 </div>
-                                <div class="col" style="border:2px solid black">
-                                    <h3>Hasil Dokumentasi :</h3>
-                                    <div id="results" class=""></div>
-                                        <input type="hidden" id="photoStore" name="photoStore" value="">
-                                        <!-- <img name="foto" for="activity" class="screenshot" src="<?= base_url('uploadFoto/profile.png') ?>" alt=""> -->
-                                    </div>
+                            </div>
+                            <div class="col-6 ml-4" style="border:2px solid black; margin-left:8px">
+                                <h3 style="margin:10px;">Hasil Dokumentasi :</h3>
+                                <div id="results" class=""></div>
+                                <input type="hidden" id="photoStore" name="photoStore" value="">
+                                <!-- <img name="foto" for="activity" class="screenshot" src="<?= base_url('uploadFoto/profile.png') ?>" alt=""> -->
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>
         </div>
+        </form>
+    </div>
     </div>
     <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
     </script> -->

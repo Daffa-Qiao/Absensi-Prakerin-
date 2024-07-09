@@ -43,7 +43,7 @@
                     <div class="col-sm-4 col-md-4">
                         <div class="form-group basic mb-0 my-2">
                             <div class="input-wrapper">
-                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Tanggal Awal :
+                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Date :
                                 </label>
                                 <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date"
                                     value="<?= (isset($start_date) ? $start_date : ''); ?>" />
@@ -54,7 +54,7 @@
                     <div class="col-sm-4 col-md-4 my-2">
                         <div class="form-group basic mb-0">
                             <div class="input-wrapper">
-                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Tanggal Akhir :
+                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Date :
                                 </label>
                                 <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date"
                                     value="<?= (isset($end_date) ? $end_date : ''); ?>" />
@@ -72,7 +72,7 @@
             <div class="row text-center justify-content-center py-2">
                 <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
                     <select name="namaLengkap" id="select" class="form-control">
-                        <option value="all">TAMPILKAN SEMUA</option>
+                        <option value="all">SHOW ALL</option>
                         <?php foreach ($dataUser as $usr): ?>
                             <option value="<?= $usr['nama_lengkap'] ?>">
                                 <?= $usr['nama_lengkap'] ?>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
                     <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6" data-toggle="modal"
-                        data-target="#modalLaporan"><i class="fa-solid fa-pen"></i> Tambah Laporan
+                        data-target="#modalLaporan"><i class="fa-solid fa-pen"></i> Add Report
                     </button>
                 </div>
 
@@ -91,7 +91,7 @@
     </div>
 
     <!-- DataTales Example -->
-    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">List Laporan</div>
+    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">Report List</div>
     <div class="card shadow mb-2">
         <div class="card-body border-bottom">
             <div class="table-responsive">
@@ -99,11 +99,11 @@
                     <thead class="border">
                         <tr>
                             <th>No.</th>
-                            <th style="min-width: 190px" class="text-center">Tanggal</th>
-                            <th style="min-width: 200px">Nama Lengkap</th>
+                            <th style="min-width: 190px" class="text-center">Date</th>
+                            <th style="min-width: 200px">Full Name</th>
                             <th>Status</th>
-                            <th>Keterangan</th>
-                            <th>Foto</th>
+                            <th>Description</th>
+                            <th>Photo</th>
                         </tr>
                     </thead>
                     <tbody class="border" id="dataTableBody">

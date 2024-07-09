@@ -149,18 +149,21 @@
   align-content: flex-start;
   justify-content: flex-start;
 }
-
 .body-dua-activity .wrapper-image {
   padding: 10px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; 
   border: solid 2px;
   margin: 15px;
   width: 40%;
   text-align: center;
 }
-
+.buttonWrapper{
+  margin: 10px 0px;
+  display: flex;
+  justify-content:space-between;
+}
 .body-dua-activity .wrapper-image .text {
   display: flex;
   margin-bottom: 5px;
@@ -267,17 +270,17 @@ nav.close {
 
 .body-dua-activity .grid-dua-activity {
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
+  justify-content: start;
+  align-items: flex-start;
   margin-bottom: 5px;
 }
 
 .grid-dua-activity .wrapper-activity {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   border: 2px solid;
-  width: 700px;
+  /* width: 700px; */
   height: 350px;
 }
 
@@ -287,6 +290,7 @@ nav.close {
   height: 220px;
   width: 280px;
   background-color: wheat;
+  margin: 100px;
 }
 
 .grid-dua-activity .hasilWrapper {

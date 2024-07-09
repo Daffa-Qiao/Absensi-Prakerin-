@@ -79,8 +79,8 @@ class Admin extends BaseController
         $dataUser = $user->orderBy('nama_lengkap', 'asc')->where('is_verifikasi', 'yes')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_dataAbsen = 'aktif';
-        $halaman = 'Admin | Data Absensi';
-        $title = 'Data Absensi';
+        $halaman = 'Admin | Attendance Data';
+        $title = 'Attendance Data';
 
         $data = [
             'nama_lengkap' => $nama_lengkap,
@@ -124,8 +124,8 @@ class Admin extends BaseController
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_dataUser = 'aktif';
         $aktif_dataSiswa = 'aktif';
-        $halaman = 'Admin | Data Siswa';
-        $title = 'Data Siswa';
+        $halaman = 'Admin | Student Data';
+        $title = 'Student Data';
 
         $data = [
             'dataSiswa' => $dataSiswa,
@@ -136,7 +136,7 @@ class Admin extends BaseController
             'title' => $title,
             'titleSuperAdmin' => 'Super Admin',
         ];
-        
+
         return view('Admin/v_dataSiswa', $data);
     }
     public function data_mahasiswa()
@@ -149,8 +149,8 @@ class Admin extends BaseController
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_dataUser = 'aktif';
         $aktif_dataMahasiswa = 'aktif';
-        $halaman = 'Admin | Data Mahasiswa';
-        $title = 'Data Mahasiswa';
+        $halaman = 'Admin | Student Data';
+        $title = 'Collage Student Data';
 
         $data = [
             'dataMahasiswa' => $dataMahasiswa,
@@ -369,8 +369,8 @@ class Admin extends BaseController
         $dataUser = $user->where('jenis_user', 'Siswa')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapSiswa = 'aktif';
-        $halaman = 'Admin | Rekap Siswa';
-        $title = 'Rekap Siswa';
+        $halaman = 'Admin | Student Recap';
+        $title = 'Student Recap';
 
         $data = [
             'dataUser' => $dataUser,
@@ -409,8 +409,8 @@ class Admin extends BaseController
         $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Mahasiswa')->findAll();
         $dataUser = $user->where('jenis_user', 'Mahasiswa')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
-        $halaman = 'Admin | Rekap Mahasiswa';
-        $title = 'Rekap Mahasiswa';
+        $halaman = 'Admin | Collage Student Recap';
+        $title = 'Collage Student Recap';
 
         $data = [
             'dataUser' => $dataUser,
@@ -472,8 +472,8 @@ class Admin extends BaseController
         }
         $dataUser = $user->orderBy('nama_lengkap', 'asc')->where('is_verifikasi', 'yes')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
-        $halaman = 'Admin | Data Laporan';
-        $title = 'Data Laporan';
+        $halaman = 'Admin | Report Data';
+        $title = 'Report Data';
 
         $data = [
             'nama_lengkap' => $nama_lengkap,

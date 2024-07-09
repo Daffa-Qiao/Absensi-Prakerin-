@@ -20,18 +20,18 @@
                     <thead class="border">
                         <tr>
                             <th>No</th>
-                            <th>Nama Lengkap</th>
+                            <th>Full Name</th>
                             <th>NIM / NIS</th>
                             <th>Username</th>
                             <th>Email</th>
-                            <th>No. Telepon</th>
+                            <th>Phone Number</th>
                             <th>Role</th>
                         </tr>
                     </thead>
                     <tbody class="border">
                         <?php foreach ($dataUser as $v) {
 
-                            ?>
+                        ?>
                             <tr>
                                 <td class="text-center">
                                     <?= $nomor; ?>
@@ -56,7 +56,7 @@
                                 </td>
                             </tr>
 
-                            <?php
+                        <?php
                             $nomor++;
                         } ?>
                     </tbody>
@@ -69,7 +69,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    <?php if (session()->getFlashdata('swal_icon')): ?>
+    <?php if (session()->getFlashdata('swal_icon')) : ?>
         Swal.fire({
             icon: '<?= session()->getFlashdata('swal_icon'); ?>',
             title: '<?= session()->getFlashdata('swal_title'); ?>',
@@ -82,7 +82,7 @@
         $.ajax({
             url: "<?= site_url('admin/superadmin/super_admin_edit') ?>/" + $id,
             type: "GET",
-            success: function (hasil) {
+            success: function(hasil) {
                 var $obj = $.parseJSON(hasil);
                 if ($obj.id != "") {
                     $("#superId").val($obj.member_id);

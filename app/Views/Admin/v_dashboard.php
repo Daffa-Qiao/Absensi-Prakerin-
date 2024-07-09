@@ -16,7 +16,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-                                    Sekolah
+                                    School
                                 </div>
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="sekolah">
                                     <?= $totalSekolah ?>
@@ -39,9 +39,8 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-3">
-                                <div class="text-xl font-weight-bold text-info text-uppercase mb-1"
-                                    style="width: 100px;">
-                                    Siswa
+                                <div class="text-xl font-weight-bold text-info text-uppercase mb-1" style="width: 100px;">
+                                    Student
                                 </div>
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="card-ssw">
                                     <?= $totalSiswa ?>
@@ -70,7 +69,7 @@
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="aktif">
                                     <?= $totalUser; ?>
                                 </div>
-                                <?php if (session('redirected') == 'superadmin'): ?>
+                                <?php if (session('redirected') == 'superadmin') : ?>
                                     <div class="font-weight-bold text-primary mt-1">
                                         <a href="<?= site_url('admin/super-admin'); ?>">Info
                                             <i class="fa-regular fa-circle-right"></i>
@@ -91,7 +90,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-                                    Universitas
+                                    University
                                 </div>
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="univ">
                                     <?= $totalUniv ?>
@@ -115,7 +114,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xl font-weight-bold text-info text-uppercase mb-1">
-                                    Mahasiswa
+                                College Student
                                 </div>
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="card-mhs">
                                     <?= $totalMahasiswa ?>
@@ -159,7 +158,7 @@
             </div>
         </div>
     </div>
-    <div class="title text-dark font-weight-bold px-1 rounded-top mt-2 pl-3">Update Absen Bulan Ini</div>
+    <div class="title text-dark font-weight-bold px-1 rounded-top mt-2 pl-3">This Month's Absence Update</div>
     <div class="card shadow mb-2">
         <div class="card-body border-bottom">
             <div class="table-responsive">
@@ -167,9 +166,9 @@
                     <thead class="border">
                         <tr>
                             <th class="">Data User</th>
-                            <th class="" style="width: 100px;">Hadir</th>
-                            <th class="" style="width: 100px;">Izin</th>
-                            <th class="" style="width: 100px;">Sakit</th>
+                            <th class="" style="width: 100px;">Attended</th>
+                            <th class="" style="width: 100px;">Permission</th>
+                            <th class="" style="width: 100px;">Sick</th>
                         </tr>
                     </thead>
                     <tbody class="border">
@@ -185,11 +184,10 @@
                             } else if ($jenis_user == 'Mahasiswa') {
                                 $jenis = 'text-primary';
                             }
-                            ?>
+                        ?>
                             <tr>
                                 <td class="dashboard">
-                                    <img src="<?= base_url('uploadFoto/' . $profil) ?>" alt=""
-                                        onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $profil) ?>')" />
+                                    <img src="<?= base_url('uploadFoto/' . $profil) ?>" alt="" onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $profil) ?>')" />
                                     <div class="wrapper-tdSatu">
                                         <p class="dashboard nama" name="nama">
                                             <?= $namaLengkap ?>
@@ -209,7 +207,7 @@
                                     <?= $totalAbsensi[$v->nim_nis]['sakit']; ?>
                                 </td>
                             </tr>
-                            <?php
+                        <?php
                         } ?>
                     </tbody>
                 </table>
@@ -225,11 +223,10 @@
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-<?php if (session()->getFlashdata('swal_icon')): ?> Swal.fire({
-        icon: '<?= session()->getFlashdata('swal_icon'); ?>',
-        title: '<?= session()->getFlashdata('swal_title'); ?>',
-    })
+    <?php if (session()->getFlashdata('swal_icon')) : ?> Swal.fire({
+            icon: '<?= session()->getFlashdata('swal_icon'); ?>',
+            title: '<?= session()->getFlashdata('swal_title'); ?>',
+        })
     <?php endif; ?>
-
 </script>
 <?= $this->endSection(); ?>

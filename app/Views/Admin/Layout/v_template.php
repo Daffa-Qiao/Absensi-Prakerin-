@@ -13,16 +13,13 @@
     </title>
 
     <!-- Custom fonts for this template -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.jqueryui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.jqueryui.css" />
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/dashboard.css" />
     <link href="<?= base_url(); ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/fb6ebd8b45.js" crossorigin="anonymous"></script>
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <!-- Custom styles for this template -->
     <link href="<?= base_url('admin'); ?>/css/sb-admin-2.min.css" rel="stylesheet" />
     <!-- Custom styles for this page -->
@@ -223,26 +220,27 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"
-            style="height: 100vh; position: sticky; top: 0; right: 0; z-index: 1">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="height: 100vh; position: sticky; top: 0; right: 0; z-index: 1">
             <!-- Sidebar - Brand -->
-            <a class="ml-10 sidebar-brand d-flex align-items-center justify-content-center" href="#"
-                style="cursor: default;">
+            <a class="ml-10 sidebar-brand d-flex align-items-center justify-content-center" href="#" style="cursor: default;">
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-user" aria-hidden="true"></i>
                 </div>
 
                 <div class="sidebar-brand-text mx-3">
                     <span style="font-size: 17px">
-                        <?php if (session('redirected') == 'superadmin'): ?>
+                        <?php if (session('redirected') == 'superadmin') : ?>
                             <?= 'Super Admin'; ?>
                         <?php endif ?>
-                        <?php if (session('redirected') == 'admin'): ?>
+                        <?php if (session('redirected') == 'admin') : ?>
                             <?= 'Admin'; ?>
                         <?php endif ?>
+
+                        <h6 style="font-size: 8px"> Kementrian Perhubungan
+                        </h6>
                     </span>
-                    <span>
                 </div>
+
             </a>
 
             <!-- Divider -->
@@ -255,7 +253,7 @@
                 <a class="nav-link" href="<?= site_url('admin/dashboard'); ?>">
                     <i class="fa-solid fa-gauge-high"></i>
                     <span>Dashboard</span></a>
-            </li> 
+            </li>
 
             <!-- Divider -->
 
@@ -265,68 +263,57 @@
                 <a class="nav-link" href="<?= site_url('admin/data-absen'); ?>">
                     <i class="fa-solid fa-file-pen" aria-hidden="true"></i>
                     <!-- <i class="fas fa-fw fa-tachometer-alt" aria-hidden="true"></i> -->
-                    <span>Data Absensi</span></a>
+                    <span>Attendance Data</span></a>
             </li>
 
             <li class="nav-item <?= (isset($aktif_dataLaporan)) ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= site_url('admin/data-laporan'); ?>">
-                <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
+                    <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
                     <!-- <i class="fas fa-fw fa-tachometer-alt" aria-hidden="true"></i> -->
-                    <span>Data Laporan</span></a>
+                    <span>Report Data</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_dataUser)) ? 'active' : '' ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-user" aria-hidden="true"></i>
                     <span>Data User</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">PILIHAN :</h6>
-                        <a class="collapse-item ssw <?= (isset($aktif_dataSiswa)) ? 'active text-warning' : '' ?>"
-                            href="<?= site_url('admin/data-siswa'); ?>">Siswa</a>
-                        <a class="collapse-item mhs <?= (isset($aktif_dataMahasiswa)) ? 'active text-info' : '' ?>"
-                            href="<?= site_url('admin/data-mahasiswa'); ?>">Mahasiswa</a>
+                        <h6 class="collapse-header">OPTIONS:</h6>
+                        <a class="collapse-item ssw <?= (isset($aktif_dataSiswa)) ? 'active text-warning' : '' ?>" href="<?= site_url('admin/data-siswa'); ?>">Student</a>
+                        <a class="collapse-item mhs <?= (isset($aktif_dataMahasiswa)) ? 'active text-info' : '' ?>" href="<?= site_url('admin/data-mahasiswa'); ?>">College Student</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_instansi) ? $aktif_instansi : ''); ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-school" aria-hidden="true"></i>
-                    <span>Instansi Pendidikan</span>
+                    <span>Educational Institutions</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">PILIHAN:</h6>
-                        <a class="collapse-item ssw <?= (isset($aktif_sekolah) ? 'active text-warning' : ''); ?>"
-                            href="<?= site_url('admin/instansi-sekolah'); ?>">Sekolah</a>
-                        <a class="collapse-item mhs <?= (isset($aktif_universitas) ? 'active text-info' : ''); ?>"
-                            href="<?= site_url('admin/instansi-universitas'); ?>">Universitas</a>
+                        <h6 class="collapse-header">OPTIONS:</h6>
+                        <a class="collapse-item ssw <?= (isset($aktif_sekolah) ? 'active text-warning' : ''); ?>" href="<?= site_url('admin/instansi-sekolah'); ?>">School</a>
+                        <a class="collapse-item mhs <?= (isset($aktif_universitas) ? 'active text-info' : ''); ?>" href="<?= site_url('admin/instansi-universitas'); ?>">University</a>
                     </div>
                 </div>
             </li>
 
             <!-- Divider -->
             <li class="nav-item <?= (isset($aktif_rekapAbsensi) ? 'active' : ''); ?>">
-                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
+                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     <i class="fas fa-user-tie" aria-hidden="true"></i>
-                    <span>Rekap Absensi</span>
+                    <span>Attendance Recap</span>
                 </a>
-                <div id="collapseOne" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseOne" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">PILIHAN:</h6>
-                        <a class="collapse-item ssw <?= (isset($aktif_rekapSiswa) ? 'active text-warning' : ''); ?>"
-                            href="<?= site_url('admin/rekap-siswa'); ?>">Siswa</a>
-                        <a class="collapse-item mhs <?= (isset($aktif_rekapMahasiswa) ? 'active text-info' : ''); ?>"
-                            href="<?= site_url('admin/rekap-mahasiswa'); ?>">Mahasiswa</a>
+                        <h6 class="collapse-header">OPTIONS:</h6>
+                        <a class="collapse-item ssw <?= (isset($aktif_rekapSiswa) ? 'active text-warning' : ''); ?>" href="<?= site_url('admin/rekap-siswa'); ?>">Student</a>
+                        <a class="collapse-item mhs <?= (isset($aktif_rekapMahasiswa) ? 'active text-info' : ''); ?>" href="<?= site_url('admin/rekap-mahasiswa'); ?>">Collage Student</a>
                     </div>
                 </div>
 
@@ -339,7 +326,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block" />
 
-            <?php if (session('redirected') == 'superadmin'): ?>
+            <?php if (session('redirected') == 'superadmin') : ?>
                 <li class="nav-item <?= (isset($aktif_superAdmin)) ? 'active' : '' ?>">
                     <a class="nav-link" href="<?= site_url('admin/super-admin'); ?>">
                         <i class="fa-solid fa-user-gear"></i>
@@ -365,8 +352,7 @@
             <!-- Main Content -->
             <div id="content">
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar sticky-top shadow h2"
-                    style="padding: 38px 10px;">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar sticky-top shadow h2" style="padding: 38px 10px;">
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars" aria-hidden="false" id="burger"></i>
@@ -391,14 +377,12 @@
                                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 aria-hidden="true">
                             </a> -->
-                            <div class="profile" id="userDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false" aria-hidden="true">
+                            <div class="profile" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-hidden="true">
                                 <?php $namaFile = session()->get('member_foto') ?>
                                 <img src="<?= base_url('uploadFoto/' . $namaFile); ?>" class="headerImg">
                             </div>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="<?= site_url('admin/profile'); ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400" aria-hidden="true"></i>
                                     Profile
@@ -409,8 +393,7 @@
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" onclick="logout()">
-                                    <i href="" class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
-                                        aria-hidden="true"></i>
+                                    <i href="" class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400" aria-hidden="true"></i>
                                     Logout
                                 </a>
                             </div>
@@ -452,10 +435,8 @@
     </div>
 </body>
 <!-- JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
 <!-- Bootstrap core JavaScript-->
 <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -525,17 +506,17 @@
         popup.style.display = "none";
         wrapper.style.filter = "none";
     }
-    $('#popup').on("click", function () {
+    $('#popup').on("click", function() {
         sembunyikanPopup();
     });
-    $('#gambar').on("click", function () {
+    $('#gambar').on("click", function() {
         var popup = $('#popup').val();
 
         popup.style.display = "flex"
     });
 
     // untuk simpan data
-    $("#tombolSimpan").on("click", function () {
+    $("#tombolSimpan").on("click", function() {
         var $nama_lengkap = $("#inputNamaLengkap").val();
         var $nim_nis = $("#inputNimNis").val();
         var $username = $("#inputUsername").val();
@@ -558,7 +539,7 @@
                 instansi: $instansi,
                 nama_instansi: $nama_instansi,
             },
-            success: function (hasil) {
+            success: function(hasil) {
                 var $obj = $.parseJSON(hasil);
                 // jika ada error
                 if ($obj.error) {
@@ -608,7 +589,7 @@
     });
 
     // UNTUK EDIT DATA
-    $("#tombolEdit").on("click", function () {
+    $("#tombolEdit").on("click", function() {
         var $id = $("#inputId").val();
         var $nama_lengkap = $("#editNamaLengkap").val();
         var $nim_nis = $("#editNimNis").val();
@@ -636,7 +617,7 @@
                 edit_nama_instansi: $nama_instansi,
             },
             dataType: "json",
-            success: function (response) {
+            success: function(response) {
                 // jika ada error
                 if (response.error) {
                     $(".sukses").hide();
@@ -708,7 +689,7 @@
         $.ajax({
             url: "<?= site_url('Admin/Modal/editUser') ?>/" + $id,
             type: "GET",
-            success: function (hasil) {
+            success: function(hasil) {
                 var $obj = $.parseJSON(hasil);
                 if ($obj.id != "") {
                     $("#inputId").val($obj.member_id);
@@ -731,7 +712,7 @@
             url: "<?= site_url('Admin/Modal/instansi'); ?>/" + $id,
             type: "GET",
             dataType: "json",
-            success: function (response) {
+            success: function(response) {
                 $('#instansiNama').val(response.namaInstansi);
                 $('#instansiJumlah').val(response.jumlahSiswa);
                 $('#instansiPendidikan').val(response.instansiPendidikan);
@@ -739,11 +720,11 @@
         });
     }
 
-    $('.tombol-tutup-absen').on("click", function () {
+    $('.tombol-tutup-absen').on("click", function() {
         bersihkanAbsen();
     });
 
-    $("#tombolAbsen").on("click", function () {
+    $("#tombolAbsen").on("click", function() {
         var $tanggal = $("#inputTanggal").val();
         var $nim_nis = $("#absenNimNis").val();
         var $status = $("#absenStatus").val();
@@ -763,7 +744,7 @@
                 foto: $foto
             },
             dataType: 'json',
-            success: function (response) {
+            success: function(response) {
                 // jika ada error
                 if (response.error) {
                     if ($('#absenFoto').val() == '') {
@@ -809,7 +790,7 @@
         hapusValidasiAbsen();
     });
 
-    $('#tombolCheckout').on("click", function () {
+    $('#tombolCheckout').on("click", function() {
         var $id = $('#inputID').val();
         var $checkout = $('#inputCheckout').val();
 
@@ -821,7 +802,7 @@
                 checkout: $checkout
             },
             dataType: "json",
-            success: function (response) {
+            success: function(response) {
                 if (response.error) {
                     if (response.error.checkout) {
                         $('#inputCheckout').addClass("is-invalid");
@@ -835,11 +816,11 @@
         hapusValidasiCheckout();
     });
 
-    $('.tombol-tutup-checkout').on("click", function () {
+    $('.tombol-tutup-checkout').on("click", function() {
         bersihkan_checkout();
     });
 
-    $("#tombolSave").on("click", function () {
+    $("#tombolSave").on("click", function() {
         var $id = $("#superId").val();
         var $nama_lengkap = $("#superNamaLengkap").val();
         var $nim_nis = $("#superNimNis").val();
@@ -863,7 +844,7 @@
                 super_role: $role
             },
             dataType: 'json',
-            success: function (response) {
+            success: function(response) {
                 // jika ada error
                 if (response.error) {
                     if (response.error.super_nama_lengkap) {
@@ -904,18 +885,16 @@
         });
     });
 
-    $(document).ready(function () {
+    $(document).ready(function() {
         const table = $('#dTable').DataTable({
             dom: "lBfrtip",
-            'columnDefs': [
-                {
-                    "targets": [1],
-                    "className": "text-center"
-                },
-            ]
+            'columnDefs': [{
+                "targets": [1],
+                "className": "text-center"
+            }, ]
         });
 
-        $('#select').on('change', function () {
+        $('#select').on('change', function() {
             var dropdown = $('#select').val();
             if (dropdown === "all") {
                 table.columns(2).search('').draw();
@@ -926,7 +905,7 @@
             }
         });
 
-        $('.start_date, .end_date').on("change", function () {
+        $('.start_date, .end_date').on("change", function() {
             var startDateValue = $('.start_date').val();
             var endDateValue = $('.end_date').val();
             var filterForm = $('#filterForm');

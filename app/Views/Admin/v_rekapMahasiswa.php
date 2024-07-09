@@ -44,7 +44,7 @@
                     <div class="col-sm-4 col-md-4">
                         <div class="form-group basic mb-0 my-2">
                             <div class="input-wrapper">
-                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Tanggal Awal :
+                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Date :
                                 </label>
                                 <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date"
                                     placeholder="Tanggal Awal"
@@ -56,7 +56,7 @@
                     <div class="col-sm-4 col-md-4 my-2">
                         <div class="form-group basic mb-0">
                             <div class="input-wrapper">
-                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Tanggal Akhir :
+                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Date :
                                 </label>
                                 <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date"
                                     placeholder="Tanggal Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
@@ -76,7 +76,7 @@
         <div class="row text-center justify-content-center py-2">
             <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
                 <select name="namaLengkap" id="select" class="form-control">
-                    <option value="all">TAMPILKAN SEMUA</option>
+                    <option value="all">SHOW ALL</option>
                     <?php foreach ($dataUser as $usr): ?>
                         <option value="<?= $usr['nama_lengkap'] ?>">
                             <?= $usr['nama_lengkap'] ?>
@@ -106,7 +106,7 @@
 
 <!-- DataTales Example -->
 <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">
-    List Absensi Mahasiswa
+Student Attendance List
 </div>
 <div class="card shadow mb-2" style="border-radius: 0px;">
     <div class="card-body border-bottom">
@@ -115,14 +115,14 @@
                 <thead class="border">
                     <tr>
                         <th data-f-bold="true" data-a-h="left" class="text-center">No.</th>
-                        <th data-f-bold="true" style="min-width: 190px" class="text-center">Tanggal</th>
-                        <th data-f-bold="true" style="min-width: 150px" class="text-center">Nama Lengkap</th>
+                        <th data-f-bold="true" style="min-width: 190px" class="text-center">Date</th>
+                        <th data-f-bold="true" style="min-width: 150px" class="text-center">Full Name</th>
                         <th data-f-bold="true" style="min-width: 90px" class="text-center">SSW / MHS</th>
                         <th data-f-bold="true" style="min-width: 70px" class="text-center">Check-In</th>
                         <th data-f-bold="true" style="min-width: 80px" class="text-center">Check-Out</th>
                         <th data-f-bold="true" class="text-center">Status</th>
-                        <th data-f-bold="true" class="text-center">Keterangan</th>
-                        <th data-exclude="true" class="text-center">Foto</th>
+                        <th data-f-bold="true" class="text-center">Description</th>
+                        <th data-exclude="true" class="text-center">Photo</th>
                         <th data-f-bold="true" style="min-width: 160px;" class="text-center">Latitude / Longitude</th>
                     </tr>
                 </thead>

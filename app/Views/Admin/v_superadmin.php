@@ -7,7 +7,7 @@
 <div class="container-fluid p-0">
     <!-- DataTales Example -->
     <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">
-        List Data User
+    List User Data
     </div>
     <div class="card shadow mb-2">
         <div class="card-body border-bottom">
@@ -16,20 +16,20 @@
                     <thead class="border">
                         <tr>
                             <th class="text-center">No</th>
-                            <th style="min-width: 200px">Nama Lengkap</th>
+                            <th style="min-width: 200px">Fullname</th>
                             <th style="min-width: 100px">NIM / NIS</th>
                             <th>Username</th>
                             <th>Email</th>
                             <th style="width: 210px; min-width: 250px;">Password</th>
-                            <th>No. Telepon</th>
+                            <th>Phone Number</th>
                             <th style="min-width: 100px">Role</th>
-                            <th style="min-width: 100px">Aksi</th>
+                            <th style="min-width: 100px">Action</th>
                         </tr>
                     </thead>
                     <tbody class="border">
                         <?php foreach ($dataUser as $v) {
 
-                            ?>
+                        ?>
                             <tr>
                                 <td class="text-center">
                                     <?= $nomor; ?>
@@ -47,12 +47,9 @@
                                     <?= $v['email']; ?>
                                 </td>
                                 <td>
-                                    <input type="password" value="<?= $v['password']; ?>"
-                                        style="outline: none; border: none; text-align: center; cursor: default;width: 50%;"
-                                        id="<?= $v['member_id']; ?>" readonly>
+                                    <input type="password" value="<?= $v['password']; ?>" style="outline: none; border: none; text-align: center; cursor: default;width: 50%;" id="<?= $v['member_id']; ?>" readonly>
 
-                                    <span id="mata<?= $v['member_id']; ?>" onclick="change(<?= $v['member_id']; ?>)"
-                                        style="cursor: pointer;">
+                                    <span id="mata<?= $v['member_id']; ?>" onclick="change(<?= $v['member_id']; ?>)" style="cursor: pointer;">
                                         <i class="fa-regular fa-eye fa-xl"></i>
                                     </span>
                                 </td>
@@ -63,19 +60,18 @@
                                     <?= $v['level'] ?>
                                 </td>
                                 <td>
-                                    <?php if ($v['member_id'] != session('member_id')): ?>
+                                    <?php if ($v['member_id'] != session('member_id')) : ?>
                                         <a class="btn btn-danger btn-circle mb-1" onclick="hapus(<?= $v['member_id'] ?>)">
                                             <i class="fas fa-trash"></i>
                                         </a>
-                                        <a class="btn btn-warning btn-circle mb-1" data-toggle="modal"
-                                            data-target="#modalsuperAdmin" onclick="super_admin_edit(<?= $v['member_id'] ?>)">
+                                        <a class="btn btn-warning btn-circle mb-1" data-toggle="modal" data-target="#modalsuperAdmin" onclick="super_admin_edit(<?= $v['member_id'] ?>)">
                                             <i class="fa-regular fa-pen-to-square"></i>
                                         </a>
                                     <?php endif ?>
                                 </td>
                             </tr>
 
-                            <?php
+                        <?php
                             $nomor++;
                         } ?>
                     </tbody>
@@ -88,13 +84,13 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    <?php if (session()->getFlashdata('role_icon')): ?>
+    <?php if (session()->getFlashdata('role_icon')) : ?>
         Swal.fire({
             icon: '<?= session()->getFlashdata('role_icon'); ?>',
             title: '<?= session()->getFlashdata('role_title'); ?>',
         })
     <?php endif; ?>
-    <?php if (session()->getFlashdata('swal_icon')): ?>
+    <?php if (session()->getFlashdata('swal_icon')) : ?>
         Swal.fire({
             icon: '<?= session()->getFlashdata('swal_icon'); ?>',
             title: '<?= session()->getFlashdata('swal_title'); ?>',
@@ -107,7 +103,7 @@
         $.ajax({
             url: "<?= site_url('Admin/SuperAdmin/super_admin_edit') ?>/" + $id,
             type: "GET",
-            success: function (hasil) {
+            success: function(hasil) {
                 var $obj = $.parseJSON(hasil);
                 if ($obj.id != "") {
                     $("#superId").val($obj.member_id);

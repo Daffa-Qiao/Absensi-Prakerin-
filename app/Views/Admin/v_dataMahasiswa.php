@@ -10,11 +10,11 @@
         <input type="button" id="but" data-toggle="modal" data-target="#exampleModal" hidden></input>
         <label for="but" class="w-100 h-100 d-flex align-items-center" style="min-width: 200px; ">
             <i class="fa-solid fa-circle-plus mr-2"></i>
-            Tambah User Baru
+            Add New User
         </label>
     </div>
     <!-- DataTales Example -->
-    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">List Data Mahasiswa</div>
+    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">List of Collage Student Data</div>
     <div class="card shadow">
         <div class="card-body border-bottom">
             <div class="table-responsive">
@@ -22,14 +22,14 @@
                     <thead class="border">
                         <tr>
                             <th>No</th>
-                            <th style="min-width: 200px">Nama Lengkap</th>
-                            <th style="min-width: 150px">Asal Instansi</th>
+                            <th style="min-width: 200px">Full Name</th>
+                            <th style="min-width: 150px">Agency Origin</th>
                             <th>Username</th>
-                            <th style="min-width:120px">Jenis Kelamin</th>
+                            <th style="min-width:120px">Gender</th>
                             <th>Profil</th>
                             <th style="min-width: 100px">NIM / NIS</th>
-                            <th style="min-width: 200px">Tanggal Bergabung</th>
-                            <th style="min-width: 100px">Aksi</th>
+                            <th style="min-width: 200px">Date Joined</th>
+                            <th style="min-width: 100px">Action</th>
                         </tr>
                     </thead>
                     <tbody class="border">
