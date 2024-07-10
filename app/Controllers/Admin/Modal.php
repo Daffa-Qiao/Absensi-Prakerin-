@@ -299,26 +299,26 @@ class Modal extends BaseController
             'tanggal' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Tanggal absen harus diisi',
+                    'required' => 'Date of absence must be filled in',
                 ]
             ],
             'absen_nim_nis' => [
                 'rules' => 'required|is_not_unique[member.nim_nis]',
                 'errors' => [
-                    'required' => 'NIM / NIS harus diisi',
-                    'is_not_unique' => 'NIM / NIS tidak terdaftar',
+                    'required' => 'NIM / NIS must be filled in',
+                    'is_not_unique' => 'NIM / NIS not registered',
                 ]
             ],
             'status' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Status absen harus diisi',
+                    'required' => 'Absence status must be filled in',
                 ]
             ],
             'checkin' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Waktu Checkin harus diisi',
+                    'required' => 'Checkin time must be filled',
                 ]
             ],
         ];
@@ -327,32 +327,32 @@ class Modal extends BaseController
                 'tanggal' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required' => 'Tanggal absen harus diisi',
+                        'required' => 'Date of absence must be filled in',
                     ]
                 ],
                 'absen_nim_nis' => [
                     'rules' => 'required|is_not_unique[member.nim_nis]',
                     'errors' => [
-                        'required' => 'NIM / NIS harus diisi',
-                        'is_not_unique' => 'NIM / NIS tidak terdaftar',
+                        'required' => 'NIM / NIS must be filled in',
+                        'is_not_unique' => 'NIM / NIS is not registered',
                     ]
                 ],
                 'status' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required' => 'Status absen harus diisi',
+                        'required' => 'Absence status must be filled in',
                     ]
                 ],
                 'checkin' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required' => 'Waktu Checkin harus diisi',
+                        'required' => 'Checkin time must be filled',
                     ]
                 ],
                 'keterangan' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required' => 'Keterangan harus diisi',
+                        'required' => 'Description required',
                     ]
                 ],
             ];

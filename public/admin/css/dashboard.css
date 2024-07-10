@@ -1,5 +1,6 @@
 #accordionSidebar {
     background: linear-gradient(181deg, #00a2e9 90%, rgba(255, 255, 255, 0.63) 110%) !important;
+    
 }
 
 #content {
@@ -26,6 +27,7 @@
 a.nav-link>* {
     font-size: 15px !important;
     font-size: 240px;
+    
 }
 
 
@@ -34,10 +36,12 @@ nav.navbar.navbar-light.bg-light {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 nav.navbar {
     margin: 0;
+    
 }
 
 h5 {

@@ -270,22 +270,22 @@ class Admin extends BaseController
             'nama_lengkap' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama Lengkap harus diisi',
+                    'required' => 'Full name must be filled in',
                 ]
             ],
             'nim_nis' => [
                 'rules' => 'required|is_unique[member.nim_nis, member_id, ' . $userID . ']',
                 'errors' => [
-                    'required' => 'NIM / NIS harus diisi',
-                    'is_unique' => 'NIM / NIS sudah terdaftar'
+                    'required' => 'NIM / NIS must be filled in',
+                    'is_unique' => 'NIM/NIS is already registered'
                 ]
             ],
             'username' => [
                 'rules' => 'required|is_unique[member.username, member_id, ' . $userID . ']|regex_match[/^\S+$/]',
                 'errors' => [
-                    'required' => 'Username harus diisi',
-                    'is_unique' => 'Username sudah terdaftar',
-                    'regex_match' => 'Username tidak boleh menggunakan spasi'
+                    'required' => 'Username must be filled in',
+                    'is_unique' => 'Username is already registered',
+                    'regex_match' => 'Username must not use spaces'
                 ]
             ],
             'password' => [

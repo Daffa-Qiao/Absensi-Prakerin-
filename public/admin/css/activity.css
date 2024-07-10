@@ -187,7 +187,6 @@ img.screenshot {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   position: relative;
-  border: 2px solid;
 }
 
 canvas {

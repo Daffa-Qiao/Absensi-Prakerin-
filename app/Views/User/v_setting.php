@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="text">
-                <label for="upload" class="uploud-image bg-primary bg-gradient">Pilih Gambar</label>
+                <label for="upload" class="uploud-image bg-primary bg-gradient">Select Image</label>
             </div>
         </div>
     </div>

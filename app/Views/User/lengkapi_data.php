@@ -27,10 +27,10 @@
             <header>
                 <div class="text">
                     <h1 class="nama-lengkap">
-                        (Nama Lengkap)
+                        (Full Name)
                     </h1>
                     <h2 class="sekolah">
-                        (Nama Instansi)
+                        (Educational Institutions Name)
                     </h2>
                 </div>
             </header>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="text btn">
-                        <label for="upload" class="uploud-image bg-primary bg-gradient">Pilih Gambar</label>
+                        <label for="upload" class="uploud-image bg-primary bg-gradient">Select Image</label>
                     </div>
                 </div>
             </div>
@@ -101,20 +101,20 @@
                             readonly />
                     </div>
                     <div class="identitas-profile">
-                        <label for="gender">Jenis Kelamin : </label>
+                        <label for="gender">Gender : </label>
                         <select name="gender" id="gender"
                             class="form-select <?= ($validation->hasError('gender')) ? 'is-invalid' : ''; ?>"
                             value="<?= set_value('selected_gender') ?>" required>
                             <option value="" hidden></option>
-                            <option value="Pria">Pria</option>
-                            <option value="Wanita">Wanita</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
                         </select>
                         <div class="invalid-feedbak">
                             <?= $validation->getError('gender') ?>
                         </div>
                     </div>
                     <div class="identitas-profile">
-                        <label for="no_hp">No. Telepon :</label>
+                        <label for="no_hp">Phone Number :</label>
                         <input type="number" name="no_hp" id="" pattern="[0-9]{4}[0-9]{4}[0-9]{5}"
                             class="form-control <?= ($validation->hasError('no_hp')) ? 'is-invalid' : ''; ?>"
                             value="<?= set_value('no_hp') ?>" placeholder="08xxxxx" required />
@@ -125,24 +125,38 @@
                     <div class="identitas-profile">
                         <label for="email">Email :</label>
                         <input type="email" name="email" id="" value="<?= session()->get('member_email'); ?>"
-                            readonly />
+                            readonly /> 
+                    </div>
+                    <div class="identitas-profile">
+                        <label for="nama_pembimbing">Name Of Supervising Teacher :</label>
+                        <input type="text" name="nama_pembimbing" id="" >
+                        <div class="invalid-feedbak">
+                            <?= $validation->getError('nama') ?>
+                        </div>
+                    </div>
+                    <div class="identitas-profile">
+                        <label for="no_hp_pembimbing">Teacher Phone Number  :</label>
+                        <input type="number" name="no_hp_pembimbing" id=""/>
+                        <div class="invalid-feedbak">
+                            <?= $validation->getError('no_hp_pembimbing') ?>
+                        </div>
                     </div>
                     <div class="identitas-profileInstansi">
                         <div class="instansiAsal">
-                            <label for="instansiSelect">Instansi Pendidikan :</label>
+                            <label for="instansiSelect">Educational Institutions :</label>
                             <select name="instansi" id="instansi"
                                 class="form-select <?= ($validation->hasError('instansi')) ? 'is-invalid' : ''; ?>"
                                 onchange="autoFill()" style="border: none;" required>
                                 <option value="" hidden></option>
-                                <option value="Sekolah">Sekolah</option>
-                                <option value="Universitas">Universitas</option>
+                                <option value="Sekolah">School</option>
+                                <option value="Universitas">University</option>
                             </select>
                             <div class="invalid-feedbak">
                                 <?= $validation->getError('instansi') ?>
                             </div>
                         </div>
                         <div class="instansiNama">
-                            <label for="nama_instansi">Nama Instansi :</label>
+                            <label for="nama_instansi">Educational Institutions Name :</label>
                             <input type="text" name="nama_instansi" id="namaInstansi"
                                 class="form-control <?= ($validation->hasError('nama_instansi')) ? 'is-invalid' : ''; ?>"
                                 value="<?= set_value('nama_instansi') ?>" required />

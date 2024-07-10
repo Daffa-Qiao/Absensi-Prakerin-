@@ -20,7 +20,7 @@
     <div class="wrapper-body-activity">
         <div class="body-satu-activity">
             <div class="date">
-                <div class="text">Waktu & Tanggal</div>
+                <div class="text">Time & Date</div>
                 <div class="date-time">
                     <h3 id="current-time"></h3>
                     <h3 id="date-today"></h3>
@@ -53,27 +53,54 @@
                         <div class="row mt-5">
                             <div class="col-6" style="border:2px solid black; width:49%">
                                 <textarea rows="8" placeholder="Description...." style="width: 100%; padding:12px 15px; margin-top:12px; border:2px solid black"></textarea>
-                                <select class="form-select border border-dark" aria-label="multiple select example">
+                                <select class="form-select border border-dark  data-container=" aria-label="multiple select example">
                                     <option selected>Location</option>
                                     <optgroup label="Gedung Karya">
-                                        <option value="Gedung Karya Lantai 1">Lantai 1</option>
-                                        <option value="Gedung Karya Lantai 2">Lantai 2</option>
-                                        <option value="Gedung Karya Lantai 3">Lantai 3</option>
+                                        <option value="Gedung Karya Floor 1">Floor 1</option>
+                                        <option value="Gedung Karya Floor 2">Floor 2</option>
+                                        <option value="Gedung Karya Floor 3">Floor 3</option>
+                                        <option value="Gedung Karya Floor 4">Floor 4</option>
+                                        <option value="Gedung Karya Floor 5">Floor 5</option>
+                                        <option value="Gedung Karya Floor 6">Floor 6</option>
+                                        <option value="Gedung Karya Floor 7">Floor 7</option>
+                                        <option value="Gedung Karya Floor 8">Floor 8</option>
+                                        <option value="Gedung Karya Floor 9">Floor 9</option>
+                                        <option value="Gedung Karya Floor 10">Floor 10</option>
+                                        <option value="Gedung Karya Floor 11">Floor 11</option>
+                                        <option value="Gedung Karya Floor 12">Floor 12</option>
+                                        <option value="Gedung Karya Floor 13">Floor 13</option>
+                                        <option value="Gedung Karya Floor 14">Floor 14</option>
+                                        <option value="Gedung Karya Floor 15">Floor 15</option>
+                                        <option value="Gedung Karya Floor 16">Floor 16</option>
+                                        <option value="Gedung Karya Floor 17">Floor 17</option>
+                                        <option value="Gedung Karya Floor 18">Floor 18</option>
+                                        <option value="Gedung Karya Floor 19">Floor 19</option>
+                                        <option value="Gedung Karya Floor 20">Floor 20</option>
+                                        <option value="Gedung Karya Floor 21">Floor 21</option>
+                                        <option value="Gedung Karya Floor 22">Floor 22</option>
+                                        <option value="Gedung Karya Floor 23">Floor 23</option>
+                                        <option value="Gedung Karya Floor 24">Floor 24</option>
+                                        <option value="Gedung Karya Floor 25">Floor 25</option>
                                     </optgroup>
                                     <optgroup label="Gedung Karsa">
-                                        <option value="Gedung Karsa Lantai 1">Lantai 1</option>
-                                        <option value="Gedung Karsa Lantai 2">Lantai 2</option>
-                                        <option value="Gedung Karsa Lantai 3">Lantai 3</option>
+                                        <option value="Gedung Karsa Floor 1">Floor 1</option>
+                                        <option value="Gedung Karsa Floor 2">Floor 2</option>
+                                        <option value="Gedung Karsa Floor 3">Floor 3</option>
+                                        <option value="Gedung Karya Floor 4">Floor 4</option>
+                                        <option value="Gedung Karya Floor 5">Floor 5</option>
+                                        <option value="Gedung Karya Floor 6">Floor 6</option>
+                                        <option value="Gedung Karya Floor 7">Floor 7</option>
+                                        <option value="Gedung Karya Floor 8">Floor 8</option>
+                                        <option value="Gedung Karya Floor 9">Floor 9</option>
                                     </optgroup>
                                     <optgroup label="Cipta">
-                                        <option value="Gedung Cipta Lantai 1">Lantai 1</option>
-                                        <option value="Gedung Cipta Lantai 2">Lantai 2</option>
-                                        <option value="Gedung Cipta Lantai 3">Lantai 3</option>
-                                        <option value="Gedung Cipta Lantai 4">Lantai 4</option>
-                                        <option value="Gedung Cipta Lantai 5">Lantai 5</option>
-                                        <option value="Gedung Cipta Lantai 6">Lantai 6</option>
-                                        <option value="Gedung Cipta Lantai 7">Lantai 7</option>
-                                        <option value="Gedung Cipta Lantai 8">Lantai 8</option>
+                                        <option value="Gedung Cipta Floor 1">Floor 1</option>
+                                        <option value="Gedung Cipta Floor 2">Floor 2</option>
+                                        <option value="Gedung Cipta Floor 3">Floor 3</option>
+                                        <option value="Gedung Cipta Floor 4">Floor 4</option>
+                                        <option value="Gedung Cipta Floor 5">Floor 5</option>
+                                        <option value="Gedung Cipta Floor 6">Floor 6</option>
+                                        <option value="Gedung Cipta Floor 7">Floor 7</option>
                                     </optgroup>
                                 </select>
                                 <div class="buttonWrapper">
@@ -82,10 +109,10 @@
                                 </div>
                             </div>
                             <div class="col-6 ml-4" style="border:2px solid black; margin-left:8px">
-                                <h3 style="margin:10px;">Hasil Dokumentasi :</h3>
+                                <h3 style="margin:10px;">Documentation Results :</h3>
                                 <div id="results" class=""></div>
                                 <input type="hidden" id="photoStore" name="photoStore" value="">
-                                <!-- <img name="foto" for="activity" class="screenshot" src="<?= base_url('uploadFoto/profile.png') ?>" alt=""> -->
+                                <img name="foto" for="activity" class="screenshot" src="<?= base_url('uploadFoto/activityprofile.png') ?>" alt="">
                             </div>
                         </div>
                     </div>

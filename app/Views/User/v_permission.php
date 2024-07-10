@@ -22,7 +22,7 @@
     <div class="wrapper-body">
         <div class="body-satu">
             <div class="date">
-                <div class="text">Waktu & Tanggal</div>
+                <div class="text">Time & Date</div>
                 <div class="date-time">
                     <h3 class="current-time" id="current-time"></h3>
                     <h3 class="date-today" id="date-today"></h3>
@@ -35,9 +35,9 @@
                     <div class="wrapper-bukti">
                         <div class="wrapper-izin">
                             <select name="menu" id="menu" onchange="updateValue()">
-                                <option value="" hidden></option>
-                                <option value="Izin">Izin</option>
-                                <option value="Sakit">Sakit</option>
+                                <option value="" hidden>Reason:</option>
+                                <option value="Izin">Permissions</option>
+                                <option value="Sakit">Sick</option>
                             </select>
                         </div>
                         <div class="wrapper-image">
@@ -45,7 +45,7 @@
                                 <img id="preview" src="#" alt="File yang anda masukan bukan gambar" />
                             </div>
                             <div class="text">
-                                <label for="upload" class="uploud-image bg-primary bg-gradient">Pilih Gambar</label>
+                                <label for="upload" class="uploud-image bg-primary bg-gradient">Select Image</label>
                             </div>
                             <input name="foto_absen" type="file" id="upload" accept=".png, .jpg, .jpeg" style="display: none; visibility: hidden" value="<?= set_value('foto_absen'); ?>" />
                         </div>
@@ -57,7 +57,7 @@
                 <div class="grid-dua">
                     <div class="wrapper">
                         <div class="textareaWrapper">
-                            <h3>Keterangan :</h3>
+                            <h3>Description :</h3>
                             <textarea name="keterangan" id="" cols="30" rows="10" placeholder="Isi Disini..."></textarea>
                         </div>
                         <div class="kbWrapper">

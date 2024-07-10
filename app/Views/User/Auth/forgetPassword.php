@@ -32,7 +32,7 @@
                 <?php } ?>
 
                 <div class="wrapperJudul">
-                    <label>Masukkan Username/Email untuk melakukan reset password</label>
+                    <label>Enter Username/Email to reset password</label>
                 </div>
 
                 <div class="wrapperInput form-floating">
@@ -44,7 +44,7 @@
         </div>
 
         <div class="footer d-flex align-items-center justify-content-between mt-4">
-            <a class="small" href="<?= base_url('/login') ?>">Kembali Ke Login</a>
+            <a class="small" href="<?= base_url('/login') ?>">Back to Login</a>
             <input type="submit" name="submit" class="button-reset" value="Reset Password">
         </div>
         </form>

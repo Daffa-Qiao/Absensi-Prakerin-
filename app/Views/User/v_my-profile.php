@@ -12,7 +12,7 @@
     <div class="wrapper-identity-profile">
         <form action="">
             <div class="identitas-profile">
-                <label for="nama">Nama Lengkap : </label>
+                <label for="nama">Full Name : </label>
                 <input type="text" name="nama_lengkap" id="nama" readonly value="<?= session()->get('member_nama_lengkap') ?>" />
             </div>
             <div class="identitas-profile">
@@ -24,11 +24,11 @@
                 <input type="text" name="" id="" value="<?= session()->get('member_username') ?>" readonly />
             </div>
             <div class="identitas-profile">
-                <label for="jenis-kelamin">Jenis Kelamin : </label>
+                <label for="jenis-kelamin">Gander : </label>
                 <input type="text" name="jenis_kelamin" value="<?= session()->get('member_jenis_kelamin') ?>" readonly>
             </div>
             <div class="identitas-profile">
-                <label for="telepon">No. Telepon :</label>
+                <label for="telepon">Phone Number :</label>
                 <input type="tel" name="no_hp" id="" value="<?= session()->get('member_no_hp') ?>" readonly />
             </div>
             <div class="identitas-profile">
@@ -37,11 +37,11 @@
             </div>
             <div class="identitas-profileInstansi" id="instansi">
                 <div class="instansiAsal">
-                    <label for="Instansi">Instansi Pendidikan :</label>
+                    <label for="Instansi">Educational Institutions :</label>
                     <input type="text" name="instansi" value="<?= session()->get('member_instansi') ?>" readonly>
                 </div>
                 <div class="instansiNama">
-                    <label for="namaInstansi">Nama Instansi :</label>
+                    <label for="namaInstansi">Educational Institutions Name :</label>
                     <input type="text" name="nama_instansi" id="" value="<?= session()->get('member_nama_instansi') ?>" readonly />
                 </div>
             </div>

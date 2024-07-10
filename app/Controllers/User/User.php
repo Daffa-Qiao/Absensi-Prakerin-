@@ -412,7 +412,7 @@ class User extends BaseController
         $sesi_nim = session()->get('member_nim_nis');
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_activity');
-        $dataActivity = $activity->where('nim_nis', $sesi_nim)->orderBy('id', 'desc')->paginate($jumlahBaris, 'absensi');
+        $dataActivity = $activity->where('nim_nis', $sesi_nim)->orderBy('id_laporan', 'desc')->paginate($jumlahBaris, 'absensi');
         $nama_lengkap = [];
         foreach ($dataActivity as $v) {
             $nimUser = $v['nim_nis'];

@@ -10,15 +10,14 @@
                 <thead>
                     <tr>
                         <th class="text-center" style="min-width: 50px;">No</th>
-                        <th class="text-center" style="min-width: 100px;">School Name</th>
-                        <th class="text-center" style="min-width: 150px;">Full Name</th>
+                        <th class="text-center" style="min-width: 200px;">Name</th>
+                        <th class="text-center" style="min-width: 100px;">Date</th>
                         <th class="text-center" style="min-width: 150px;">Location</th>
-                        <th class="text-center" style="min-width: 100px;">Attendance Image</th>
-                        <th class="text-center" style="min-width: 100px;">Description</th>
-                        <th class="text-center" style="min-width: 100px">Checkin</th>
-                        <th class="text-center" style="min-width: 100px">Checkout</th>
-                        <th class="text-center" style="min-width: 100px;">Status</th>
-                        <th class="text-center" style="min-width: 180px;">Date</th>
+                        <th class="text-center" style="min-width: 150px;">Documentation</th>
+                        <th class="text-center" style="min-width: 100px;">Start Time</th>
+                        <th class="text-center" style="min-width: 100px">Finish Time</th>
+                        <th class="text-center" style="min-width: 200px">Description</th>
+                        <th class="text-center" style="min-width: 120px;">Status</th>
                     </tr>
                 </thead>
                 <tbody>

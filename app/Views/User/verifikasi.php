@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verifikasi</title>
+    <title>Verification</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('admin') ?>/css/verifikasi.css" />
@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="card-header">
-            <h3 class="text-center font-weight-light my-4">Verifikasi Email</h3>
+            <h3 class="text-center font-weight-light my-4">Email Verification</h3>
         </div>
         <?php $validation = \Config\Services::validation() ?>
         <div class="containerInput">
@@ -30,20 +30,19 @@
                 </div>
             <?php endif ?>
             <div class=" wrapperJudul">
-                <label>Masukkan kode OTP untuk verifikasi akun</label>
+                <label>Input OTP code for account verification</label>
             </div>
             <form action="<?= site_url('/verifikasi'); ?>" method="post">
                 <div class="mb-3 mt-2">
                     <div class="form-floating">
                         <input type="text" name="token" id="inputOTP" class="form-control"
                             style="background-color: #d9d9d9; border-radius: 15px;" placeholder="Masukkan OTP" required>
-                        <label for="inputOTP">Masukkan kode OTP</label>
+                        <label for="inputOTP">Input OTP code</label>
                     </div>
                 </div>
                 <div class=" d-flex justify-content-between">
                     <a href="<?= site_url('/kirim_ulang'); ?>" id="countdownLink" name="kirim_ulang" class="resendLink"
-                        style=" color: grey;">Kirim
-                        OTP</a>
+                        style=" color: grey;">Send OTP</a>
                     <div class="d-grid w-90">
                         <input type="submit" name="verifikasi" id="verifikasiBtn" class="btn btn-primary"
                             value="Verfikasi" style="background: #19aaea; border: none;">

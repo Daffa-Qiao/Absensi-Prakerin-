@@ -46,9 +46,9 @@ tbody tr td {
 
 }
 
-tbody tr:hover {
-    /* background-color: #2789da; */
-}
+/* tbody tr:hover {
+    background-color: #2789da;
+} */
 
 nav.close {
     z-index: 2;

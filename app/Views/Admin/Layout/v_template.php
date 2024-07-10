@@ -236,8 +236,7 @@
                             <?= 'Admin'; ?>
                         <?php endif ?>
 
-                        <h6 style="font-size: 8px"> Kementrian Perhubungan
-                        </h6>
+                        <h6 style="font-size: 8px"> Kementrian Perhubungan</h6>
                     </span>
                 </div>
 

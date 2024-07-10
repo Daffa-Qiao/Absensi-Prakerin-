@@ -192,7 +192,7 @@ class Auth extends BaseController
                     return redirect()->to('admin/dashboard')->withCookies();
                 } else if ($memberInfo['level'] == 'User') {
                     session()->set('redirected', 'user');
-                    notif_swal('success', 'Selamat Datang User');
+                    notif_swal('success', 'Welcome User');
                     return redirect()->to('user/my-profile')->withCookies();
                 }
             }

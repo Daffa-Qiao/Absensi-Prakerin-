@@ -57,52 +57,52 @@ class SuperAdmin extends BaseController
             'super_nama_lengkap' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama Lengkap harus diisi',
+                    'required' => 'Full Name required',
                 ]
             ],
             'super_nim_nis' => [
                 'rules' => 'required|is_unique[member.nim_nis, member_id,' . $id . ']',
                 'errors' => [
-                    'required' => 'NIM/NIS harus diisi',
-                    'is_unique' => 'NIM/NIS sudah terdaftar'
+                    'required' => 'NIM/NIS must be filled in',
+                    'is_unique' => 'NIM/NIS already registered'
                 ]
             ],
             'super_username' => [
                 'rules' => 'required|is_unique[member.username, member_id,' . $id . ']|regex_match[/^\S+$/]',
                 'errors' => [
-                    'required' => 'Username harus diisi',
-                    'is_unique' => 'Username sudah terdaftar',
-                    'regex_match' => 'Username tidak boleh menggunakan spasi'
+                    'required' => 'Username required',
+                    'is_unique' => 'Username already registered',
+                    'regex_match' => 'Username cannot use spaces'
                 ]
             ],
             'super_password' => [
                 'rules' => 'required|regex_match[/^\S+$/]|min_length[5]',
                 'errors' => [
-                    'required' => 'Password harus diisi',
-                    'regex_match' => 'Password tidak boleh menggunakan spasi',
-                    'min_length' => 'Minimum panjang password adalah 5 karakter'
+                    'required' => 'Password required',
+                    'regex_match' => 'Password must not use spaces',
+                    'min_length' => 'Minimum password length is 5 characters'
                 ]
             ],
             'super_no_hp' => [
                 'rules' => 'required|is_unique[member.no_hp, member_id,' . $id . ']|regex_match[/^08\d{8,12}$/]',
                 'errors' => [
-                    'required' => 'Nomor Telepon harus diisi',
-                    'is_unique' => 'Nomor Telepon sudah terdaftar',
-                    'regex_match' => 'Nomor Telepon tidak valid'
+                    'required' => 'Phone Number must be filled in',
+                    'is_unique' => 'Phone number already registered',
+                    'regex_match' => 'Invalid phone number'
                 ]
             ],
             'super_email' => [
                 'rules' => 'required|is_unique[member.email, member_id,' . $id . ']|valid_email',
                 'errors' => [
-                    'required' => 'Email harus diisi',
-                    'is_unique' => 'Email sudah terdaftar',
-                    'valid_email' => 'Email tidak valid'
+                    'required' => 'Email must be filled in',
+                    'is_unique' => 'Email already registered',
+                    'valid_email' => 'Invalid email'
                 ]
             ],
             'super_role' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Role harus diisi',
+                    'required' => 'Role must be filled',
                 ]
             ],
         ];
