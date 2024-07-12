@@ -487,4 +487,84 @@ class Admin extends BaseController
 
         return view('Admin/v_dataLaporan', $data);
     }
+
+    public function rekap_aktifitasSiswa()
+    {
+        $laporan = new Laporan();
+        $user = new MemberModel();
+        $jumlahBaris = 10;
+        $currentPage = $this->request->getVar('page_laporan');
+        $dataLaporan = $laporan->orderBy('waktu_laporan', 'desc')->orderBy('id_laporan', 'desc')->where('jenis_user', 'Mahasiswa')->findAll();
+        $dataUser = $user->where('jenis_user', 'Mahasiswa')->orderBy('nama_lengkap', 'asc')->findAll();
+        $nomor = nomor($currentPage, $jumlahBaris);
+        $aktif_rekapAktifitasSiswa = 'aktif';
+        $halaman = 'Admin | Acvitivy Student Recap';
+        $title = 'Activity Student Recap';
+
+        $data = [
+            'dataUser' => $dataUser,
+            'dataLaporan' => $dataLaporan,
+            'nomor' => $nomor,
+            'aktif_rekapAktifitasSiswa' => $aktif_rekapAktifitasSiswa,
+            'aktif_rekapAktifitas' => 'active',
+            'halaman' => $halaman,
+            'title' => $title,
+        ];
+        return view('Admin/v_rekapAktifitasSsw', $data);
+    }
+
+    public function rekap_aktifitasSiswaFilter()
+    {
+        $laporan = new Laporan();
+        $startDate = $this->request->getVar('start_date');
+        $endDate = $this->request->getVar('end_date');
+        $dataAbsen = $laporan->getDataByDateRangeSSW($startDate, $endDate);
+
+        $data = [
+            'dataFilter' => $dataAbsen,
+            'start_date' => $startDate,
+            'end_date' => $endDate
+        ];
+        session()->setFlashdata('data', $data);
+
+        return redirect()->to('admin/rekap-siswa');
+    }
+    public function rekap_aktifitasMahasiswa()
+    {
+        $laporan = new Laporan();
+        $user = new MemberModel();
+        $jumlahBaris = 10;
+        $currentPage = $this->request->getVar('page_absensi');
+        $dataLaporan = $laporan->orderBy('waktu_laporan', 'desc')->orderBy('id_laporan', 'desc')->where('jenis_user', 'Mahasiswa')->findAll();
+        $dataUser = $user->where('jenis_user', 'Mahasiswa')->orderBy('nama_lengkap', 'asc')->findAll();
+        $nomor = nomor($currentPage, $jumlahBaris);
+        $halaman = 'Admin | Activity Collage Student Recap';
+        $title = 'Activity Collage Student Recap';
+
+        $data = [
+            'dataUser' => $dataUser,
+            'dataLaporan' => $dataLaporan,
+            'nomor' => $nomor,
+            'aktif_rekapAktifitasMahasiswa' => 'active',
+            'aktif_rekapAktifitas' => 'active',
+            'halaman' => $halaman,
+            'title' => $title,
+        ];
+        return view('Admin/v_rekapAktifitasMssw', $data);
+    }
+    public function rekap_aktivitasMahasiswaFilter()
+    {
+        $absensi = new Absensi();
+        $startDate = $this->request->getVar('start_date');
+        $endDate = $this->request->getVar('end_date');
+        $dataAbsen = $absensi->getDataByDateRangeMHS($startDate, $endDate);
+
+        $data = [
+            'dataFilter' => $dataAbsen,
+            'start_date' => $startDate,
+            'end_date' => $endDate
+        ];
+        session()->setFlashdata('data', $data);
+        return redirect()->to('admin/rekap-aktifitas-mahasiswa');
+    }
 }

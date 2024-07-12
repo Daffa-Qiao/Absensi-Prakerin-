@@ -132,9 +132,6 @@ p.dashboard .Siswa {
     color: red;
 }
 
-.checkin {}
-
-
 /* Css data Absensi */
 .table th.start:nth-child(1) {
     text-align: start;

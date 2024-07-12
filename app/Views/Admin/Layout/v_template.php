@@ -29,6 +29,19 @@
 
 
     <style>
+        .custom-sidebar {
+            width: 290px !important;
+        }
+
+        .custom-sidebar .nav-item {
+            width: 100%;
+        }
+
+        .custom-sidebar .nav-link {
+            white-space: nowrap;
+            overflow: hidden;
+            
+        }
         img.instansi {
             width: 50px;
             height: 50px;
@@ -67,8 +80,8 @@
         }
 
         #display_c {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
         }
 
         li.nav-item>#collapseUtilities>.bg-white a.ssw:hover {
@@ -127,7 +140,6 @@
             width: 100%;
             margin-top: 3rem;
         }
-
         .wrapper-profile .profile-body {
             display: flex;
             justify-content: center;
@@ -156,7 +168,7 @@
         }
 
         #dTable_paginate span>* {
-            border-right: .01px solid black;
+            border-right: .0    1px solid black;
             margin: 0;
         }
 
@@ -220,7 +232,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="height: 100vh; position: sticky; top: 0; right: 0; z-index: 1">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion custom-sidebar" id="accordionSidebar" style="height: 100vh; position: sticky; top: 0; right: 0; z-index: 1;">
             <!-- Sidebar - Brand -->
             <a class="ml-10 sidebar-brand d-flex align-items-center justify-content-center" href="#" style="cursor: default;">
                 <div class="sidebar-brand-icon">
@@ -236,7 +248,7 @@
                             <?= 'Admin'; ?>
                         <?php endif ?>
 
-                        <h6 style="font-size: 8px"> Kementrian Perhubungan</h6>
+                        <h6 style="font-size: 8px"> Kementerian Perhubungan</h6>
                     </span>
                 </div>
 
@@ -249,7 +261,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item <?= (isset($aktif_dashboard)) ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= site_url('admin/dashboard'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/dashboard'); ?>" style="width:270px !important">
                     <i class="fa-solid fa-gauge-high"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -259,14 +271,14 @@
             <!-- Heading -->
 
             <li class="nav-item <?= (isset($aktif_dataAbsen)) ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= site_url('admin/data-absen'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/data-absen'); ?>" style="width: 270px !important">
                     <i class="fa-solid fa-file-pen" aria-hidden="true"></i>
                     <!-- <i class="fas fa-fw fa-tachometer-alt" aria-hidden="true"></i> -->
                     <span>Attendance Data</span></a>
             </li>
 
             <li class="nav-item <?= (isset($aktif_dataLaporan)) ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= site_url('admin/data-laporan'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/data-laporan'); ?>" style="width: 270px !important">
                     <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
                     <!-- <i class="fas fa-fw fa-tachometer-alt" aria-hidden="true"></i> -->
                     <span>Report Data</span></a>
@@ -274,13 +286,13 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_dataUser)) ? 'active' : '' ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"  style="width: 270px !important">
                     <i class="fas fa-user" aria-hidden="true"></i>
                     <span>Data User</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">OPTIONS:</h6>
+                        <h6 class="collapse-header" >OPTIONS:</h6>
                         <a class="collapse-item ssw <?= (isset($aktif_dataSiswa)) ? 'active text-warning' : '' ?>" href="<?= site_url('admin/data-siswa'); ?>">Student</a>
                         <a class="collapse-item mhs <?= (isset($aktif_dataMahasiswa)) ? 'active text-info' : '' ?>" href="<?= site_url('admin/data-mahasiswa'); ?>">College Student</a>
                     </div>
@@ -289,14 +301,14 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_instansi) ? $aktif_instansi : ''); ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities"  style="width: 270px !important">  
                     <i class="fas fa-school" aria-hidden="true"></i>
                     <span>Educational Institutions</span>
-                </a>
+                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">OPTIONS:</h6>
-                        <a class="collapse-item ssw <?= (isset($aktif_sekolah) ? 'active text-warning' : ''); ?>" href="<?= site_url('admin/instansi-sekolah'); ?>">School</a>
+                        <a class="collapse-item ssw <?= (isset($aktif_sekolah) ? 'active text-warning' : ''); ?>" href="<?= site_url('admin/instansi-sekolah'); ?>">High School</a>
                         <a class="collapse-item mhs <?= (isset($aktif_universitas) ? 'active text-info' : ''); ?>" href="<?= site_url('admin/instansi-universitas'); ?>">University</a>
                     </div>
                 </div>
@@ -304,7 +316,7 @@
 
             <!-- Divider -->
             <li class="nav-item <?= (isset($aktif_rekapAbsensi) ? 'active' : ''); ?>">
-                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"  style="width: 270px !important">
                     <i class="fas fa-user-tie" aria-hidden="true"></i>
                     <span>Attendance Recap</span>
                 </a>
@@ -317,6 +329,21 @@
                 </div>
 
             </li>
+
+            <li class="nav-item <?= (isset($aktif_rekapAktifitas) ? $aktif_rekapAktifitas : ''); ?>">
+                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseUtilities"  style="width: 270px !important">  
+                    <i class="fas fa-school" aria-hidden="true"></i>
+                    <span>Activity Recap</span>
+                 </a>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">OPTIONS:</h6>
+                        <a class="collapse-item ssw <?= (isset($aktif_rekapAktifitasSiswa) ? 'active text-warning' : ''); ?>" href="<?= site_url('admin/rekap-aktifitas-siswa'); ?>">Student</a>
+                        <a class="collapse-item mhs <?= (isset($aktif_rekapAktifitasMahasiswa) ? 'active text-info' : ''); ?>" href="<?= site_url('admin/rekap-aktifitas-mahasiswa'); ?>">Collage Student</a>
+                    </div>
+                </div>
+            </li>
+
 
             <!-- Nav Item - Pages Collapse Menu -->
 
@@ -359,7 +386,7 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto d-flex align-items-center fs-3">
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->   
                         <!-- Counter - Messages -->
 
                         <br />
