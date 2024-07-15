@@ -101,6 +101,7 @@
                             <th>No.</th>
                             <th style="min-width: 190px" class="text-center">Date</th>
                             <th style="min-width: 200px">Full Name</th>
+                            <th style="min-width: 200px">Location</th>
                             <th>Status</th>
                             <th>Description</th>
                             <th>Photo</th>
@@ -124,10 +125,10 @@
                                     <?= tanggal_indo($v['waktu_absen']) ?>
                                 </td>
                                 <td>
-                                    <?= $nama_lengkap[$v['nim_nis']] ?>
+                                    <?= $nama_lengkap[$v['nama_lengkap']] ?>
                                 </td>
                                 <td>
-                                    <?= $v['jenis_user']; ?>
+                                    <?= $v['lokasi']; ?>
                                 </td>
                                 <td>
                                     <?= $v['checkin_time']; ?>

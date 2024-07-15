@@ -17,9 +17,8 @@
                 <input type="hidden" name="dataNim_Nis" id="dataNim_Nis">
                 <!-- FOTM INPUT DATA -->
                 <div class="mb-3">
-                    <label for="editNamaLengkap" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" name="edit_nama_lengkap" id="editNamaLengkap"
-                        placeholder="">
+                    <label for="editNamaLengkap" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" name="edit_nama_lengkap" id="editNamaLengkap" placeholder="">
                     <div class="invalid-feedback errorEdit_nama_lengkap">
 
                     </div>
@@ -46,18 +45,18 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="editGender" class="form-label">Jenis Kelamin</label>
+                    <label for="editGender" class="form-label">Gender</label>
                     <select name="edit_gender" class="custom-select" id="editGender">
                         <option value="" hidden></option>
-                        <option value="Pria">Pria</option>
-                        <option value="Wanita">Wanita</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
                     <div class="invalid-feedback errorEdit_gender">
 
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="editNoHP" class="form-label">No Telepon</label>
+                    <label for="editNoHP" class="form-label">Phone Number</label>
                     <input type="number" class="form-control" name="edit_no_hp" id="editNoHP" placeholder="">
                     <div class="invalid-feedback errorEdit_no_hp">
 
@@ -71,22 +70,32 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="editInstansi" class="form-label">Instansi Pendidikan</label>
+                    <label for="editInstansi" class="form-label">Educational Institutions</label>
                     <select name="edit_instansi" class="custom-select" id="editInstansi">
                         <option value="" hidden></option>
-                        <option value="Sekolah">Sekolah</option>
-                        <option value="Universitas">Universitas</option>
+                        <option value="School">School</option>
+                        <option value="University">University</option>
                     </select>
                     <div class="invalid-feedback errorEdit_instansi">
 
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="editNamaInstansi" class="form-label">Nama Instansi</label>
-                    <input type="text" class="form-control" name="edit_nama_instansi" id="editNamaInstansi"
-                        placeholder="">
+                    <label for="editNamaInstansi" class="form-label">Educational Institutions Name :</label>
+                    <input type="text" class="form-control" name="edit_nama_instansi" id="editNamaInstansi" placeholder="">
                     <div class="invalid-feedback errorEdit_nama_instansi">
-
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="editNamaPembimbing" class="form-label">Name Of Supervising Teacher :</label>
+                    <input type="text" class="form-control" name="edit_nama_instansi" id="editNamaPembimbing" placeholder="">
+                    <div class="invalid-feedback errorEdit_nama_instansi">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="editNoPembimbing" class="form-label">Supervising Teacher Phone :</label>
+                    <input type="number" class="form-control" name="edit_nama_instansi" id="editNoPembimbing" placeholder="">
+                    <div class="invalid-feedback errorEdit_nama_instansi">
                     </div>
                 </div>
             </div>

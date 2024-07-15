@@ -14,7 +14,7 @@
             <div class="modal-body">
                 <!-- FOTM INPUT DATA -->
                 <div class="mb-3">
-                    <label for="inputNamaLengkap" class="form-label">Nama Lengkap</label>
+                    <label for="inputNamaLengkap" class="form-label">Full Name</label>
                     <input type="text" class="form-control" name="nama_lengkap" id="inputNamaLengkap" placeholder="">
                     <div class=" invalid-feedback errornama_lengkap">
 
@@ -39,11 +39,11 @@
                     <input type="text" class="form-control" name="password" id="inputPassword" value="12345678" readonly>
                 </div>
                 <div class="mb-3">
-                    <label for="inputGender" class="form-label">Jenis Kelamin</label>
+                    <label for="inputGender" class="form-label">Gender</label>
                     <select name="gender" class="custom-select" id="inputGender" onchange="updateValueG()">
                         <option value="" hidden></option>
-                        <option value="Pria">Pria</option>
-                        <option value="Wanita">Wanita</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
                     <div class="invalid-feedback errorgender">
 
@@ -68,8 +68,8 @@
                     <label for="inputInstansi" class="form-label">Instansi Pendidikan</label>
                     <select name="instansi" class="custom-select" id="inputInstansi" onchange="updateValueI()">
                         <option value="" hidden></option>
-                        <option value="Sekolah">Sekolah</option>
-                        <option value="Universitas">Universitas</option>
+                        <option value="School">School</option>
+                        <option value="University">University</option>
                     </select>
                     <div class="invalid-feedback errorinstansi">
 
@@ -79,7 +79,20 @@
                     <label for="inputNamaInstansi" class="form-label">Nama Instansi</label>
                     <input type="text" class="form-control" name="nama_instansi" id="inputNamaInstansi" placeholder="">
                     <div class="invalid-feedback errornama_instansi">
-
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputNamaPembimbing" class="form-label">Nama Guru Pembimbing</label>
+                    <input type="text" class="form-control" name="nama_pembimbing" id="inputNamaPembimbing" placeholder="">
+                    <div class="invalid-feedback errornama_pembimbing">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputNoPembimbing" class="form-label">No Guru Pembimbing</label>
+                    
+                    <input type="number" class="form-control" name="no_pembimbing" id="inputNoPembimbing" placeholder="08xxxx"
+                        pattern="[0-9]{4}[0-9]{4}[0-9]{5}">
+                    <div class="invalid-feedback errornama_instansi">
                     </div>
                 </div>
             </div>

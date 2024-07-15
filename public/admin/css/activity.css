@@ -156,7 +156,6 @@
   align-items: center; 
   border: solid 2px;
   margin: 15px;
-  width: 40%;
   text-align: center;
 }
 .buttonWrapper{
@@ -183,11 +182,11 @@
   height: auto !important;
 }
 
-img.screenshot {
+/* img.screenshot {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   position: relative;
-}
+} */
 
 canvas {
   display: none;
@@ -200,8 +199,8 @@ canvas {
 video {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  height: 13vw !important;
-  width: 18vw !important;
+  height: 10vw !important;
+  width: 14vw !important;
   min-width: 297px;
   min-height: 224px;
   border: 2px solid;
@@ -353,6 +352,22 @@ nav.close {
   background: var(--background-color);
   box-shadow: -1px 5px 5px rgb(29, 29, 29);
 }
+.screenshot {
+  width: 80%;
+  height: auto;
+  max-width: fit-content;
+}
+.custom-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 576px) {
+  .custom-row{
+    display: flex;
+    flex-direction: row;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .wrapper-body-activity {
@@ -411,14 +426,6 @@ nav.close {
   .body-dua-activity .image video {
     height: 220px !important;
     width: 280px !important;
-  }
-
-  .grid-dua-activity .hasilWrapper {
-    height: 60%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
 
   .grid-dua-activity .wrapper-activity .kbWrapper .kordinatWrapper .lat span {

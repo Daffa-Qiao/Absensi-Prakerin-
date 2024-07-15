@@ -7,8 +7,7 @@
 <!-- Begin Page Content -->
 
 <head>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.jqueryui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.jqueryui.css" />
     <style>
@@ -45,8 +44,7 @@
                             <div class="input-wrapper">
                                 <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Date :
                                 </label>
-                                <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date"
-                                    value="<?= (isset($start_date) ? $start_date : ''); ?>" />
+                                <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date" value="<?= (isset($start_date) ? $start_date : ''); ?>" />
                                 <input type="text" id="tanggalA" hidden>
                             </div>
                         </div>
@@ -56,8 +54,7 @@
                             <div class="input-wrapper">
                                 <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Date :
                                 </label>
-                                <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date"
-                                    value="<?= (isset($end_date) ? $end_date : ''); ?>" />
+                                <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
                                 <input type="text" id="tanggalB" hidden>
                             </div>
                         </div>
@@ -73,7 +70,7 @@
                 <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
                     <select name="namaLengkap" id="select" class="form-control">
                         <option value="all">SHOW ALL</option>
-                        <?php foreach ($dataUser as $usr): ?>
+                        <?php foreach ($dataUser as $usr) : ?>
                             <option value="<?= $usr['nama_lengkap'] ?>">
                                 <?= $usr['nama_lengkap'] ?>
                             </option>
@@ -81,8 +78,7 @@
                     </select>
                 </div>
                 <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-                    <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6" data-toggle="modal"
-                        data-target="#modalAbsen"><i class="fa-solid fa-pen"></i> Add Absence
+                    <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6 btnTambah" data-toggle="modal" data-target="#modalAbsen"><i class="fa-solid fa-pen"></i> Add Absence
                     </button>
                 </div>
 
@@ -101,13 +97,13 @@
                             <th>No.</th>
                             <th style="min-width: 190px" class="text-center">Date</th>
                             <th style="min-width: 200px">Full Name</th>
-                            <th style="min-width: 90px">SSW / MHS</th>
+                            <th style="min-width: 200px">Educational Institutions </th>
+                            <th style="min-width: 90px">Student/College Student</th>
                             <th style="min-width: 70px">Check-In</th>
                             <th style="min-width: 80px">Check-Out</th>
                             <th>Status</th>
                             <th>Description</th>
                             <th>Photo</th>
-                            <th style="min-width: 160px">Latitude / Longitude</th>
                             <th style="min-width: 140px">Action</th>
                         </tr>
                     </thead>
@@ -120,7 +116,7 @@
                             } else {
                                 $status = 'sakit';
                             }
-                            ?>
+                        ?>
                             <tr id="">
                                 <td class="text-center">
                                     <?= $nomor; ?>
@@ -130,6 +126,9 @@
                                 </td>
                                 <td>
                                     <?= $nama_lengkap[$v['nim_nis']] ?>
+                                </td>
+                                <td>
+                                    <?= $v['nama_instansi']; ?>
                                 </td>
                                 <td>
                                     <?= $v['jenis_user']; ?>
@@ -149,28 +148,21 @@
                                     <?= $v['keterangan']; ?>
                                 </td>
                                 <td>
-                                    <?php if ($v['foto_absen'] != ''): ?>
-                                        <img src="<?= base_url('uploadFoto/' . $v['foto_absen']) ?>" alt=""
-                                            onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto_absen']) ?>')">
+                                    <?php if ($v['foto_absen'] != '') : ?>
+                                        <img src="<?= base_url('uploadFoto/' . $v['foto_absen']) ?>" alt="" onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto_absen']) ?>')">
                                     <?php endif ?>
                                 </td>
                                 <td>
-
-                                    <?= $v['lokasi']; ?>
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-danger btn-circle mb-1"
-                                        onclick="hapus_absen(<?= $v['id'] ?>)">
+                                    <a href="#" class="btn btn-danger btn-circle mb-1" onclick="hapus_absen(<?= $v['id'] ?>)">
                                         <i class="fas fa-trash"></i>
                                     </a>
 
-                                    <a class="btn btn-warning mb-1" data-toggle="modal" data-target="#modalCheckout"
-                                        onclick="checkout(<?= $v['id'] ?>)">
+                                    <a class="btn btn-warning mb-1" data-toggle="modal" data-target="#modalCheckout" onclick="checkout(<?= $v['id'] ?>)">
                                         Check-Out
                                     </a>
                                 </td>
                             </tr>
-                            <?php
+                        <?php
                             $nomor++;
                         } ?>
                     </tbody>
@@ -193,7 +185,7 @@
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    <?php if (session()->getFlashdata('swal_icon')): ?>
+    <?php if (session()->getFlashdata('swal_icon')) : ?>
         Swal.fire({
             icon: '<?= session()->getFlashdata('swal_icon'); ?>',
             title: '<?= session()->getFlashdata('swal_title'); ?>',
@@ -203,7 +195,7 @@
     <?php endif; ?>
 
     // ajax
-    <?php if (session()->getFlashdata('swal_icon')): ?>
+    <?php if (session()->getFlashdata('swal_icon')) : ?>
         Swal.fire({
             icon: '<?= session()->getFlashdata('swal_icon'); ?>',
             title: '<?= session()->getFlashdata('swal_title'); ?>',
@@ -234,7 +226,7 @@
             url: "<?= site_url('Admin/Modal/checkout') ?>/" + $id,
             type: "GET",
             dataType: "json",
-            success: function (response) {
+            success: function(response) {
                 if (response.id != "") {
                     $("#inputID").val(response.id);
                 }
@@ -284,38 +276,55 @@
     }
     // end ajax
 
-        // $(document).ready(function () {
-        //     const table = $('#dTable').DataTable({
-        //         dom: "lBfrtip",
-        //         'columnDefs': [
-        //             {
-        //                 "targets": [1],
-        //                 "className": "text-center"
-        //             },
-        //         ]
-        //     });
+    // $(document).ready(function () {
+    //     const table = $('#dTable').DataTable({
+    //         dom: "lBfrtip",
+    //         'columnDefs': [
+    //             {
+    //                 "targets": [1],
+    //                 "className": "text-center"
+    //             },
+    //         ]
+    //     });
 
-        //     $('#select').on('change', function () {
-        //         var dropdown = $('#select').val();
-        //         if (dropdown === "all") {
-        //             table.columns(2).search('').draw();
-        //         } else if (name === dropdown) {
-        //             table.columns(2).search(dropdown).draw();
-        //         } else {
-        //             table.columns(2).search(dropdown).draw();
-        //         }
-        //     });
+    //     $('#select').on('change', function () {
+    //         var dropdown = $('#select').val();
+    //         if (dropdown === "all") {
+    //             table.columns(2).search('').draw();
+    //         } else if (name === dropdown) {
+    //             table.columns(2).search(dropdown).draw();
+    //         } else {
+    //             table.columns(2).search(dropdown).draw();
+    //         }
+    //     });
 
-        //     $('.start_date, .end_date').on("change", function () {
-        //         var startDateValue = $('.start_date').val();
-        //         var endDateValue = $('.end_date').val();
-        //         var filterForm = $('#filterForm');
-        //         // Periksa apakah kedua nilai ada
-        //         if (startDateValue && endDateValue) {
-        //             filterForm.submit();
-        //         }
-        //     });
-        // });
+    //     $('.start_date, .end_date').on("change", function () {
+    //         var startDateValue = $('.start_date').val();
+    //         var endDateValue = $('.end_date').val();
+    //         var filterForm = $('#filterForm');
+    //         // Periksa apakah kedua nilai ada
+    //         if (startDateValue && endDateValue) {
+    //             filterForm.submit();
+    //         }
+    //     });
+    // });
+
+    $('.btnTambah').on('click', function(a) {
+        const modalForm = document.getElementById('#modalAbsen');
+        modalForm.addEventListener('shown.bs.modal', function(eventTambah) {
+            eventTambah.preventDefault();
+            eventTambah.stopImmediatePropagation();
+            const link = eventTambah.relatedTarget.getAttribute('attr-href');
+            alert(link);
+            axios.get(link).then(response => {
+                $("#modalAbsen .modal-body").html(response.data);
+                $('.autoDropdown')
+            })
+        })
+    })
+
+    var table = $('.DataTable').DataTable({})
+    $('.btnTambahTuk')
 </script>
 
 

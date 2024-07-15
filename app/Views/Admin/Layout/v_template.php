@@ -40,8 +40,9 @@
         .custom-sidebar .nav-link {
             white-space: nowrap;
             overflow: hidden;
-            
+
         }
+
         img.instansi {
             width: 50px;
             height: 50px;
@@ -140,6 +141,7 @@
             width: 100%;
             margin-top: 3rem;
         }
+
         .wrapper-profile .profile-body {
             display: flex;
             justify-content: center;
@@ -168,7 +170,7 @@
         }
 
         #dTable_paginate span>* {
-            border-right: .0    1px solid black;
+            border-right: .0 1px solid black;
             margin: 0;
         }
 
@@ -286,13 +288,13 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_dataUser)) ? 'active' : '' ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"  style="width: 270px !important">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="width: 270px !important">
                     <i class="fas fa-user" aria-hidden="true"></i>
                     <span>Data User</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header" >OPTIONS:</h6>
+                        <h6 class="collapse-header">OPTIONS:</h6>
                         <a class="collapse-item ssw <?= (isset($aktif_dataSiswa)) ? 'active text-warning' : '' ?>" href="<?= site_url('admin/data-siswa'); ?>">Student</a>
                         <a class="collapse-item mhs <?= (isset($aktif_dataMahasiswa)) ? 'active text-info' : '' ?>" href="<?= site_url('admin/data-mahasiswa'); ?>">College Student</a>
                     </div>
@@ -301,10 +303,10 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_instansi) ? $aktif_instansi : ''); ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities"  style="width: 270px !important">  
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities" style="width: 270px !important">
                     <i class="fas fa-school" aria-hidden="true"></i>
                     <span>Educational Institutions</span>
-                 </a>
+                </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">OPTIONS:</h6>
@@ -316,7 +318,7 @@
 
             <!-- Divider -->
             <li class="nav-item <?= (isset($aktif_rekapAbsensi) ? 'active' : ''); ?>">
-                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"  style="width: 270px !important">
+                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="width: 270px !important">
                     <i class="fas fa-user-tie" aria-hidden="true"></i>
                     <span>Attendance Recap</span>
                 </a>
@@ -331,10 +333,10 @@
             </li>
 
             <li class="nav-item <?= (isset($aktif_rekapAktifitas) ? $aktif_rekapAktifitas : ''); ?>">
-                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseUtilities"  style="width: 270px !important">  
+                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseUtilities" style="width: 270px !important">
                     <i class="fas fa-school" aria-hidden="true"></i>
                     <span>Activity Recap</span>
-                 </a>
+                </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">OPTIONS:</h6>
@@ -386,7 +388,7 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto d-flex align-items-center fs-3">
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->   
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <!-- Counter - Messages -->
 
                         <br />
@@ -728,6 +730,7 @@
                     $("#editEmail").val($obj.email);
                     $("#editInstansi").val($obj.instansi_pendidikan);
                     $("#editNamaInstansi").val($obj.nama_instansi);
+                    $("#editNamaPembimbing").val($obj.nama_pembimbing);
                 }
             },
         });

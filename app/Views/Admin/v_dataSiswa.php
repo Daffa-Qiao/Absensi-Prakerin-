@@ -28,6 +28,8 @@
                                 <th>Educational institutions</th>
                                 <th style="min-width: 100px">NIM / NIS</th>
                                 <th style="min-width: 200px">Date Join</th>
+                                <th style="min-width: 200px">Supervising Teacher</th>
+                                <th style="min-width: 200px">Supervising Teacher Phone Number</th>
                                 <th style="min-width: 100px;"><strong>Status</strong></th>
                                 <th style="min-width: 100px">Action</th>
                             </strong></tr>
@@ -59,6 +61,12 @@
                                 </td>
                                 <td>
                                     <?= tanggal_indo($v['tanggal_bergabung']) ?>
+                                </td>
+                                <td>
+                                    <?= $v['nama_pembimbing']; ?>
+                                </td>
+                                <td>
+                                    <?= $v['no_pembimbing']; ?>
                                 </td>
                                 <td style="background-color: #00FF7F;font-family: 'Times New Roman', Times, serif;">
                                     <strong><?= $v['status']; ?></strong>

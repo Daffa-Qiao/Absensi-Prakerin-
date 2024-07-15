@@ -36,8 +36,8 @@ class Admin extends BaseController
 
         $jumlahSekolah = $user->getJumlahInstansi('sekolah');
         $jumlahUniv = $user->getJumlahInstansi('universitas');
-        $totalSiswa = $user->getUser('Siswa');
-        $totalMahasiswa = $user->getUser('Mahasiswa');
+        $totalSiswa = $user->getUser('Student');
+        $totalMahasiswa = $user->getUser('College Student');
         $totalUser = $user->where('is_verifikasi', 'yes')->countAllResults();
         $totalSuperAdmin = $user->getSuperAdmin('Super Admin');
 
@@ -120,7 +120,7 @@ class Admin extends BaseController
         $user = new MemberModel();
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_siswa');
-        $dataSiswa = $user->where('jenis_user', 'Siswa')->findAll();
+        $dataSiswa = $user->where('jenis_user', 'Student')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_dataUser = 'aktif';
         $aktif_dataSiswa = 'aktif';
@@ -144,7 +144,7 @@ class Admin extends BaseController
         $user = new MemberModel();
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_mahasiswa');
-        $dataMahasiswa = $user->where('jenis_user', 'Mahasiswa')->findAll();
+        $dataMahasiswa = $user->where('jenis_user', 'College Student')->findAll();
 
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_dataUser = 'aktif';
@@ -265,6 +265,9 @@ class Admin extends BaseController
         $email = $this->request->getVar('email');
         $nama_instansi = strtoupper($this->request->getVar('nama_instansi'));
         $foto_profile = $this->request->getFile('foto_profile');
+        $nama_pembimbing = $this->request->getVar('nama_pembimbing');
+        $no_pembimbing = $this->request->getVar('no_pembimbing');
+
 
         $rules = $this->validate([
             'nama_lengkap' => [
@@ -291,29 +294,41 @@ class Admin extends BaseController
             'password' => [
                 'rules' => 'required|regex_match[/^\S+$/]',
                 'errors' => [
-                    'required' => 'Password harus diisi',
-                    'regex_match' => 'Password tidak boleh menggunakan spasi'
+                    'required' => 'Password required',
+                    'regex_match' => 'Password must not use spaces'
                 ]
             ],
             'no_hp' => [
                 'rules' => 'required|is_unique[member.no_hp, member_id, ' . $userID . ']|regex_match[/^08\d{8,12}$/]',
                 'errors' => [
-                    'required' => 'Nomor Telepon harus diisi',
-                    'is_unique' => 'Nomor Telepon sudah terdaftar',
-                    'regex_match' => 'Nomor Telepon tidak valid'
+                    'required' => 'Phone Number must be filled in',
+                    'is_unique' => 'Phone number already registered',
+                    'regex_match' => 'Invalid phone number'
                 ]
             ],
             'email' => [
                 'rules' => 'required|is_unique[member.email, member_id, ' . $userID . ']',
                 'errors' => [
-                    'required' => 'Email harus diisi',
-                    'is_unique' => 'Email sudah terdaftar'
+                    'required' => 'Email must be filled in',
+                    'is_unique' => 'Email already registered'
                 ]
             ],
             'nama_instansi' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Nama Instansi harus diisi',
+                    'required' => 'Educational Institutions required',
+                ]
+            ],
+            'nama_pembimbing' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Supervisors name required',
+                ]
+            ],
+            'no_pembimbing' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Supervisor number Required',
                 ]
             ],
         ]);
@@ -347,6 +362,8 @@ class Admin extends BaseController
                 'email' => $email,
                 'foto' => $namaFile,
                 'nama_instansi' => $nama_instansi,
+                'nama_pembimbing' => $nama_pembimbing,
+                'no_pembimbing' => $no_pembimbing,
             ];
             $user->save($dataUpdate);
             $sesi = [
@@ -365,8 +382,8 @@ class Admin extends BaseController
         $user = new MemberModel();
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_absensi');
-        $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Siswa')->findAll();
-        $dataUser = $user->where('jenis_user', 'Siswa')->orderBy('nama_lengkap', 'asc')->findAll();
+        $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->findAll();
+        $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapSiswa = 'aktif';
         $halaman = 'Admin | Student Recap';
@@ -406,8 +423,8 @@ class Admin extends BaseController
         $user = new MemberModel();
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_absensi');
-        $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Mahasiswa')->findAll();
-        $dataUser = $user->where('jenis_user', 'Mahasiswa')->orderBy('nama_lengkap', 'asc')->findAll();
+        $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'College Student')->findAll();
+        $dataUser = $user->where('jenis_user', 'College Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $halaman = 'Admin | Collage Student Recap';
         $title = 'Collage Student Recap';
@@ -494,8 +511,8 @@ class Admin extends BaseController
         $user = new MemberModel();
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_laporan');
-        $dataLaporan = $laporan->orderBy('waktu_laporan', 'desc')->orderBy('id_laporan', 'desc')->where('jenis_user', 'Mahasiswa')->findAll();
-        $dataUser = $user->where('jenis_user', 'Mahasiswa')->orderBy('nama_lengkap', 'asc')->findAll();
+        $dataLaporan = $laporan->orderBy('waktu_laporan', 'desc')->orderBy('id_laporan', 'desc')->where('jenis_user', 'Student')->findAll();
+        $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapAktifitasSiswa = 'aktif';
         $halaman = 'Admin | Acvitivy Student Recap';
@@ -535,8 +552,8 @@ class Admin extends BaseController
         $user = new MemberModel();
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_absensi');
-        $dataLaporan = $laporan->orderBy('waktu_laporan', 'desc')->orderBy('id_laporan', 'desc')->where('jenis_user', 'Mahasiswa')->findAll();
-        $dataUser = $user->where('jenis_user', 'Mahasiswa')->orderBy('nama_lengkap', 'asc')->findAll();
+        $dataLaporan = $laporan->orderBy('waktu_laporan', 'desc')->orderBy('id_laporan', 'desc')->where('jenis_user', 'College Student')->findAll();
+        $dataUser = $user->where('jenis_user', 'College Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $halaman = 'Admin | Activity Collage Student Recap';
         $title = 'Activity Collage Student Recap';

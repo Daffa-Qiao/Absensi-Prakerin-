@@ -58,7 +58,7 @@
                     <div class="wrapper">
                         <div class="textareaWrapper">
                             <h3>Description :</h3>
-                            <textarea name="keterangan" id="" cols="30" rows="10" placeholder="Isi Disini..."></textarea>
+                            <textarea name="keterangan" id="" cols="30" rows="10" placeholder="Lorem Ipsum ...."></textarea>
                         </div>
                         <div class="kbWrapper">
                             <div class="kordinatWrapper">

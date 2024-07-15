@@ -23,7 +23,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="absenNimNis">NIM / NIS : </label>
-                        <input type="text" name="absen_nim_nis" class="form-control" id="absenNimNis" />
+                        <input type="text" name="absen_nim_nis" class="form-control autoDropdown" id="absenNimNis" />
                         <div class="invalid-feedback errorNim_nis">
 
                         </div>
@@ -87,3 +87,7 @@
 </div>
 <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
 <script src="<?= base_url('admin'); ?>/js/mdb.js"></script>
+<script>
+
+
+</script>

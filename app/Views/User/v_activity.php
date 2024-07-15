@@ -50,7 +50,7 @@
                 </div>
                 <div class="grid-dua-activity">
                     <div class="container" style="justIfy-content:start">
-                        <div class="row mt-5">
+                        <div class="row custom-row">
                             <div class="col-6" style="border:2px solid black; width:49%">
                                 <textarea rows="8" placeholder="Description...." style="width: 100%; padding:10px 15px; margin-top:5px; border:2px solid black"></textarea>
                                 <select class="form-select border border-dark  data-container=" aria-label="multiple select example">
@@ -108,11 +108,11 @@
                                     <button type="submit" class="btn btn-success" name="selesai" value="End Time" style="border:2px solid black;">End Time</button>
                                 </div>
                             </div>
-                            <div class="col-6 ml-4" style="border:2px solid black; margin-left:8px">
+                            <div class="col-6 ml-4" style="border:2px solid black;">
                                 <h3 style="margin:10px;">Documentation Results :</h3>
                                 <div id="results" class=""></div>
                                 <input type="hidden" id="photoStore" name="photoStore" value="">
-                                <img name="foto" for="activity" class="screenshot" src="<?= base_url('uploadFoto/activityprofile.png') ?>" alt="">
+                                <img name="foto" for="activity" class="screenshot responsive" src="<?= base_url('uploadFoto/activityprofile.png') ?>" alt="">
                             </div>
                         </div>
                     </div>

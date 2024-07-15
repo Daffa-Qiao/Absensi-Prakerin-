@@ -24,7 +24,7 @@
                 <input type="text" name="" id="" value="<?= session()->get('member_username') ?>" readonly />
             </div>
             <div class="identitas-profile">
-                <label for="jenis-kelamin">Gander : </label>
+                <label for="jenis-kelamin">Gender : </label>
                 <input type="text" name="jenis_kelamin" value="<?= session()->get('member_jenis_kelamin') ?>" readonly>
             </div>
             <div class="identitas-profile">
@@ -34,6 +34,14 @@
             <div class="identitas-profile">
                 <label for="email">Email :</label>
                 <input type="email" name="" id="" value="<?= session()->get('member_email') ?>" readonly />
+            </div>
+            <div class="identitas-profile">
+                <label for="guru_pembimbing">Name Of Supervising Teacher :</label>
+                <input type="text" name="nama_pembimbing" id="nama_pembimbing" value="<?= session()->get('member_nama_pembimbing') ?>" readonly />
+            </div>
+            <div class="identitas-profile">
+                <label for="guru_pembimbing">Teacher Phone Number :</label>
+                <input type="text" name="nama_pembimbing" id="nama_pembimbing" value="<?= session()->get('member_nama_pembimbing') ?>" readonly />
             </div>
             <div class="identitas-profileInstansi" id="instansi">
                 <div class="instansiAsal">

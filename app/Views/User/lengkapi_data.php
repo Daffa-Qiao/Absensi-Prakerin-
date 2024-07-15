@@ -14,10 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://kit.fontawesome.com/fb6ebd8b45.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto+Condensed&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto+Condensed&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 </head>
 
 <body class="kontainer">
@@ -79,32 +77,25 @@
                     <input name="profile" type="file" id="upload" accept=".png, .jpg, .jpeg" hidden />
                     <div class="identitas-profile">
                         <label for="nama_lengkap">Full Name : </label>
-                        <input type="text" name="nama_lengkap"
-                            class="form-control <?= ($validation->hasError('nama_lengkap')) ? 'is-invalid' : ''; ?>"
-                            id="" value="<?= set_value('nama_lengkap') ?>" required />
+                        <input type="text" name="nama_lengkap" class="form-control <?= ($validation->hasError('nama_lengkap')) ? 'is-invalid' : ''; ?>" id="" value="<?= set_value('nama_lengkap') ?>" required />
                         <div class="invalid-feedbak">
                             <?= $validation->getError('nama_lengkap') ?>
                         </div>
                     </div>
                     <div class="identitas-profile">
                         <label for="nim/nis">NIM/NIS : </label>
-                        <input type="number" name="nim_nis" id="nim_nis"
-                            class="form-control <?= ($validation->hasError('nim_nis')) ? 'is-invalid' : ''; ?>"
-                            value="<?= set_value('nim_nis') ?>" required />
+                        <input type="number" name="nim_nis" id="nim_nis" class="form-control <?= ($validation->hasError('nim_nis')) ? 'is-invalid' : ''; ?>" value="<?= set_value('nim_nis') ?>" required />
                         <div class="invalid-feedbak">
                             <?= $validation->getError('nim_nis') ?>
                         </div>
                     </div>
                     <div class="identitas-profile">
                         <label for="username">Username : </label>
-                        <input type="text" name="username" id="" value="<?= session()->get('akun_username'); ?>"
-                            readonly />
+                        <input type="text" name="username" id="" value="<?= session()->get('akun_username'); ?>" readonly />
                     </div>
                     <div class="identitas-profile">
                         <label for="gender">Gender : </label>
-                        <select name="gender" id="gender"
-                            class="form-select <?= ($validation->hasError('gender')) ? 'is-invalid' : ''; ?>"
-                            value="<?= set_value('selected_gender') ?>" required>
+                        <select name="gender" id="gender" class="form-select <?= ($validation->hasError('gender')) ? 'is-invalid' : ''; ?>" value="<?= set_value('selected_gender') ?>" required>
                             <option value="" hidden></option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -115,41 +106,36 @@
                     </div>
                     <div class="identitas-profile">
                         <label for="no_hp">Phone Number :</label>
-                        <input type="number" name="no_hp" id="" pattern="[0-9]{4}[0-9]{4}[0-9]{5}"
-                            class="form-control <?= ($validation->hasError('no_hp')) ? 'is-invalid' : ''; ?>"
-                            value="<?= set_value('no_hp') ?>" placeholder="08xxxxx" required />
+                        <input type="number" name="no_hp" id="" pattern="[0-9]{4}[0-9]{4}[0-9]{5}" class="form-control <?= ($validation->hasError('no_hp')) ? 'is-invalid' : ''; ?>" value="<?= set_value('no_hp') ?>" placeholder="08xxxxx" required />
                         <div class="invalid-feedbak">
                             <?= $validation->getError('no_hp') ?>
                         </div>
                     </div>
                     <div class="identitas-profile">
                         <label for="email">Email :</label>
-                        <input type="email" name="email" id="" value="<?= session()->get('member_email'); ?>"
-                            readonly /> 
+                        <input type="email" name="email" id="" value="<?= session()->get('member_email'); ?>" readonly />
                     </div>
                     <div class="identitas-profile">
                         <label for="nama_pembimbing">Name Of Supervising Teacher :</label>
-                        <input type="text" name="nama_pembimbing" id="" >
+                        <input type="text" name="nama_pembimbing" id="nama_pembimbing">
                         <div class="invalid-feedbak">
-                            <?= $validation->getError('nama') ?>
+                            <?= $validation->getError('nama_pembimbing') ?>
                         </div>
                     </div>
                     <div class="identitas-profile">
-                        <label for="no_hp_pembimbing">Teacher Phone Number  :</label>
-                        <input type="number" name="no_hp_pembimbing" id=""/>
+                        <label for="no_hp_pembimbing">Teacher Phone Number :</label>
+                        <input type="number" name="no_pembimbing" id="no_pembimbing" />
                         <div class="invalid-feedbak">
-                            <?= $validation->getError('no_hp_pembimbing') ?>
+                            <?= $validation->getError('no_pembimbing') ?>
                         </div>
                     </div>
                     <div class="identitas-profileInstansi">
                         <div class="instansiAsal">
                             <label for="instansiSelect">Educational Institutions :</label>
-                            <select name="instansi" id="instansi"
-                                class="form-select <?= ($validation->hasError('instansi')) ? 'is-invalid' : ''; ?>"
-                                onchange="autoFill()" style="border: none;" required>
+                            <select name="instansi" id="instansi" class="form-select <?= ($validation->hasError('instansi')) ? 'is-invalid' : ''; ?>" onchange="autoFill()" style="border: none;" required>
                                 <option value="" hidden></option>
-                                <option value="Sekolah">School</option>
-                                <option value="Universitas">University</option>
+                                <option value="School">School</option>
+                                <option value="University">University</option>
                             </select>
                             <div class="invalid-feedbak">
                                 <?= $validation->getError('instansi') ?>
@@ -157,9 +143,7 @@
                         </div>
                         <div class="instansiNama">
                             <label for="nama_instansi">Educational Institutions Name :</label>
-                            <input type="text" name="nama_instansi" id="namaInstansi"
-                                class="form-control <?= ($validation->hasError('nama_instansi')) ? 'is-invalid' : ''; ?>"
-                                value="<?= set_value('nama_instansi') ?>" required />
+                            <input type="text" name="nama_instansi" id="namaInstansi" class="form-control <?= ($validation->hasError('nama_instansi')) ? 'is-invalid' : ''; ?>" value="<?= set_value('nama_instansi') ?>" required />
                             <div class="invalid-feedbak">
                                 <?= $validation->getError('nama_instansi') ?>
                             </div>
@@ -178,7 +162,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        <?php if (session()->getFlashdata('swal_icon2')): ?>
+        <?php if (session()->getFlashdata('swal_icon2')) : ?>
             Swal.fire({
                 icon: '<?= session()->getFlashdata('swal_icon2'); ?>',
                 text: '<?= session()->getFlashdata('swal_text2'); ?>',
@@ -208,7 +192,7 @@
             nav.classList.toggle("close");
         });
 
-        document.addEventListener("click", function (event) {
+        document.addEventListener("click", function(event) {
             if (nav.contains(event.target)) {
                 nav.contains.remove("close")
             } else if (!menu.contains(event.target)) {
@@ -220,9 +204,9 @@
             var instansi = document.getElementById("instansi").value;
             var namaInstansi = document.getElementById("namaInstansi");
 
-            if (instansi == "Sekolah") {
+            if (instansi == "School") {
                 namaInstansi.value = "SMK";
-            } else if (instansi == "Universitas") {
+            } else if (instansi == "University") {
                 namaInstansi.value = "UNIVERSITAS";
             }
         }

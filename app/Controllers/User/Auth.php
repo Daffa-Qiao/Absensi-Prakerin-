@@ -3,9 +3,7 @@
 namespace App\Controllers\User;
 
 use App\Controllers\BaseController;
-use App\Models\MemberModel;
-
-;
+use App\Models\MemberModel;;
 
 class Auth extends BaseController
 {
@@ -268,29 +266,29 @@ class Auth extends BaseController
             ]);
         } else {
             // verifikasi captcha
-            $secret = getenv('SECRETKEY');
+            // $secret = getenv('SECRETKEY');
 
-            $credential = array(
-                'secret' => $secret,
-                'response' => $this->request->getVar('g-recaptcha-response')
-            );
+            // $credential = array(
+            //     'secret' => $secret,
+            //     'response' => $this->request->getVar('g-recaptcha-response')
+            // );
 
-            $verify = curl_init();
-            curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
-            curl_setopt($verify, CURLOPT_POST, true);
-            curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($credential));
-            curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
-            $response = curl_exec($verify);
-            curl_close($verify);
+            // $verify = curl_init();
+            // curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+            // curl_setopt($verify, CURLOPT_POST, true);
+            // curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($credential));
+            // curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
+            // curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
+            // $response = curl_exec($verify);
+            // curl_close($verify);
 
-            $status = json_decode($response, true);
-            if (!$status['success']) {
-                // session()->setFlashdata('error', 'Verifikasi CAPTCHA!');
-                return view('User/Auth/register', [
-                    'captcha' => 'Verify the CAPTCHA!'
-                ]);
-            }
+            // $status = json_decode($response, true);
+            // if (!$status['success']) {
+            //     // session()->setFlashdata('error', 'Verifikasi CAPTCHA!');
+            //     return view('User/Auth/register', [
+            //         'captcha' => 'Verify the CAPTCHA!'
+            //     ]);
+            // }
 
             /**Membuat function kirim email verifikasi menggunakan helpers */
             $token = random_string('numeric', 6);
@@ -359,6 +357,8 @@ class Auth extends BaseController
                 'member_instansi' => $dataAkun['instansi_pendidikan'],
                 'member_nama_instansi' => $dataAkun['nama_instansi'],
                 'member_foto' => $dataAkun['foto'],
+                'member_nama_pembimbing' => $dataAkun['nama_pembimbing'],
+                'member_no_pembimbing' => $dataAkun['no_pembimbing']
             ]);
             if ($dataAkun['level'] == 'User') {
                 session()->set('redirected', 'user');
@@ -495,6 +495,8 @@ class Auth extends BaseController
                     'member_instansi' => $dataAkun['instansi_pendidikan'],
                     'member_nama_instansi' => $dataAkun['nama_instansi'],
                     'member_foto' => $dataAkun['foto'],
+                    'member_nama_pembimbing' => $dataAkun['nama_pembimbing'],
+                    'member_no_pembimbing' => $dataAkun['no_pembimbing'],
                 ]);
                 if ($dataAkun['level'] == 'User') {
                     session()->set('redirected', 'user');
@@ -520,6 +522,8 @@ class Auth extends BaseController
         $instansi = $this->request->getVar('instansi');
         $nama_instansi = strtoupper($this->request->getVar('nama_instansi'));
         $fileProfile = $this->request->getFile('profile');
+        $nama_pembimbing = $this->request->getVar('nama_pembimbing');
+        $no_pembimbing = $this->request->getVar('no_pembimbing');
 
         if (is_null($fileProfile) || !$fileProfile->isValid()) {
             $namaFile = 'profile.png';
@@ -575,7 +579,19 @@ class Auth extends BaseController
                     'is_unique' => 'Phone number already registered',
                     'regex_match' => 'Phone number not valid'
                 ]
-            ]
+            ],
+            'nama_pembimbing' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Supervisors name required',
+                ]
+            ],
+            'no_pembimbing' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Supervisor number Required',
+                ]
+            ],
         ]);
 
 
@@ -592,7 +608,10 @@ class Auth extends BaseController
                 'foto' => $namaFile,
                 'instansi_pendidikan' => $instansi,
                 'nama_instansi' => $nama_instansi,
-                'is_verifikasi' => 'yes'
+                'is_verifikasi' => 'yes',
+                'nama_pembimbing' => $nama_pembimbing,
+                'no_pembimbing' => $no_pembimbing,
+
             ];
             $member->where('email', $email)->set($dataUpdate)->update();
             session()->remove('akun_username');
@@ -609,6 +628,8 @@ class Auth extends BaseController
                 'member_nim_nis' => $nim_nis,
                 'member_instansi' => $instansi,
                 'member_nama_instansi' => $nama_instansi,
+                'member_nama_pembimbing' => $nama_pembimbing,
+                'member_no_pembimbing' => $no_pembimbing
             ];
             session()->set($dataSesi);
             // membuat cookie login

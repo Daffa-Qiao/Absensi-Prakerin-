@@ -71,8 +71,8 @@
       </form>
       <div class="row text-center justify-content-center py-2">
         <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
-          <select name="namaLengkap" id="select" class="form-control">
-            <option value="all">SHOW ALL</option>
+          <select name="namaLengkap" id="select" class="form-control">Full Name
+            <option value="all">Full Name:</option>
             <?php foreach ($dataUser as $usr): ?>
               <option value="<?= $usr['nama_lengkap'] ?>">
                 <?= $usr['nama_lengkap'] ?>
@@ -111,7 +111,7 @@
               <th data-f-bold="true" data-a-h="left" class="text-center">No.</th>
               <th data-f-bold="true" style="min-width: 190px" class="text-center">Date</th>
               <th data-f-bold="true" style="min-width: 150px" class="text-center">Full Name</th>
-              <th data-f-bold="true" style="min-width: 90px" class="text-center">SSW / MHS</th>
+              <th data-f-bold="true" style="min-width: 90px" class="text-center">Educational Institutions</th>
               <th data-f-bold="true" style="min-width: 70px" class="text-center">Check-In</th>
               <th data-f-bold="true" style="min-width: 80px" class="text-center">Check-Out</th>
               <th data-f-bold="true" class="text-center">Status</th>
@@ -136,13 +136,13 @@
                   <?= $nomor; ?>
                 </td>
                 <td>
-                  <?= tanggal_indo($v['waktu_absen']) ?>
+                <?= tanggal_indo($v['waktu_absen']) ?>
                 </td>
                 <td>
                   <?= $v['nama_lengkap']; ?>
                 </td>
                 <td>
-                  <?= $v['jenis_user']; ?>
+                  <?= $v['nama_instansi']; ?>
                 </td>
                 <td>
                   <?= $v['checkin_time']; ?>

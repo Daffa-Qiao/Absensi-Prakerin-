@@ -21,7 +21,10 @@ class MemberModel extends Model
         'nama_instansi',
         'level',
         'is_verifikasi',
-        'token'
+        'token',
+        'status',
+        'nama_pembimbing',
+        'no_pembimbing'
     ];
 
     public function getUser($jenis_user)
@@ -42,5 +45,4 @@ class MemberModel extends Model
     {
         return $this->where('level', $role)->countAllResults();
     }
-
 }
