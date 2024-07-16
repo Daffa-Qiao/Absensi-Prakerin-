@@ -12,7 +12,8 @@ function bersihkan() {
   $("#inputEmail").val("");
   $("#inputInstansi").val("");
   $("#inputNamaInstansi").val("");
-
+  $("#inputPembimbing").val("");
+  $("#inputNoPembimbing").val("");
   // Hapus validasi
   $("#inputNamaLengkap").removeClass("is-invalid");
   $("#inputNimNis").removeClass("is-invalid");
@@ -22,6 +23,8 @@ function bersihkan() {
   $("#inputEmail").removeClass("is-invalid");
   $("#inputInstansi").removeClass("is-invalid");
   $("#inputNamaInstansi").removeClass("is-invalid");
+  $("#inputNamaPembimbing").removeClass("is-invalid");
+  $("#inputNoPembimbing").removeClass("is-invalid");
 }
 
 function hapusValidasi() {
@@ -34,6 +37,8 @@ function hapusValidasi() {
   $("#inputEmail").removeClass("is-invalid");
   $("#inputInstansi").removeClass("is-invalid");
   $("#inputNamaInstansi").removeClass("is-invalid");
+  $("#inputNamaPembimbing").removeClass("is-invalid");
+  $("#inputNoPembimbing").removeClass("is-invalid");
 }
 
 $(".tombol-tutup").on("click", function () {

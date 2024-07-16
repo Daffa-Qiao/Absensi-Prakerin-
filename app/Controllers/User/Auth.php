@@ -42,6 +42,8 @@ class Auth extends BaseController
                         'member_instansi' => $dataAkun['instansi_pendidikan'],
                         'member_nama_instansi' => $dataAkun['nama_instansi'],
                         'member_foto' => $dataAkun['foto'],
+                        'member_nama_pembimbing'=> $dataAkun['nama_pembimbing'],
+                        'member_no_pembimbing'=> $dataAkun['no_pembimbing'],
                     ];
                     session()->set($dataSesi);
 
@@ -173,6 +175,8 @@ class Auth extends BaseController
                     'member_instansi' => $memberInfo['instansi_pendidikan'],
                     'member_nama_instansi' => $memberInfo['nama_instansi'],
                     'member_foto' => $memberInfo['foto'],
+                    'member_nama_pembimbing'=> $memberInfo['nama_pembimbing'],
+                    'member_no_pembimbing'=> $memberInfo['no_pembimbing'],
                 ];
                 session()->set($dataSesi);
 

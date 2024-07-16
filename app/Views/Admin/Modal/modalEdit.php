@@ -88,14 +88,14 @@
                 </div>
                 <div class="mb-3">
                     <label for="editNamaPembimbing" class="form-label">Name Of Supervising Teacher :</label>
-                    <input type="text" class="form-control" name="edit_nama_instansi" id="editNamaPembimbing" placeholder="">
-                    <div class="invalid-feedback errorEdit_nama_instansi">
+                    <input type="text" class="form-control" name="edit_nama_pembimbing" id="editNamaPembimbing" placeholder="">
+                    <div class="invalid-feedback errorEdit_nama_Pembimbing">
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="editNoPembimbing" class="form-label">Supervising Teacher Phone :</label>
-                    <input type="number" class="form-control" name="edit_nama_instansi" id="editNoPembimbing" placeholder="">
-                    <div class="invalid-feedback errorEdit_nama_instansi">
+                    <input type="number" class="form-control" name="edit_no_pembimbing" id="editNoPembimbing" placeholder="">
+                    <div class="invalid-feedback errorEdit_no_pembimbing">
                     </div>
                 </div>
             </div>

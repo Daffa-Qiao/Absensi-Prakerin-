@@ -1,0 +1,1026 @@
+INFO - 2024-07-16 08:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 08:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-16 10:36:41 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:36:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:41 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:36:45 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:36:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:45 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:36:46 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:36:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:46 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:36:47 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:36:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:47 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:36:54 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:36:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:54 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:36:54 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:36:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:54 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:36:55 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:36:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:36:55 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:37:17 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:37:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:37:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:37:17 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:37:40 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:37:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:37:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:37:40 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:37:40 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:37:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:37:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:37:40 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-07-16 10:37:41 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:37:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:37:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:37:41 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Daffa\', \'12313\', \'daffareivan\', \'Male\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-07-16 10:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-16 10:39:19 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:39:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:39:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chelsearamadhani91@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chelsearamadhani91@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:39:20 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chelsearamadhani91@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chelsearamadhani91@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chelsearamadhani91@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKN 1\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-07-16 10:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-16 10:41:32 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:41:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:41:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKDD\', \'yes\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKDD\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:41:32 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKDD\', \'yes\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKDD\', \'yes\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (\'Chelsea Ramadhani\', \'2214312\', \'sds\', \'Female\', \'chellibomb99@gmail.com\', \'profile.png\', \'12345678\', \'085714108993\', \'School\', \'SMKDD\', \'yes\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`nama_lengkap`, `nim_nis`, `username`, `jenis_kelamin`, `email`, `foto`, `password`, `no_hp`, `instansi_pendidikan`, `nama_instansi`, `is_verifikasi`) VALUES (:nama_lengkap:, :nim_nis:, :username:, :jenis_kelamin:, :email:, :foto:, :password:, :no_hp:, :instansi_pendidikan:, :nama_instansi:, :is_verifikasi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(108): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahUser()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-07-16 10:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-16 10:43:49 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Absensi-Prakerin-\app\Controllers\User\Auth.php(317): CodeIgniter\Model->insert(Array)
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\User\Auth->registerProcess()
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Auth))
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#13 {main}
+CRITICAL - 2024-07-16 10:43:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`username`, `email`, `password`, `token`) VALUES (:username:, :email:, :password:, :token:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\User\Auth.php(317): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\User\Auth->registerProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:43:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`username`, `email`, `password`, `token`) VALUES (\'bagoes\', \'bagoessholehm.s.n@gmail.com\', \'12345678\', \'311833\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`username`, `email`, `password`, `token`) VALUES (\'bagoes\', \'bagoessholehm.s.n@gmail.com\', \'12345678\', \'311833\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`username`, `email`, `password`, `token`) VALUES (:username:, :email:, :password:, :token:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\User\Auth.php(317): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\User\Auth->registerProcess()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Auth))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:43:49 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `member` (`username`, `email`, `password`, `token`) VALUES (\'bagoes\', \'bagoessholehm.s.n@gmail.com\', \'12345678\', \'311833\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `member` (`username`, `email`, `password`, `token`) VALUES (\'bagoes\', \'bagoessholehm.s.n@gmail.com\', \'12345678\', \'311833\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `member` (`username`, `email`, `password`, `token`) VALUES (\'bagoes\', \'bagoessholehm.s.n@gmail.com\', \'12345678\', \'311833\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `member` (`username`, `email`, `password`, `token`) VALUES (:username:, :email:, :password:, :token:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User\Auth.php(317): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\User\Auth->registerProcess()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Auth))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-07-16 10:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-16 10:48:50 --> mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `member`...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member`...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member`...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `member`...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(990): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(812): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->update('54', Array)
+#8 C:\Absensi-Prakerin-\app\Controllers\User\Auth.php(425): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\User\Auth->verifikasiProcess()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Auth))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-07-16 10:48:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `member` SET `token` = :token:, `is_verifikasi` = :is_verifikasi:
+WHERE `member`.`member_id` IN :member.member_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->update('54', [...])
+ 6 APPPATH\Controllers\User\Auth.php(425): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\User\Auth->verifikasiProcess()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:48:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member` SET `token` = NULL, `is_verifikasi` = \'pending\'
+WHERE `member`.`member_id` IN (\'54\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member` SET `token` = NULL, `is_verifikasi` = \'pending\'
+WHERE `member`.`member_id` IN (\'54\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `member` SET `token` = :token:, `is_verifikasi` = :is_verifikasi:
+WHERE `member`.`member_id` IN :member.member_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 7 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->update('54', [...])
+ 8 APPPATH\Controllers\User\Auth.php(425): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\User\Auth->verifikasiProcess()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Auth))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-07-16 10:48:50 --> [Caused by] mysqli_sql_exception: Can't update table 'member' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `member` SET `token` = NULL, `is_verifikasi` = \'pending\'
+WHERE `member`.`member_id` IN (\'54\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `member` SET `token` = NULL, `is_verifikasi` = \'pending\'
+WHERE `member`.`member_id` IN (\'54\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `member` SET `token` = NULL, `is_verifikasi` = \'pending\'
+WHERE `member`.`member_id` IN (\'54\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `member` SET `token` = :token:, `is_verifikasi` = :is_verifikasi:
+WHERE `member`.`member_id` IN :member.member_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 8 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->update('54', [...])
+ 9 APPPATH\Controllers\User\Auth.php(425): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\User\Auth->verifikasiProcess()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Auth))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-07-16 10:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 10:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:44:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 11:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 12:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 12:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 13:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 13:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 13:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 13:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 13:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

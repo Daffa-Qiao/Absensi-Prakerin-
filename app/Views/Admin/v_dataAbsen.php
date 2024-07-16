@@ -78,7 +78,7 @@
                     </select>
                 </div>
                 <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-                    <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6 btnTambah" data-toggle="modal" data-target="#modalAbsen"><i class="fa-solid fa-pen"></i> Add Absence
+                    <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6 btnTambah" data-toggle="modal" data-target="#modalAbsen" attr-href="{{route('absen.tambah')}}"><i class="fa-solid fa-pen"></i> Add Absence
                     </button>
                 </div>
 
@@ -184,7 +184,7 @@
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
+<script type="module">
     <?php if (session()->getFlashdata('swal_icon')) : ?>
         Swal.fire({
             icon: '<?= session()->getFlashdata('swal_icon'); ?>',
@@ -309,22 +309,26 @@
     //     });
     // });
 
-    $('.btnTambah').on('click', function(a) {
-        const modalForm = document.getElementById('#modalAbsen');
-        modalForm.addEventListener('shown.bs.modal', function(eventTambah) {
-            eventTambah.preventDefault();
-            eventTambah.stopImmediatePropagation();
-            const link = eventTambah.relatedTarget.getAttribute('attr-href');
-            alert(link);
-            axios.get(link).then(response => {
-                $("#modalAbsen .modal-body").html(response.data);
-                $('.autoDropdown')
-            })
-        })
+    const modalForm = document.querySelector('#modalAbsen');
+    const modal = bootstrap.Modal.getOrCreateInstance(modalForm);
+    var table = $('.dTable').DataTable({
+        processing = true;
+        serverSide = true;
+        ajax: "{{route('absen.tambah')}}",
+        columns: [{
+            render: function(data, type, row){
+                return row.
+            }
+        }]
     })
 
-    var table = $('.DataTable').DataTable({})
-    $('.btnTambahTuk')
+    // tambah
+    $('.btnTambah').on('click', function(a) {
+        a.preventDefault();
+
+        const modalForm = document.getElementById('')
+    })
+
 </script>
 
 

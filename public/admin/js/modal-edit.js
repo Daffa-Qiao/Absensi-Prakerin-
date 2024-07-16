@@ -13,6 +13,8 @@ function bersihkanEdit() {
   $("#editEmail").val("");
   $("#editInstansi").val("");
   $("#editNamaInstansi").val("");
+  $("#editNamaPembimbing").val("");
+  $("#editNoPembimbing").val("");
 
   // Hapus validasi
   $("#editNamaLengkap").removeClass("is-invalid");
@@ -23,6 +25,8 @@ function bersihkanEdit() {
   $("#editEmail").removeClass("is-invalid");
   $("#editInstansi").removeClass("is-invalid");
   $("#editNamaInstansi").removeClass("is-invalid");
+  $("#editNamaPembimbing").removeClass("is-invalid");
+  $("#editNoPembimbing").removeClass("is-invalid");
 }
 
 function hapusValidasiEdit() {
@@ -35,6 +39,8 @@ function hapusValidasiEdit() {
   $("#editEmail").removeClass("is-invalid");
   $("#editInstansi").removeClass("is-invalid");
   $("#editNamaInstansi").removeClass("is-invalid");
+  $("#editNamaPembimbing").removeClass("is-invalid");
+  $("#editNoPembimbing").removeClass("is-invalid");
 }
 
 $(".tombol-tutup-edit").on("click", function () {

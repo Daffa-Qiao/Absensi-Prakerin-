@@ -40,7 +40,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="inputGender" class="form-label">Gender</label>
-                    <select name="gender" class="custom-select" id="inputGender" onchange="updateValueG()">
+                    <select name="gender" class="custom-select" id="inputGender">
                         <option value="" hidden></option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="inputInstansi" class="form-label">Instansi Pendidikan</label>
-                    <select name="instansi" class="custom-select" id="inputInstansi" onchange="updateValueI()">
+                    <select name="instansi" class="custom-select" id="inputInstansi">
                         <option value="" hidden></option>
                         <option value="School">School</option>
                         <option value="University">University</option>
@@ -89,10 +89,9 @@
                 </div>
                 <div class="mb-3">
                     <label for="inputNoPembimbing" class="form-label">No Guru Pembimbing</label>
-                    
                     <input type="number" class="form-control" name="no_pembimbing" id="inputNoPembimbing" placeholder="08xxxx"
                         pattern="[0-9]{4}[0-9]{4}[0-9]{5}">
-                    <div class="invalid-feedback errornama_instansi">
+                    <div class="invalid-feedback errorno_pembimbing">
                     </div>
                 </div>
             </div>

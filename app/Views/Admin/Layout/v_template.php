@@ -553,6 +553,8 @@
         var $email = $("#inputEmail").val();
         var $instansi = $("#inputInstansi").val();
         var $nama_instansi = $("#inputNamaInstansi").val();
+        var $nama_pembimbing = $("#inputNamaPembimbing").val();
+        var $no_pembimbing = $("#inputNoPembimbing").val();
 
         $.ajax({
             url: "<?= site_url('Admin/Modal/tambahUser'); ?>",
@@ -566,6 +568,8 @@
                 email: $email,
                 instansi: $instansi,
                 nama_instansi: $nama_instansi,
+                nama_pembimbing: $nama_instansi,
+                no_pembimbing: $no_pembimbing,
             },
             success: function(hasil) {
                 var $obj = $.parseJSON(hasil);
@@ -605,6 +609,14 @@
                         $("#inputNamaInstansi").addClass("is-invalid");
                         $(".errornama_instansi").html($obj.error.nama_instansi);
                     }
+                    if ($obj.error.nama_pembimbing) {
+                        $("#inputNamaPembimbing").addClass("is-invalid");
+                        $(".errornama_pembimbing").html($obj.error.nama_pembimbing);
+                    }
+                    if ($obj.error.no_pembimbing) {
+                        $("#inputNoPembimbing").addClass("is-invalid");
+                        $(".errorno_pembimbing").html($obj.error.no_pembimbing);
+                    }
 
                     // value
                 } else if ($obj.sukses == true) {
@@ -628,6 +640,8 @@
         var $email = $("#editEmail").val();
         var $instansi = $("#editInstansi").val();
         var $nama_instansi = $("#editNamaInstansi").val();
+        var $nama_pembimbing = $("#editNamaPembimbing").val();
+        var $no_pembimbing = $("#editNoPembimbing").val();
 
         $.ajax({
             url: "<?= site_url('Admin/Modal/editUserModal'); ?>",
@@ -643,6 +657,8 @@
                 edit_email: $email,
                 edit_instansi: $instansi,
                 edit_nama_instansi: $nama_instansi,
+                edit_nama_pembimbing: $nama_pembimbing,
+                edit_no_pembimbing: $no_pembimbing,
             },
             dataType: "json",
             success: function(response) {
@@ -682,9 +698,13 @@
                         $("#editInstansi").addClass("is-invalid");
                         $(".errorEdit_instansi").html(response.error.edit_instansi);
                     }
-                    if (response.error.edit_nama_instansi) {
-                        $("#editNamaInstansi").addClass("is-invalid");
-                        $(".errorEdit_nama_instansi").html(response.error.edit_nama_instansi);
+                    if (response.error.edit_nama_pembimbing) {
+                        $("#editNamaPembimbing").addClass("is-invalid");
+                        $(".errorEdit_nama_pembimbing").html(response.error.edit_nama_pembimbing);
+                    }
+                    if (response.error.edit_no_pembimbing) {
+                        $("#editNoPembimbing").addClass("is-invalid");
+                        $(".errorEdit_no_pembimbing").html(response.error.edit_no_pembimbing);
                     }
                     // value
                 } else if (response.sukses == true) {
@@ -731,6 +751,7 @@
                     $("#editInstansi").val($obj.instansi_pendidikan);
                     $("#editNamaInstansi").val($obj.nama_instansi);
                     $("#editNamaPembimbing").val($obj.nama_pembimbing);
+                    $("#editNoPembimbing").val($obj.no_pembimbing);
                 }
             },
         });
