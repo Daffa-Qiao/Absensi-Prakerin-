@@ -24,7 +24,6 @@
     <link href="<?= base_url('admin'); ?>/css/sb-admin-2.min.css" rel="stylesheet" />
     <!-- Custom styles for this page -->
     <link href="<?= base_url() ?>/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/rekap.css" />
 
 
@@ -121,6 +120,18 @@
         }
 
         li.nav-item>#collapseOne>.bg-white a.mhs:hover {
+            background-color: #36b9cc;
+            background-image: linear-gradient(180deg, #36b9cc 10%, #258391 100%);
+            color: white !important;
+            transition: .2s;
+        }
+        li.nav-item>#collapseThree>.bg-white a.ssw:hover {
+            background-color: #f6c23e;
+            background-image: linear-gradient(180deg, #f6c23e 10%, #dda20a 100%);
+            color: white !important;
+            transition: .2s;
+        }
+        li.nav-item>#collapseThree>.bg-white a.mhs:hover {
             background-color: #36b9cc;
             background-image: linear-gradient(180deg, #36b9cc 10%, #258391 100%);
             color: white !important;

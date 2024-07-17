@@ -78,8 +78,7 @@
                     </select>
                 </div>
                 <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-                    <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6 btnTambah" data-toggle="modal" data-target="#modalAbsen" attr-href="{{route('absen.tambah')}}"><i class="fa-solid fa-pen"></i> Add Absence
-                    </button>
+                    <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6 btnTambah" data-toggle="modal" data-target="#modalAbsen" attr-href="{{route('absen.tambah')}}"><i class="fa-solid fa-pen"></i> Add Absence </button>
                 </div>
 
             </div>
@@ -309,25 +308,7 @@
     //     });
     // });
 
-    const modalForm = document.querySelector('#modalAbsen');
-    const modal = bootstrap.Modal.getOrCreateInstance(modalForm);
-    var table = $('.dTable').DataTable({
-        processing = true;
-        serverSide = true;
-        ajax: "{{route('absen.tambah')}}",
-        columns: [{
-            render: function(data, type, row){
-                return row.
-            }
-        }]
-    })
-
-    // tambah
-    $('.btnTambah').on('click', function(a) {
-        a.preventDefault();
-
-        const modalForm = document.getElementById('')
-    })
+    
 
 </script>
 
