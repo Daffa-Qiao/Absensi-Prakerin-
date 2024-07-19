@@ -27,10 +27,7 @@
     #dTableSsw_wrapper .dt-buttons {
       display: none;
     }
-
-    .custom-export {
-      height: 10%;
-    }
+    @media screen and (max-width: 571px)
   </style>
 </head>
 <?php if (session()->getFlashdata('data')) {
@@ -39,9 +36,9 @@
   $start_date = $flashData['start_date'];
   $end_date = $flashData['end_date'];
 } ?>
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 ">
   <div class="card mt-3">
-    <div class="card-body m-auto py-2" style="width: 100%;">
+    <div class="card-body m-auto py-2">
       <form action="<?= route_to('/rekap-aktifitasSiswa'); ?>" method="post" id="filterForm">
         <div class="row text-center">
           <div class="col-sm-4 col-md-4">
@@ -93,7 +90,7 @@
           </select>
         </div>
         <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-start">
-          <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-9 rounded-pill btnTambah" data-toggle="modal" data-target="#modalActivity" attr-href="{{route('activity.tambah')}}"><i class="fa-solid fa-pen"></i> Add Activity </button>
+          <button type="button" class="btn btn-primary bg-gradient-primary col-9 rounded-pill btnTambah" data-toggle="modal" data-target="#modalActivity" attr-href="{{route('activity.tambah')}}"><i class="fa-solid fa-pen"></i> Add Activity </button>
         </div>
         <div class="d-flex justify-content-center p-2 align-self-sm-end custom-export">
             <button class="btn btn-warning bg-gradient-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
