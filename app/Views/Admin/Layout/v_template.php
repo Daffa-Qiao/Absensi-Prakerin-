@@ -20,14 +20,24 @@
     <link href="<?= base_url(); ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/fb6ebd8b45.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="<?= base_url('admin'); ?>/css/sb-admin-2.min.css" rel="stylesheet" />
     <!-- Custom styles for this page -->
     <link href="<?= base_url() ?>/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/rekap.css" />
 
 
     <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
         .custom-sidebar {
             width: 290px !important;
         }
@@ -125,12 +135,14 @@
             color: white !important;
             transition: .2s;
         }
+
         li.nav-item>#collapseThree>.bg-white a.ssw:hover {
             background-color: #f6c23e;
             background-image: linear-gradient(180deg, #f6c23e 10%, #dda20a 100%);
             color: white !important;
             transition: .2s;
         }
+
         li.nav-item>#collapseThree>.bg-white a.mhs:hover {
             background-color: #36b9cc;
             background-image: linear-gradient(180deg, #36b9cc 10%, #258391 100%);
@@ -275,7 +287,7 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item <?= (isset($aktif_dashboard)) ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= site_url('admin/dashboard'); ?>" style="width:270px !important">
-                    <i class="fa-solid fa-gauge-high"></i>
+                    <i class="bi bi-speedometer2"></i>
                     <span>Dashboard</span></a>
             </li>
 
@@ -285,22 +297,20 @@
 
             <li class="nav-item <?= (isset($aktif_dataAbsen)) ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= site_url('admin/data-absen'); ?>" style="width: 270px !important">
-                    <i class="fa-solid fa-file-pen" aria-hidden="true"></i>
-                    <!-- <i class="fas fa-fw fa-tachometer-alt" aria-hidden="true"></i> -->
+                    <i class="bi bi-pencil-square"></i>
                     <span>Attendance Data</span></a>
             </li>
 
-            <li class="nav-item <?= (isset($aktif_dataLaporan)) ? 'active' : '' ?>">
+            <!-- <li class="nav-item <?= (isset($aktif_dataLaporan)) ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= site_url('admin/data-laporan'); ?>" style="width: 270px !important">
                     <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
-                    <!-- <i class="fas fa-fw fa-tachometer-alt" aria-hidden="true"></i> -->
                     <span>Report Data</span></a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_dataUser)) ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="width: 270px !important">
-                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <i class="bi bi-person-fill"></i>
                     <span>Data User</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -315,7 +325,7 @@
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_instansi) ? $aktif_instansi : ''); ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities" style="width: 270px !important">
-                    <i class="fas fa-school" aria-hidden="true"></i>
+                    <i class="bi bi-bank2"></i>
                     <span>Educational Institutions</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -329,8 +339,8 @@
 
             <!-- Divider -->
             <li class="nav-item <?= (isset($aktif_rekapAbsensi) ? 'active' : ''); ?>">
-                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="width: 270px !important">
-                    <i class="fas fa-user-tie" aria-hidden="true"></i>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="width: 270px !important">
+                    <i class="bi bi-card-list"></i>
                     <span>Attendance Recap</span>
                 </a>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -344,8 +354,8 @@
             </li>
 
             <li class="nav-item <?= (isset($aktif_rekapAktifitas) ? $aktif_rekapAktifitas : ''); ?>">
-                <a class="nav-link collapsed active" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseUtilities" style="width: 270px !important">
-                    <i class="fas fa-school" aria-hidden="true"></i>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseUtilities" style="width: 270px !important">
+                    <i class="bi bi-clipboard-data"></i>
                     <span>Activity Recap</span>
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -375,7 +385,7 @@
 
             <li class="nav-item <?= (isset($aktif_listSuperAdmin)) ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= site_url('admin/list-super-admin'); ?>">
-                    <i class="fa-regular fa-rectangle-list"></i>
+                    <i class="bi bi-person-lines-fill"></i>
                     <span>List Super Admin</span></a>
             </li>
 

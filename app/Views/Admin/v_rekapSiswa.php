@@ -45,8 +45,7 @@
               <div class="input-wrapper">
                 <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Date :
                 </label>
-                <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date"
-                  placeholder="Tanggal Awal" value="<?= (isset($start_date) ? $start_date : ''); ?>" />
+                <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date" placeholder="Tanggal Awal" value="<?= (isset($start_date) ? $start_date : ''); ?>" />
                 <input type="text" id="tanggalA" hidden>
               </div>
             </div>
@@ -56,8 +55,7 @@
               <div class="input-wrapper">
                 <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Date :
                 </label>
-                <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date"
-                  placeholder="Tanggal Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
+                <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date" placeholder="Tanggal Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
                 <input type="text" id="tanggalB" hidden>
               </div>
             </div>
@@ -73,7 +71,7 @@
         <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
           <select name="namaLengkap" id="select" class="form-control">Full Name
             <option value="all">Full Name:</option>
-            <?php foreach ($dataUser as $usr): ?>
+            <?php foreach ($dataUser as $usr) : ?>
               <option value="<?= $usr['nama_lengkap'] ?>">
                 <?= $usr['nama_lengkap'] ?>
               </option>
@@ -81,16 +79,12 @@
           </select>
         </div>
         <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-          <button class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5"
-            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa-solid fa-file-export"></i> Export File
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i
-                class="fa-regular fa-file-pdf text-center d-flex align-items-center" style="color: #ff0033"></i></label>
-            <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel"
-              for="toExcel">Excel<i class="fa-regular fa-file-excel text-center d-flex align-items-center"
-                style="color: #3f8230; width: 16px"></i>
+            <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="fa-regular fa-file-pdf text-center d-flex align-items-center" style="color: #ff0033"></i></label>
+            <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel" for="toExcel">Excel<i class="fa-regular fa-file-excel text-center d-flex align-items-center" style="color: #3f8230; width: 16px"></i>
             </label>
           </div>
         </div>
@@ -100,7 +94,7 @@
 
   <!-- DataTales Example -->
   <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">
-  Student Attendance List
+    Student Attendance Recap
   </div>
   <div class="card shadow mb-2" style="border-radius: 0px;">
     <div class="card-body border-bottom">
@@ -130,13 +124,13 @@
                 $status = 'sakit';
               }
 
-              ?>
+            ?>
               <tr>
                 <td class="text-center" data-t="n">
                   <?= $nomor; ?>
                 </td>
                 <td>
-                <?= tanggal_indo($v['waktu_absen']) ?>
+                  <?= tanggal_indo($v['waktu_absen']) ?>
                 </td>
                 <td>
                   <?= $v['nama_lengkap']; ?>
@@ -159,9 +153,8 @@
                   <?= $v['keterangan']; ?>
                 </td>
                 <td data-exclude="true">
-                  <?php if ($v['foto_absen'] != ''): ?>
-                    <img src="<?= base_url('uploadFoto/' . $v['foto_absen']) ?>" id="" alt=""
-                      onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto_absen']) ?>')">
+                  <?php if ($v['foto_absen'] != '') : ?>
+                    <img src="<?= base_url('uploadFoto/' . $v['foto_absen']) ?>" id="" alt="" onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto_absen']) ?>')">
                   <?php endif ?>
                 </td>
                 <td>
@@ -169,7 +162,7 @@
                   <?= $v['lokasi']; ?>
                 </td>
               </tr>
-              <?php
+            <?php
               $nomor++;
             } ?>
           </tbody>
@@ -193,7 +186,7 @@
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
 <script>
-  <?php if (session()->getFlashdata('swal_icon')): ?>
+  <?php if (session()->getFlashdata('swal_icon')) : ?>
     Swal.fire({
       icon: '<?= session()->getFlashdata('swal_icon'); ?>',
       title: '<?= session()->getFlashdata('swal_title'); ?>',
@@ -214,17 +207,14 @@
   let current_time = `${day}-${month}-${year}, ${hours}.${minutes}.${seconds}`;
 
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     const table = $('#dTableSsw').DataTable({
       dom: "lBfrtip",
-      'columnDefs': [
-        {
-          "targets": [1],
-          "className": "text-center"
-        },
-      ],
-      buttons: [
-        {
+      'columnDefs': [{
+        "targets": [1],
+        "className": "text-center"
+      }, ],
+      buttons: [{
           extend: 'excelHtml5',
           title: `Rekap Absensi Siswa ${current_time} WIB`,
           exportOptions: {
@@ -243,7 +233,7 @@
     document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
     document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
 
-    $('#select').on('change', function () {
+    $('#select').on('change', function() {
       var dropdown = $('#select').val();
       if (dropdown === "all") {
         table.columns(2).search('').draw();
@@ -254,7 +244,7 @@
       }
     });
 
-    $('.start_date, .end_date').on("change", function () {
+    $('.start_date, .end_date').on("change", function() {
       var startDateValue = $('.start_date').val();
       var endDateValue = $('.end_date').val();
       var filterForm = $('#filterForm');

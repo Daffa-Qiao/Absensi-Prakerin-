@@ -36,12 +36,10 @@ class Absensi extends Model
     }
     public function getDataByDateRangeSSW($startDate, $endDate)
     {
-        return $this->where('waktu_absen >=', $startDate)->where('waktu_absen <=', $endDate)->where('jenis_user', 'Siswa')->orderBy('waktu_absen', 'asc')->orderBy('id', 'asc')->get()->getResultArray();
+        return $this->where('waktu_absen >=', $startDate)->where('waktu_absen <=', $endDate)->where('jenis_user', 'Student')->orderBy('waktu_absen', 'asc')->orderBy('id', 'asc')->get()->getResultArray();
     }
     public function getDataByDateRangeMHS($startDate, $endDate)
     {
-        return $this->where('waktu_absen >=', $startDate)->where('waktu_absen <=', $endDate)->where('jenis_user', 'Mahasiswa')->orderBy('waktu_absen', 'asc')->orderBy('id', 'asc')->get()->getResultArray();
+        return $this->where('waktu_absen >=', $startDate)->where('waktu_absen <=', $endDate)->where('jenis_user', 'College Student')->orderBy('waktu_absen', 'asc')->orderBy('id', 'asc')->get()->getResultArray();
     }
-
-
 }

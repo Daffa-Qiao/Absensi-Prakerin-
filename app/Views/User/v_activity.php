@@ -36,6 +36,7 @@
                             <div class="row">
                                 <div class="col-sm">
                                     <div id="my_camera" class="mx-auto rounded overflow-hidden col-lg"></div>
+                                    
                                 </div>
                                 <div class="col">
                                     <button type="button" id="takephoto" style="border:2px solid black">
