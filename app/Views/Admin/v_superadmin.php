@@ -7,7 +7,7 @@
 <div class="container-fluid p-0">
     <!-- DataTales Example -->
     <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">
-    List User Data
+        List User Data
     </div>
     <div class="card shadow mb-2">
         <div class="card-body border-bottom">
@@ -22,13 +22,22 @@
                             <th>Email</th>
                             <th style="width: 210px; min-width: 250px;">Password</th>
                             <th>Phone Number</th>
+                            <th style="min-width: 100px">Status</th>
                             <th style="min-width: 100px">Role</th>
                             <th style="min-width: 100px">Action</th>
                         </tr>
                     </thead>
                     <tbody class="border">
                         <?php foreach ($dataUser as $v) {
-
+                            if ($v['status'] == 'Good') {
+                                $status = 'baik';
+                            } else if ($v['status'] == 'Verbal Warning') {
+                                $status = 'teguran-lisan';
+                            } else if ($v['status'] == 'Written Agreement') {
+                                $status = 'teguran-tertulis';
+                            } else if ($v['status'] == 'Terminated') {
+                                $status = 'terminated';
+                            }
                         ?>
                             <tr>
                                 <td class="text-center">
@@ -55,6 +64,11 @@
                                 </td>
                                 <td>
                                     <?= $v['no_hp']; ?>
+                                </td>
+                                <td>
+                                    <div class="status <?= (isset($status)) ? $status : '' ?>" style="font-family: ' Times New Roman', Times, serif;">
+                                        <strong><?= $v['status']; ?></strong>
+                                    </div>
                                 </td>
                                 <td>
                                     <?= $v['level'] ?>
@@ -115,6 +129,7 @@
                     $("#superNoHP").val($obj.no_hp);
                     $("#superEmail").val($obj.email);
                     $("#superRole").val($obj.level);
+                    $("#superStatus").val($obj.status);
                 }
             },
         });

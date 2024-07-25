@@ -36,6 +36,15 @@
                     </thead>
                     <tbody class="border">
                         <?php foreach ($dataSiswa as $v) {
+                            if ($v['status'] == 'Good') {
+                                $status = 'baik';
+                            } else if ($v['status'] == 'Verbal Warning') {
+                                $status = 'teguran-lisan';
+                            } else if ($v['status'] == 'Written Agreement') {
+                                $status = 'teguran-tertulis';
+                            } else if ($v['status'] == 'Terminated') {
+                                $status = 'terminated';
+                            }
                         ?>
                             <tr>
                                 <td>
@@ -53,7 +62,7 @@
                                     <?php endif ?>
                                 </td>
                                 <td>
-                                        
+
                                     <?= $v['nama_instansi']; ?>
                                 </td>
                                 <td>
@@ -68,8 +77,10 @@
                                 <td>
                                     <?= $v['no_pembimbing']; ?>
                                 </td>
-                                <td style="background-color: #00FF7F;font-family: 'Times New Roman', Times, serif;">
-                                    <strong><?= $v['status']; ?></strong>
+                                <td>
+                                    <div class="status <?= (isset($status)) ? $status : '' ?>" style="font-family: ' Times New Roman', Times, serif;">
+                                        <strong><?= $v['status']; ?></strong>
+                                    </div>
                                 </td>
                                 <td>
                                     <?php if (session('member_id') != $v['member_id']) : ?>

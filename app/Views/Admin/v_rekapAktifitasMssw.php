@@ -36,67 +36,85 @@
   $end_date = $flashData['end_date'];
 } ?>
 <div class="container-fluid p-0">
-  <div class="card mt-3">
-    <div class="card-body m-auto py-2" style="width: 90%">
+<div class="card mt-3">
+    <div class="card-body m-auto py-2" style="width: 70%;">
       <form action="<?= route_to('/rekap-aktifitasSiswa'); ?>" method="post" id="filterForm">
-        <div class="row text-center justify-content-center ">
-          <div class="col-sm-4 col-md-4">   
-            <div class="form-group basic mb-0 my-2">
-              <div class="input-wrapper">
-                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Date :
-                </label>
-                <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date"
-                  placeholder="Tanggal Awal" value="<?= (isset($start_date) ? $start_date : ''); ?>" />
-                <input type="text" id="tanggalA" hidden>
+        <!--row  -->
+        <div class="row">
+          <!-- col 1 -->
+          <div class="col">
+            <div class="col">
+              <!-- start date -->
+              <div class="form-group basic mb-0 my-2">
+                <div class="input-wrapper">
+                  <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Date :
+                  </label>
+                  <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date" placeholder="Tanggal Awal" value="<?= (isset($start_date) ? $start_date : ''); ?>" />
+                  <input type="text" id="tanggalA" hidden>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-md-4 my-2">
-            <div class="form-group basic mb-0">
-              <div class="input-wrapper">
-                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Date :
-                </label>
-                <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date"
-                  placeholder="Tanggal Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
-                <input type="text" id="tanggalB" hidden>
+              <!-- end date -->
+              <div class="col-13">
+                <div class="form-group basic mb-0 my-2">
+                  <div class="input-wrapper">
+                    <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Date :
+                    </label>
+                    <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date" placeholder="Tanggal Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
+                    <input type="text" id="tanggalB" hidden>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-1 col-md-1 my-2 d-flex justify-content-center align-items-end">
+              <!--full name  -->
+              <div class="col-13">
+                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Full Name :</label>
+                <select name="namaLengkap" id="select" class="form-control">
+                  <option value="all">Show :</option>
+                  <?php foreach ($dataUser as $usr) : ?>
+                    <option value="<?= $usr['nama_lengkap'] ?>">
+                      <?= $usr['nama_lengkap'] ?>
+                    </option>
+                  <?php endforeach ?>
+                </select>
+              </div>
+              <div class="col-13 my-2 d-flex justify-content-center align-items-end">
             <a class="btn btn-secondary" href="<?= site_url('admin/rekap-aktifitas-siswa'); ?>">
-              <i class="fa-solid fa-rotate-left"></i>
+              <i class="bi bi-arrow-repeat"></i>
             </a>
+          </div>
+            </div>
+          </div>
+          <!-- col 2 -->
+          <div class="col ">
+            <!-- button add activity -->
+            <div class="col d-flex mt-5 justify-content-center">
+              <button type="button" class="btn btn-primary bg-gradient-primary col-10 rounded-pill btnTambah custom-tambahkan custom-text fw-bold text-dark" data-toggle="modal" data-target="#modalActivity" attr-href="{{route('activity.tambah')}}"><i class="bi bi-pencil-square"></i> ADD ACTIVITY</button>
+            </div>
+            <!-- button monthly recap -->
+            <div class="col d-flex mt-2 justify-content-center">
+              <button class="btn btn-lg btn-warning bg-gradient-warning dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+              <i class="bi bi-arrow-bar-down"></i> MONTHLY RECAP
+              </button>
+              <div class="dropdown-menu col-9" aria-labelledby="dropdownMenuButton">
+                <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="bi bi-file-earmark-pdf" style="color: #ff0033;"></i></label>
+                <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel" for="toExcel">Excel<i class="bi bi-file-earmark-excel" style="color: #3f8230;"></i></label>
+              </div>
+            </div>
+            <!-- button export file -->
+            <div class="col d-flex mt-2 justify-content-center">
+              <button class="btn btn-lg btn-danger bg-gradient-danger dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+              <i class="bi bi-arrow-bar-down"></i> EXPORT FILE
+              </button>
+              <div class="dropdown-menu col-9" aria-labelledby="dropdownMenuButton">
+                <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="bi bi-file-earmark-pdf" style="color: #ff0033;"></i></label>
+                <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel" for="toExcel">Excel<i class="bi bi-file-earmark-excel" style="color: #3f8230;"></i></label>
+              </div>
+            </div>
           </div>
         </div>
       </form>
-      <div class="row text-center justify-content-center py-2">
-        <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
-          <select name="namaLengkap" id="select" class="form-control">
-            <option value="all">Full Name:</option>
-            <?php foreach ($dataUser as $usr): ?>
-              <option value="<?= $usr['nama_lengkap'] ?>">
-                <?= $usr['nama_lengkap'] ?>
-              </option>
-            <?php endforeach ?>
-          </select>
-        </div>
-        <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-          <button class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5"
-            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa-solid fa-file-export"></i> Export File
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i
-                class="fa-regular fa-file-pdf text-center d-flex align-items-center" style="color: #ff0033"></i></label>
-            <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel"
-              for="toExcel">Excel<i class="fa-regular fa-file-excel text-center d-flex align-items-center"
-                style="color: #3f8230; width: 16px"></i>
-            </label>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+
 
   <!-- DataTales Example -->
   <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">

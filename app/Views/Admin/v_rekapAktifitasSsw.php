@@ -32,9 +32,7 @@
       box-sizing: border-box;
     }
 
-    .custom-text {
-      color: black;
-    }
+
 
     @media screen and (max-width: 571px) {}
   </style>
@@ -97,28 +95,26 @@
           <div class="col ">
             <!-- button add activity -->
             <div class="col d-flex mt-5 justify-content-center">
-              <button type="button" class="btn btn-primary bg-gradient-primary col-10 rounded-pill btnTambah custom-tambahkan custom-text fw-bold" data-toggle="modal" data-target="#modalActivity" attr-href="{{route('activity.tambah')}}"><i class="bi bi-pencil-square"></i> ADD ACTIVITY</button>
+              <button type="button" class="btn btn-primary bg-gradient-primary col-10 rounded-pill btnTambah custom-tambahkan custom-text fw-bold text-dark" data-toggle="modal" data-target="#modalActivity" attr-href="{{route('activity.tambah')}}"><i class="bi bi-pencil-square"></i> ADD ACTIVITY</button>
             </div>
             <!-- button monthly recap -->
             <div class="col d-flex mt-2 justify-content-center">
-              <button class="btn btn-lg btn-warning bg-gradient-warning dropdown-toggle col-10 fw-bold custom-text" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:13px;">
+              <button class="btn btn-lg btn-warning bg-gradient-warning dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
               <i class="bi bi-arrow-bar-down"></i> MONTHLY RECAP
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="fa-regular fa-file-pdf text-center d-flex align-items-center" style="color: #ff0033"></i></label>
-                <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel" for="toExcel">Excel<i class="fa-regular fa-file-excel text-center d-flex align-items-center" style="color: #3f8230; width: 16px"></i>
-                </label>
+              <div class="dropdown-menu col-9" aria-labelledby="dropdownMenuButton">
+                <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="bi bi-file-earmark-pdf" style="color: #ff0033;"></i></label>
+                <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel" for="toExcel">Excel<i class="bi bi-file-earmark-excel" style="color: #3f8230;"></i></label>
               </div>
             </div>
             <!-- button export file -->
             <div class="col d-flex mt-2 justify-content-center">
-              <button class="btn btn-lg btn-danger bg-gradient-danger dropdown-toggle col-10 fw-bold custom-text" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+              <button class="btn btn-lg btn-danger bg-gradient-danger dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
               <i class="bi bi-arrow-bar-down"></i> EXPORT FILE
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="fa-regular fa-file-pdf text-center d-flex align-items-center" style="color: #ff0033"></i></label>
-                <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel" for="toExcel">Excel<i class="fa-regular fa-file-excel text-center d-flex align-items-center" style="color: #3f8230; width: 16px"></i>
-                </label>
+              <div class="dropdown-menu col-9" aria-labelledby="dropdownMenuButton">
+                <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="bi bi-file-earmark-pdf" style="color: #ff0033;"></i></label>
+                <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel" for="toExcel">Excel<i class="bi bi-file-earmark-excel" style="color: #3f8230;"></i></label>
               </div>
             </div>
           </div>

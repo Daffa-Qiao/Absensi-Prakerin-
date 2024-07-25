@@ -36,15 +36,17 @@
                             <div class="row">
                                 <div class="col-sm">
                                     <div id="my_camera" class="mx-auto rounded overflow-hidden col-lg"></div>
-                                    
                                 </div>
                                 <div class="col">
-                                    <button type="button" id="takephoto" style="border:2px solid black">
+                                    <button type="button" id="takephoto" style="border:2px solid black; margin-top:20px; margin-bottom: 20px">
                                         <a href="#hasil">
                                             <i class="fa-solid fa-camera"></i>
                                         </a>
                                     </button>
                                 </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="file" class="form-control" id="inputGroupFile02">
                             </div>
                         </div>
                     </div>
@@ -54,55 +56,27 @@
                         <div class="row custom-row">
                             <div class="col-6" style="border:2px solid black; width:49%">
                                 <textarea rows="8" placeholder="Description...." style="width: 100%; padding:10px 15px; margin-top:5px; border:2px solid black"></textarea>
-                                <select class="form-select border border-dark  data-container=" aria-label="multiple select example">
-                                    <option selected>Location</option>
-                                    <optgroup label="Gedung Karya">
-                                        <option value="Gedung Karya Lantai 1">Lantai 1</option>
-                                        <option value="Gedung Karya Lantai 2">Lantai 2</option>
-                                        <option value="Gedung Karya Lantai 3">Lantai 3</option>
-                                        <option value="Gedung Karya Lantai 4">Lantai 4</option>
-                                        <option value="Gedung Karya Lantai 5">Lantai 5</option>
-                                        <option value="Gedung Karya Lantai 6">Lantai 6</option>
-                                        <option value="Gedung Karya Lantai 7">Lantai 7</option>
-                                        <option value="Gedung Karya Lantai 8">Lantai 8</option>
-                                        <option value="Gedung Karya Lantai 9">Lantai 9</option>
-                                        <option value="Gedung Karya Lantai 10">Lantai 10</option>
-                                        <option value="Gedung Karya Lantai 11">Lantai 11</option>
-                                        <option value="Gedung Karya Lantai 12">Lantai 12</option>
-                                        <option value="Gedung Karya Lantai 13">Lantai 13</option>
-                                        <option value="Gedung Karya Lantai 14">Lantai 14</option>
-                                        <option value="Gedung Karya Lantai 15">Lantai 15</option>
-                                        <option value="Gedung Karya Lantai 16">Lantai 16</option>
-                                        <option value="Gedung Karya Lantai 17">Lantai 17</option>
-                                        <option value="Gedung Karya Lantai 18">Lantai 18</option>
-                                        <option value="Gedung Karya Lantai 19">Lantai 19</option>
-                                        <option value="Gedung Karya Lantai 20">Lantai 20</option>
-                                        <option value="Gedung Karya Lantai 21">Lantai 21</option>
-                                        <option value="Gedung Karya Lantai 22">Lantai 22</option>
-                                        <option value="Gedung Karya Lantai 23">Lantai 23</option>
-                                        <option value="Gedung Karya Lantai 24">Lantai 24</option>
-                                        <option value="Gedung Karya Lantai 25">Lantai 25</option>
-                                    </optgroup>
-                                    <optgroup label="Gedung Karsa">
-                                        <option value="Gedung Karsa Lantai 1">Lantai 1</option>
-                                        <option value="Gedung Karsa Lantai 2">Lantai 2</option>
-                                        <option value="Gedung Karsa Lantai 3">Lantai 3</option>
-                                        <option value="Gedung Karya Lantai 4">Lantai 4</option>
-                                        <option value="Gedung Karya Lantai 5">Lantai 5</option>
-                                        <option value="Gedung Karya Lantai 6">Lantai 6</option>
-                                        <option value="Gedung Karya Lantai 7">Lantai 7</option>
-                                        <option value="Gedung Karya Lantai 8">Lantai 8</option>
-                                        <option value="Gedung Karya Lantai 9">Lantai 9</option>
-                                    </optgroup>
-                                    <optgroup label="Geudng Cipta">
-                                        <option value="Gedung Cipta Lantai 1">Lantai 1</option>
-                                        <option value="Gedung Cipta Lantai 2">Lantai 2</option>
-                                        <option value="Gedung Cipta Lantai 3">Lantai 3</option>
-                                        <option value="Gedung Cipta Lantai 4">Lantai 4</option>
-                                        <option value="Gedung Cipta Lantai 5">Lantai 5</option>
-                                        <option value="Gedung Cipta Lantai 6">Lantai 6</option>
-                                        <option value="Gedung Cipta Lantai 7">Lantai 7</option>
-                                    </optgroup>
+                                <select class="form-select border border-dark data-container" id="lokasi" aria-label="multiple select example">
+                                    <option selected>Lockasi</option>
+                                    <option value="Gedung Karya">Gedung Karya</option>
+                                    <option value="Gedung Karsa">Gedung Karsa</option>
+                                    <option value="Gedung Cipta">Gedung Cipta</option>
+                                    <option value="Merdeka Timur">Merdeka Timur</option>
+                                </select>
+                                <select class="form-select border-dark mt-3" aria-label="Default select example" id="lantai">
+                                    <option selected>Lantai</option>
+                                    <option value="Lantai 1">Lantai 1</option>
+                                    <option value="Lantai 2">Lantai 2</option>
+                                    <option value="Lantai 3">Lantai 3</option>
+                                    <option value="Lantai 4">Lantai 4</option>
+                                    <option value="Lantai 5">Lantai 5</option>
+                                    <option value="Lantai 6">Lantai 6</option>
+                                    <option value="Lantai 7">Lantai 7</option>
+                                    <option value="Lantai 8">Lantai 8</option>
+                                    <option value="Lantai 9">Lantai 9</option>
+                                    <option value="Lantai 10">Lantai 10</option>
+                                    <option value="Lantai 11">Lantai 11</option>
+                                    <option value="Lantai 12">Lantai 12</option>
                                 </select>
                                 <div class="buttonWrapper">
                                     <button type="submit" class="btn btn-primary" name="mulai" value="Start Time" style="border:2px solid black;">Start Time</button>
@@ -219,6 +193,8 @@
             let d = new Date();
             time.innerHTML = d.toLocaleTimeString();
         }, 1000);
+
+
     </script>
 
 </main>

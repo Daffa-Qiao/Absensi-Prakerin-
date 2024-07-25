@@ -38,6 +38,7 @@
         * {
             font-family: "Poppins", sans-serif;
         }
+
         .custom-sidebar {
             width: 290px !important;
         }
@@ -237,11 +238,32 @@
 
         td .status.izin {
             background-color: #f6c23e;
-            color: black;
+            color: white;
         }
 
         td .status.sakit {
             background-color: #d893a3;
+            color: black;
+        }
+
+        td .status.baik {
+            background-color: #00FF7F;
+            border-radius: 1rem;
+            padding: .4rem 0;
+        }
+
+        td .status.teguran-lisan {
+            background-color: #FFFF00;
+            color: black;
+        }
+
+        td .status.teguran-tertulis {
+            background-color: #FF8F00;
+            color: black;
+        }
+
+        td .status.terminated {
+            background-color: #E53636;
             color: black;
         }
 
@@ -900,6 +922,7 @@
         var $password = $("#superPassword").val();
         var $no_hp = $("#superNoHP").val();
         var $role = $("#superRole").val();
+        var $status = $("#superStatus").val();
 
         $.ajax({
             url: "<?= site_url('admin/SuperAdmin/super_admin_modal'); ?>",
@@ -912,7 +935,8 @@
                 super_password: $password,
                 super_no_hp: $no_hp,
                 super_email: $email,
-                super_role: $role
+                super_role: $role,
+                super_status: $status
             },
             dataType: 'json',
             success: function(response) {
@@ -945,6 +969,10 @@
                     if (response.error.super_role) {
                         $("#superRole").addClass("is-invalid");
                         $(".errorrole").html(response.error.super_role);
+                    }
+                    if (response.error.super_status) {
+                        $("#superStatus").addClass("is-invalid");
+                        $(".errorstatus").html(response.error.super_status);
                     }
                 } else if (response.sukses == true) {
                     /**  jika sukses */

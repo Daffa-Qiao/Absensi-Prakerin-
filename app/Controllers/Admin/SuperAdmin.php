@@ -40,6 +40,7 @@ class SuperAdmin extends BaseController
         return view('Admin/v_superadmin', $data);
     }
 
+
     public function super_admin_edit($id)
     {
         $user = new MemberModel();
@@ -105,6 +106,12 @@ class SuperAdmin extends BaseController
                     'required' => 'Role must be filled',
                 ]
             ],
+            'super_status' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Status must be filled',
+                ]
+            ],
         ];
 
         $validasi->setRules($aturan);
@@ -116,6 +123,7 @@ class SuperAdmin extends BaseController
             $no_hp = $this->request->getPost('super_no_hp');
             $email = $this->request->getPost('super_email');
             $role = $this->request->getPost('super_role');
+            $status = $this->request->getPost('super_status');
 
             $data = [
                 'member_id' => $id,
@@ -126,6 +134,7 @@ class SuperAdmin extends BaseController
                 'email' => $email,
                 'no_hp' => $no_hp,
                 'level' => $role,
+                'status' => $status,
             ];
             $user = new MemberModel();
             $user->save($data);
@@ -144,6 +153,7 @@ class SuperAdmin extends BaseController
                     'super_no_hp' => $validasi->getError('super_no_hp'),
                     'super_email' => $validasi->getError('super_email'),
                     'super_role' => $validasi->getError('super_role'),
+                    'super_status' => $validasi->getError('super_status'),
                 ],
             ];
         }

@@ -114,7 +114,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xl font-weight-bold text-info text-uppercase mb-1">
-                                College Student
+                                    College Student
                                 </div>
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="card-mhs">
                                     <?= $totalMahasiswa ?>
@@ -165,9 +165,9 @@
                 <table class="table table-bordered" id="dTable" width="100%" cellspacing="0">
                     <thead class="border">
                         <tr>
-                            <th class="">Data User</th>
+                            <th class="">User</th>
                             <th class="" style="width: 100px;">Attended</th>
-                            <th class="" style="width: 100px;">Permission</th>
+                            <th class="" style="width: 100px;">Permit</th>
                             <th class="" style="width: 100px;">Sick</th>
                         </tr>
                     </thead>
@@ -179,9 +179,9 @@
                             $namaLengkap = $dataUser ? $dataUser->nama_lengkap : 'User Telah Dihapus';
                             $nama_instansi = $dataUser ? $dataUser->nama_instansi : '';
                             $jenis_user = $dataUser ? $dataUser->jenis_user : $v->jenis_user;
-                            if ($jenis_user == 'Siswa') {
+                            if ($jenis_user == 'Student') {
                                 $jenis = 'text-success';
-                            } else if ($jenis_user == 'Mahasiswa') {
+                            } else if ($jenis_user == 'College Student') {
                                 $jenis = 'text-primary';
                             }
                         ?>

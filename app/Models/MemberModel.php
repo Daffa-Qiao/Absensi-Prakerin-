@@ -22,9 +22,9 @@ class MemberModel extends Model
         'level',
         'is_verifikasi',
         'token',
-        'status',
         'nama_pembimbing',
-        'no_pembimbing'
+        'no_pembimbing',
+        'status',
     ];
 
     public function getUser($jenis_user)
@@ -33,7 +33,7 @@ class MemberModel extends Model
     }
     public function getTotalUser($jenis_user)
     {
-        return $this->table->findALl()->countAllResults();
+        return $this->table->findALL()->countAllResults();
     }
 
     public function getJumlahInstansi($jenis_instansi)

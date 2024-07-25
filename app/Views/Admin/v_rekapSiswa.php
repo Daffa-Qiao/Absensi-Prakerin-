@@ -124,7 +124,7 @@
                 $status = 'sakit';
               }
 
-            ?>
+              ?>
               <tr>
                 <td class="text-center" data-t="n">
                   <?= $nomor; ?>

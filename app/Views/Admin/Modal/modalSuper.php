@@ -18,8 +18,7 @@
                 <!-- FOTM INPUT DATA -->
                 <div class="mb-3">
                     <label for="superNamaLengkap" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" name="super_nama_lengkap" id="superNamaLengkap"
-                        placeholder="">
+                    <input type="text" class="form-control" name="super_nama_lengkap" id="superNamaLengkap" placeholder="">
                     <div class=" invalid-feedback errornama_lengkap">
 
                     </div>
@@ -57,7 +56,18 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="superRole" class="form-label">Ubah Role</label>
+                    <label for="superStatus" class="form-label">Change Status</label>
+                    <select name="super_status" class="custom-select" id="superStatus">
+                        <option value="Good">Good</option>
+                        <option value="Verbal Warning">Verbal Warning</option>
+                        <option value="Written Agreement">Written Agreement</option>
+                        <option value="Terminated">Terminated</option>
+                    </select>
+                    <div class="invalid-feedback errorstatus">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="superRole" class="form-label">Change Role</label>
                     <select name="super_role" class="custom-select" id="superRole">
                         <option value="Super Admin">Super Admin</option>
                         <option value="Admin">Admin</option>
