@@ -328,7 +328,7 @@ class Admin extends BaseController
             'no_pembimbing' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Supervisor number Required',
+                    'required' => 'Supervisors phone number Required',
                 ]
             ],
         ]);

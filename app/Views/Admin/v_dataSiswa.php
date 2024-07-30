@@ -10,7 +10,7 @@
         <input type="button" id="but" data-toggle="modal" data-target="#exampleModal" hidden></input>
         <label for="but" class="w-100 h-100 d-flex align-items-center" style="min-width: 200px; ">
             <i class="fa-solid fa-circle-plus mr-2"></i>
-            Tambah User Baru
+            Add New User
         </label>
     </div>
     <!-- DataTales Example -->

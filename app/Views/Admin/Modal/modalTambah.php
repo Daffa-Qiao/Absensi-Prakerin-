@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputInstansi" class="form-label">Instansi Pendidikan</label>
+                    <label for="inputInstansi" class="form-label">Educational Institutions</label>
                     <select name="instansi" class="custom-select" id="inputInstansi">
                         <option value="" hidden></option>
                         <option value="School">School</option>
@@ -76,19 +76,19 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputNamaInstansi" class="form-label">Nama Instansi</label>
+                    <label for="inputNamaInstansi" class="form-label">Name Of Agency</label>
                     <input type="text" class="form-control" name="nama_instansi" id="inputNamaInstansi" placeholder="">
                     <div class="invalid-feedback errornama_instansi">
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputNamaPembimbing" class="form-label">Nama Guru Pembimbing</label>
+                    <label for="inputNamaPembimbing" class="form-label">Name of Supervisors Teacher</label>
                     <input type="text" class="form-control" name="nama_pembimbing" id="inputNamaPembimbing" placeholder="">
                     <div class="invalid-feedback errornama_pembimbing">
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputNoPembimbing" class="form-label">No Guru Pembimbing</label>
+                    <label for="inputNoPembimbing" class="form-label">Supervisors Phone Number</label>
                     <input type="number" class="form-control" name="no_pembimbing" id="inputNoPembimbing" placeholder="08xxxx"
                         pattern="[0-9]{4}[0-9]{4}[0-9]{5}">
                     <div class="invalid-feedback errorno_pembimbing">
@@ -96,8 +96,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary tombol-tutup" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary btn-simpan" id="tombolSimpan">Simpan</button>
+                <button type="button" class="btn btn-secondary tombol-tutup" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary btn-simpan" id="tombolSimpan">Submit</button>
             </div>
         </div>
     </div>

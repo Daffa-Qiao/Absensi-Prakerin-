@@ -14,7 +14,7 @@
         </label>
     </div>
     <!-- DataTales Example -->
-    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">List of Collage Student Data</div>
+    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">List of Collage Student</div>
     <div class="card shadow">
         <div class="card-body border-bottom">
             <div class="table-responsive">

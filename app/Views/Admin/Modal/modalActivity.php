@@ -6,7 +6,7 @@
         }
     </style>
 </head>
-<div class="modal fade" id="modalAbsen" tabindex="-1" role="dialog" aria-labelledby="modalAbsenLabel"
+<div class="modal fade" id="modalActivity" tabindex="-1" role="dialog" aria-labelledby="modalActivityLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
