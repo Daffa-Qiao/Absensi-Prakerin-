@@ -118,7 +118,7 @@
 
   <!-- DataTales Example -->
   <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">
-  Student Activity List
+  Activity List
   </div>
   <div class="card shadow mb-2" style="border-radius: 0px;">
     <div class="card-body border-bottom">

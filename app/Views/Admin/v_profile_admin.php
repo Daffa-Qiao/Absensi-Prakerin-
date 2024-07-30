@@ -14,8 +14,7 @@
         </div>
     </div>
     <div class="text-center mt-3">
-        <label class="btn btn-primary bg-primary bg-gradient" style=" border: none;" for="upload">Pilih
-            Gambar</label>
+        <label class="btn btn-primary bg-primary bg-gradient" style=" border: none;" for="upload">Select an Image</label>
     </div>
     <div class="card bg-light mb-4 mt-4">
         <div class="card-body">
@@ -24,7 +23,7 @@
             <form action="<?= route_to('/profile'); ?>" method="post" enctype="multipart/form-data">
                 <input name="foto_profile" type="file" id="upload" accept=".png, .jpg, .jpeg" hidden />
                 <div class="mb-3">
-                    <label for="inputNamaLengkap" class="form-label">Nama Lengkap</label>
+                    <label for="inputNamaLengkap" class="form-label">Fullname</label>
                     <input type="text"
                         class="form-control <?= ($validation->hasError('nama_lengkap')) ? 'is-invalid' : '' ?>"
                         id="inputNamaLengkap" name="nama_lengkap"
@@ -64,13 +63,13 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputJenisKelamin" class="form-label">Jenis Kelamin</label>
+                    <label for="inputJenisKelamin" class="form-label">Gender</label>
                     <input type="text" class="form-control" id="inputJenisKelamin" name="gender"
                         value="<?= (isset($dataUser)) ? $dataUser['jenis_kelamin'] : '', set_value('gender') ?>"
                         readonly>
                 </div>
                 <div class="mb-3">
-                    <label for="inputNoHP" class="form-label">No. Telepon</label>
+                    <label for="inputNoHP" class="form-label">Phone Number</label>
                     <input type="number"
                         class="form-control <?= ($validation->hasError('no_hp')) ? 'is-invalid' : '' ?>" id="inputNoHP"
                         name="no_hp" value="<?= (isset($dataUser)) ? $dataUser['no_hp'] : '', set_value('no_hp') ?>">
@@ -88,13 +87,13 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputInstansi" class="form-label">Instansi Pendidikan</label>
+                    <label for="inputInstansi" class="form-label">Educational Institutions</label>
                     <input type="text" class="form-control" id="inputInstansi" name="instansi"
                         value="<?= (isset($dataUser)) ? $dataUser['instansi_pendidikan'] : '', set_value('instansi') ?> "
                         readonly>
                 </div>
                 <div class="mb-3">
-                    <label for="inputNamaInstansi" class="form-label">Nama Instansi</label>
+                    <label for="inputNamaInstansi" class="form-label">Name Of Agency</label>
                     <input type="text"
                         class="form-control <?= ($validation->hasError('nama_instansi')) ? 'is-invalid' : '' ?>"
                         id="inputNamaInstansi" name="nama_instansi"

@@ -104,7 +104,7 @@
                     <?php endif ?>
                     <a class="wrapper-logout" href="<?= site_url('user/logout') ?>">
                         <i class="fa-solid fa-right-from-bracket"></i>
-                        <span>Keluar</span>
+                        <span>Logout</span>
                     </a>
                 </div>
             </header>

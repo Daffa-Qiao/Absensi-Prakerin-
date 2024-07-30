@@ -79,7 +79,7 @@
           </select>
         </div>
         <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-          <button class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5 text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa-solid fa-file-export"></i> Export File
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -94,7 +94,7 @@
 
   <!-- DataTales Example -->
   <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">
-    Student Attendance Recap
+    Attendance List
   </div>
   <div class="card shadow mb-2" style="border-radius: 0px;">
     <div class="card-body border-bottom">

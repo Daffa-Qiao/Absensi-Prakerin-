@@ -371,7 +371,7 @@ class Admin extends BaseController
                 'member_foto' => $namaFile
             ];
             session()->set($sesi);
-            notif_swal('success', 'Berhasil Update Data');
+            notif_swal('success', 'Data Updated Successfully');
             return redirect()->to('admin/profile');
         }
     }
@@ -386,8 +386,8 @@ class Admin extends BaseController
         $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapSiswa = 'aktif';
-        $halaman = 'Admin | Student Recap';
-        $title = 'Student Recap';
+        $halaman = 'Admin | Attendance Recap';
+        $title = 'Attendance Recap';
 
         $data = [
             'dataUser' => $dataUser,
@@ -427,7 +427,7 @@ class Admin extends BaseController
         $dataUser = $user->where('jenis_user', 'College Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $halaman = 'Admin | Collage Student Recap';
-        $title = 'Collage Student Recap';
+        $title = 'Attendance Recap';
 
         $data = [
             'dataUser' => $dataUser,

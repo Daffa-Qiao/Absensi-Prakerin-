@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">+ Tambah User Baru</h5>
+                <h5 class="modal-title" id="exampleModalLabel">+ Add New User</h5>
                 <button type="button" class="close tombol-tutup" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">
                         <i class="fa-solid fa-xmark"></i>

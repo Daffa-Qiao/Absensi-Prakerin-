@@ -49,7 +49,7 @@
                                 <input type="file" class="form-control" id="inputGroupFile02">
                             </div>
                         </div>
-                    </div>
+                      </div>
                 </div>
                 <div class="grid-dua-activity">
                     <div class="container" style="justIfy-content:start">
@@ -184,7 +184,7 @@
         let month = `${today.getMonth() + 1 < 10 ? "0" : ""}${today.getMonth() + 1}`;
         let year = today.getFullYear();
 
-        dateToday.textContent = `${day} / ${month} / ${year}`;
+        dateToday.textContent = `${month} / ${day} / ${year}`;
 
         // Waktu
         let time = document.getElementById("current-time");
