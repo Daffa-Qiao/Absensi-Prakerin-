@@ -46,10 +46,10 @@
                                 </div>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="file" class="form-control" id="inputGroupFile02">
+                                <input type="file" class='form-control' id="inputGroupFile02">
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="grid-dua-activity">
                     <div class="container" style="justIfy-content:start">
@@ -57,26 +57,15 @@
                             <div class="col-6" style="border:2px solid black; width:49%">
                                 <textarea rows="8" placeholder="Description...." style="width: 100%; padding:10px 15px; margin-top:5px; border:2px solid black"></textarea>
                                 <select class="form-select border border-dark data-container" id="lokasi" aria-label="multiple select example">
-                                    <option selected>Lockasi</option>
-                                    <option value="Gedung Karya">Gedung Karya</option>
-                                    <option value="Gedung Karsa">Gedung Karsa</option>
-                                    <option value="Gedung Cipta">Gedung Cipta</option>
+                                    <option disabled selected>Location</option>
+                                    <option value="Gedung Karya">Karya</option>
+                                    <option value="Gedung Karsa">Karsa</option>
+                                    <option value="Gedung Cipta">Cipta</option>
                                     <option value="Merdeka Timur">Merdeka Timur</option>
                                 </select>
                                 <select class="form-select border-dark mt-3" aria-label="Default select example" id="lantai">
-                                    <option selected>Lantai</option>
-                                    <option value="Lantai 1">Lantai 1</option>
-                                    <option value="Lantai 2">Lantai 2</option>
-                                    <option value="Lantai 3">Lantai 3</option>
-                                    <option value="Lantai 4">Lantai 4</option>
-                                    <option value="Lantai 5">Lantai 5</option>
-                                    <option value="Lantai 6">Lantai 6</option>
-                                    <option value="Lantai 7">Lantai 7</option>
-                                    <option value="Lantai 8">Lantai 8</option>
-                                    <option value="Lantai 9">Lantai 9</option>
-                                    <option value="Lantai 10">Lantai 10</option>
-                                    <option value="Lantai 11">Lantai 11</option>
-                                    <option value="Lantai 12">Lantai 12</option>
+                                   <option disabled selected>Floor</option>
+                                    
                                 </select>
                                 <div class="buttonWrapper">
                                     <button type="submit" class="btn btn-primary" name="mulai" value="Start Time" style="border:2px solid black;">Start Time</button>
@@ -194,7 +183,30 @@
             time.innerHTML = d.toLocaleTimeString();
         }, 1000);
 
+        // filter lantai
+        var lokasi_dan_lantai = {
+            "Gedung Karya": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+            "Gedung Karsa": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            "Gedung Cipta": [1, 2, 3, 4, 5, 6, 7],
+            "Merdeka Timur": [1, 2, 3]
+        };
+        document.getElementById('lokasi').addEventListener('change', function () {
+        var selectedLocation = this.value;
+        var floor = lokasi_dan_lantai[selectedLocation];
+        updateLokasi(floor);
+    });
+    
+    function updateLokasi(floor) {
+    var lantaiDropdown = document.getElementById('lantai');
+    lantaiDropdown.innerHTML = "";
 
+    floor.forEach(function(floorNumber) {
+        var option = document.createElement('option');
+        option.value = floorNumber;
+        option.text = floorNumber;
+        lantaiDropdown.add(option);
+    });
+}
     </script>
 
 </main>

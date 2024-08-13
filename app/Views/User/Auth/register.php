@@ -70,7 +70,7 @@
                     <input id="inputPasswordKonf"
                         class="form-control <?= ($validator->hasError('konfirmasi_password')) ? 'is-invalid' : '' ?>"
                         type="password" name="konfirmasi_password" placeholder="Masukkan Password" required />
-                    <label for="inputPasswordKonf">Konfirmasi Password</label>
+                    <label for="inputPasswordKonf">Confirm Password</label>
                     <div class="invalid-feedback">
                         <?php if (isset($validation['konfirmasi_password'])): ?>
                             <?= $validation['konfirmasi_password']; ?>
@@ -83,7 +83,7 @@
             <div class="form-check mt-3">
                 <input class="form-check-input" type="checkbox" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
-                    Tampilkan Password
+                Show Password
                 </label>
             </div>
             <!-- </div> -->
@@ -92,7 +92,7 @@
             <div class="containerFooter">
                 <input type="submit" name="submit" class="login" value="Register">
                 <div class="wrapperText">
-                    <span>Sudah memiliki akun ?</span>
+                    <span>Already have an account ?</span>
                     <a href="<?= base_url('/login'); ?>">Login</a>
                 </div>
             </div>

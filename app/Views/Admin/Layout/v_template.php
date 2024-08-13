@@ -58,7 +58,7 @@
             height: 50px;
             border-radius: 25%;
             vertical-align: middle;
-            cursor: pointer;
+            cursor: pointer;    
         }
 
         .title {
@@ -333,7 +333,7 @@
             <li class="nav-item <?= (isset($aktif_dataUser)) ? 'active' : '' ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="width: 270px !important">
                     <i class="bi bi-person-fill"></i>
-                    <span>Data User</span>
+                    <span>User Data</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -399,14 +399,14 @@
 
             <?php if (session('redirected') == 'superadmin') : ?>
                 <li class="nav-item <?= (isset($aktif_superAdmin)) ? 'active' : '' ?>">
-                    <a class="nav-link" href="<?= site_url('admin/super-admin'); ?>">
+                    <a class="nav-link" href="<?= site_url('admin/super-admin'); ?>"  style="width:270px !important">
                         <i class="fa-solid fa-user-gear"></i>
                         <span>Super Admin</span></a>
                 </li>
             <?php endif ?>
 
             <li class="nav-item <?= (isset($aktif_listSuperAdmin)) ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= site_url('admin/list-super-admin'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/list-super-admin'); ?>"  style="width:270px !important">
                     <i class="bi bi-person-lines-fill"></i>
                     <span>List Super Admin</span></a>
             </li>
@@ -1014,6 +1014,22 @@
             }
         });
     });
+    function hapus_absen($id) {
+        Swal.fire({
+            title: "Yakin ingin menghapus?",
+            text: "Data yang dihapus tidak dapat dikembalikan!",
+            icon: "warning",
+            showCancelButton: true,
+            cancelButtonText: 'Batal',
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ya, hapus!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "<?= site_url('Admin/Modal/hapus_absen') ?>/" + $id;
+            }
+        });
+    }
 </script>
 
 </html>

@@ -32,7 +32,7 @@
       box-sizing: border-box;
     }
 
-
+    
 
     @media screen and (max-width: 571px) {}
   </style>
@@ -109,7 +109,7 @@
             </div>
             <!-- button export file -->
             <div class="col d-flex mt-2 justify-content-center">
-              <button class="btn btn-lg btn-danger bg-gradient-danger dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+              <button class="btn btn-lg btn-danger bg-gradient-danger dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark hover-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
               <i class="bi bi-arrow-bar-down"></i> EXPORT FILE
               </button>
               <div class="dropdown-menu col-9" aria-labelledby="dropdownMenuButton">

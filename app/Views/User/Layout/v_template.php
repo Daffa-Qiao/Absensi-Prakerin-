@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/permission.css">
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/history.css">
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/activity.css">
-    <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/setting.css"><link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/setting.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
@@ -28,6 +29,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+        .theme{
+            color:#00A2E9;
+            font-size: 16px;
+        }
+        .theme-selector .down,
+        .theme-selector .up {
+            margin-left: 170px;
+        }
+
+        .theme-colors {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .theme-colors .color {
+            width: 31px;
+            height: 27px;
+            border-radius: 10%;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .theme-colors .color.blue {
+            background-color: #01A2EC;
+        }
+
+        .theme-colors .color.green {
+            background-color: #81A263;
+        }
+
+
+        .theme-colors .color.orange {
+            background-color: #ECB159;
+        }
+
+        .theme-colors .color.pink {
+            background-color: #DC3545;
+        }
+    </style>
 </head>
 
 <body class="kontainer">
@@ -102,6 +150,20 @@
                             <a href="<?= site_url('admin/dashboard'); ?>">Admin Page</a>
                         </div>
                     <?php endif ?>
+                    <!-- color theme selector start -->
+                    <div class="wrapper-a theme-selector" id="themeToggle">
+                        <span class="theme">Theme</span>
+                        <div class="down" style="display: none;"><i class="bi bi-chevron-down"></i></div>
+                        <div class="up"><i class="bi bi-chevron-up"></i></div>
+                    </div>
+                    <div class="toggle-wrap"></div>
+                    <div class="theme-colors" style="display: none;">
+                        <div class="color blue" data-color="#01A2EC"></div>
+                        <div class="color green" data-color="#81A263"></div>
+                        <div class="color orange" data-color="#ECB159"></div>
+                        <div class="color pink" data-color="#FA7070"></div>
+                    </div>
+                    <!-- color theme selector end -->
                     <a class="wrapper-logout" href="<?= site_url('user/logout') ?>">
                         <i class="fa-solid fa-right-from-bracket"></i>
                         <span>Logout</span>
@@ -194,6 +256,35 @@
         }
     });
 
+    // theme selector
+    document.addEventListener('DOMContentLoaded', function() {
+        var themeToggle = document.getElementById('themeToggle');
+        var themeColors = document.querySelector('.theme-colors');
+        var chevronUp = document.querySelector('.theme-selector .up');
+        var chevronDown = document.querySelector('.theme-selector .down');
+
+        // Toggle the display of the theme colors
+        themeToggle.addEventListener('click', function() {
+            if (themeColors.style.display === 'none' || themeColors.style.display === '') {
+                themeColors.style.display = 'flex';
+                chevronUp.style.display = 'none';
+                chevronDown.style.display = 'block';
+            } else {
+                themeColors.style.display = 'none';
+                chevronUp.style.display = 'block';
+                chevronDown.style.display = 'none';
+            }
+        });
+
+        // Add event listeners to the color divs
+        var colors = document.querySelectorAll('.theme-colors .color');
+        colors.forEach(function(colorDiv) {
+            colorDiv.addEventListener('click', function() {
+                var selectedColor = colorDiv.getAttribute('data-color');
+                document.body.style.backgroundColor = selectedColor;
+            });
+        });
+    });
 </script>
 
 </html>

@@ -18,7 +18,7 @@
         <div class="containerTittle">
             <div class="wrapperImg">
                 <img src="<?= base_url('admin') ?>/img/sekolah.png" />
-                <h1>Absensi</h1>
+                <h1>Absence</h1>
             </div>
             <div class="wrapperTittle">
                 <h2>Siswa/Mahasiswa</h2>
@@ -48,7 +48,7 @@
                         class="form-control <?= ($validation->hasError('login_id')) ? 'is-invalid' : '' ?>" type="text"
                         name="login_id" placeholder="Username :"
                         value="<?= session()->getFlashdata('login_id'), set_value('login_id') ?>" required />
-                    <label for="inputUsername">Username atau Email</label>
+                    <label for="inputUsername">Username or Email</label>
                     <div class="invalid-feedback">
                         <?= $validation->getError('login_id') ?>
                     </div>
@@ -74,15 +74,15 @@
                         </div>
                     </div>
                     <div class="forget">
-                        <a href="<?= base_url('/forgetpassword') ?>">Lupa Password ?</a>
+                        <a href="<?= base_url('/forgetpassword') ?>">Forget Password ?</a>
                     </div>
                 </div>
 		<!-- <div class="g-recaptcha mt-1" data-sitekey="<?= getenv('SITEKEY'); ?>"></div> -->
                 <div class="containerFooter">
                     <input type="submit" name="submit" class="login" value="Login">
                     <div class="wrapperText">
-                        <span>Belum memiliki Akun?</span>
-                        <a href="<?= base_url('/register'); ?>">Buat Akun</a>
+                        <span>Don't have an Account?</span>
+                        <a href="<?= base_url('/register'); ?>">Create an Account</a>
                     </div>
                 </div>
         </form>

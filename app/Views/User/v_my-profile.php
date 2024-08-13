@@ -35,14 +35,6 @@
                 <label for="email">Email :</label>
                 <input type="email" name="" id="" value="<?= session()->get('member_email') ?>" readonly />
             </div>
-            <div class="identitas-profile">
-                <label for="guru_pembimbing">Name Of Supervising Teacher :</label>
-                <input type="text" name="nama_pembimbing" id="nama_pembimbing" value="<?= session()->get('member_nama_pembimbing') ?>" readonly />
-            </div>
-            <div class="identitas-profile">
-                <label for="guru_pembimbing">Teacher Phone Number :</label>
-                <input type="text" name="nama_pembimbing" id="nama_pembimbing" value="<?= session()->get('member_nama_pembimbing') ?>" readonly />
-            </div>
             <div class="identitas-profileInstansi" id="instansi">
                 <div class="instansiAsal">
                     <label for="Instansi">Educational Institutions :</label>
@@ -53,6 +45,15 @@
                     <input type="text" name="nama_instansi" id="" value="<?= session()->get('member_nama_instansi') ?>" readonly />
                 </div>
             </div>
+            <div class="identitas-profile">
+                <label for="guru_pembimbing">Name Of Supervising Teacher :</label>
+                <input type="text" name="nama_pembimbing" id="nama_pembimbing" value="<?= session()->get('member_nama_pembimbing') ?>" readonly />
+            </div>
+            <div class="identitas-profile">
+                <label for="guru_pembimbing">Teacher Phone Number :</label>
+                <input type="text" name="nama_pembimbing" id="nama_pembimbing" value="<?= session()->get('member_nama_pembimbing') ?>" readonly />
+            </div>
+
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
