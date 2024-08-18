@@ -1,0 +1,283 @@
+INFO - 2024-08-15 08:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 08:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 08:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 08:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 08:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 08:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 09:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 09:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 09:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 09:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 10:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 10:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 10:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 10:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 10:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 10:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 11:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 11:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 11:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 11:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 11:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 11:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 11:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 12:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-15 13:45:12 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4', 3306, '', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 C:\Absensi-Prakerin-\app\Filters\SuperAdmin.php(21): CodeIgniter\BaseModel->first()
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\SuperAdmin->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('admin/super-adm...', 'before')
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 C:\Absensi-Prakerin-\app\Filters\SuperAdmin.php(21): CodeIgniter\BaseModel->first()
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\SuperAdmin->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('admin/super-adm...', 'before')
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#11 {main}
+CRITICAL - 2024-08-15 13:45:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` = :member_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\SuperAdmin.php(21): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(184): App\Filters\SuperAdmin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('admin/super-admin', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-15 13:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-15 13:45:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4', 3306, '', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 C:\Absensi-Prakerin-\app\Filters\AuthFilter.php(19): CodeIgniter\BaseModel->first()
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('admin/rekap-akt...', 'before')
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 C:\Absensi-Prakerin-\app\Filters\AuthFilter.php(19): CodeIgniter\BaseModel->first()
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('admin/rekap-akt...', 'before')
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#11 {main}
+CRITICAL - 2024-08-15 13:45:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` = :member_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(19): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(184): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('admin/rekap-aktifitas-siswa', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-15 13:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-15 13:45:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4', 3306, '', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 C:\Absensi-Prakerin-\app\Filters\AuthFilter.php(19): CodeIgniter\BaseModel->first()
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('admin/rekap-akt...', 'before')
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 C:\Absensi-Prakerin-\app\Filters\AuthFilter.php(19): CodeIgniter\BaseModel->first()
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('admin/rekap-akt...', 'before')
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#11 {main}
+CRITICAL - 2024-08-15 13:45:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` = :member_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\AuthFilter.php(19): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(184): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('admin/rekap-aktifitas-mahasiswa', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-15 13:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-15 13:49:11 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4', 3306, '', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 C:\Absensi-Prakerin-\app\Filters\NoAuthFilter.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\NoAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 C:\Absensi-Prakerin-\app\Filters\NoAuthFilter.php(17): CodeIgniter\BaseModel->first()
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\NoAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#11 {main}
+CRITICAL - 2024-08-15 13:49:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` = :member_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\NoAuthFilter.php(17): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(184): App\Filters\NoAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-15 13:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-15 13:49:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'ci4', 3306, '', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 C:\Absensi-Prakerin-\app\Filters\NoAuthFilter.php(17): CodeIgniter\BaseModel->first()
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\NoAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#5 C:\Absensi-Prakerin-\app\Filters\NoAuthFilter.php(17): CodeIgniter\BaseModel->first()
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Filters\Filters.php(184): App\Filters\NoAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+#8 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#11 {main}
+CRITICAL - 2024-08-15 13:49:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `member_id` = :member_id:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Filters\NoAuthFilter.php(17): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Filters\Filters.php(184): App\Filters\NoAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(475): CodeIgniter\Filters\Filters->run('', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-15 13:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-15 13:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

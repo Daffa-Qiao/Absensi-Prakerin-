@@ -1,0 +1,60 @@
+INFO - 2024-08-16 08:25:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 08:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 08:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 08:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 08:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 08:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 08:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 08:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 10:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 10:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-16 10:09:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Admin/v_rekapAbsensi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/v_rekapAbsensi.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAbsensi', [], true)
+ 3 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapAbsensi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-16 10:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-16 10:09:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Admin/v_rekapAbsensi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/v_rekapAbsensi.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAbsensi', [], true)
+ 3 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapAbsensi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-16 10:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-16 10:16:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Admin/v_rekapAbsensi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/v_rekapAbsensi.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAbsensi', [], true)
+ 3 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapAbsensi')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-16 10:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-16 10:16:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Admin/v_rekapAbsensi.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/v_rekapAbsensi.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAbsensi', [], true)
+ 3 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapAbsensi')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-16 10:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 11:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 11:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 11:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 11:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 11:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-16 11:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

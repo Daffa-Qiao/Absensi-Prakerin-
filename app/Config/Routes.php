@@ -68,6 +68,7 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('super-admin', 'Admin\SuperAdmin::super_admin', ['filter' => 'superadmin']);
     $routes->get('list-super-admin', 'Admin\SuperAdmin::list_super_admin');
     $routes->get('data-laporan', 'Admin\Admin::data_laporan');
+    $routes->get('rekap-absensi', 'Admin\Admin::rekapAbsensi');
     $routes->get('rekap-aktifitas-siswa', 'Admin\Admin::rekap_aktifitasSiswa');
     $routes->post('rekap-aktifitas-siswa', 'Admin\Admin::rekap_aktifitasSiswaFilter');
     $routes->get('rekap-aktifitas-mahasiswa', 'Admin\Admin::rekap_aktifitasMahasiswa');

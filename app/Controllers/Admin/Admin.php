@@ -584,4 +584,44 @@ class Admin extends BaseController
         session()->setFlashdata('data', $data);
         return redirect()->to('admin/rekap-aktifitas-mahasiswa');
     }
+
+    public function rekapAbsensi()
+    {
+        // Instansiasi model
+        $absensi = new Absensi();
+        $user = new MemberModel();
+
+        // Dapatkan semua data user
+        $dataUser = $user->findAll();
+        
+        // Array untuk menyimpan rekap absensi
+        $rekapAbsensi = [];
+
+        // Looping melalui semua user untuk menghitung absensi "Masuk"
+        foreach ($dataUser as $user) {
+            $nim_nis = $user['nim_nis'];
+
+            // Menghitung total absensi "Masuk"
+            $totalMasuk = $absensi->where('nim_nis', $nim_nis)
+                                  ->where('status', 'Masuk')
+                                  ->countAllResults();
+
+            // Menyimpan hasil ke dalam array
+            $rekapAbsensi[$nim_nis] = [
+                'nama_lengkap' => $user['nama_lengkap'],
+                'totalMasuk' => $totalMasuk
+            ];
+        }
+
+        // Data yang akan dikirimkan ke view
+        $data = [
+            'rekapAbsensi' => $rekapAbsensi,
+            'halaman' => 'Admin | Rekap Absensi',
+            'title' => 'Rekap Absensi',
+        ];
+
+        // Memuat view dengan data rekap absensi
+        return view('Admin/v_rekapData');
+    }
 }
+
