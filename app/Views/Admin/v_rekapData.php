@@ -58,10 +58,11 @@
             margin-top: 20px;
         }
         .legend {
-            background-color: #333;
+            background-color: #2C4250;
             color: white;
             padding: 10px;
             text-align: left;
+            
             display: inline-block;
             max-width: 300px;
             border-radius: 5px; 
@@ -100,32 +101,17 @@
         <th>Total Absences</th>
     </tr>
 
-    <?php foreach ($attendance_data as $v) { ?>
+   
+
     <tr>
-        <td><?= $v['no']; ?></td>
-        <td><?= $v['nama_lengkap']; ?></td>
-        <td><?= $v['username']; ?></td>
-        <td><?= $v['nama_instansi']; ?></td>
-        <?php
-        $attendance = $v['attendance']; // $v['attendance'] untuik data yg hadir tiap hari
-        $total_a = 0;
-        $total_absences = 0;
-        foreach ($attendance as $day) {
-            if ($day === 'A') $total_a++;
-            if (in_array($day, ['A', 'AB'])) $total_absences++;
-            $class = $day === 'WEEKEND' ? 'weekend' : '';
-            echo "<td class='$class'>$day</td>";
-        }
-        ?>
-        <td><?php echo $total_a; ?></td>
-        <td><?php echo $total_absences; ?></td>
-    </tr>
-    <?php } ?>
+
+</tr>
+
 
 </table>
 
 <div class="legend">
-    <p>S = SICK/SABIT</p>
+    <p>S = SICK/SAKIT</p>
     <p>P = PERMIT/IZIN</p>
     <p>AB = ABSENCES/ALPHA</p>
     <p>A = ATTEND/HADIR</p>

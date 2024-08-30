@@ -1,0 +1,112 @@
+INFO - 2024-08-19 07:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 07:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 07:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 07:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 07:18:38 --> ErrorException: Undefined variable $attendance_data
+in APPPATH\Views\Admin\v_rekapData.php on line 103.
+ 1 APPPATH\Views\Admin\v_rekapData.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $attendance_data', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 103)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-19 07:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 07:19:07 --> ErrorException: Undefined variable $attendance_data
+in APPPATH\Views\Admin\v_rekapData.php on line 103.
+ 1 APPPATH\Views\Admin\v_rekapData.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $attendance_data', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 103)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-19 07:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 07:28:28 --> ErrorException: Undefined variable $attendance_data
+in APPPATH\Views\Admin\v_rekapData.php on line 103.
+ 1 APPPATH\Views\Admin\v_rekapData.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $attendance_data', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 103)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-19 08:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 08:04:42 --> ErrorException: Undefined variable $attendance_data
+in APPPATH\Views\Admin\v_rekapData.php on line 103.
+ 1 APPPATH\Views\Admin\v_rekapData.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $attendance_data', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 103)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-19 08:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 13:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 13:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 13:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 13:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-19 13:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 13:53:12 --> ErrorException: Undefined variable $absensiInfo
+in APPPATH\Views\Admin\v_rekapData.php on line 103.
+ 1 APPPATH\Views\Admin\v_rekapData.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $absensiInfo', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 103)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-19 13:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 13:53:27 --> ErrorException: Undefined variable $attendance_data
+in APPPATH\Views\Admin\v_rekapData.php on line 103.
+ 1 APPPATH\Views\Admin\v_rekapData.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $attendance_data', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 103)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-19 13:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 13:56:35 --> ErrorException: Undefined variable $absensiInfo
+in APPPATH\Views\Admin\v_rekapData.php on line 103.
+ 1 APPPATH\Views\Admin\v_rekapData.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $absensiInfo', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 103)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-19 14:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-19 14:07:44 --> ErrorException: Undefined variable $attendance_data
+in APPPATH\Views\Admin\v_rekapData.php on line 103.
+ 1 APPPATH\Views\Admin\v_rekapData.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $attendance_data', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 103)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')

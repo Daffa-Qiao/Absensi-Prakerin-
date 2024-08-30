@@ -1,0 +1,120 @@
+INFO - 2024-08-20 11:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-20 11:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-20 11:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-20 11:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-20 11:09:35 --> ErrorException: Undefined variable $rekapAbsensi
+in APPPATH\Views\Admin\v_rekapData.php on line 103.
+ 1 APPPATH\Views\Admin\v_rekapData.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rekapAbsensi', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 103)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-20 11:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-20 11:11:25 --> ErrorException: Undefined array key "no"
+in APPPATH\Views\Admin\v_rekapData.php on line 105.
+ 1 APPPATH\Views\Admin\v_rekapData.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "no"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 105)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-20 11:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-20 11:11:42 --> ErrorException: Undefined array key "username"
+in APPPATH\Views\Admin\v_rekapData.php on line 106.
+ 1 APPPATH\Views\Admin\v_rekapData.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 106)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-20 11:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-20 11:13:31 --> ErrorException: Undefined array key "username"
+in APPPATH\Views\Admin\v_rekapData.php on line 106.
+ 1 APPPATH\Views\Admin\v_rekapData.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 106)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-20 11:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-20 11:24:12 --> ErrorException: Undefined array key "attendance"
+in APPPATH\Views\Admin\v_rekapData.php on line 107.
+ 1 APPPATH\Views\Admin\v_rekapData.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "attendance"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 107)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-20 11:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-20 11:24:15 --> ErrorException: Undefined array key "attendance"
+in APPPATH\Views\Admin\v_rekapData.php on line 107.
+ 1 APPPATH\Views\Admin\v_rekapData.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "attendance"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 107)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-20 11:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-20 11:27:54 --> ErrorException: Undefined array key "username"
+in APPPATH\Views\Admin\v_rekapData.php on line 106.
+ 1 APPPATH\Views\Admin\v_rekapData.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 106)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-20 11:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-20 11:28:02 --> ErrorException: Undefined array key "username"
+in APPPATH\Views\Admin\v_rekapData.php on line 106.
+ 1 APPPATH\Views\Admin\v_rekapData.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 106)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-08-20 11:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-20 11:28:57 --> ErrorException: Undefined array key "attendance"
+in APPPATH\Views\Admin\v_rekapData.php on line 108.
+ 1 APPPATH\Views\Admin\v_rekapData.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "attendance"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 108)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(624): view('Admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')

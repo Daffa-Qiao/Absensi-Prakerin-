@@ -590,7 +590,8 @@ class Admin extends BaseController
         // Instansiasi model
         $absensi = new Absensi();
         $user = new MemberModel();
-
+        $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->findAll();
+        $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
         // Dapatkan semua data user
         $dataUser = $user->findAll();
         
@@ -616,12 +617,14 @@ class Admin extends BaseController
         // Data yang akan dikirimkan ke view
         $data = [
             'rekapAbsensi' => $rekapAbsensi,
+            'dataAbsen'=> $dataAbsen,
+            'user'=> $user,
             'halaman' => 'Admin | Rekap Absensi',
             'title' => 'Rekap Absensi',
         ];
 
         // Memuat view dengan data rekap absensi
-        return view('Admin/v_rekapData');
+        return view('Admin/v_rekapData',$data);
     }
 }
 
