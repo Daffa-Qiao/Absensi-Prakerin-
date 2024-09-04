@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="                                                                                                             en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Data Recap Monthly</title>
+    <a href=""></a>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,7 +27,6 @@
         .header h1 {
             margin: 0;
             font-size: 15px;
-            /* font-family: poppins; */
         }
         .header h2, .header h3 {
             margin: 0;
@@ -100,14 +100,27 @@
         <?php } ?>
         <th>Total Absences</th>
     </tr>
-
-   
-
-    <tr>
-
-</tr>
-
-
+    <?php
+    $no = 1;
+    foreach ($dataUser as $usr) { ?>
+        <tr>
+            <td><?= $nomor; ?></td>
+            <td><?= $nama_lengkap['nama_lengkap']; ?></td>
+            <td><?= $nim_nis['nim_nis']; ?></td>
+            <td><?= $nama_instansi['nama_instansi']; ?></td>
+            <?php 
+            $totalAbsences = 0;
+            for ($i = 1; $i <= 31; $i++) {
+                $day = 'day' . $i;
+                $attendance = isset($user['attendance'][$day]) ? $user['attendance'][$day] : 'A'; // Default to 'A' if not set
+                if ($attendance == 'S' || $attendance == 'P' || $attendance == 'AB') {
+                    $totalAbsences++;
+                }
+                echo "<td>{$attendance}</td>";
+            } ?>
+            <td><?= $totalAbsences; ?></td>
+        </tr>
+    <?php } ?>
 </table>
 
 <div class="legend">

@@ -590,8 +590,11 @@ class Admin extends BaseController
         // Instansiasi model
         $absensi = new Absensi();
         $user = new MemberModel();
+        $jumlahBaris = 10;
+        $currentPage = $this->request->getVar('page_laporan');
         $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->findAll();
         $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
+        $nomor = nomor($currentPage, $jumlahBaris);
         // Dapatkan semua data user
         $dataUser = $user->findAll();
         
@@ -619,6 +622,7 @@ class Admin extends BaseController
             'rekapAbsensi' => $rekapAbsensi,
             'dataAbsen'=> $dataAbsen,
             'user'=> $user,
+            'nomor'=> $nomor,
             'halaman' => 'Admin | Rekap Absensi',
             'title' => 'Rekap Absensi',
         ];
