@@ -76,3 +76,4 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
 });
 
 $routes->add('data-absenProcess', 'Admin\Modal::tambahAbsensiProcess');
+$routes->post('print/pdf', 'print\pdf::generatePDF');
