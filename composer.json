@@ -12,6 +12,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "codeigniter4/framework": "^4.0",
+        "dompdf/dompdf": "^3.0",
         "ezyang/htmlpurifier": "^4.16"
     },
     "require-dev": {
