@@ -3,6 +3,7 @@
 namespace App\Controllers\Print;
 
 use App\Controllers\BaseController;
+use App\Models\Absensi;
 use Dompdf\Dompdf;
 use Dompdf\Options;
 use DateTime;
@@ -60,6 +61,8 @@ class Pdf extends BaseController
 
             return $formattedDate;
         }
+
+
 
         $data = [
             'dataAbsen' => session('dataAbsen'),

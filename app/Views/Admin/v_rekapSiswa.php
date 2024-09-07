@@ -209,66 +209,66 @@ $(document).ready(function() {
         "columnDefs": [{
             // "targets": [1],
         }],
-        // buttons: [{
-        //         extend: 'excelHtml5',
-        //         title: `Rekap Absensi Siswa ${current_time} WIB`,
-        //         exportOptions: {
-        //             columns: ':visible:not(.hilang)'
-        //         }
-        //     },
-        //     {
-        //         extend: 'pdfHtml5',
-        //         title: `Rekap Absensi Siswa ${current_time} WIB`,
-        //         orientation: 'portrait',
-        //         pageSize: 'A4',
-        //         customize: function(doc) {
-        //             // Custom styling for the table
-        //             doc.content.forEach(function(item) {
-        //                 if (item.table) {
-        //                     item.table.headerRows = 1;
+        buttons: [{
+                extend: 'excelHtml5',
+                title: `Rekap Absensi Siswa ${current_time} WIB`,
+                exportOptions: {
+                    columns: ':visible:not(.hilang)'
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                title: `Rekap Absensi Siswa ${current_time} WIB`,
+                orientation: 'portrait',
+                pageSize: 'A4',
+                customize: function(doc) {
+                    // Custom styling for the table
+                    doc.content.forEach(function(item) {
+                        if (item.table) {
+                            item.table.headerRows = 1;
 
-        //                     // Adjust column widths and cell margins
-        //                     item.table.widths = Array(item.table.body[0].length).fill(
-        //                         '*');
-        //                     item.table.body.forEach(function(row) {
-        //                         row.forEach(function(cell) {
-        //                             cell.margin = [4, 6, 4,
-        //                                 6
-        //                             ]; // Top, right, bottom, left
-        //                         });
-        //                     });
-        //                 }
-        //             });
+                            // Adjust column widths and cell margins
+                            item.table.widths = Array(item.table.body[0].length).fill(
+                                '*');
+                            item.table.body.forEach(function(row) {
+                                row.forEach(function(cell) {
+                                    cell.margin = [4, 6, 4,
+                                        6
+                                    ]; // Top, right, bottom, left
+                                });
+                            });
+                        }
+                    });
 
-        //             // Style the table header
-        //             doc.styles.tableHeader = {
-        //                 bold: true,
-        //                 fontSize: 10,
-        //                 color: 'black',
-        //                 fillColor: '#f3f3f3',
-        //                 alignment: 'center',
-        //                 margin: [4, 4, 4, 4]
-        //             };
+                    // Style the table header
+                    doc.styles.tableHeader = {
+                        bold: true,
+                        fontSize: 10,
+                        color: 'black',
+                        fillColor: '#f3f3f3',
+                        alignment: 'center',
+                        margin: [4, 4, 4, 4]
+                    };
 
-        //             // Style table body cells
-        //             doc.styles.tableBodyEven = {
-        //                 fontSize: 8,
-        //                 alignment: 'center',
-        //                 margin: [4, 4, 4, 4]
-        //             };
-        //             doc.styles.tableBodyOdd = {
-        //                 fontSize: 8,
-        //                 alignment: 'center',
-        //                 margin: [4, 4, 4, 4]
-        //             };
+                    // Style table body cells
+                    doc.styles.tableBodyEven = {
+                        fontSize: 8,
+                        alignment: 'center',
+                        margin: [4, 4, 4, 4]
+                    };
+                    doc.styles.tableBodyOdd = {
+                        fontSize: 8,
+                        alignment: 'center',
+                        margin: [4, 4, 4, 4]
+                    };
 
-        //             // Page margins
-        //             doc.pageMargins = [20, 30, 20, 30];
-        //         }
-        //     }
+                    // Page margins
+                    doc.pageMargins = [20, 30, 20, 30];
+                }
+            }
 
 
-        // ]
+        ]
 
 
     });

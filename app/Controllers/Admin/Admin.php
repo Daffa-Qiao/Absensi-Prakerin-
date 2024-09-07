@@ -382,7 +382,7 @@ class Admin extends BaseController
         $user = new MemberModel();
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_absensi');
-        $dataAbsen = $absensi->select('nama_lengkap, nim_nis, nama_instansi, status, waktu_absen')->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->distinct('nim_nis')->get()->getResult();
+        $dataAbsen = $absensi->select('nama_lengkap, nim_nis, nama_instansi, status, waktu_absen')->orderBy('id', 'desc')->where('jenis_user', 'Student')->distinct('nim_nis')->get()->getResult();
         $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapSiswa = 'aktif';

@@ -10,24 +10,24 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.jqueryui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.jqueryui.css" />
     <style>
-        #dTableMhs_paginate {
-            border: 2px solid black;
-            padding: 0;
-        }
+    #dTableMhs_paginate {
+        border: 2px solid black;
+        padding: 0;
+    }
 
-        #dTableMhs_paginate span>* {
-            border-right: .01px solid black;
-            margin: 0;
-        }
+    #dTableMhs_paginate span>* {
+        border-right: .01px solid black;
+        margin: 0;
+    }
 
-        #dTableMhs_paginate span>*:nth-child(1) {
-            border-left: .01px solid black;
-            margin: 0;
-        }
+    #dTableMhs_paginate span>*:nth-child(1) {
+        border-left: .01px solid black;
+        margin: 0;
+    }
 
-        #dTableMhs_wrapper .dt-buttons {
-            display: none;
-        }
+    #dTableMhs_wrapper .dt-buttons {
+        display: none;
+    }
     </style>
 </head>
 <?php if (session()->getFlashdata('data')) {
@@ -78,14 +78,15 @@
                 <select name="namaLengkap" id="select" class="form-control">
                     <option value="all">Full Name:</option>
                     <?php foreach ($dataUser as $usr): ?>
-                        <option value="<?= $usr['nama_lengkap'] ?>">
-                            <?= $usr['nama_lengkap'] ?>
-                        </option>
+                    <option value="<?= $usr['nama_lengkap'] ?>">
+                        <?= $usr['nama_lengkap'] ?>
+                    </option>
                     <?php endforeach ?>
                 </select>
             </div>
             <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-                <button class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5 text-dark"
+                <button
+                    class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5 text-dark"
                     type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <i class="fa-solid fa-file-export"></i> Export File
@@ -106,7 +107,7 @@
 
 <!-- DataTales Example -->
 <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">
-Attendance List
+    Attendance List
 </div>
 <div class="card shadow mb-2" style="border-radius: 0px;">
     <div class="card-body border-bottom">
@@ -137,45 +138,45 @@ Attendance List
                         }
 
                         ?>
-                        <tr>
-                            <td class="text-center" data-t="n" data-a-h="left">
-                                <?= $nomor; ?>
-                            </td>
-                            <td>
-                                <?= tanggal_indo($v['waktu_absen']) ?>
-                            </td>
-                            <td>
-                                <?= $v['nama_lengkap']; ?>
-                            </td>
-                            <td>
-                                <?= $v['jenis_user']; ?>
-                            </td>
-                            <td>
-                                <?= $v['checkin_time']; ?>
-                            </td>
-                            <td>
-                                <?= $v['checkout_time']; ?>
-                            </td>
-                            <td>
-                                <div class="status <?= $status ?>">
-                                    <?= $v['status']; ?>
-                                </div>
-                            </td>
-                            <td>
-                                <?= $v['keterangan']; ?>
-                            </td>
-                            <td data-exclude="true">
-                                <?php if ($v['foto_absen'] != ''): ?>
-                                    <img src="<?= base_url('uploadFoto/' . $v['foto_absen']) ?>" id="" alt=""
-                                        onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto_absen']) ?>')">
-                                <?php endif ?>
-                            </td>
-                            <td>
+                    <tr>
+                        <td class="text-center" data-t="n" data-a-h="left">
+                            <?= $nomor; ?>
+                        </td>
+                        <td>
+                            <?= tanggal_indo($v['waktu_absen']) ?>
+                        </td>
+                        <td>
+                            <?= $v['nama_lengkap']; ?>
+                        </td>
+                        <td>
+                            <?= $v['jenis_user']; ?>
+                        </td>
+                        <td>
+                            <?= $v['checkin_time']; ?>
+                        </td>
+                        <td>
+                            <?= $v['checkout_time']; ?>
+                        </td>
+                        <td>
+                            <div class="status <?= $status ?>">
+                                <?= $v['status']; ?>
+                            </div>
+                        </td>
+                        <td>
+                            <?= $v['keterangan']; ?>
+                        </td>
+                        <td data-exclude="true">
+                            <?php if ($v['foto_absen'] != ''): ?>
+                            <img src="<?= base_url('uploadFoto/' . $v['foto_absen']) ?>" id="" alt=""
+                                onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto_absen']) ?>')">
+                            <?php endif ?>
+                        </td>
+                        <td>
 
-                                <?= $v['lokasi']; ?>
-                            </td>
-                        </tr>
-                        <?php
+                            <?= $v['lokasi']; ?>
+                        </td>
+                    </tr>
+                    <?php
                         $nomor++;
                     } ?>
                 </tbody>
@@ -200,77 +201,74 @@ Attendance List
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
 <script>
-    <?php if (session()->getFlashdata('swal_icon')): ?>
-        Swal.fire({
-            icon: '<?= session()->getFlashdata('swal_icon'); ?>',
-            title: '<?= session()->getFlashdata('swal_title'); ?>',
-            showConfirmButton: false,
-            timer: 1500
-        })
-    <?php endif; ?>
+<?php if (session()->getFlashdata('swal_icon')): ?>
+Swal.fire({
+    icon: '<?= session()->getFlashdata('swal_icon'); ?>',
+    title: '<?= session()->getFlashdata('swal_title'); ?>',
+    showConfirmButton: false,
+    timer: 1500
+})
+<?php endif; ?>
 
-    // ajax
-    let today = new Date();
-    let day = `${today.getDate() < 10 ? "0" : ""}${today.getDate()}`;
-    let month = `${today.getMonth() + 1 < 10 ? "0" : ""}${today.getMonth() + 1}`;
-    let year = today.getFullYear();
-    let hours = today.getHours();
-    let minutes = `${today.getMinutes() < 10 ? "0" : ""}${today.getMinutes()}`;
-    let seconds = `${today.getSeconds() < 10 ? "0" : ""}${today.getSeconds()}`;
+// ajax
+let today = new Date();
+let day = `${today.getDate() < 10 ? "0" : ""}${today.getDate()}`;
+let month = `${today.getMonth() + 1 < 10 ? "0" : ""}${today.getMonth() + 1}`;
+let year = today.getFullYear();
+let hours = today.getHours();
+let minutes = `${today.getMinutes() < 10 ? "0" : ""}${today.getMinutes()}`;
+let seconds = `${today.getSeconds() < 10 ? "0" : ""}${today.getSeconds()}`;
 
-    let current_time = `${day}-${month}-${year}, ${hours}.${minutes}.${seconds}`;
+let current_time = `${day}-${month}-${year}, ${hours}.${minutes}.${seconds}`;
 
 
-    $(document).ready(function () {
-        const table = $('#dTableMhs').DataTable({
-            dom: "lBfrtip",
-            'columnDefs': [
-                {
-                    "targets": [0, 1, 2, 3, 4, 5, 6, 7, 8],
-                    "className": "text-center"
-                },
-            ],
-            buttons: [
-                {
-                    extend: 'excelHtml5',
-                    title: `Rekap Absensi Mahasiswa ${current_time} WIB`,
-                    exportOptions: {
-                        columns: ':visible:not(.hilang)'
-                    }
-                },
-                {
-                    extend: 'pdfHtml5',
-                    title: `Rekap Absensi Mahasiswa ${current_time} WIB`,
-                    exportOptions: {
-                        columns: ':visible:not(.hilang)'
-                    }
+$(document).ready(function() {
+    const table = $('#dTableMhs').DataTable({
+        dom: "lBfrtip",
+        'columnDefs': [{
+            "targets": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+            "className": "text-center"
+        }, ],
+        buttons: [{
+                extend: 'excelHtml5',
+                title: `Rekap Absensi Mahasiswa ${current_time} WIB`,
+                exportOptions: {
+                    columns: ':visible:not(.hilang)'
                 }
-            ],
-        });
-        document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
-        document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
-
-        $('#select').on('change', function () {
-            var dropdown = $('#select').val();
-            if (dropdown === "all") {
-                table.columns(2).search('').draw();
-            } else if (name === dropdown) {
-                table.columns(2).search(dropdown).draw();
-            } else {
-                table.columns(2).search(dropdown).draw();
+            },
+            {
+                extend: 'pdfHtml5',
+                title: `Rekap Absensi Mahasiswa ${current_time} WIB`,
+                exportOptions: {
+                    columns: ':visible:not(.hilang)'
+                }
             }
-        });
-
-        $('.start_date, .end_date').on("change", function () {
-            var startDateValue = $('.start_date').val();
-            var endDateValue = $('.end_date').val();
-            var filterForm = $('#filterForm');
-            // Periksa apakah kedua nilai ada
-            if (startDateValue && endDateValue) {
-                filterForm.submit();
-            }
-        });
+        ],
     });
+    document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
+    document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
+
+    $('#select').on('change', function() {
+        var dropdown = $('#select').val();
+        if (dropdown === "all") {
+            table.columns(2).search('').draw();
+        } else if (name === dropdown) {
+            table.columns(2).search(dropdown).draw();
+        } else {
+            table.columns(2).search(dropdown).draw();
+        }
+    });
+
+    $('.start_date, .end_date').on("change", function() {
+        var startDateValue = $('.start_date').val();
+        var endDateValue = $('.end_date').val();
+        var filterForm = $('#filterForm');
+        // Periksa apakah kedua nilai ada
+        if (startDateValue && endDateValue) {
+            filterForm.submit();
+        }
+    });
+});
 </script>
 
 <script src="<?= base_url('admin'); ?>/js/table2excel.js"></script>
