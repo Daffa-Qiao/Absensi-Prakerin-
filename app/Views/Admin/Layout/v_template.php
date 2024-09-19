@@ -246,6 +246,11 @@
             color: black;
         }
 
+        td .status.alpa {
+            background-color:red;
+            color: black;
+        }
+
         td .status.baik {
             background-color: #00FF7F;
             border-radius: 1rem;

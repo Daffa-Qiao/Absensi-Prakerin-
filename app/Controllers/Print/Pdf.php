@@ -4,6 +4,7 @@ namespace App\Controllers\Print;
 
 use App\Controllers\BaseController;
 use App\Models\Absensi;
+use App\Models\MemberModel;
 use Dompdf\Dompdf;
 use Dompdf\Options;
 use DateTime;
@@ -62,10 +63,23 @@ class Pdf extends BaseController
             return $formattedDate;
         }
 
-
-
+        $absensi= new Absensi();
+        $user = new MemberModel();
+       $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
+       $absensiInfo = $absensi->where("DATE_FORMAT(waktu_absen,'%Y-%m')", date('Y-m'))->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
+       $totalAbsensi = [];
+       foreach ($absensiInfo as $nim_nis) {
+           $nimUser = $nim_nis->nim_nis;
+           $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
+           $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
+           $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
+           $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
+       }
         $data = [
-            'dataAbsen' => session('dataAbsen'),
+            'dataAbsen' => $absensiInfo,
+            'dataUser'=> $dataUser,
+            'user'=> $user,
+            'totalAbsensi' => $totalAbsensi,
             'jumlahTanggal' => countDaysInCurrentMonth(),
             'weekend' => getWeekendsInCurrentMonth(),
             'date' => formatedDate()
@@ -83,7 +97,7 @@ class Pdf extends BaseController
         $dompdf->loadHtml($html);
 
         // (Optional) Set paper size and orientation
-        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->setPaper('A2', 'landscape');
 
         // Render PDF
         $dompdf->render();

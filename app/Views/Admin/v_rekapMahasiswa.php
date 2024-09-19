@@ -231,14 +231,14 @@ $(document).ready(function() {
         }, ],
         buttons: [{
                 extend: 'excelHtml5',
-                title: `Rekap Absensi Mahasiswa ${current_time} WIB`,
+                title: `LOG ACTIVITY`,
                 exportOptions: {
                     columns: ':visible:not(.hilang)'
                 }
             },
             {
                 extend: 'pdfHtml5',
-                title: `Rekap Absensi Mahasiswa ${current_time} WIB`,
+                title: `LOG ACTIVITY`,
                 exportOptions: {
                     columns: ':visible:not(.hilang)'
                 }

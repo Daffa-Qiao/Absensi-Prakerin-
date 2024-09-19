@@ -36,7 +36,7 @@
                             <option value="Masuk">Attend</option>
                             <option value="Izin">Permit</option>
                             <option value="Sakit">Sick</option>
-                            <option value="Sakit">Absences</option>
+                            <option value="Alpa">Absences</option>
                         </select>
                         <div class="invalid-feedback errorStatus">
 

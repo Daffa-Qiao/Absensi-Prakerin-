@@ -112,8 +112,10 @@
                                 $status = 'hadir';
                             } else if ($v['status'] == 'Izin') {
                                 $status = 'izin';
-                            } else {
+                            } else if ($v['status'] == 'Sakit')  {
                                 $status = 'sakit';
+                            } else {
+                                $status = 'alpa';
                             }
                         ?>
                             <tr id="">

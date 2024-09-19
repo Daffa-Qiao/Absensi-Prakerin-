@@ -58,6 +58,20 @@ class User extends BaseController
                 return redirect()->back();
             }
             if ($currentTime > '10:00:00') {
+                $updateData = [
+                    'nama_lengkap' => $memberInfo['nama_lengkap'],
+                    'email' => $memberInfo['email'],
+                    'instansi_pendidikan' => $memberInfo['instansi_pendidikan'],
+                    'nama_instansi' => $memberInfo['nama_instansi'],
+                    'nim_nis' => $memberInfo['nim_nis'],
+                    'lokasi' => '',
+                    'status' => 'Alpa',
+                    'keterangan' => '',
+                    'checkin_time' => '',
+                    'foto_profile' => $memberInfo['foto'],
+                    'foto_absen' => '',
+                    'jenis_user' => $memberInfo['jenis_user'],
+                ];
                 notif_swal('error', 'Missed the absence deadline');
                 return redirect()->back();
             } else {
@@ -131,7 +145,7 @@ class User extends BaseController
                 $absensi->where('nim_nis', $sesi_nis)->orderBy('id', 'desc')->set($updateData)->update();
             }
             $absensi->where('nim_nis', $sesi_nis)->orderBy('id', 'desc')->set($updateData)->update();
-            notif_swal_tiga('success', 'Berhasil Check-out', $currentTime);
+            notif_swal_tiga('success', 'Check-out Successfully', $currentTime);
             return redirect()->back();
         }
     }

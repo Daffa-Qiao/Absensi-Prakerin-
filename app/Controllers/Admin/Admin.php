@@ -34,8 +34,8 @@ class Admin extends BaseController
             $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
         }
 
-        $jumlahSekolah = $user->getJumlahInstansi('sekolah');
-        $jumlahUniv = $user->getJumlahInstansi('universitas');
+        $jumlahSekolah = $user->getJumlahInstansi('School');
+        $jumlahUniv = $user->getJumlahInstansi('College School');
         $totalSiswa = $user->getUser('Student');
         $totalMahasiswa = $user->getUser('College Student');
         $totalUser = $user->where('is_verifikasi', 'yes')->countAllResults();
@@ -382,8 +382,18 @@ class Admin extends BaseController
         $user = new MemberModel();
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_absensi');
-        $dataAbsen = $absensi->select('nama_lengkap, nim_nis, nama_instansi, status, waktu_absen')->orderBy('id', 'desc')->where('jenis_user', 'Student')->distinct('nim_nis')->get()->getResult();
+        //$dataAbsen = $absensi->select('nama_lengkap, nim_nis, nama_instansi, status, waktu_absen')->orderBy('id', 'desc')->where('jenis_user', 'Student')->distinct('nim_nis')->get()->getResult();
         $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
+
+        $absensiInfo = $absensi->where("DATE_FORMAT(waktu_absen,'%Y-%m')", date('Y-m'))->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
+        $totalAbsensi = [];
+        foreach ($absensiInfo as $nim_nis) {
+            $nimUser = $nim_nis->nim_nis;
+            $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
+            $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
+            $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
+            $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
+        }
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapSiswa = 'aktif';
         $halaman = 'Admin | Attendance Recap';
@@ -434,13 +444,16 @@ class Admin extends BaseController
 
         $data = [
             'dataUser' => $dataUser,
-            'dataAbsen' => $dataAbsen,
+            'dataAbsen' => $absensiInfo,
+            'totalAbsensi' => $totalAbsensi,
+            // 'dataAbsen' => $absensiInfo,
             'nomor' => $nomor,
             'aktif_rekapSiswa' => $aktif_rekapSiswa,
             'aktif_rekapAbsensi' => 'active',
             'halaman' => $halaman,
             'title' => $title,
             'jumlahTanggal' => countTanggal(),
+            'user' => $user,
             'weekend' => getWeekend(),
         ];
         return view('Admin/v_rekapSiswa', $data);
@@ -635,6 +648,7 @@ class Admin extends BaseController
         // Instansiasi model
         $absensi = new Absensi();
         $user = new MemberModel();
+         $bulanIni = date('Y-m');
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_laporan');
         $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->findAll();
@@ -642,6 +656,15 @@ class Admin extends BaseController
         $nomor = nomor($currentPage, $jumlahBaris);
         // Dapatkan semua data user
         $dataUser = $user->findAll();
+        $absensiInfo = $absensi->where("DATE_FORMAT(waktu_absen,'%Y-%m')", $bulanIni)->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
+        $totalAbsensi = [];
+        foreach ($absensiInfo as $nim_nis) {
+            $nimUser = $nim_nis->nim_nis;
+            $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
+            $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
+            $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
+            $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
+        }
 
         // Array untuk menyimpan rekap absensi
         $rekapAbsensi = [];
@@ -665,7 +688,8 @@ class Admin extends BaseController
         // Data yang akan dikirimkan ke view
         $data = [
             'rekapAbsensi' => $rekapAbsensi,
-            'dataAbsen' => $dataAbsen,
+            'dataAbsen' => $absensiInfo,
+            'dataUser'=> $dataUser,
             'user' => $user,
             'nomor' => $nomor,
             'halaman' => 'Admin | Rekap Absensi',

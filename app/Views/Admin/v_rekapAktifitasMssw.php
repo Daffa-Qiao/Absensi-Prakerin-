@@ -244,14 +244,14 @@
       buttons: [
         {
           extend: 'excelHtml5',
-          title: `Rekap Laporan Siswa ${current_time} WIB`,
+          title: `LOG ACTIVITY`,
           exportOptions: {
             columns: ':visible:not(.hilang)'
           }
         },
         {
           extend: 'pdfHtml5',
-          title: `Rekap Laporan Siswa ${current_time} WIB`,
+          title: `LOG ACTIVITY`,
           exportOptions: {
             columns: ':visible:not(.hilang)'
           }
