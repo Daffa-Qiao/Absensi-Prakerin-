@@ -94,4 +94,8 @@ class Absensi extends Model
                     ->get()
                     ->getResultArray();
     }
+    public function getStatusByDateSsw($nimUser){
+        return $this->where('nim_nis', $nimUser)
+        ->where('DATE_FORMAT(waktu_absen, "%Y-%m")', date('Y-m'));
+    }
 }

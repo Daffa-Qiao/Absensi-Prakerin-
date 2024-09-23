@@ -384,16 +384,19 @@ class Admin extends BaseController
         $currentPage = $this->request->getVar('page_absensi');
         //$dataAbsen = $absensi->select('nama_lengkap, nim_nis, nama_instansi, status, waktu_absen')->orderBy('id', 'desc')->where('jenis_user', 'Student')->distinct('nim_nis')->get()->getResult();
         $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
-
+        $dataAbsens = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Siswa')->findAll();
         $absensiInfo = $absensi->where("DATE_FORMAT(waktu_absen,'%Y-%m')", date('Y-m'))->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
         $totalAbsensi = [];
         foreach ($absensiInfo as $nim_nis) {
             $nimUser = $nim_nis->nim_nis;
+            $status =  $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Siswa')->findAll();
             $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
             $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
             $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
             $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
+            $statusHari[$nimUser]= $absensi->getStatusByDateSsw($nimUser);
         }
+        
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapSiswa = 'aktif';
         $halaman = 'Admin | Attendance Recap';
@@ -445,8 +448,9 @@ class Admin extends BaseController
         $data = [
             'dataUser' => $dataUser,
             'dataAbsen' => $absensiInfo,
+            'statusHari' => $statusHari,
             'totalAbsensi' => $totalAbsensi,
-            // 'dataAbsen' => $absensiInfo,
+            'status' => $status,
             'nomor' => $nomor,
             'aktif_rekapSiswa' => $aktif_rekapSiswa,
             'aktif_rekapAbsensi' => 'active',
@@ -573,8 +577,8 @@ class Admin extends BaseController
         $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapAktifitasSiswa = 'aktif';
-        $halaman = 'Admin | Log Activity';
-        $title = 'Log Activity';
+        $halaman = 'Admin | Acvitivy Recap';
+        $title = 'Activity Recap';
 
         $data = [
             'dataUser' => $dataUser,
@@ -613,8 +617,8 @@ class Admin extends BaseController
         $dataLaporan = $laporan->orderBy('waktu_laporan', 'desc')->orderBy('id_laporan', 'desc')->where('jenis_user', 'College Student')->findAll();
         $dataUser = $user->where('jenis_user', 'College Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
-        $halaman = 'Admin | Log Activity';
-        $title = 'Log Activity';
+        $halaman = 'Admin | Activity Recap';
+        $title = 'Activity Recap';
 
         $data = [
             'dataUser' => $dataUser,
@@ -664,6 +668,7 @@ class Admin extends BaseController
             $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
             $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
             $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
+            
         }
 
         // Array untuk menyimpan rekap absensi

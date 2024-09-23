@@ -94,13 +94,14 @@
         .buttons-container {
             margin-top: 10px;
         }
+        
     </style>
 </head>
 
 <body>
 
-    <div class="img">
-        <img src="<?= base_url('admin') ?>/img/pusdatin.jpg" />
+<div class="img">
+        <img src="<?= base_url('admin') ?>/img/pusdatin.jpg"/>
     </div>
 
     <div class="header">
@@ -158,12 +159,13 @@
                     <td><?= $nama_instansi ?></td>
 
                     <?php
+                    foreach ($statusHari as $d){
                     for ($day = 1; $day <= $numDays; $day++) {
-                        echo "<td>" . (isset($attendanceData[$v->nim_nis][$day]) ? $attendanceData[$v->nim_nis][$day] : '-') . "</td>";
-                    }
+                        echo "<td>" . (isset($statusHari[$d->nim_nis][$day]) ? ($statusHari[$d->nim_nis][$day]) : '-') . "</td>";
+                    }}
                     ?>
 
-                    <td><?= $totalAbsensi[$v->nim_nis]['alpa']; ?></td>
+                    <td><?= $totalAbsensi[$v->nim_nis]['masuk']; ?></td>
                     <td><?= $totalAbsensi[$v->nim_nis]['alpa']; ?></td>
                     <td><?= $totalAbsensi[$v->nim_nis]['sakit']; ?></td>
                     <td><?= $totalAbsensi[$v->nim_nis]['izin']; ?></td>

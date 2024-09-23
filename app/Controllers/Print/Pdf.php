@@ -74,10 +74,12 @@ class Pdf extends BaseController
            $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
            $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
            $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
+           $statusHari[$nimUser]=$absensi->getStatusByDateSsw($nimUser);
        }
         $data = [
             'dataAbsen' => $absensiInfo,
             'dataUser'=> $dataUser,
+            'statusHari'=>$statusHari,
             'user'=> $user,
             'totalAbsensi' => $totalAbsensi,
             'jumlahTanggal' => countDaysInCurrentMonth(),
@@ -97,7 +99,7 @@ class Pdf extends BaseController
         $dompdf->loadHtml($html);
 
         // (Optional) Set paper size and orientation
-        $dompdf->setPaper('A2', 'landscape');
+        $dompdf->setPaper('A1', 'landscape');
 
         // Render PDF
         $dompdf->render();

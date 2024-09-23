@@ -1,7 +1,7 @@
 <?= $this->extend('Admin/Layout/v_template'); ?>
 
 <?= $this->section('content'); ?>
-
+<?php include(APPPATH . 'Views/Admin/Modal/modalActivity.php') ?>
 <!-- Begin Page Content -->
 
 <head>
