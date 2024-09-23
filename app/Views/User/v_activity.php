@@ -45,9 +45,15 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="file" class='form-control' id="inputGroupFile02">
+                            <div class="row customFile" style="flex-wrap:wrap; margin-left:10px; width:90%">
+                                <div class="customAddFile" style="width: 35%;">
+                                    <label for="upload" class="upload-image customUpload">Add File</label>
+                                </div>
+                                <div class="customFileSelected" style="width: 65%;">
+                                    <span id="file-chosen" class="filename customFileChosen">No file selected</span>
+                                </div>
                             </div>
+                            <input name="foto_absen" type="file" id="upload" accept=".png, .jpg, .jpeg" style="display: none;" onchange="updateFileName()"/>
                         </div>
                     </div>
                 </div>
@@ -191,22 +197,36 @@
             "Merdeka Timur": [1, 2, 3]
         };
         document.getElementById('lokasi').addEventListener('change', function () {
-        var selectedLocation = this.value;
-        var floor = lokasi_dan_lantai[selectedLocation];
-        updateLokasi(floor);
-    });
+            var selectedLocation = this.value;
+            var floor = lokasi_dan_lantai[selectedLocation];
+            updateLokasi(floor);
+        });
     
-    function updateLokasi(floor) {
-    var lantaiDropdown = document.getElementById('lantai');
-    lantaiDropdown.innerHTML = "";
+        function updateLokasi(floor) {
+            var lantaiDropdown = document.getElementById('lantai');
+            lantaiDropdown.innerHTML = "";
 
-    floor.forEach(function(floorNumber) {
-        var option = document.createElement('option');
-        option.value = floorNumber;
-        option.text = floorNumber;
-        lantaiDropdown.add(option);
-    });
-}
+        floor.forEach(function(floorNumber) {
+            var option = document.createElement('option');
+            option.value = floorNumber;
+            option.text = floorNumber;
+            lantaiDropdown.add(option);
+        });
+
+    }
+
+        // Upload Foto
+        function updateFileName() {
+        const fileInput = document.getElementById('upload');
+        const fileChosen = document.getElementById('file-chosen');
+
+        if (fileInput.files.length > 0) {
+            fileChosen.textContent = fileInput.files[0].name;
+        } else {
+            fileChosen.textContent = 'No file selected';
+        }
+    }
+
     </script>
 
 </main>

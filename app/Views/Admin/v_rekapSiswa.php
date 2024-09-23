@@ -93,10 +93,6 @@
                         <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="buttonPdf"
                             for="toPdf">Pdf<i class="fa-regular fa-file-pdf text-center d-flex align-items-center"
                                 style="color: #ff0033"></i></label>
-                        <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel"
-                            for="toExcel">Excel<i class="fa-regular fa-file-excel text-center d-flex align-items-center"
-                                style="color: #3f8230; width: 16px"></i>
-                        </label>
                     </div>
                 </div>
             </div>

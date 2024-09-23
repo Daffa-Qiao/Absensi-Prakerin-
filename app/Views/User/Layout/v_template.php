@@ -7,6 +7,7 @@
     <title>
         <?= $halaman ?>
     </title>
+    <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/themeSelector.css">
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/sidebar.css" />
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/my-profile.css">
     <link rel="stylesheet" href="<?= base_url('admin'); ?>/css/attendance.css">
@@ -60,11 +61,11 @@
         }
 
         .theme-colors .color.blue {
-            background-color: #01A2EC;
+            background-color: var(--blue);
         }
 
         .theme-colors .color.green {
-            background-color: #81A263;
+            background-color: var(--green);
         }
 
 

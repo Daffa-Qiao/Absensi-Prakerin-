@@ -34,7 +34,7 @@
                         <div class="image">
                             <div id="my_camera" class="mx-auto rounded overflow-hidden"></div>
                         </div>
-                        <div class="text">
+                        <div class="col d-flex align-items-center" style="margin-left: 20px; margin-top:40px;">
                             <button type="button" id="takephoto">
                                 <a href="#hasil">
                                     <i class="fa-solid fa-camera"></i>

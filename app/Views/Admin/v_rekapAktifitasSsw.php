@@ -29,7 +29,7 @@
     }
 
     .custom-tambahkan {
-      box-sizing: border-box;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     }
 
     
@@ -92,29 +92,18 @@
             </div>
           </div>
           <!-- col 2 -->
-          <div class="col ">
+          <div class="col" style="margin-top: 2rem; margin-bottom: 3rem;">
             <!-- button add activity -->
             <div class="col d-flex mt-5 justify-content-center">
               <button type="button" class="btn btn-primary bg-gradient-primary col-10 rounded-pill btnTambah custom-tambahkan custom-text fw-bold text-dark" data-toggle="modal" data-target="#modalActivity" attr-href="{{route('activity.tambah')}}"><i class="bi bi-pencil-square"></i> ADD ACTIVITY</button>
             </div>
-            <!-- button monthly recap -->
-            <div class="col d-flex mt-2 justify-content-center">
-              <button class="btn btn-lg btn-warning bg-gradient-warning dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
-              <i class="bi bi-arrow-bar-down"></i> MONTHLY RECAP
-              </button>
-              <div class="dropdown-menu col-9" aria-labelledby="dropdownMenuButton">
-                <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="bi bi-file-earmark-pdf" style="color: #ff0033;"></i></label>
-                <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel" for="toExcel">Excel<i class="bi bi-file-earmark-excel" style="color: #3f8230;"></i></label>
-              </div>
-            </div>
             <!-- button export file -->
             <div class="col d-flex mt-2 justify-content-center">
-              <button class="btn btn-lg btn-danger bg-gradient-danger dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark hover-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+              <button class="btn btn-lg btn-danger bg-gradient-danger dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark hover-button custom-tambahkan" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
               <i class="bi bi-arrow-bar-down"></i> EXPORT FILE
               </button>
               <div class="dropdown-menu col-9" aria-labelledby="dropdownMenuButton">
                 <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="bi bi-file-earmark-pdf" style="color: #ff0033;"></i></label>
-                <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel" for="toExcel">Excel<i class="bi bi-file-earmark-excel" style="color: #3f8230;"></i></label>
               </div>
             </div>
           </div>

@@ -383,7 +383,7 @@
             <li class="nav-item <?= (isset($aktif_rekapAktifitas) ? $aktif_rekapAktifitas : ''); ?>">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseUtilities" style="width: 270px !important">
                     <i class="bi bi-clipboard-data"></i>
-                    <span>Activity Recap</span>
+                    <span>Log Activity</span>
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">

@@ -17,7 +17,7 @@
                 <input type="hidden" name="dataNim_Nis" id="dataNim_Nis">
                 <!-- FOTM INPUT DATA -->
                 <div class="mb-3">
-                    <label for="superNamaLengkap" class="form-label">Nama Lengkap</label>
+                    <label for="superNamaLengkap" class="form-label">Full Name</label>
                     <input type="text" class="form-control" name="super_nama_lengkap" id="superNamaLengkap" placeholder="">
                     <div class=" invalid-feedback errornama_lengkap">
 
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="superNoHP" class="form-label">No Telepon</label>
+                    <label for="superNoHP" class="form-label">Phone Number</label>
                     <input type="number" class="form-control" name="super_no_hp" id="superNoHP" placeholder="">
                     <div class="invalid-feedback errorno_hp">
                     </div>
@@ -79,7 +79,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary tombol-tutup" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary" id="tombolSave">Simpan</button>
+                <button type="submit" class="btn btn-primary" id="tombolSave">Submit</button>
             </div>
         </div>
     </div>

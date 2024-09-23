@@ -573,8 +573,8 @@ class Admin extends BaseController
         $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapAktifitasSiswa = 'aktif';
-        $halaman = 'Admin | Acvitivy Recap';
-        $title = 'Activity Recap';
+        $halaman = 'Admin | Log Activity';
+        $title = 'Log Activity';
 
         $data = [
             'dataUser' => $dataUser,
@@ -613,8 +613,8 @@ class Admin extends BaseController
         $dataLaporan = $laporan->orderBy('waktu_laporan', 'desc')->orderBy('id_laporan', 'desc')->where('jenis_user', 'College Student')->findAll();
         $dataUser = $user->where('jenis_user', 'College Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
-        $halaman = 'Admin | Activity Recap';
-        $title = 'Activity Recap';
+        $halaman = 'Admin | Log Activity';
+        $title = 'Log Activity';
 
         $data = [
             'dataUser' => $dataUser,

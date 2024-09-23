@@ -1,3 +1,27 @@
+/* untuk button upload file */
+.customFile {
+  background-color: #BCBCBC;
+  text-align: center;
+}
+.customFile:hover{
+  background-color: #888484;
+  transition-duration: 0.5s;
+}
+.customUpload{
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.customFileChosen {
+ background-color: #ffffff;
+ display: flex;
+ align-items: center;
+ margin : 6px;
+ color: #888484;
+ padding-left: 3px;
+ font-size: 16px;
+}
+
 .wrapper-content-activity {
   display: flex;
   align-items: center;
