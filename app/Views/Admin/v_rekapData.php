@@ -159,10 +159,9 @@
                     <td><?= $nama_instansi ?></td>
 
                     <?php
-                    foreach ($statusHari as $d){
                     for ($day = 1; $day <= $numDays; $day++) {
-                        echo "<td>" . (isset($statusHari[$d->nim_nis][$day]) ? ($statusHari[$d->nim_nis][$day]) : '-') . "</td>";
-                    }}
+                        echo "<td> - </td>";
+                    }
                     ?>
 
                     <td><?= $totalAbsensi[$v->nim_nis]['masuk']; ?></td>

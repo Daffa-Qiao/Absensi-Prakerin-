@@ -142,3 +142,63 @@ in APPPATH\Views\Admin\v_rekapData.php on line 140.
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
 INFO - 2024-09-23 22:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 23:00:40 --> ParseError: syntax error, unexpected token "."
+in APPPATH\Views\Admin\v_rekapData.php on line 164.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 3 APPPATH\Controllers\Print\Pdf.php(90): view('admin/v_rekapData', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-23 23:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 23:02:47 --> TypeError: Unsupported operand types: string - string
+in APPPATH\Views\Admin\v_rekapData.php on line 164.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(90): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-23 23:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 23:03:43 --> Error: Cannot use object of type App\Models\Absensi as array
+in APPPATH\Views\Admin\v_rekapData.php on line 156.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(90): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-23 23:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 23:05:51 --> TypeError: Unsupported operand types: string - string
+in APPPATH\Views\Admin\v_rekapData.php on line 164.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(90): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-23 23:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 23:12:21 --> TypeError: Unsupported operand types: string - string
+in APPPATH\Views\Admin\v_rekapData.php on line 164.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(90): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-23 23:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
