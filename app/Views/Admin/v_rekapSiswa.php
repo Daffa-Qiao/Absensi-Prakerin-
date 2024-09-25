@@ -47,7 +47,7 @@
                                 <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Month :
                                 </label>
                                 <input type="month" class="form-control start_date" id="Fdatepicker" name="start_date"
-                                    placeholder="Tanggal Awal"
+                                    placeholder="Bulan Awal"
                                     value="<?= (isset($start_date) ? $start_date : ''); ?>" />
                                 <input type="text" id="tanggalA" hidden>
                             </div>
@@ -59,7 +59,7 @@
                                 <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Month :
                                 </label>
                                 <input type="month" class="form-control end_date" id="Ldatepicker" name="end_date"
-                                    placeholder="Tanggal Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
+                                    placeholder="Bulan Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
                                 <input type="text" id="tanggalB" hidden>
                             </div> 
                         </div>
