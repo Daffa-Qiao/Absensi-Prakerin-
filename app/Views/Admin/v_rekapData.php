@@ -10,95 +10,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Data Recap Monthly</title>
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-    .header {
-        text-align: center;
-        margin-bottom: 20px;
-        text-align: left;
-        transform: translateY(30px);
-    }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            text-align: left;
+            transform: translateY(30px);
+        }
 
-    .header1 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+        .header1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    .header img {
-        width: 100px;
-        float: left;
-    }
+        .header img {
+            width: 100px;
+            float: left;
+        }
 
-    .header h1 {
-        margin: 0;
-        font-size: 15px;
-    }
+        .header h1 {
+            margin: 0;
+            font-size: 15px;
+        }
 
-    .header h2,
-    .header h3 {
-        margin: 0;
-        font-size: 15px;
-    }
+        .header h2,
+        .header h3 {
+            margin: 0;
+            font-size: 15px;
+        }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
 
-    table,
-    th,
-    td {
-        border: 1px solid black;
-    }
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
 
-    th,
-    td {
-        padding: 8px;
-        text-align: center;
-    }
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+        }
 
-    th {
-        background-color: #2C4250;
-        color: white;
-    }
+        th {
+            background-color: #2C4250;
+            color: white;
+        }
 
-    .weekend {
-        background-color: red;
-        color: black;
-    }
+        .weekend {
+            background-color: red;
+            color: black;
+        }
 
-    .footer {
-        text-align: left;
-        font-size: 12px;
-        margin-top: 20px;
-        position: fixed;
-        bottom: 0;
-        left: 20px;
-        width: 100%;
-    }
+        .footer {
+            text-align: left;
+            font-size: 12px;
+            margin-top: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 20px;
+            width: 100%;
+        }
 
-    .legend {
-        background-color: #2C4250;
-        color: white;
-        padding: 10px;
-        text-align: left;
-        max-width: 300px;
-        border-radius: 5px;
-        float: right;
-        margin-right: 2px;
-    }
+        .legend {
+            background-color: #2C4250;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            max-width: 300px;
+            border-radius: 5px;
+            float: right;
+            margin-right: 2px;
+        }
 
-    .legend p {
-        margin: 5px 0;
-    }
+        .legend p {
+            margin: 5px 0;
+        }
 
-    .buttons-container {
-        margin-top: 10px;
-    }
+        .buttons-container {
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -153,44 +153,49 @@
                 $jenis_user = $dataUser ? $dataUser->jenis_user : $v->jenis_user;
 
                 ?>
-            <tr>
-                <td><?= $nomor; ?></td>
-                <td><?= $namaLengkap; ?></td>
-                <td><?= $nim_nis ?></td>
-                <td><?= $nama_instansi ?></td>
+                <tr>
+                    <td><?= $nomor; ?></td>
+                    <td><?= $namaLengkap; ?></td>
+                    <td><?= $nim_nis ?></td>
+                    <td><?= $nama_instansi ?></td>
 
-                <?php
-                    // Loop through each day of the month for the current row (user)
+                    <?php
                     for ($day = 1; $day <= $numDays; $day++) {
                         if ($day < 10) {
                             $day = '0' . $day;
                         }
                         $statusUser = $absensiModel->getStatusByDateSsw($v->nim_nis, $day);
-
-                        if ($statusUser) {
-                            if ($statusUser->status == 'Masuk') {
-                                echo '<td>A</td>';
-                            } else if ($statusUser->status == 'Alpa') {
-                                echo '<td>AP</td>';
-                            } else if ($statusUser->status == 'Sakit') {
-                                echo '<td>S</td>';
-                            } else if ($statusUser->status == 'Izin') {
-                                echo '<td>P</td>';
-                            }
+                        if (in_array($day, $weekend)) {
+                            echo '<td style="background-color: red"></td>';
                         } else {
-                            echo '<td>-</td>';
+                            // Check user status
+                            if ($statusUser) {
+                                if ($statusUser->status == 'Masuk') {
+                                    echo '<td>A</td>';
+                                } else if ($statusUser->status == 'Alpa') {
+                                    echo '<td>AP</td>';
+                                } else if ($statusUser->status == 'Sakit') {
+                                    echo '<td>S</td>';
+                                } else if ($statusUser->status == 'Izin') {
+                                    echo '<td>P</td>';
+                                }
+                            } else {
+                                // If no status is found, use default placeholder
+                                echo '<td>-</td>';
+                            }
                         }
                     }
+
                     ?>
 
-                <td><?= $totalAbsensi[$v->nim_nis]['masuk']; ?></td>
-                <td><?= $totalAbsensi[$v->nim_nis]['alpa']; ?></td>
-                <td><?= $totalAbsensi[$v->nim_nis]['sakit']; ?></td>
-                <td><?= $totalAbsensi[$v->nim_nis]['izin']; ?></td>
-                <td><?= $totalAbsensi[$v->nim_nis]['izin'] + $totalAbsensi[$v->nim_nis]['sakit'] + $totalAbsensi[$v->nim_nis]['alpa']; ?>
-                </td>
-            </tr>
-            <?php $nomor++;
+                    <td><?= $totalAbsensi[$v->nim_nis]['masuk']; ?></td>
+                    <td><?= $totalAbsensi[$v->nim_nis]['alpa']; ?></td>
+                    <td><?= $totalAbsensi[$v->nim_nis]['sakit']; ?></td>
+                    <td><?= $totalAbsensi[$v->nim_nis]['izin']; ?></td>
+                    <td><?= $totalAbsensi[$v->nim_nis]['izin'] + $totalAbsensi[$v->nim_nis]['sakit'] + $totalAbsensi[$v->nim_nis]['alpa']; ?>
+                    </td>
+                </tr>
+                <?php $nomor++;
             } ?>
         </tbody>
     </table>
@@ -204,7 +209,7 @@
     </div>
 
     <div class="footer">
-        <p>Created on <?= date('F d Y') ?></p>
+        <p>Created on <?= date('Y-m-d') ?></p>
     </div>
 
 </body>

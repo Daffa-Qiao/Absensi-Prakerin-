@@ -30,7 +30,7 @@ class Pdf extends BaseController
             $year = date('Y');
             $month = date('m');
 
-            // Array untuk menyimpan tanggal Sabtu dan Minggu
+            // Array untuk menyimpan hari Sabtu dan Minggu saja
             $weekends = [];
 
             // Menentukan jumlah hari dalam bulan ini
@@ -47,12 +47,14 @@ class Pdf extends BaseController
 
                 // Memeriksa apakah hari adalah Sabtu atau Minggu
                 if ($dayOfWeek == 'Saturday' || $dayOfWeek == 'Sunday') {
-                    $weekends[] = $date;
+                    // Menambahkan hanya nomor hari ke array
+                    $weekends[] = $day;
                 }
             }
 
             return $weekends;
         }
+
 
         function formatedDate()
         {

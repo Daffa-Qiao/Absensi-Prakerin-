@@ -658,21 +658,4 @@ class Admin extends BaseController
         // Memuat view dengan data rekap absensi
         return view('Admin/v_rekapData', $data);
     }
-    public function getWeekendDate($year, $month) {
-    $weekend = array(0, 6); // 0 = Sunday, 6 = Saturday
-    $dates = array();
-    $first_day = mktime(0, 0, 0, $month, 1, $year);
-    $last_day = mktime(0, 0, 0, $month + 1, 0, $year);
-    for ($date = $first_day; $date <= $last_day; $date += 86400) {
-        $day = date('w', $date);
-        if (in_array($day, $weekend)) {
-            $dates[] = date('Y-m-d', $date);
-        }
-    }
-    return $dates;
-    $year = date('Y');
-    $month = date('m');
-    $weekend_dates = $this->getWeekendDate($year, $month);
-    print_r($weekend_dates); // Tampilkan tanggal weekend dalam bulan ini
-        }
-    }
+}
