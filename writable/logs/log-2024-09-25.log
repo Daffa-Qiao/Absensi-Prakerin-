@@ -1,0 +1,469 @@
+INFO - 2024-09-25 09:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:35:53 --> Error: Call to a member function where() on array
+in APPPATH\Views\Admin\v_rekapData.php on line 144.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Admin\Admin.php(705): view('Admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:35:54 --> Error: Call to a member function where() on array
+in APPPATH\Views\Admin\v_rekapData.php on line 144.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Admin\Admin.php(705): view('Admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:48:59 --> ParseError: syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\Admin\v_rekapData.php on line 165.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 3 APPPATH\Controllers\Print\Pdf.php(92): view('admin/v_rekapData', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:55:04 --> ErrorException: Attempt to read property "status" on array
+in APPPATH\Views\Admin\v_rekapData.php on line 166.
+ 1 APPPATH\Views\Admin\v_rekapData.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status" on array', 'C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 166)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Print\Pdf.php(92): view('admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:56:24 --> ErrorException: Array to string conversion
+in APPPATH\Views\Admin\v_rekapData.php on line 166.
+ 1 APPPATH\Views\Admin\v_rekapData.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 166)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Print\Pdf.php(92): view('admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:56:51 --> ErrorException: Array to string conversion
+in APPPATH\Views\Admin\v_rekapData.php on line 166.
+ 1 APPPATH\Views\Admin\v_rekapData.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 166)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Print\Pdf.php(92): view('admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:57:55 --> ErrorException: Array to string conversion
+in APPPATH\Views\Admin\v_rekapData.php on line 166.
+ 1 APPPATH\Views\Admin\v_rekapData.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 166)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Print\Pdf.php(92): view('admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:58:06 --> ErrorException: Undefined array key "status"
+in APPPATH\Views\Admin\v_rekapData.php on line 166.
+ 1 APPPATH\Views\Admin\v_rekapData.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php', 166)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapData.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 5 APPPATH\Controllers\Print\Pdf.php(92): view('admin/v_rekapData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:59:08 --> Error: Cannot use object of type App\Models\Absensi as array
+in APPPATH\Views\Admin\v_rekapData.php on line 166.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(92): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 09:59:22 --> Error: Object of class App\Models\Absensi could not be converted to string
+in APPPATH\Views\Admin\v_rekapData.php on line 166.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(92): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 09:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 09:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:00:01 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\Admin\v_rekapData.php on line 166.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(92): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:06:37 --> Error: Call to a member function getStatusByDateSsw() on array
+in APPPATH\Views\Admin\v_rekapData.php on line 165.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(91): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-09-25 10:07:04 --> Error: Call to a member function getStatusByDateSsw() on array
+in APPPATH\Views\Admin\v_rekapData.php on line 165.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(91): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:08:59 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:00 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:01 --> Error: Call to a member function where() on array
+in APPPATH\Views\Admin\v_rekapData.php on line 148.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Admin\Admin.php(705): view('Admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:01 --> Error: Call to a member function where() on array
+in APPPATH\Views\Admin\v_rekapData.php on line 148.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Admin\Admin.php(705): view('Admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekapAbsensi()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:05 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:05 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:06 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:28 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:28 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:31 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:31 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:40 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:40 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:56 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:56 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:58 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:09:59 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:11:01 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:11:02 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:13:18 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:13:18 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:14:23 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:14:23 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:14:34 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:14:34 --> ArgumentCountError: Too few arguments to function App\Models\Absensi::getStatusByDateSsw(), 1 passed in C:\xampp\htdocs\Absensi-Prakerin-\app\Controllers\Admin\Admin.php on line 397 and exactly 2 expected
+in APPPATH\Models\Absensi.php on line 97.
+ 1 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-25 10:14:48 --> [DEPRECATED] str_pad(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Models\Absensi.php on line 100.
+ 1 APPPATH\Models\Absensi.php(100): str_pad(null, 2, '0', 0)
+ 2 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-25 10:14:51 --> [DEPRECATED] str_pad(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Models\Absensi.php on line 100.
+ 1 APPPATH\Models\Absensi.php(100): str_pad(null, 2, '0', 0)
+ 2 APPPATH\Controllers\Admin\Admin.php(397): App\Models\Absensi->getStatusByDateSsw('2214312221')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 10:17:08 --> Error: Call to a member function getStatusByDateSsw() on array
+in APPPATH\Views\Admin\v_rekapData.php on line 165.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(91): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 10:19:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 10:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 11:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 11:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 11:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 12:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

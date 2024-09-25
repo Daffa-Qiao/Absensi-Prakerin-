@@ -1,0 +1,82 @@
+INFO - 2024-10-31 16:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-31 16:09:06 --> ErrorException: Undefined variable $statusHari
+in APPPATH\Controllers\Admin\Admin.php on line 451.
+ 1 APPPATH\Controllers\Admin\Admin.php(451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statusHari', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 451)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-31 16:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-31 16:09:30 --> ErrorException: Undefined variable $statusHari
+in APPPATH\Controllers\Admin\Admin.php on line 451.
+ 1 APPPATH\Controllers\Admin\Admin.php(451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statusHari', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 451)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-31 16:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-31 16:11:00 --> ErrorException: Undefined variable $statusHari
+in APPPATH\Controllers\Admin\Admin.php on line 451.
+ 1 APPPATH\Controllers\Admin\Admin.php(451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statusHari', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 451)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-31 16:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-31 16:11:04 --> ErrorException: Undefined variable $statusHari
+in APPPATH\Controllers\Admin\Admin.php on line 451.
+ 1 APPPATH\Controllers\Admin\Admin.php(451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statusHari', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 451)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-31 16:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-31 16:11:07 --> ErrorException: Undefined variable $statusHari
+in APPPATH\Controllers\Admin\Admin.php on line 451.
+ 1 APPPATH\Controllers\Admin\Admin.php(451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statusHari', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 451)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-31 16:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-31 16:12:13 --> ErrorException: Undefined variable $statusHari
+in APPPATH\Controllers\Admin\Admin.php on line 451.
+ 1 APPPATH\Controllers\Admin\Admin.php(451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statusHari', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 451)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-31 16:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-31 16:12:17 --> ErrorException: Undefined variable $statusHari
+in APPPATH\Controllers\Admin\Admin.php on line 451.
+ 1 APPPATH\Controllers\Admin\Admin.php(451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statusHari', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 451)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-31 16:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-31 16:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-31 16:13:47 --> ErrorException: Undefined variable $statusHari
+in APPPATH\Controllers\Admin\Admin.php on line 451.
+ 1 APPPATH\Controllers\Admin\Admin.php(451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statusHari', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 451)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')

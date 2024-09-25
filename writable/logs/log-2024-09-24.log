@@ -1,0 +1,198 @@
+INFO - 2024-09-24 08:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 08:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 08:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 09:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-24 09:40:23 --> Exception: The PHP GD extension is required, but is not installed.
+in VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php on line 285.
+ 1 VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php(85): Dompdf\Renderer\AbstractRenderer->_background_image('http://localhost:8080/', 49.01574803149606, 49.01574803149606, 2285.908503937008, 0.0, Object(Dompdf\Css\Style))
+ 2 VENDORPATH\dompdf\dompdf\src\Renderer\Block.php(41): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Block), [...])
+ 3 VENDORPATH\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Block->render(Object(Dompdf\FrameDecorator\Block))
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(110): Dompdf\Renderer->_render_frame('block', Object(Dompdf\FrameDecorator\Block))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 6 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(null)
+ 8 VENDORPATH\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+ 9 APPPATH\Controllers\Print\Pdf.php(105): Dompdf\Dompdf->render()
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-09-24 09:40:41 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 253759488 bytes)
+【Previous Exception】
+Exception
+The PHP GD extension is required, but is not installed.
+#0 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer\AbstractRenderer.php(85): Dompdf\Renderer\AbstractRenderer->_background_image('http://localhos...', 49.015748031496, 49.015748031496, 2285.908503937, 0.0, Object(Dompdf\Css\Style))
+#1 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer\Block.php(41): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Block), Array)
+#2 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Block->render(Object(Dompdf\FrameDecorator\Block))
+#3 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer.php(110): Dompdf\Renderer->_render_frame('block', Object(Dompdf\FrameDecorator\Block))
+#4 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#5 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#6 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(NULL)
+#7 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#8 C:\Absensi-Prakerin-\app\Controllers\Print\Pdf.php(105): Dompdf\Dompdf->render()
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+in APPPATH\Views\errors\html\error_exception.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-09-24 09:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-24 09:40:54 --> Exception: The PHP GD extension is required, but is not installed.
+in VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php on line 285.
+ 1 VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php(85): Dompdf\Renderer\AbstractRenderer->_background_image('http://localhost:8080/', 49.01574803149606, 49.01574803149606, 2285.908503937008, 0.0, Object(Dompdf\Css\Style))
+ 2 VENDORPATH\dompdf\dompdf\src\Renderer\Block.php(41): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Block), [...])
+ 3 VENDORPATH\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Block->render(Object(Dompdf\FrameDecorator\Block))
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(110): Dompdf\Renderer->_render_frame('block', Object(Dompdf\FrameDecorator\Block))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 6 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(null)
+ 8 VENDORPATH\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+ 9 APPPATH\Controllers\Print\Pdf.php(105): Dompdf\Dompdf->render()
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-09-24 09:41:14 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 260050944 bytes)
+【Previous Exception】
+Exception
+The PHP GD extension is required, but is not installed.
+#0 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer\AbstractRenderer.php(85): Dompdf\Renderer\AbstractRenderer->_background_image('http://localhos...', 49.015748031496, 49.015748031496, 2285.908503937, 0.0, Object(Dompdf\Css\Style))
+#1 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer\Block.php(41): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Block), Array)
+#2 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Block->render(Object(Dompdf\FrameDecorator\Block))
+#3 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer.php(110): Dompdf\Renderer->_render_frame('block', Object(Dompdf\FrameDecorator\Block))
+#4 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#5 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#6 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(NULL)
+#7 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#8 C:\Absensi-Prakerin-\app\Controllers\Print\Pdf.php(105): Dompdf\Dompdf->render()
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+in APPPATH\Views\errors\html\error_exception.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-24 09:41:16 --> Exception: The PHP GD extension is required, but is not installed.
+in VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php on line 285.
+ 1 VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php(85): Dompdf\Renderer\AbstractRenderer->_background_image('http://localhost:8080/', 49.01574803149606, 49.01574803149606, 2285.908503937008, 0.0, Object(Dompdf\Css\Style))
+ 2 VENDORPATH\dompdf\dompdf\src\Renderer\Block.php(41): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Block), [...])
+ 3 VENDORPATH\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Block->render(Object(Dompdf\FrameDecorator\Block))
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(110): Dompdf\Renderer->_render_frame('block', Object(Dompdf\FrameDecorator\Block))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 6 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(null)
+ 8 VENDORPATH\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+ 9 APPPATH\Controllers\Print\Pdf.php(105): Dompdf\Dompdf->render()
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-09-24 09:41:36 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 260050944 bytes)
+【Previous Exception】
+Exception
+The PHP GD extension is required, but is not installed.
+#0 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer\AbstractRenderer.php(85): Dompdf\Renderer\AbstractRenderer->_background_image('http://localhos...', 49.015748031496, 49.015748031496, 2285.908503937, 0.0, Object(Dompdf\Css\Style))
+#1 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer\Block.php(41): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Block), Array)
+#2 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Block->render(Object(Dompdf\FrameDecorator\Block))
+#3 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer.php(110): Dompdf\Renderer->_render_frame('block', Object(Dompdf\FrameDecorator\Block))
+#4 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#5 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#6 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(NULL)
+#7 C:\Absensi-Prakerin-\vendor\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#8 C:\Absensi-Prakerin-\app\Controllers\Print\Pdf.php(105): Dompdf\Dompdf->render()
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+in APPPATH\Views\errors\html\error_exception.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-24 09:41:57 --> Error: Undefined constant "admin"
+in APPPATH\Views\Admin\v_rekapData.php on line 105.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(90): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-09-24 09:42:12 --> Error: Undefined constant "admin"
+in APPPATH\Views\Admin\v_rekapData.php on line 105.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(90): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-09-24 09:42:22 --> Error: Undefined constant "admin"
+in APPPATH\Views\Admin\v_rekapData.php on line 105.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/v_rekapData', [], true)
+ 4 APPPATH\Controllers\Print\Pdf.php(90): view('admin/v_rekapData', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Print\Pdf->generatePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Print\Pdf))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-24 09:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 09:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 09:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 10:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 13:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 13:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 13:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 13:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 14:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-24 15:30:00 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 134.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 134)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(463): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-24 15:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 15:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 16:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 16:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 16:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-24 16:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -389,66 +389,22 @@ class Admin extends BaseController
         $totalAbsensi = [];
         foreach ($absensiInfo as $nim_nis) {
             $nimUser = $nim_nis->nim_nis;
-            $status =  $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Siswa')->findAll();
+            $status = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Siswa')->findAll();
             $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
             $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
             $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
             $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
-            $statusHari[$nimUser]= $absensi->getStatusByDateSsw($nimUser);
+
         }
-        
+
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapSiswa = 'aktif';
         $halaman = 'Admin | Attendance Recap';
         $title = 'Attendance Recap';
 
-
-        function countTanggal()
-        {
-            // Mendapatkan tahun dan bulan saat ini
-            $year = date('Y');
-            $month = date('m');
-
-            // Menghitung jumlah hari dalam bulan ini
-            $daysInMonth = date('t', strtotime("$year-$month-01"));
-
-            return $daysInMonth;
-        }
-
-
-        function getWeekend()
-        {
-            $year = date('Y');
-            $month = date('m');
-
-            // Array untuk menyimpan tanggal Sabtu dan Minggu
-            $weekends = [];
-
-            // Menentukan jumlah hari dalam bulan ini
-            $daysInMonth = date('t', strtotime("$year-$month-01"));
-
-            // Loop untuk setiap hari dalam bulan ini
-            for ($day = 1; $day <= $daysInMonth; $day++) {
-                // Membuat tanggal dari tahun, bulan, dan hari
-                $date = "$year-$month-$day";
-                $timestamp = strtotime($date);
-
-                // Mengambil nama hari dari timestamp
-                $dayOfWeek = date('l', $timestamp);
-
-                // Memeriksa apakah hari adalah Sabtu atau Minggu
-                if ($dayOfWeek == 'Saturday' || $dayOfWeek == 'Sunday') {
-                    $weekends[] = $date;
-                }
-            }
-
-            return $weekends;
-        }
-
         $data = [
             'dataUser' => $dataUser,
             'dataAbsen' => $absensiInfo,
-            'statusHari' => $statusHari,
             'totalAbsensi' => $totalAbsensi,
             'status' => $status,
             'nomor' => $nomor,
@@ -456,9 +412,7 @@ class Admin extends BaseController
             'aktif_rekapAbsensi' => 'active',
             'halaman' => $halaman,
             'title' => $title,
-            'jumlahTanggal' => countTanggal(),
             'user' => $user,
-            'weekend' => getWeekend(),
         ];
         return view('Admin/v_rekapSiswa', $data);
     }
@@ -652,7 +606,7 @@ class Admin extends BaseController
         // Instansiasi model
         $absensi = new Absensi();
         $user = new MemberModel();
-         $bulanIni = date('Y-m');
+        $bulanIni = date('Y-m');
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_laporan');
         $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->findAll();
@@ -668,7 +622,7 @@ class Admin extends BaseController
             $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
             $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
             $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
-            
+
         }
 
         // Array untuk menyimpan rekap absensi
@@ -694,7 +648,7 @@ class Admin extends BaseController
         $data = [
             'rekapAbsensi' => $rekapAbsensi,
             'dataAbsen' => $absensiInfo,
-            'dataUser'=> $dataUser,
+            'dataUser' => $dataUser,
             'user' => $user,
             'nomor' => $nomor,
             'halaman' => 'Admin | Rekap Absensi',
@@ -704,4 +658,21 @@ class Admin extends BaseController
         // Memuat view dengan data rekap absensi
         return view('Admin/v_rekapData', $data);
     }
-}
+    public function getWeekendDate($year, $month) {
+    $weekend = array(0, 6); // 0 = Sunday, 6 = Saturday
+    $dates = array();
+    $first_day = mktime(0, 0, 0, $month, 1, $year);
+    $last_day = mktime(0, 0, 0, $month + 1, 0, $year);
+    for ($date = $first_day; $date <= $last_day; $date += 86400) {
+        $day = date('w', $date);
+        if (in_array($day, $weekend)) {
+            $dates[] = date('Y-m-d', $date);
+        }
+    }
+    return $dates;
+    $year = date('Y');
+    $month = date('m');
+    $weekend_dates = $this->getWeekendDate($year, $month);
+    print_r($weekend_dates); // Tampilkan tanggal weekend dalam bulan ini
+        }
+    }

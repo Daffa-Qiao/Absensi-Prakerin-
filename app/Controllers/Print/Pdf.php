@@ -63,24 +63,24 @@ class Pdf extends BaseController
             return $formattedDate;
         }
 
-        $absensi= new Absensi();
+        $absensi = new Absensi();
         $user = new MemberModel();
-       $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
-       $absensiInfo = $absensi->where("DATE_FORMAT(waktu_absen,'%Y-%m')", date('Y-m'))->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
-       $totalAbsensi = [];
-       foreach ($absensiInfo as $nim_nis) {
-           $nimUser = $nim_nis->nim_nis;
-           $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
-           $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
-           $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
-           $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
-           $statusHari[$nimUser]=$absensi->getStatusByDateSsw($nimUser);
-       }
+        $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
+        $absensiInfo = $absensi->where("DATE_FORMAT(waktu_absen,'%Y-%m')", date('Y-m'))->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
+        $totalAbsensi = [];
+        foreach ($absensiInfo as $nim_nis) {
+            $nimUser = $nim_nis->nim_nis;
+            $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
+            $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
+            $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
+            $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
+        }
+
         $data = [
+            'absensiModel' => $absensi,
             'dataAbsen' => $absensiInfo,
-            'dataUser'=> $dataUser,
-            'statusHari'=>$statusHari,
-            'user'=> $user,
+            'dataUser' => $dataUser,
+            'user' => $user,
             'totalAbsensi' => $totalAbsensi,
             'jumlahTanggal' => countDaysInCurrentMonth(),
             'weekend' => getWeekendsInCurrentMonth(),
@@ -99,7 +99,7 @@ class Pdf extends BaseController
         $dompdf->loadHtml($html);
 
         // (Optional) Set paper size and orientation
-        $dompdf->setPaper('A1', 'landscape');
+        $dompdf->setPaper('A2', 'landscape');
 
         // Render PDF
         $dompdf->render();
