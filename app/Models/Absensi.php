@@ -63,7 +63,7 @@ class Absensi extends Model
             ->countAllResults();
     }
 
-    public function getDataByDateRange($startDate, $endDate)
+    public function getDataByDateRange($startDate, $endDate,$nimUser)
     {
         return $this->where('waktu_absen >=', $startDate)
             ->where('waktu_absen <=', $endDate)

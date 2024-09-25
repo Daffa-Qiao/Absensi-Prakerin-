@@ -469,3 +469,705 @@ INFO - 2024-09-25 11:31:34 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-09-25 12:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-25 13:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-25 13:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 19:28:17 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 134.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 4 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 19:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 19:28:55 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 134.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 134)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 19:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 19:46:33 --> ErrorException: Undefined array key "sekolah"
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 152.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sekolah"', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 152)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 19:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 19:46:46 --> ErrorException: Undefined array key "school"
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 152.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "school"', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 152)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 19:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 19:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 20:25:35 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 138.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 138)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 20:25:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:31:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 20:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:26:17 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 138.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 138)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:30:00 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Controllers\Admin\Admin.php on line 391.
+ 1 APPPATH\Controllers\Admin\Admin.php(391): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 391)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:30:40 --> ErrorException: Undefined property: stdClass::$nim_nis
+in APPPATH\Controllers\Admin\Admin.php on line 391.
+ 1 APPPATH\Controllers\Admin\Admin.php(391): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nim_nis', 'E:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 391)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:37:28 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 138.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 138)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:40:59 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 147.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 4 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:41:28 --> ErrorException: Undefined variable $namaLengkap
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 147.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaLengkap', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 147)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:41:38 --> ErrorException: Undefined variable $nama_lengkap
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 147.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_lengkap', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 147)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:42:22 --> Error: Call to a member function get() on array
+in APPPATH\Controllers\Admin\Admin.php on line 388.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:42:51 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Controllers\Admin\Admin.php on line 391.
+ 1 APPPATH\Controllers\Admin\Admin.php(391): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 391)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:43:33 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Controllers\Admin\Admin.php on line 391.
+ 1 APPPATH\Controllers\Admin\Admin.php(391): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 391)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:43:56 --> ErrorException: Undefined variable $nama_lengkap
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 147.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_lengkap', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 147)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:47:39 --> ErrorException: Undefined variable $v
+in APPPATH\Controllers\Admin\Admin.php on line 387.
+ 1 APPPATH\Controllers\Admin\Admin.php(387): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $v', 'E:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 387)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:48:15 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 79.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 4 APPPATH\Controllers\Admin\Admin.php(418): view('Admin/v_rekapSiswa', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:48:52 --> ErrorException: Undefined variable $namaLengkap
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 79.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaLengkap', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 79)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(418): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:49:06 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 79.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 4 APPPATH\Controllers\Admin\Admin.php(418): view('Admin/v_rekapSiswa', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:49:52 --> ErrorException: Undefined variable $nama_instansi
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 83.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_instansi', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 83)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(418): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:50:43 --> Error: Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 333.
+ 1 SYSTEMPATH\Database\Query.php(333): strtr('SELECT *
+FROM `member`
+WHERE `nim_nis` = :nim_nis:', [...])
+ 2 SYSTEMPATH\Database\Query.php(308): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `member`
+WHERE `nim_nis` = :nim_nis:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+WHERE `nim_nis` = :nim_nis:', [...], false)
+ 6 SYSTEMPATH\Model.php(877): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Admin\Admin.php(393): CodeIgniter\Model->__call('get', [])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:51:15 --> Error: Undefined constant "App\Controllers\Admin\nim_nis"
+in APPPATH\Controllers\Admin\Admin.php on line 393.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-25 21:53:56 --> mysqli_sql_exception: Unknown column 'nama_lengkap]' in 'field list' in E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT...', 0)
+#1 E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(877): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Absensi-Prakerin-\app\Controllers\Admin\Admin.php(388): CodeIgniter\Model->__call('get', Array)
+#6 E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+#7 E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+#8 E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prak...')
+#11 {main}
+CRITICAL - 2024-09-25 21:53:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_lengkap]' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT `nama_lengkap]`, `nim_nis`, `waktu_absen`
+FROM `absensi`
+WHERE `jenis_user` = :jenis_user:
+ORDER BY `waktu_absen` DESC, `id` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(877): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin\Admin.php(388): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-09-25 21:53:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nama_lengkap]' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT `nama_lengkap]`, `nim_nis`, `waktu_absen`
+FROM `absensi`
+WHERE `jenis_user` = \'Student\'
+ORDER BY `waktu_absen` DESC, `id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT `nama_lengkap]`, `nim_nis`, `waktu_absen`
+FROM `absensi`
+WHERE `jenis_user` = \'Student\'
+ORDER BY `waktu_absen` DESC, `id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT `nama_lengkap]`, `nim_nis`, `waktu_absen`
+FROM `absensi`
+WHERE `jenis_user` = :jenis_user:
+ORDER BY `waktu_absen` DESC, `id` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(877): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin\Admin.php(388): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-09-25 21:53:56 --> [Caused by] mysqli_sql_exception: Unknown column 'nama_lengkap]' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT `nama_lengkap]`, `nim_nis`, `waktu_absen`
+FROM `absensi`
+WHERE `jenis_user` = \'Student\'
+ORDER BY `waktu_absen` DESC, `id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT `nama_lengkap]`, `nim_nis`, `waktu_absen`
+FROM `absensi`
+WHERE `jenis_user` = \'Student\'
+ORDER BY `waktu_absen` DESC, `id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT `nama_lengkap]`, `nim_nis`, `waktu_absen`
+FROM `absensi`
+WHERE `jenis_user` = \'Student\'
+ORDER BY `waktu_absen` DESC, `id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT `nama_lengkap]`, `nim_nis`, `waktu_absen`
+FROM `absensi`
+WHERE `jenis_user` = :jenis_user:
+ORDER BY `waktu_absen` DESC, `id` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(877): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\Admin.php(388): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:55:15 --> BadMethodCallException: Call to undefined method App\Models\Absensi::findaAll
+in SYSTEMPATH\Model.php on line 879.
+ 1 APPPATH\Controllers\Admin\Admin.php(388): CodeIgniter\Model->__call('findaAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:55:23 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Controllers\Admin\Admin.php on line 391.
+ 1 APPPATH\Controllers\Admin\Admin.php(391): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 391)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 21:57:38 --> ErrorException: Undefined array key "nama_lengkap"
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 79.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_lengkap"', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 79)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(417): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 21:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 21:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:01:04 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 79.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 4 APPPATH\Controllers\Admin\Admin.php(418): view('Admin/v_rekapSiswa', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:13:56 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 143.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 143)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(418): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:15:40 --> ErrorException: Undefined property: stdClass::$nim_nis
+in APPPATH\Controllers\Admin\Admin.php on line 393.
+ 1 APPPATH\Controllers\Admin\Admin.php(393): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nim_nis', 'E:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 393)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:15:53 --> ErrorException: Undefined property: stdClass::$nim_nis
+in APPPATH\Controllers\Admin\Admin.php on line 393.
+ 1 APPPATH\Controllers\Admin\Admin.php(393): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nim_nis', 'E:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 393)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:24:15 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 143.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 143)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:24:48 --> ErrorException: Undefined variable $nama_instansi
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 155.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_instansi', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 155)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:26:46 --> ErrorException: Undefined variable $nama_instansi
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 153.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_instansi', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 153)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:27:27 --> ErrorException: Undefined variable $v
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 38.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $v', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:32:41 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 143.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 143)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:33:14 --> ErrorException: Attempt to read property "nama_lengkap" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 82.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_lengkap" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 82)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:33:54 --> ErrorException: Attempt to read property "nama_lengkap" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 81.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_lengkap" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 81)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:36:12 --> ErrorException: Attempt to read property "nama_lengkap" on string
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 144.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_lengkap" on string', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 144)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:37:04 --> ErrorException: Undefined property: stdClass::$nama_lengkap
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 144.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_lengkap', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 144)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:37:19 --> ErrorException: Undefined property: stdClass::$nama_lengkap
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 144.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_lengkap', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 144)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:37:28 --> ErrorException: Attempt to read property "nama_instansi" on string
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 145.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_instansi" on string', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 145)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:37:39 --> ErrorException: Attempt to read property "nim_nis" on string
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 146.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on string', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 146)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:37:50 --> ErrorException: Attempt to read property "jenis_user" on string
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 147.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jenis_user" on string', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 147)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-25 22:50:51 --> ErrorException: Attempt to read property "nim_nis" on array
+in APPPATH\Views\Admin\v_rekapSiswa.php on line 143.
+ 1 APPPATH\Views\Admin\v_rekapSiswa.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nim_nis" on array', 'E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php', 143)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapSiswa.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapSiswa', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(419): view('Admin/v_rekapSiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-25 22:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-25 22:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

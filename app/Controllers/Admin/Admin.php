@@ -100,10 +100,11 @@ class Admin extends BaseController
     {
         $startDate = $this->request->getPost('start_date');
         $endDate = $this->request->getPost('end_date');
+        $nimUser=$this->request->getPost('nim_nis');
 
         // Load model
         $absensi = new Absensi();
-        $dataAbsen = $absensi->getDataByDateRange($startDate, $endDate);
+        $dataAbsen = $absensi->getDataByDateRange($startDate, $endDate,$nimUser);
 
         $data = [
             'dataFilter' => $dataAbsen,
@@ -383,13 +384,14 @@ class Admin extends BaseController
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_absensi');
         //$dataAbsen = $absensi->select('nama_lengkap, nim_nis, nama_instansi, status, waktu_absen')->orderBy('id', 'desc')->where('jenis_user', 'Student')->distinct('nim_nis')->get()->getResult();
-        $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
-        $dataAbsens = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Siswa')->findAll();
-        $absensiInfo = $absensi->where("DATE_FORMAT(waktu_absen,'%Y-%m')", date('Y-m'))->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
+        //$dataUser = $user->select('nim_nis,nama_lengkap')->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
+        $dataUser = $user->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
+        $dataAbsen = $absensi->select('nama_lengkap, nim_nis, nama_instansi, status, waktu_absen')->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->findAll();
+        $absensiInfo = $absensi->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
         $totalAbsensi = [];
         foreach ($absensiInfo as $nim_nis) {
             $nimUser = $nim_nis->nim_nis;
-            $status = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Siswa')->findAll();
+            $status = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->findAll();
             $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
             $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
             $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
