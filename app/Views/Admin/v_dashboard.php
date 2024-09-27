@@ -16,69 +16,14 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-                                    School
+                                    SCHOOL
                                 </div>
-                                <div class="h3 mb-0 font-weight-bold text-gray-800" name="sekolah">
+                                <div class="h3 mb-0 font-weight-bold text-gray-800 mt-4" name="sekolah">
                                     <?= $totalSekolah ?>
-                                </div>
-                                <div class="font-weight-bold text-primary mt-1">
-                                    <a href="<?= site_url('admin/instansi-sekolah') ?>">Info
-                                        <i class="fa-regular fa-circle-right"></i>
-                                    </a>
                                 </div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-school fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-3">
-                                <div class="text-xl font-weight-bold text-info text-uppercase mb-1" style="width: 100px;">
-                                    Student
-                                </div>
-                                <div class="h3 mb-0 font-weight-bold text-gray-800" name="card-ssw">
-                                    <?= $totalSiswa ?>
-                                </div>
-                                <div class="font-weight-bold text-primary mt-1">
-                                    <a href="<?= site_url('admin/data-siswa'); ?>">Info
-                                        <i class="fa-regular fa-circle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-user-tie fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xl font-weight-bold text-warning text-uppercase mb-1">
-                                    Total User
-                                </div>
-                                <div class="h3 mb-0 font-weight-bold text-gray-800" name="aktif">
-                                    <?= $totalUser; ?>
-                                </div>
-                                <?php if (session('redirected') == 'superadmin') : ?>
-                                    <div class="font-weight-bold text-primary mt-1">
-                                        <a href="<?= site_url('admin/super-admin'); ?>">Info
-                                            <i class="fa-regular fa-circle-right"></i>
-                                        </a>
-                                    </div>
-                                <?php endif ?>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-user-check fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
@@ -90,19 +35,53 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-                                    University
+                                    UNIVERSITY
                                 </div>
-                                <div class="h3 mb-0 font-weight-bold text-gray-800" name="univ">
+                                <div class="h3 mb-0 font-weight-bold text-gray-800 mt-4" name="univ">
                                     <?= $totalUniv ?>
-                                </div>
-                                <div class="font-weight-bold text-primary mt-1">
-                                    <a href="<?= site_url('admin/instansi-universitas') ?>">Info
-                                        <i class="fa-regular fa-circle-right"></i>
-                                    </a>
                                 </div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-school fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xl font-weight-bold text-warning text-uppercase mb-1">
+                                    TOTAL EDUCATION 
+                                    <br>INSTITUTIONS
+                                </div>
+                                <div class="h3 mb-0 font-weight-bold text-gray-800" name="aktif">
+                                    <?= $totalUser; ?>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user-check fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-3">
+                                <div class="text-xl font-weight-bold text-info text-uppercase mb-1" style="width: 100px;">
+                                    STUDENT
+                                </div>
+                                <div class="h3 mb-0 font-weight-bold text-gray-800 mt-4" name="card-ssw">
+                                    <?= $totalSiswa ?>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user-tie fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
@@ -114,15 +93,10 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xl font-weight-bold text-info text-uppercase mb-1">
-                                    College Student
+                                    COLLEGE STUDENT
                                 </div>
-                                <div class="h3 mb-0 font-weight-bold text-gray-800" name="card-mhs">
+                                <div class="h3 mb-0 font-weight-bold text-gray-800 mt-4" name="card-mhs">
                                     <?= $totalMahasiswa ?>
-                                </div>
-                                <div class="font-weight-bold text-primary mt-1">
-                                    <a href="<?= site_url('admin/data-mahasiswa'); ?>">Info
-                                        <i class="fa-regular fa-circle-right"></i>
-                                    </a>
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -138,15 +112,11 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xl font-weight-bold text-warning text-uppercase mb-1">
-                                    Total Super Admin
+                                    TOTAL COLLAGE 
+                                    <br>/ STUDENT
                                 </div>
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="aktif">
                                     <?= $totalSuperAdmin; ?>
-                                </div>
-                                <div class="font-weight-bold text-primary mt-1">
-                                    <a href="<?= site_url('admin/list-super-admin'); ?>">Info
-                                        <i class="fa-regular fa-circle-right"></i>
-                                    </a>
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -158,7 +128,7 @@
             </div>
         </div>
     </div>
-    <div class="title text-dark font-weight-bold px-1 rounded-top mt-2 pl-3">This Month's Absence Update</div>
+        <div class="title text-dark font-weight-bold px-1 rounded-top mt-2 pl-3">Absence Update <?= date('F Y') ?></div> 
     <div class="card shadow mb-2">
         <div class="card-body border-bottom">
             <div class="table-responsive">

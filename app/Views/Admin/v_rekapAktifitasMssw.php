@@ -97,12 +97,7 @@
             </div>
             <!-- button export file -->
             <div class="col d-flex mt-2 justify-content-center">
-              <button class="btn btn-lg btn-danger bg-gradient-danger dropdown-toggle col-10 fw-bold custom-text rounded-pill text-dark custom-tambahkan" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
-              <i class="bi bi-arrow-bar-down"></i> EXPORT FILE
-              </button>
-              <div class="dropdown-menu col-9" aria-labelledby="dropdownMenuButton">
-                <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i class="bi bi-file-earmark-pdf" style="color: #ff0033;"></i></label>
-              </div>
+              <button type="button" class="btn btn-warning bg-gradient-warning col-10 rounded-pill btnTambah custom-tambahkan custom-text fw-bold text-dark custom-tambahkan" id="Pdf" for="toPdf"><i class="bi bi-file-earmark-pdf"></i> EXPORT FILE</button>
             </div>
           </div>
         </div>
@@ -256,6 +251,10 @@
     document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
     document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
 
+    $('#Pdf').click(function() {
+      $('#toPdf').click();
+    });
+
     $('#select').on('change', function () {
       var dropdown = $('#select').val();
       if (dropdown === "all") {
@@ -276,6 +275,10 @@
         filterForm.submit();
       }
     });
+
+    $('#filterForm').on('submit', function(e) {
+      e.preventDefault();
+    })
   });
 </script>
 

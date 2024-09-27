@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.jqueryui.css" />
@@ -100,13 +101,14 @@
             margin-top: 10px;
         }
     </style>
+    <div class="img">
+        <img src="<?= base_url('admin') ?> /img/kemenhub1.png"/>
+    </div>
 </head>
 
 <body>
 
-    <div class="img">
-        <img src="<?= base_url('admin') ?>/img/kemhub.png" />
-    </div>
+
 
 
     <div class="header1">
@@ -152,7 +154,7 @@
                 $nim_nis = $dataUser ? $dataUser->nim_nis : '';
                 $jenis_user = $dataUser ? $dataUser->jenis_user : $v->jenis_user;
 
-                ?>
+            ?>
                 <tr>
                     <td><?= $nomor; ?></td>
                     <td><?= $namaLengkap; ?></td>
@@ -195,7 +197,7 @@
                     <td><?= $totalAbsensi[$v->nim_nis]['izin'] + $totalAbsensi[$v->nim_nis]['sakit'] + $totalAbsensi[$v->nim_nis]['alpa']; ?>
                     </td>
                 </tr>
-                <?php $nomor++;
+            <?php $nomor++;
             } ?>
         </tbody>
     </table>

@@ -34,11 +34,11 @@ class Laporan extends Model
     }
     public function getDataByDateRangeSSW($startDate, $endDate)
     {
-        return $this->where('waktu_laporan >=', $startDate)->where('waktu_laporan <=', $endDate)->where('jenis_user', 'Siswa')->orderBy('waktu_laporan', 'asc')->orderBy('laporan_id', 'asc')->get()->getResultArray();
+        return $this->where('waktu_laporan >=', $startDate)->where('waktu_laporan <=', $endDate)->where('jenis_user', 'Siswa')->orderBy('waktu_absen', 'asc')->orderBy('laporan_id', 'asc')->get()->getResultArray();
     }
     public function getDataByDateRangeMHS($startDate, $endDate)
     {
-        return $this->where('waktu_laporan >=', $startDate)->where('waktu_laporan <=', $endDate)->where('jenis_user', 'Mahasiswa')->orderBy('waktu_laporan', 'asc')->orderBy('laporan_id', 'asc')->get()->getResultArray();
+        return $this->where('waktu_laporan >=', $startDate)->where('waktu_laporan <=', $endDate)->where('jenis_user', 'Mahasiswa')->orderBy('waktu_absen', 'asc')->orderBy('laporan_id', 'asc')->get()->getResultArray();
     }
 
 

@@ -10,26 +10,27 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.jqueryui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.jqueryui.css" />
     <style>
-        #dTableSsw_paginate {
-            border: 2px solid black;
-            padding: 0;
-        }
+    #dTableSsw_paginate {
+        border: 2px solid black;
+        padding: 0;
+    }
 
-        #dTableSsw_paginate span>* {
-            border-right: .01px solid black;
-            margin: 0;
-        }
+    #dTableSsw_paginate span>* {
+        border-right: .01px solid black;
+        margin: 0;
+    }
 
-        #dTableSsw_paginate span>*:nth-child(1) {
-            border-left: .01px solid black;
-            margin: 0;
-        }
+    #dTableSsw_paginate span>*:nth-child(1) {
+        border-left: .01px solid black;
+        margin: 0;
+    }
 
-        #dTableSsw_wrapper .dt-buttons {
-            display: none;
-        }
+    #dTableSsw_wrapper .dt-buttons {
+        display: none;
+    }
     </style>
 </head>
+
 <?php if (session()->getFlashdata('data')) {
     $flashData = session()->getFlashdata('data');
     $dataAbsen = $flashData['dataFilter'];
@@ -44,10 +45,10 @@
                     <div class="col-sm-4 col-md-4">
                         <div class="form-group basic mb-0 my-2">
                             <div class="input-wrapper">
-                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Month :
+                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Date :
                                 </label>
-                                <input type="month" class="form-control start_date" id="Fdatepicker" name="start_date"
-                                    placeholder="Bulan Awal"
+                                <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date"
+                                    placeholder="Tanggal Awal"
                                     value="<?= (isset($start_date) ? $start_date : ''); ?>" />
                                 <input type="text" id="tanggalA" hidden>
                             </div>
@@ -56,12 +57,12 @@
                     <div class="col-sm-4 col-md-4 my-2">
                         <div class="form-group basic mb-0">
                             <div class="input-wrapper">
-                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Month :
+                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Date :
                                 </label>
-                                <input type="month" class="form-control end_date" id="Ldatepicker" name="end_date"
-                                    placeholder="Bulan Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
+                                <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date"
+                                    placeholder="Tanggal Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
                                 <input type="text" id="tanggalB" hidden>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-1 col-md-1 my-2 d-flex justify-content-center align-items-end">
@@ -75,15 +76,10 @@
                 <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
                     <select name="namaLengkap" id="select" class="form-control">Full Name
                         <option value="all">Full Name:</option>
-                        <?php foreach ($dataUser as $v): 
-                            
-                            $dataUser = $user->where('nim_nis', $v->nim_nis)->get()->getRow();
-                            $namaLengkap = $dataUser ? $dataUser->nama_lengkap : 'User Telah Dihapus';
-                            $nim_nis = $dataUser ? $dataUser->nim_nis : '';
-                            ?>
-                            <option value="<?= $nim_nis ?>">
-                                <?= $namaLengkap ?>
-                            </option>
+                        <?php foreach ($dataUser as $usr): ?>
+                        <option value="<?= $usr['nama_lengkap'] ?>">
+                            <?= $usr['nama_lengkap'] ?>
+                        </option>
                         <?php endforeach ?>
                     </select>
                 </div>
@@ -98,10 +94,6 @@
                         <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="buttonPdf"
                             for="toPdf">Pdf<i class="fa-regular fa-file-pdf text-center d-flex align-items-center"
                                 style="color: #ff0033"></i></label>
-                        <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel"
-                            for="toExcel">Excel<i class="fa-regular fa-file-excel text-center d-flex align-items-center"
-                                style="color: #3f8230; width: 16px"></i>
-                        </label>
                     </div>
                 </div>
             </div>
@@ -131,7 +123,7 @@
                         </tr>
                         <tr>
                             <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">A</th>
-                            <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">AB</th>
+                            <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">AP</th>
                             <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">S</th>
                             <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">P</th>
                             <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">TA</th>
@@ -141,31 +133,33 @@
                     <tbody class="border">
                         <?php foreach ($dataAbsen as $v) {
                             $dataUser = $user->where('nim_nis', $v->nim_nis)->get()->getRow();
+
                             $namaLengkap = $dataUser ? $dataUser->nama_lengkap : 'User Telah Dihapus';
                             $nama_instansi = $dataUser ? $dataUser->nama_instansi : '';
                             $nim_nis = $dataUser ? $dataUser->nim_nis : '';
                             $jenis_user = $dataUser ? $dataUser->jenis_user : $v->jenis_user;
-                        ?>
-                            <tr>
-                                <td><?= $nomor; ?></td>
-                                <td><?= $namaLengkap; ?></td>
-                                <td><?= $nim_nis ?></td>
-                                <td><?= $nama_instansi ?></td>
+                            ?>
+                        <tr>
+                            <td><?= $nomor; ?></td>
+                            <td><?= $namaLengkap; ?></td>
+                            <td><?= $nim_nis ?></td>
+                            <td><?= $nama_instansi ?></td>
 
-                                <td>
-                                    <?= $totalAbsensi[$v->nim_nis]['masuk']; ?>
-                                </td>
-                                <td>
-                                    <?= $totalAbsensi[$v->nim_nis]['alpa']; ?>
-                                </td>
-                                <td>
-                                    <?= $totalAbsensi[$v->nim_nis]['sakit']; ?>
-                                </td>
-                                <td>
-                                    <?= $totalAbsensi[$v->nim_nis]['izin']; ?>
-                                </td>
-                                <td><?= $totalAbsensi[$v->nim_nis]['izin'] + $totalAbsensi[$v->nim_nis]['sakit'] + $totalAbsensi[$v->nim_nis]['alpa']; ?></td>
-                            </tr>
+                            <td>
+                                <?= $totalAbsensi[$v->nim_nis]['masuk']; ?>
+                            </td>
+                            <td>
+                                <?= $totalAbsensi[$v->nim_nis]['alpa']; ?>
+                            </td>
+                            <td>
+                                <?= $totalAbsensi[$v->nim_nis]['sakit']; ?>
+                            </td>
+                            <td>
+                                <?= $totalAbsensi[$v->nim_nis]['izin']; ?>
+                            </td>
+                            <td><?= $totalAbsensi[$v->nim_nis]['izin'] + $totalAbsensi[$v->nim_nis]['sakit'] + $totalAbsensi[$v->nim_nis]['alpa']; ?>
+                            </td>
+                        </tr>
                         <?php
                             $nomor++;
                         } ?>
@@ -192,129 +186,129 @@
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
 <script>
-    <?php if (session()->getFlashdata('swal_icon')): ?>
-        Swal.fire({
-            icon: '<?= session()->getFlashdata('swal_icon'); ?>',
-            title: '<?= session()->getFlashdata('swal_title'); ?>',
-            showConfirmButton: false,
-            timer: 1500
-        })
-    <?php endif; ?>
+<?php if (session()->getFlashdata('swal_icon')): ?>
+Swal.fire({
+    icon: '<?= session()->getFlashdata('swal_icon'); ?>',
+    title: '<?= session()->getFlashdata('swal_title'); ?>',
+    showConfirmButton: false,
+    timer: 1500
+})
+<?php endif; ?>
 
-    // pdf/Excel
-    let today = new Date();
-    let day = `${today.getDate() < 10 ? "0" : ""}${today.getDate()}`;
-    let month = `${today.getMonth() + 1 < 10 ? "0" : ""}${today.getMonth() + 1}`;
-    let year = today.getFullYear();
-    let hours = today.getHours();
-    let minutes = `${today.getMinutes() < 10 ? "0" : ""}${today.getMinutes()}`;
-    let seconds = `${today.getSeconds() < 10 ? "0" : ""}${today.getSeconds()}`;
+// pdf/Excel
+let today = new Date();
+let day = `${today.getDate() < 10 ? "0" : ""}${today.getDate()}`;
+let month = `${today.getMonth() + 1 < 10 ? "0" : ""}${today.getMonth() + 1}`;
+let year = today.getFullYear();
+let hours = today.getHours();
+let minutes = `${today.getMinutes() < 10 ? "0" : ""}${today.getMinutes()}`;
+let seconds = `${today.getSeconds() < 10 ? "0" : ""}${today.getSeconds()}`;
 
-    let current_time = `${day}-${month}-${year}, ${hours}.${minutes}.${seconds}`;
+let current_time = `${day}-${month}-${year}, ${hours}.${minutes}.${seconds}`;
 
 
-    $(document).ready(function() {
-        const table = $('#dTableSsw').DataTable({
-            dom: "lBfrtip",
-            "columnDefs": [{
-                // "targets": [1],
-            }],
-            buttons: [{
-                    extend: 'excelHtml5',
-                    title: `LOG ACTIVITY`,
-                    exportOptions: {
-                        columns: ':visible:not(.hilang)'
-                    }
-                },
-                {
-                    extend: 'pdfHtml5',
-                    title: `LOG ACTIVITY`,
-                    orientation: 'portrait',
-                    pageSize: 'A4',
-                    customize: function(doc) {
-                        // Custom styling for the table
-                        doc.content.forEach(function(item) {
-                            if (item.table) {
-                                item.table.headerRows = 1;
-
-                                // Adjust column widths and cell margins
-                                item.table.widths = Array(item.table.body[0].length).fill(
-                                    '*');
-                                item.table.body.forEach(function(row) {
-                                    row.forEach(function(cell) {
-                                        cell.margin = [4, 6, 4,
-                                            6
-                                        ]; // Top, right, bottom, left
-                                    });
-                                });
-                            }
-                        });
-
-                        // Style the table header
-                        doc.styles.tableHeader = {
-                            bold: true,
-                            fontSize: 10,
-                            color: 'black',
-                            fillColor: '#f3f3f3',
-                            alignment: 'center',
-                            margin: [4, 4, 4, 4]
-                        };
-
-                        // Style table body cells
-                        doc.styles.tableBodyEven = {
-                            fontSize: 8,
-                            alignment: 'center',
-                            margin: [4, 4, 4, 4]
-                        };
-                        doc.styles.tableBodyOdd = {
-                            fontSize: 8,
-                            alignment: 'center',
-                            margin: [4, 4, 4, 4]
-                        };
-
-                        // Page margins
-                        doc.pageMargins = [20, 30, 20, 30];
-                    }
+$(document).ready(function() {
+    const table = $('#dTableSsw').DataTable({
+        dom: "lBfrtip",
+        "columnDefs": [{
+            // "targets": [1],
+        }],
+        buttons: [{
+                extend: 'excelHtml5',
+                title: `LOG ACTIVITY`,
+                exportOptions: {
+                    columns: ':visible:not(.hilang)'
                 }
+            },
+            {
+                extend: 'pdfHtml5',
+                title: `LOG ACTIVITY`,
+                orientation: 'portrait',
+                pageSize: 'A4',
+                customize: function(doc) {
+                    // Custom styling for the table
+                    doc.content.forEach(function(item) {
+                        if (item.table) {
+                            item.table.headerRows = 1;
+
+                            // Adjust column widths and cell margins
+                            item.table.widths = Array(item.table.body[0].length).fill(
+                                '*');
+                            item.table.body.forEach(function(row) {
+                                row.forEach(function(cell) {
+                                    cell.margin = [4, 6, 4,
+                                        6
+                                    ]; // Top, right, bottom, left
+                                });
+                            });
+                        }
+                    });
+
+                    // Style the table header
+                    doc.styles.tableHeader = {
+                        bold: true,
+                        fontSize: 10,
+                        color: 'black',
+                        fillColor: '#f3f3f3',
+                        alignment: 'center',
+                        margin: [4, 4, 4, 4]
+                    };
+
+                    // Style table body cells
+                    doc.styles.tableBodyEven = {
+                        fontSize: 8,
+                        alignment: 'center',
+                        margin: [4, 4, 4, 4]
+                    };
+                    doc.styles.tableBodyOdd = {
+                        fontSize: 8,
+                        alignment: 'center',
+                        margin: [4, 4, 4, 4]
+                    };
+
+                    // Page margins
+                    doc.pageMargins = [20, 30, 20, 30];
+                }
+            }
 
 
-            ]
+        ]
 
 
-        });
+    });
 
-        // document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
-        document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
+    // document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
+    document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
 
-        document.getElementById("buttonPdf").addEventListener("click", function() {
-            <?php
+    document.getElementById("buttonPdf").addEventListener("click", function() {
+        <?php
             session()->set('dataAbsen', $dataAbsen);
             ?>
 
-            $('#printPDF').submit();
-        });
-
-        $('#select').on('change', function() {
-            var dropdown = $('#select').val();
-            if (dropdown === "all") {
-                table.columns(2).search('').draw();
-            } else if (name === dropdown) {
-                table.columns(2).search(dropdown).draw();
-            } else {
-                table.columns(2).search(dropdown).draw();
-            }
-        });
-
-        $('.start_date, .end_date').on("change", function() {
-            var startDateValue = $('.start_date').val();
-            var endDateValue = $('.end_date').val();
-            var filterForm = $('#filterForm');
-            // Periksa apakah kedua nilai ada
-            if (startDateValue && endDateValue) {
-                filterForm.submit();
-            }
-        });
+        $('#printPDF').submit();
     });
+
+    $('#select').on('change', function() {
+        var dropdown = $('#select').val();
+        if (dropdown === "all") {
+            table.columns(2).search('').draw();
+        } else if (name === dropdown) {
+            table.columns(2).search(dropdown).draw();
+        } else {
+            table.columns(2).search(dropdown).draw();
+        }
+    });
+
+    $('.start_date, .end_date').on("change", function() {
+        var startDateValue = $('.start_date').val();
+        var endDateValue = $('.end_date').val();
+        var filterForm = $('#filterForm');
+        // Periksa apakah kedua nilai ada
+        if (startDateValue && endDateValue) {
+            filterForm.submit();
+        }
+    });
+});
 </script>
 
 <script src="<?= base_url('admin'); ?>/js/table2excel.js"></script>
