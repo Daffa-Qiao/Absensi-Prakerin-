@@ -8,7 +8,7 @@
     <!-- modal -->
     <?php include(APPPATH . 'Views/Admin/Modal/modalInstansi.php') ?>
     <!-- table -->
-    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3"> List of School</div>
+    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3"> List of High School</div>
     <div class="wrapperCard h-100">
         <div class="row row-cols-1 py-3 mx-auto d-flex flex-row">
             <?php foreach ($dataInstansi as $v): ?>
@@ -31,7 +31,7 @@
                             </p>
                             <p class="card-text">
                                 <?= $jumlahSiswa[$v->nama_instansi] ?>
-                                Siswa
+                                Student
                             </p>
                             <p class="card-text">
                                 <?= $v->instansi_pendidikan; ?>

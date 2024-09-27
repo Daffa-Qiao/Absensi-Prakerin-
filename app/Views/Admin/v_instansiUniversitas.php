@@ -31,7 +31,7 @@
                             </p>
                             <p class="card-text">
                                 <?= $jumlahSiswa[$v->nama_instansi] ?>
-                                Mahasiswa
+                                Collage Student
                             </p>
                             <p class="card-text">
                                 <?= $v->instansi_pendidikan; ?>

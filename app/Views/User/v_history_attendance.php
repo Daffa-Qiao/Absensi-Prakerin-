@@ -11,7 +11,7 @@
                     <tr>
                         <th class="text-center" style="min-width: 50px;">No</th>
                         <th class="text-center" style="min-width: 100px;">School Name</th>
-                        <th class="text-center" style="min-width: 150px;">Full Name</th>
+                        <th class="text-center" style="min-width: 150px;">Name</th>
                         <th class="text-center" style="min-width: 150px;">Location</th>
                         <th class="text-center" style="min-width: 100px;">Attendance Image</th>
                         <th class="text-center" style="min-width: 100px;">Description</th>

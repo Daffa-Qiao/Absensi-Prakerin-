@@ -12,7 +12,7 @@
     <div class="wrapper-identity-profile">
         <form action="">
             <div class="identitas-profile">
-                <label for="nama">Full Name : </label>
+                <label for="nama">Name : </label>
                 <input type="text" name="nama_lengkap" id="nama" readonly value="<?= session()->get('member_nama_lengkap') ?>" />
             </div>
             <div class="identitas-profile">
@@ -46,11 +46,11 @@
                 </div>
             </div>
             <div class="identitas-profile">
-                <label for="guru_pembimbing">Name Of Supervising Teacher :</label>
+                <label for="guru_pembimbing">Name Of Supervisor Teacher :</label>
                 <input type="text" name="nama_pembimbing" id="nama_pembimbing" value="<?= session()->get('member_nama_pembimbing') ?>" readonly />
             </div>
             <div class="identitas-profile">
-                <label for="guru_pembimbing">Teacher Phone Number :</label>
+                <label for="guru_pembimbing">Supervisor Phone Number :</label>
                 <input type="text" name="nama_pembimbing" id="nama_pembimbing" value="<?= session()->get('member_nama_pembimbing') ?>" readonly />
             </div>
 

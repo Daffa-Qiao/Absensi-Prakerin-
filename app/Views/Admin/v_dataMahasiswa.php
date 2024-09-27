@@ -22,7 +22,7 @@
                     <thead class="border">
                         <tr>
                             <th>No</th>
-                            <th style="min-width: 200px">Full Name</th>
+                            <th style="min-width: 200px">Name</th>
                             <th style="min-width: 150px">Agency Origin</th>
                             <th>Username</th>
                             <th style="min-width:120px">Gender</th>

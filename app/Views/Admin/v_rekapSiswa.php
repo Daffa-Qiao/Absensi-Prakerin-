@@ -74,8 +74,8 @@
             </form>
             <div class="row text-center justify-content-center py-2">
                 <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
-                    <select name="namaLengkap" id="select" class="form-control">Full Name
-                        <option value="all">Full Name:</option>
+                    <select name="namaLengkap" id="select" class="form-control">Name
+                        <option value="all">Name:</option>
                         <?php foreach ($dataUser as $usr): ?>
                         <option value="<?= $usr['nama_lengkap'] ?>">
                             <?= $usr['nama_lengkap'] ?>
@@ -111,13 +111,13 @@
                     <thead class="border">
                         <tr>
                             <th style="vertical-align: middle; max-width: 30px; border: 1px solid black; padding: 4px; text-align: center;"
-                                rowspan="2">NO</th>
+                                rowspan="2">No</th>
                             <th style="vertical-align: middle; border: 1px solid black; padding: 4px; text-align: center;"
-                                rowspan="2">FULL NAME</th>
+                                rowspan="2">Name</th>
                             <th style="vertical-align: middle; border: 1px solid black; padding: 4px; text-align: center;"
                                 rowspan="2">NIM/NIS</th>
                             <th style="vertical-align: middle; border: 1px solid black; padding: 4px; text-align: center;"
-                                rowspan="2">SCHOOL NAME</th>
+                                rowspan="2">School Name</th>
                             <th colspan="5" style="border: 1px solid black; padding: 4px; text-align: center;">Total
                                 Absences</th>
                         </tr>

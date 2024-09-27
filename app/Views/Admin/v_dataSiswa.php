@@ -21,7 +21,7 @@
                 <table class="table table-bordered" id="dTable" width="100%" cellspacing="0">
                     <thead class="border">
                         <tr><strong>
-                                <th style="min-width: 200px">Fullname</th>
+                                <th style="min-width: 200px">Name</th>
                                 <th>Username</th>
                                 <th style="min-width: 150px">Gender</th>
                                 <th>Profil</th>

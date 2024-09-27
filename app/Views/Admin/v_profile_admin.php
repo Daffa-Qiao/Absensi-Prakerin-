@@ -23,7 +23,7 @@
             <form action="<?= route_to('/profile'); ?>" method="post" enctype="multipart/form-data">
                 <input name="foto_profile" type="file" id="upload" accept=".png, .jpg, .jpeg" hidden />
                 <div class="mb-3">
-                    <label for="inputNamaLengkap" class="form-label">Fullname</label>
+                    <label for="inputNamaLengkap" class="form-label">Name</label>
                     <input type="text"
                         class="form-control <?= ($validation->hasError('nama_lengkap')) ? 'is-invalid' : '' ?>"
                         id="inputNamaLengkap" name="nama_lengkap"

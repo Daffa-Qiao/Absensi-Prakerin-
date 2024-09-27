@@ -72,7 +72,7 @@
             <div class="row text-center justify-content-center py-2">
                 <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
                     <select name="namaLengkap" id="select" class="form-control">
-                        <option value="all">SHOW ALL</option>
+                        <option value="all">Show All</option>
                         <?php foreach ($dataUser as $usr): ?>
                             <option value="<?= $usr['nama_lengkap'] ?>">
                                 <?= $usr['nama_lengkap'] ?>

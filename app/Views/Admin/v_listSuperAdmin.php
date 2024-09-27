@@ -20,7 +20,7 @@
                     <thead class="border">
                         <tr>
                             <th>No</th>
-                            <th>Full Name</th>
+                            <th>Name</th>
                             <th>NIM / NIS</th>
                             <th>Username</th>
                             <th>Email</th>

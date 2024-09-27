@@ -115,7 +115,7 @@
         <table id="dTableSsw" class="nowrap table table-bordered" style="width: 100%; background-color:white;">
           <thead class="border">
             <tr>
-              <th data-f-bold="true" data-a-h="left" class="text-center">No.</th>
+              <th data-f-bold="true" data-a-h="left" class="text-center">No</th>
               <th data-f-bold="true" style="min-width: 190px" class="text-center">Name</th>
               <th data-f-bold="true" style="min-width: 190px" class="text-center">School Name</th>
               <th data-f-bold="true" style="min-width: 170px" class="text-center">Location</th>

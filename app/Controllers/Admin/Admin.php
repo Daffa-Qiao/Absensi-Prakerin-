@@ -183,7 +183,7 @@ class Admin extends BaseController
                 'namaFile' => $namaFile,
                 'jumlahSiswa' => $jumlahSiswa,
                 'halaman' => 'Admin | Sekolah',
-                'title' => 'Instansi Sekolah',
+                'title' => 'Educational Institutions',
                 'aktif_instansi' => 'active',
                 'aktif_sekolah' => 'active',
                 'dataInstansi' => $dataInstansi,
@@ -191,7 +191,7 @@ class Admin extends BaseController
         } else {
             $data = [
                 'halaman' => 'Admin | Sekolah',
-                'title' => 'Instansi Sekolah',
+                'title' => 'Educational Institutions',
                 'aktif_instansi' => 'active',
                 'aktif_sekolah' => 'active',
                 'dataInstansi' => $dataInstansi,
@@ -216,7 +216,7 @@ class Admin extends BaseController
                 'namaFile' => $namaFile,
                 'jumlahSiswa' => $jumlahSiswa,
                 'halaman' => 'Admin | School',
-                'title' => 'School Name',
+                'title' => 'Educational Institutions',
                 'aktif_instansi' => 'active',
                 'aktif_universitas' => 'active',
                 'dataInstansi' => $dataInstansi,
@@ -224,7 +224,7 @@ class Admin extends BaseController
         } else {
             $data = [
                 'halaman' => 'Admin | Sekolah',
-                'title' => 'School Name',
+                'title' => 'Educational Institutions',
                 'aktif_instansi' => 'active',
                 'aktif_sekolah' => 'active',
                 'dataInstansi' => $dataInstansi,
@@ -532,7 +532,7 @@ class Admin extends BaseController
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapAktifitasSiswa = 'aktif';
         $halaman = 'Admin | Acvitivy Recap';
-        $title = 'Activity Recap';
+        $title = 'Log Activity';
 
         $data = [
             'dataUser' => $dataUser,
@@ -572,7 +572,7 @@ class Admin extends BaseController
         $dataUser = $user->where('jenis_user', 'College Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $halaman = 'Admin | Activity Recap';
-        $title = 'Activity Recap';
+        $title = 'Log Activity';
 
         $data = [
             'dataUser' => $dataUser,

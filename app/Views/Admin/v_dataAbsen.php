@@ -69,7 +69,7 @@
             <div class="row text-center justify-content-center py-2">
                 <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
                     <select name="namaLengkap" id="select" class="form-control">
-                        <option value="all">SHOW ALL</option>
+                        <option value="all">Show All</option>
                         <?php foreach ($dataUser as $usr) : ?>
                             <option value="<?= $usr['nama_lengkap'] ?>">
                                 <?= $usr['nama_lengkap'] ?>
@@ -93,9 +93,9 @@
                 <table class="nowrap table table-bordered" id="dTable" style="width: 100%; background-color:white;">
                     <thead class="border">
                         <tr>
-                            <th>No.</th>
+                            <th>No</th>
                             <th style="min-width: 190px" class="text-center">Date</th>
-                            <th style="min-width: 200px">Full Name</th>
+                            <th style="min-width: 200px">Name</th>
                             <th style="min-width: 200px">Educational Institutions </th>
                             <th style="min-width: 90px">Student/College Student</th>
                             <th style="min-width: 70px">Check-In</th>

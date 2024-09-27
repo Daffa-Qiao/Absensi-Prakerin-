@@ -17,7 +17,7 @@
                 <input type="hidden" name="dataNim_Nis" id="dataNim_Nis">
                 <!-- FOTM INPUT DATA -->
                 <div class="mb-3">
-                    <label for="editNamaLengkap" class="form-label">Full Name</label>
+                    <label for="editNamaLengkap" class="form-label">Name</label>
                     <input type="text" class="form-control" name="edit_nama_lengkap" id="editNamaLengkap" placeholder="">
                     <div class="invalid-feedback errorEdit_nama_lengkap">
 

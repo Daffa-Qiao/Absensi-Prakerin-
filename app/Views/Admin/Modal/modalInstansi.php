@@ -29,7 +29,7 @@
                         <label for="" class="text-dark">Educational Institutions Logo : </label>
                         <div class="logo d-flex justify-content-center p-3 border rounded">
                             <div class="wrapper-logo w-75 d-flex align-items-end justify-content-around">
-                                <label for="logo" class="btn btn-dark mb-0 py-1 px-3">Pilih File</label>
+                                <label for="logo" class="btn btn-dark mb-0 py-1 px-3">Select File</label>
                                 <input type="file" name="foto_logo" id="logo" accept=".png, .jpg, .jpeg" hidden />
                                 <div class="wrapperImg border-dark p-1 d-flex justify-content-center" id="display_image">
                                     <img src="<?= base_url('admin'); ?>/img/sekolah.png" alt="" class="rounded" style="width: 120px; height: 120px" />

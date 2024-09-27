@@ -14,7 +14,7 @@
             <div class="modal-body">
                 <!-- FOTM INPUT DATA -->
                 <div class="mb-3">
-                    <label for="inputNamaLengkap" class="form-label">Full Name</label>
+                    <label for="inputNamaLengkap" class="form-label">Name</label>
                     <input type="text" class="form-control" name="nama_lengkap" id="inputNamaLengkap" placeholder="">
                     <div class=" invalid-feedback errornama_lengkap">
 
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputNoHP" class="form-label">No Telepon</label>
+                    <label for="inputNoHP" class="form-label">Phone Number</label>
                     <input type="number" class="form-control" name="no_hp" id="inputNoHP" placeholder="08xxxx"
                         pattern="[0-9]{4}[0-9]{4}[0-9]{5}">
                     <div class="invalid-feedback errorno_hp">

@@ -119,11 +119,11 @@
     <table id="table">
         <thead>
             <tr>
-                <th rowspan="2">NO</th>
-                <th rowspan="2">FULL NAME</th>
+                <th rowspan="2">No</th>
+                <th rowspan="2">Name</th>
                 <th rowspan="2">NIM/NIS</th>
-                <th rowspan="2">SCHOOL NAME</th>
-                <th colspan="30">DATE</th>
+                <th rowspan="2">School Name</th>
+                <th colspan="30">Date</th>
                 <th colspan="5">Total Absences</th>
             </tr>
             <tr>
