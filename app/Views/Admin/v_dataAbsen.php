@@ -78,7 +78,7 @@
                         <?php endforeach ?>
                     </select>
                 </div>
-                <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
+                <div class="col-sm-4 col-md-5 my-3 d-flex justify-content-center">
                     <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6 btnTambah fw-bold text-dark" data-toggle="modal" data-target="#modalAbsen" attr-href="{{route('absen.tambah')}}"><i class="bi bi-pencil-square"></i> ADD ABSENCE</button>
                 </div>
 
