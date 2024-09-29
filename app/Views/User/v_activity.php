@@ -53,7 +53,7 @@
                                     <span id="file-chosen" class="filename customFileChosen">No file selected</span>
                                 </div>
                             </div>
-                            <input name="foto_absen" type="file" id="upload" accept=".png, .jpg, .jpeg" style="display: none;" onchange="updateFileName()"/>
+                            <input name="foto_absen" type="file" id="upload" accept=".png, .jpg, .jpeg" style="display: none;" onchange="updateFileDetails()"/>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                                 <h3 style="margin:10px;">Documentation Results :</h3>
                                 <div id="results" class=""></div>
                                 <input type="hidden" id="photoStore" name="photoStore" value="">
-                                <img name="foto" for="activity" class="screenshot responsive" src="<?= base_url('uploadFoto/activityprofile.png') ?>" alt="">
+                                <img name="foto" for="activity" class="screenshot responsive" id="output" src="<?= base_url('uploadFoto/activityprofile.png') ?>" alt="" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);">
                             </div>
                         </div>
                     </div>
@@ -216,17 +216,24 @@
     }
 
         // Upload Foto
-        function updateFileName() {
+        function updateFileDetails() {
         const fileInput = document.getElementById('upload');
         const fileChosen = document.getElementById('file-chosen');
-
+        
         if (fileInput.files.length > 0) {
+            // Menampilkan nama file di samping Add File
             fileChosen.textContent = fileInput.files[0].name;
+
+            // Menampilkan gambar pratinjau di Documentation Results
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(fileInput.files[0]);
+            output.onload = function() {
+                URL.revokeObjectURL(output.src); // free memory
+            };
         } else {
             fileChosen.textContent = 'No file selected';
         }
     }
-
     </script>
 
 </main>

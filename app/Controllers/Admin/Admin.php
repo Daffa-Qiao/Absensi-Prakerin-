@@ -394,7 +394,6 @@ class Admin extends BaseController
             $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
             $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
             $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
-
         }
 
         $nomor = nomor($currentPage, $jumlahBaris);
@@ -406,7 +405,7 @@ class Admin extends BaseController
             'dataUser' => $dataUser,
             'dataAbsen' => $absensiInfo,
             'totalAbsensi' => $totalAbsensi,
-            'status' => $status,
+
             'nomor' => $nomor,
             'aktif_rekapSiswa' => $aktif_rekapSiswa,
             'aktif_rekapAbsensi' => 'active',
@@ -622,7 +621,6 @@ class Admin extends BaseController
             $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
             $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
             $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
-
         }
 
         // Array untuk menyimpan rekap absensi

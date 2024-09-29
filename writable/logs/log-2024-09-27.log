@@ -29,3 +29,36 @@ INFO - 2024-09-27 11:13:58 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-09-27 11:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-27 11:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-27 11:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-27 14:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-27 14:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-27 14:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-27 14:09:50 --> ErrorException: Undefined variable $status
+in APPPATH\Controllers\Admin\Admin.php on line 409.
+ 1 APPPATH\Controllers\Admin\Admin.php(409): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'D:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 409)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-27 14:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-27 14:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-27 14:14:56 --> ErrorException: Undefined variable $status
+in APPPATH\Controllers\Admin\Admin.php on line 409.
+ 1 APPPATH\Controllers\Admin\Admin.php(409): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'D:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 409)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-27 14:15:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-27 14:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-27 14:50:03 --> ErrorException: Undefined variable $status
+in APPPATH\Controllers\Admin\Admin.php on line 409.
+ 1 APPPATH\Controllers\Admin\Admin.php(409): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'D:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Admin.php', 409)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_siswa()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-09-27 14:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-27 14:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -28,6 +28,10 @@
     #dTableSsw_wrapper .dt-buttons {
         display: none;
     }
+    .custom-tambahkan {
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        transition-duration : 0.5s;
+    }
     </style>
 </head>
 
@@ -73,9 +77,10 @@
                 </div>
             </form>
             <div class="row text-center justify-content-center py-2">
-                <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
-                    <select name="namaLengkap" id="select" class="form-control">Name
-                        <option value="all">Name:</option>
+                <div class="col-sm-2 col-md-4 d-flex flex-column align-items-end pb-2">
+                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Name :</label>
+                    <select name="namaLengkap" id="select" class="form-control">
+                        <option value="all">Show All :</option>
                         <?php foreach ($dataUser as $usr): ?>
                         <option value="<?= $usr['nama_lengkap'] ?>">
                             <?= $usr['nama_lengkap'] ?>
@@ -83,18 +88,8 @@
                         <?php endforeach ?>
                     </select>
                 </div>
-                <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-                    <button
-                        class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5 text-dark"
-                        type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <i class="fa-solid fa-file-export"></i> Export File
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="buttonPdf"
-                            for="toPdf">Pdf<i class="fa-regular fa-file-pdf text-center d-flex align-items-center"
-                                style="color: #ff0033"></i></label>
-                    </div>
+                <div class="col-sm-4 col-md-5 my-3 d-flex justify-content-center">
+                <button type="button" class="btn btn-warning bg-gradient-warning col-6 rounded-pill btnTambah custom-tambahkan custom-text fw-bold text-dark custom-tambahkan" id="buttonPdf" for="toPdf"><i class="bi bi-file-earmark-pdf"></i> EXPORT FILE</button>
                 </div>
             </div>
         </div>

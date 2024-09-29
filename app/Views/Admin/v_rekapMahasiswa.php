@@ -1,7 +1,6 @@
 <?= $this->extend('Admin/Layout/v_template'); ?>
 
 <?= $this->section('content'); ?>
-
 <!-- Begin Page Content -->
 
 <head>
@@ -28,6 +27,11 @@
     #dTableMhs_wrapper .dt-buttons {
         display: none;
     }
+    .custom-tambahkan {
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        transition-duration : 0.5s;
+    }
+
     </style>
 </head>
 <?php if (session()->getFlashdata('data')) {
@@ -74,9 +78,10 @@
             </form>
         </div>
         <div class="row text-center justify-content-center py-2">
-            <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
+            <div class="col-sm-2 col-md-4 d-flex flex-column align-items-end pb-2">
+                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Name :</label>
                 <select name="namaLengkap" id="select" class="form-control">
-                    <option value="all">Name:</option>
+                    <option value="all">Show All :</option>
                     <?php foreach ($dataUser as $usr): ?>
                     <option value="<?= $usr['nama_lengkap'] ?>">
                         <?= $usr['nama_lengkap'] ?>
@@ -84,18 +89,8 @@
                     <?php endforeach ?>
                 </select>
             </div>
-            <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-                <button
-                    class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5 text-dark"
-                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <i class="fa-solid fa-file-export"></i> Export File
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i
-                            class="fa-regular fa-file-pdf text-center d-flex align-items-center"
-                            style="color: #ff0033"></i></label>
-                </div>
+            <div class="col-sm-4 col-md-5 my-3 d-flex justify-content-center">
+                <button type="button" class="btn btn-warning bg-gradient-warning col-6 rounded-pill btnTambah custom-tambahkan custom-text fw-bold text-dark custom-tambahkan" id="buttonPdf" for="toPdf"><i class="bi bi-file-earmark-pdf"></i> EXPORT FILE</button>
             </div>
         </div>
     </div>
@@ -111,71 +106,60 @@
             <table id="dTableMhs" class="nowrap table table-bordered" style="width: 100%; background-color:white;">
                 <thead class="border">
                     <tr>
-                        <th data-f-bold="true" data-a-h="left" class="text-center">No</th>
-                        <th data-f-bold="true" style="min-width: 190px" class="text-center">Date</th>
-                        <th data-f-bold="true" style="min-width: 150px" class="text-center">Full Name</th>
-                        <th data-f-bold="true" style="min-width: 90px" class="text-center">SSW / MHS</th>
-                        <th data-f-bold="true" style="min-width: 70px" class="text-center">Check-In</th>
-                        <th data-f-bold="true" style="min-width: 80px" class="text-center">Check-Out</th>
-                        <th data-f-bold="true" class="text-center">Status</th>
-                        <th data-f-bold="true" class="text-center">Description</th>
-                        <th data-exclude="true" class="text-center">Photo</th>
-                        <th data-f-bold="true" style="min-width: 160px;" class="text-center">Latitude / Longitude</th>
+                        <th style="vertical-align: middle; max-width: 30px; border: 1px solid black; padding: 4px; text-align: center;"
+                            rowspan="2">No</th>
+                        <th style="vertical-align: middle; border: 1px solid black; padding: 4px; text-align: center;"
+                            rowspan="2">Name</th>
+                        <th style="vertical-align: middle; border: 1px solid black; padding: 4px; text-align: center;"
+                            rowspan="2">NIM/NIS</th>
+                        <th style="vertical-align: middle; border: 1px solid black; padding: 4px; text-align: center;"
+                            rowspan="2">School Name</th>
+                        <th colspan="5" style="border: 1px solid black; padding: 4px; text-align: center;">Total Absences</th>
+                    </tr>
+                    <tr>
+                        <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">A</th>
+                        <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">AP</th>
+                        <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">S</th>
+                        <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">P</th>
+                        <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">TA</th>
                     </tr>
                 </thead>
                 <tbody class="border">
                     <?php foreach ($dataAbsen as $v) {
-                        if ($v['status'] == 'Masuk') {
-                            $status = 'hadir';
-                        } else if ($v['status'] == 'Izin') {
-                            $status = 'izin';
-                        } else {
-                            $status = 'sakit';
-                        }
+                        $dataUser = $user->where('nim_nis', $v->nim_nis)->get()->getRow();
 
+                        $namaLengkap = $dataUser ? $dataUser->nama_lengkap : 'User Telah Dihapus';
+                        $nama_instansi = $dataUser ? $dataUser->nama_instansi : '';
+                        $nim_nis = $dataUser ? $dataUser->nim_nis : '';
+                        $jenis_user = $dataUser ? $dataUser->jenis_user : $v->jenis_user;
                         ?>
                     <tr>
-                        <td class="text-center" data-t="n" data-a-h="left">
-                            <?= $nomor; ?>
-                        </td>
-                        <td>
-                            <?= tanggal_indo($v['waktu_absen']) ?>
-                        </td>
-                        <td>
-                            <?= $v['nama_lengkap']; ?>
-                        </td>
-                        <td>
-                            <?= $v['jenis_user']; ?>
-                        </td>
-                        <td>
-                            <?= $v['checkin_time']; ?>
-                        </td>
-                        <td>
-                            <?= $v['checkout_time']; ?>
-                        </td>
-                        <td>
-                            <div class="status <?= $status ?>">
-                                <?= $v['status']; ?>
-                            </div>
-                        </td>
-                        <td>
-                            <?= $v['keterangan']; ?>
-                        </td>
-                        <td data-exclude="true">
-                            <?php if ($v['foto_absen'] != ''): ?>
-                            <img src="<?= base_url('uploadFoto/' . $v['foto_absen']) ?>" id="" alt=""
-                                onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto_absen']) ?>')">
-                            <?php endif ?>
-                        </td>
-                        <td>
+                        <td><?= $nomor; ?></td>
+                        <td><?= $namaLengkap; ?></td>
+                        <td><?= $nim_nis ?></td>
+                        <td><?= $nama_instansi ?></td>
 
-                            <?= $v['lokasi']; ?>
+                        <td>
+                            <?= $totalAbsensi[$v->nim_nis]['masuk']; ?>
+                        </td>
+                        <td>
+                            <?= $totalAbsensi[$v->nim_nis]['alpa']; ?>
+                        </td>
+                        <td>
+                            <?= $totalAbsensi[$v->nim_nis]['sakit']; ?>
+                        </td>
+                        <td>
+                            <?= $totalAbsensi[$v->nim_nis]['izin']; ?>
+                        </td>
+                        <td>
+                            <?= $totalAbsensi[$v->nim_nis]['izin'] + $totalAbsensi[$v->nim_nis]['sakit'] + $totalAbsensi[$v->nim_nis]['alpa']; ?>
                         </td>
                     </tr>
                     <?php
                         $nomor++;
                     } ?>
                 </tbody>
+                <form action="<?= base_url('/print/pdf'); ?>" method="post" id="printPDF"></form>
             </table>
         </div>
     </div>
@@ -221,10 +205,9 @@ let current_time = `${day}-${month}-${year}, ${hours}.${minutes}.${seconds}`;
 $(document).ready(function() {
     const table = $('#dTableMhs').DataTable({
         dom: "lBfrtip",
-        'columnDefs': [{
-            "targets": [0, 1, 2, 3, 4, 5, 6, 7, 8],
-            "className": "text-center"
-        }, ],
+        "columnDefs": [{
+            // "targets": [1],
+        }],
         buttons: [{
                 extend: 'excelHtml5',
                 title: `LOG ACTIVITY`,
@@ -235,14 +218,70 @@ $(document).ready(function() {
             {
                 extend: 'pdfHtml5',
                 title: `LOG ACTIVITY`,
-                exportOptions: {
-                    columns: ':visible:not(.hilang)'
+                orientation: 'portrait',
+                pageSize: 'A4',
+                customize: function(doc) {
+                    // Custom styling for the table
+                    doc.content.forEach(function(item) {
+                        if (item.table) {
+                            item.table.headerRows = 1;
+
+                            // Adjust column widths and cell margins
+                            item.table.widths = Array(item.table.body[0].length).fill(
+                                '*');
+                            item.table.body.forEach(function(row) {
+                                row.forEach(function(cell) {
+                                    cell.margin = [4, 6, 4,
+                                        6
+                                    ]; // Top, right, bottom, left
+                                });
+                            });
+                        }
+                    });
+
+                    // Style the table header
+                    doc.styles.tableHeader = {
+                        bold: true,
+                        fontSize: 10,
+                        color: 'black',
+                        fillColor: '#f3f3f3',
+                        alignment: 'center',
+                        margin: [4, 4, 4, 4]
+                    };
+
+                    // Style table body cells
+                    doc.styles.tableBodyEven = {
+                        fontSize: 8,
+                        alignment: 'center',
+                        margin: [4, 4, 4, 4]
+                    };
+                    doc.styles.tableBodyOdd = {
+                        fontSize: 8,
+                        alignment: 'center',
+                        margin: [4, 4, 4, 4]
+                    };
+
+                    // Page margins
+                    doc.pageMargins = [20, 30, 20, 30];
                 }
             }
-        ],
+
+
+        ]
+
+
     });
-    document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
+
+    // document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
     document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
+
+    document.getElementById("buttonPdf").addEventListener("click", function() {
+        <?php
+            session()->set('dataAbsen', $dataAbsen);
+            ?>
+
+        $('#printPDF').submit();
+    });
 
     $('#select').on('change', function() {
         var dropdown = $('#select').val();
@@ -265,6 +304,7 @@ $(document).ready(function() {
         }
     });
 });
+
 </script>
 
 <script src="<?= base_url('admin'); ?>/js/table2excel.js"></script>

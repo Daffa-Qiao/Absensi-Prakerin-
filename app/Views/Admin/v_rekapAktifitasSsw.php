@@ -29,7 +29,8 @@
     }
 
     .custom-tambahkan {
-      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      transition-duration : 0.5s;
     }
 
     
@@ -74,9 +75,9 @@
               </div>
               <!--full name  -->
               <div class="col-13">
-                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Full Name :</label>
+                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Name :</label>
                 <select name="namaLengkap" id="select" class="form-control">
-                  <option value="all">Show :</option>
+                  <option value="all">Show All :</option>
                   <?php foreach ($dataUser as $usr) : ?>
                     <option value="<?= $usr['nama_lengkap'] ?>">
                       <?= $usr['nama_lengkap'] ?>

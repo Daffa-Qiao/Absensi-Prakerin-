@@ -67,9 +67,10 @@
                 </div>
             </form>
             <div class="row text-center justify-content-center py-2">
-                <div class="col-sm-2 col-md-4 d-flex align-items-end pb-2">
+                <div class="col-sm-2 col-md-4 d-flex flex-column align-items-end pb-2">
+                    <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Name :</label>
                     <select name="namaLengkap" id="select" class="form-control">
-                        <option value="all">Show All</option>
+                        <option value="all">Show All :</option>
                         <?php foreach ($dataUser as $usr) : ?>
                             <option value="<?= $usr['nama_lengkap'] ?>">
                                 <?= $usr['nama_lengkap'] ?>
@@ -78,7 +79,7 @@
                     </select>
                 </div>
                 <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
-                    <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6 btnTambah" data-toggle="modal" data-target="#modalAbsen" attr-href="{{route('absen.tambah')}}"><i class="fa-solid fa-pen"></i> Add Absence </button>
+                    <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6 btnTambah fw-bold text-dark" data-toggle="modal" data-target="#modalAbsen" attr-href="{{route('absen.tambah')}}"><i class="bi bi-pencil-square"></i> ADD ABSENCE</button>
                 </div>
 
             </div>

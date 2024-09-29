@@ -386,6 +386,7 @@ nav.close {
   justify-content: space-between;
 }
 
+
 @media (min-width: 576px) {
   .custom-row{
     display: flex;
