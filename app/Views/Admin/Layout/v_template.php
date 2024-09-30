@@ -38,9 +38,9 @@
         * {
             font-family: "Poppins", sans-serif;
         }
-
         .custom-sidebar {
             width: 290px !important;
+
         }
 
         .custom-sidebar .nav-item {
@@ -50,7 +50,6 @@
         .custom-sidebar .nav-link {
             white-space: nowrap;
             overflow: hidden;
-
         }
 
         img.instansi {
@@ -284,7 +283,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion custom-sidebar" id="accordionSidebar" style="height: 100vh; position: sticky; top: 0; right: 0; z-index: 1;">
+        <ul class="navbar-nav sidebar sidebar-dark accordion custom-sidebar" id="accordionSidebar" style="height: 100vh; position: sticky; top: 0; right: 0; z-index: 1;">
             <!-- Sidebar - Brand -->
             <a class="ml-10 sidebar-brand d-flex align-items-center justify-content-center" href="#" style="cursor: default;">
                 <div class="sidebar-brand-icon">
@@ -467,6 +466,7 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400" aria-hidden="true"></i>
                                     User Page
                                 </a>
+                                <!-- color theme selector end -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" onclick="logout()">
                                     <i href="" class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400" aria-hidden="true"></i>
@@ -515,7 +515,6 @@
 </script>
 <!-- Bootstrap core JavaScript-->
 <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 <!-- Core plugin JavaScript-->
 
 
@@ -1035,6 +1034,25 @@
             }
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const theme = localStorage.getItem('theme') || 'blue'; // Ambil tema dari localStorage atau default ke 'blue'
+    
+    const themeColors = {
+      blue: 'linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%)',
+      green: 'linear-gradient(181deg, #81A263 85%, rgba(48, 142, 115, 1) 100%)',
+      orange: 'linear-gradient(181deg, #ECB159 85%, #B77452 100%)',
+      pink: 'linear-gradient(181deg, #FA7070 85%, #D9D9D9 100%)'
+    }
+
+    if (themeColors[theme]) {
+      document.documentElement.style.setProperty('--bs-body-bg', themeColors[theme]);
+      document.body.style.backgroundColor = themeColors[theme];
+    }
+     });
+
+    
+    
 </script>
 
 </html>

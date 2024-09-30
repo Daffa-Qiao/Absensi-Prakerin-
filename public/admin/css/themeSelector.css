@@ -1,6 +1,6 @@
 :root {
-    --blue:  #01A2EC;
-    --green : #81A263;
-    --orange : #ECB159;
-    --pink : #DC3545;
+    --blue:  linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%);
+    --green : linear-gradient(181deg, #81A263 85%, rgba(48, 142, 115, 1) 100%);
+    --orange : linear-gradient(181deg, #ECB159 85%, #B77452 100%);
+    --pink : linear-gradient(181deg, #FA7070 85%, #D9D9D9 100%);
 }

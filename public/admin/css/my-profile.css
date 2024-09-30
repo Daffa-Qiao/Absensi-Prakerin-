@@ -9,7 +9,7 @@
 .wrapper-content-profile {
     display: flex;
     justify-content: space-around;
-    background: var(--background-color);
+    background: var(--bs-body-bg);
     height: 100vh;
     border-top: 0.4vh solid;
     z-index: 0;
@@ -30,7 +30,7 @@
 }
 
 .wrapper-content-profile .wrapper-profile .profile-body {
-    background: var(--background-color);
+    background: var(--bs-body-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,7 +178,7 @@ main.kontainer-content header.first {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: linear-gradient(181deg, #00a2e9 90%, rgba(255, 255, 255, 0.63) 100%);
+        background: var(--bs-body-bg);
     }
 
     .wrapper-content-profile .kontainer-profile {

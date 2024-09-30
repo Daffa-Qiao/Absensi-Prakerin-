@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8" />
@@ -36,9 +36,10 @@
     <style>
         * {
             font-family: "Poppins", sans-serif;
+            /* background-color: var(--bs-body-bg); */
         }
         .theme{
-            color:#00A2E9;
+            color:var(--text-color);
             font-size: 16px;
         }
         .theme-selector .down,
@@ -60,13 +61,13 @@
             border: 2px solid transparent;
         }
 
-        .theme-colors .color.blue {
+        /* .theme-colors .color.blue {
             background-color: var(--blue);
         }
 
         .theme-colors .color.green {
             background-color: var(--green);
-        }
+        } */
 
 
         .theme-colors .color.orange {
@@ -159,10 +160,10 @@
                     </div>
                     <div class="toggle-wrap"></div>
                     <div class="theme-colors" style="display: none;">
-                        <div class="color blue" data-color="#01A2EC"></div>
-                        <div class="color green" data-color="#81A263"></div>
-                        <div class="color orange" data-color="#ECB159"></div>
-                        <div class="color pink" data-color="#FA7070"></div>
+                        <div class="color blue" data-bs-theme-value="blue" style="background-color: #00A2E9;"></div>
+                        <div class="color green" data-bs-theme-value="green" style="background-color: #81A263;"></div>
+                        <div class="color orange" data-bs-theme-value="orange"></div>
+                        <div class="color pink" data-bs-theme-value="pink"></div>
                     </div>
                     <!-- color theme selector end -->
                     <a class="wrapper-logout" href="<?= site_url('user/logout') ?>">
@@ -193,6 +194,7 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
 
 <script>
     <?php if (session()->getFlashdata('swal_icon3')) : ?>
@@ -259,33 +261,84 @@
 
     // theme selector
     document.addEventListener('DOMContentLoaded', function() {
-        var themeToggle = document.getElementById('themeToggle');
-        var themeColors = document.querySelector('.theme-colors');
-        var chevronUp = document.querySelector('.theme-selector .up');
-        var chevronDown = document.querySelector('.theme-selector .down');
+    var themeToggle = document.getElementById('themeToggle');
+    var themeColors = document.querySelector('.theme-colors');
+    var chevronUp = document.querySelector('.theme-selector .up');
+    var chevronDown = document.querySelector('.theme-selector .down');
 
-        // Toggle the display of the theme colors
-        themeToggle.addEventListener('click', function() {
-            if (themeColors.style.display === 'none' || themeColors.style.display === '') {
-                themeColors.style.display = 'flex';
-                chevronUp.style.display = 'none';
-                chevronDown.style.display = 'block';
-            } else {
-                themeColors.style.display = 'none';
-                chevronUp.style.display = 'block';
-                chevronDown.style.display = 'none';
-            }
-        });
+    // Toggle the display of the theme colors
+    themeToggle.addEventListener('click', function() {
+        if (themeColors.style.display === 'none' || themeColors.style.display === '') {
+            themeColors.style.display = 'flex';
+            chevronUp.style.display = 'none';
+            chevronDown.style.display = 'block';
+        } else {
+            themeColors.style.display = 'none';
+            chevronUp.style.display = 'block';
+            chevronDown.style.display = 'none';
+        }
+    });
 
-        // Add event listeners to the color divs
-        var colors = document.querySelectorAll('.theme-colors .color');
-        colors.forEach(function(colorDiv) {
-            colorDiv.addEventListener('click', function() {
-                var selectedColor = colorDiv.getAttribute('data-color');
-                document.body.style.backgroundColor = selectedColor;
-            });
+    // Add event listeners to the color divs
+    var colors = document.querySelectorAll('.theme-colors .color');
+    colors.forEach(function(colorDiv) {
+        colorDiv.addEventListener('click', function() {
+            var selectedColor = colorDiv.getAttribute('data-color');
+            document.body.style.backgroundColor = selectedColor;
         });
     });
+});
+
+// theme by bootstrap
+(() => {
+'use strict'
+
+const getStoredTheme = () => localStorage.getItem('theme');
+const setStoredTheme = theme => localStorage.setItem('theme', theme);
+
+const getPreferredTheme = () => {
+  const storedTheme = getStoredTheme();
+  if (storedTheme) {
+    return storedTheme;
+  }
+  return 'blue'; 
+}
+
+const setTheme = theme => {
+  const themeColors = {
+    blue: 'linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%)',
+    green: 'linear-gradient(181deg, #81A263 85%, rgba(48, 142, 115, 1) 100%)',
+    orange: 'linear-gradient(181deg, #ECB159 85%, #B77452 100%)',
+    pink: 'linear-gradient(181deg, #FA7070 85%, #D9D9D9 100%)'
+  }
+  const textColors = {
+    blue: '#00a2e9', 
+    green: '#81A263', 
+    orange: '#ECB159', 
+    pink: '#FA7070'
+  };
+
+  if (themeColors[theme]) {
+    document.documentElement.style.setProperty('--bs-body-bg', themeColors[theme]);
+    document.body.style.backgroundColor = themeColors[theme];
+    document.documentElement.style.setProperty('--text-color', textColors[theme]);
+  }
+}
+
+setTheme(getPreferredTheme());
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const theme = toggle.getAttribute('data-bs-theme-value');
+      setStoredTheme(theme);  
+      setTheme(theme); 
+    });
+  });
+});
+})();
+
+
 </script>
 
 </html>

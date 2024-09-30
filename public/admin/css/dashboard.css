@@ -1,10 +1,32 @@
+:root {
+    --bs-body-bg: linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%); /* Default theme */
+}
+
+body[data-bs-theme="blue"] {
+    --bs-body-bg: linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%);
+}
+
+body[data-bs-theme="green"] {
+    --bs-body-bg: linear-gradient(181deg, #81A263 85%, rgba(48, 142, 115, 1) 100%);
+}
+
+body[data-theme="orange"] {
+    --bs-body-bg: linear-gradient(181deg, #ECB159 85%, #B77452 100%);
+}
+
+body[data-theme="pink"] {
+    --bs-body-bg: linear-gradient(181deg, #FA7070 85%, #D9D9D9 100%);
+}
+
 #accordionSidebar {
-    background: linear-gradient(181deg, #00a2e9 90%, rgba(255, 255, 255, 0.63) 110%) !important;
+    background: var(--bs-body-bg);
+    /* background-color: var(--bs-body-bg); */
     
 }
 
 #content {
-    background: linear-gradient(181deg, #00a2e9 95%, rgba(255, 255, 255, 0.63) 105%) !important;
+    /* background: linear-gradient(181deg, #00a2e9 95%, rgba(255, 255, 255, 0.63) 105%) !important; */
+    background-color: var(--bs-body-bg);
 }
 
 .wrapper-addUser {

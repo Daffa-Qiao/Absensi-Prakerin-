@@ -11,13 +11,28 @@ body.kontainer {
     font-family: "Poppins", sans-serif;
 }
 
-/* Navbar Side */
+body[data-bs-theme="blue"] {
+    --text-color: #00a2e9 
+}
+
+body[data-bs-theme="green"] {
+    --text-color: #81A263; 
+}
+
+body[data-bs-theme="orange"] {
+    --text-color: #ECB159; 
+}
+
+body[data-bs-theme="pink"] {
+    --text-color:#FA7070; 
+}
+
 .navigasi {
-    background: var(--background-color);
+    background: var(--bs-body-bg);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    width: 18.5%;
+    width: 21%;
     position: fixed;
     height: 100%;
     transition: all 2s ease;
@@ -96,7 +111,7 @@ nav main .menu-links .nav-link#aktif {
     box-shadow: 5px 5px 20px 5px black;
     border-radius: 50px;
     width: 100%;
-    background: var(--background-color);
+    background: var(--bs-body-bg);
 }
 
 /* Main Content */
@@ -190,7 +205,7 @@ main.kontainer-content header.first .dropdownMenu .wrapper-a {
 
 main.kontainer-content header.first .dropdownMenu .wrapper-a a {
     text-decoration: none;
-    color: #00a2e9;
+    color: var(--text-color);
 }
 
 main.kontainer-content header.first .dropdownMenu .wrapper-logout {
@@ -329,7 +344,7 @@ main.kontainer-content header.second .text{
         left: 0;
         height: 100vh;
         display: flex;
-        background: linear-gradient(87deg, #00a2e9 60%, rgba(255, 255, 255, 0.63) 120%);
+        background: var(--bs-body-bg);
         z-index: 2;
     }
     nav header .text .nama-lengkap{

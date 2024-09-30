@@ -1,11 +1,11 @@
 nav {
-    background-color: red;
+    /* background-color: red; */
 }
 
 main.table {
     height: 99vh;
     overflow: overlay;
-    background: linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%);
+    background: var(--bs-body-bg);
     padding: 10px;
     margin: 0px;
     border-top: 3px solid;
