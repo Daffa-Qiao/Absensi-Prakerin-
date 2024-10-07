@@ -41,12 +41,12 @@
                     <input type="text" name="instansi" value="<?= session()->get('member_instansi') ?>" readonly>
                 </div>
                 <div class="instansiNama">
-                    <label for="namaInstansi">Educational Institutions Name :</label>
+                    <label for="namaInstansi"> Name of Educational Institutions :</label>
                     <input type="text" name="nama_instansi" id="" value="<?= session()->get('member_nama_instansi') ?>" readonly />
                 </div>
             </div>
             <div class="identitas-profile">
-                <label for="guru_pembimbing">Name Of Supervisor Teacher :</label>
+                <label for="guru_pembimbing">Name of Supervisor Teacher :</label>
                 <input type="text" name="nama_pembimbing" id="nama_pembimbing" value="<?= session()->get('member_nama_pembimbing') ?>" readonly />
             </div>
             <div class="identitas-profile">

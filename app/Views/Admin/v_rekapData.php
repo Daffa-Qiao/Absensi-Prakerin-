@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.jqueryui.css" />
@@ -21,11 +20,13 @@
             margin-bottom: 20px;
             text-align: left;
             transform: translateY(30px);
+            font-family: "Poppins", sans-serif;
         }
 
         .header1 {
             text-align: center;
             margin-bottom: 20px;
+            font-family: "Poppins", sans-serif;
         }
 
         .header img {
@@ -33,13 +34,7 @@
             float: left;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 15px;
-        }
-
-        .header h2,
-        .header h3 {
+        .header h1, .header h2, .header h3 {
             margin: 0;
             font-size: 15px;
         }
@@ -50,14 +45,11 @@
             margin-bottom: 20px;
         }
 
-        table,
-        th,
-        td {
+        table, th, td {
             border: 1px solid black;
         }
 
-        th,
-        td {
+        th, td {
             padding: 8px;
             text-align: center;
         }
@@ -80,6 +72,7 @@
             bottom: 0;
             left: 20px;
             width: 100%;
+            font-family: "Poppins", sans-serif;
         }
 
         .legend {
@@ -91,6 +84,7 @@
             border-radius: 5px;
             float: right;
             margin-right: 2px;
+            font-family: "Poppins", sans-serif;
         }
 
         .legend p {
@@ -101,15 +95,13 @@
             margin-top: 10px;
         }
     </style>
-    <div class="img">
-        <img src="<?= base_url('admin') ?> /img/kemenhub1.png"/>
-    </div>
 </head>
 
 <body>
-
-
-
+    <div class="header">
+        <!-- <img src="path/to/your/logo.png" alt="Logo"> -->
+        <h1>PUSAT DATA DAN TEKNOLOGI INFORMASI <br>SEKRETARIAT JENDERAL <br>KEMENTERIAN PERHUBUNGAN</h1>
+    </div>
 
     <div class="header1">
         <p><b>MONTHLY ATTENDANCE SUMMARY</b></p>
@@ -123,7 +115,7 @@
                 <th rowspan="2">Name</th>
                 <th rowspan="2">NIM/NIS</th>
                 <th rowspan="2">School Name</th>
-                <th colspan="30">Date</th>
+                <th colspan="31">Date</th>
                 <th colspan="5">Total Absences</th>
             </tr>
             <tr>
@@ -137,10 +129,10 @@
                 }
                 ?>
                 <th>A</th>
-                <th>AP</th>
+                <th>AB</th>
                 <th>S</th>
                 <th>P</th>
-                <th>TA</th>
+                <th>T</th>
             </tr>
         </thead>
         <tbody>
@@ -194,8 +186,7 @@
                     <td><?= $totalAbsensi[$v->nim_nis]['alpa']; ?></td>
                     <td><?= $totalAbsensi[$v->nim_nis]['sakit']; ?></td>
                     <td><?= $totalAbsensi[$v->nim_nis]['izin']; ?></td>
-                    <td><?= $totalAbsensi[$v->nim_nis]['izin'] + $totalAbsensi[$v->nim_nis]['sakit'] + $totalAbsensi[$v->nim_nis]['alpa']; ?>
-                    </td>
+                    <td><?= $totalAbsensi[$v->nim_nis]['izin'] + $totalAbsensi[$v->nim_nis]['sakit'] + $totalAbsensi[$v->nim_nis]['alpa']; ?></td>
                 </tr>
             <?php $nomor++;
             } ?>
@@ -203,15 +194,15 @@
     </table>
 
     <div class="legend">
-        <p>S = SICK/SAKIT</p>
-        <p>P = PERMIT/IZIN</p>
-        <p>AP = ALPA/BOLOS</p>
-        <p>A = ATTEND/HADIR</p>
-        <p>TA = TOTAL ABSENCE</p>
+        <p><b>S = SICK/SAKIT</b></p>
+        <p><b>P = PERMIT/IZIN</b></p>
+        <p><b>AB = ALPA/BOLOS</b></p>
+        <p><b>A = ATTEND/HADIR</b></p>
+        <p><b>T = TOTAL ABSENCE</b></p>
     </div>
 
     <div class="footer">
-        <p>Created on <?= date('Y-m-d') ?></p>
+        <p><b>Created on <?= date('F d Y') ?></b></p>
     </div>
 
 </body>
