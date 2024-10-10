@@ -81,7 +81,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary tombol-tutup-absen" data-dismiss="modal"
                     id="tombol-tutup-absen">Close</button>
-                <button type="button" class="btn btn-info tombol-submit-absen" id="tombolAbsen">Submit</button>
+                <button type="button" class="btn btn-primary tombol-submit-absen" id="tombolAbsen">Submit</button>
             </div>
         </div>
     </div>

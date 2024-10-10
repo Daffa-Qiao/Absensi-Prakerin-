@@ -23,7 +23,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary tombol-tutup-checkout"
                     data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-info bg-gradient-info" id="tombolCheckout">Checkout</button>
+                <button type="button" class="btn btn-primary bg-gradient-primary" id="tombolCheckout">Checkout</button>
             </div>
         </div>
     </div>

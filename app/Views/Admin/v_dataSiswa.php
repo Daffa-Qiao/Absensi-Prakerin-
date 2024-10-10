@@ -84,11 +84,11 @@
                                 <td>
                                     <?php if (session('member_id') != $v['member_id']) : ?>
                                         <a class="btn btn-danger btn-circle mb-1" onclick="hapus(<?= $v['member_id'] ?>)">
-                                            <i class="fas fa-trash"></i>
+                                        <i class="bi bi-trash" style="color:black"></i>
                                         </a>
                                     <?php endif ?>
-                                    <a href="#" class="btn btn-warning btn-circle mb-1" data-toggle="modal" data-target="#modalEdit" onclick="edit(<?= $v['member_id'] ?>)">
-                                        <i class="fa-regular fa-pen-to-square"></i>
+                                        <a href="#" class="btn btn-warning btn-circle mb-1" data-toggle="modal" data-target="#modalEdit" onclick="edit(<?= $v['member_id'] ?>)">
+                                        <i class="bi bi-pencil-square" style="color:black"></i>
                                     </a>
                                 </td>
                             </tr>
