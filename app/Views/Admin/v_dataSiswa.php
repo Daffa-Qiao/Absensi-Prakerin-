@@ -24,13 +24,13 @@
                                 <th style="min-width: 200px">Name</th>
                                 <th>Username</th>
                                 <th style="min-width: 150px">Gender</th>
-                                <th>Profil</th>
+                                <th>Profile</th>
                                 <th>Educational institutions</th>
                                 <th style="min-width: 100px">NIM / NIS</th>
                                 <th style="min-width: 200px">Date Join</th>
-                                <th style="min-width: 200px">Supervising Teacher</th>
-                                <th style="min-width: 200px">Supervising Teacher Phone Number</th>
-                                <th style="min-width: 100px;"><strong>Status</strong></th>
+                                <th style="min-width: 200px">Name of Supervisor Teacher</th>
+                                <th style="min-width: 200px">Supervisor Phone Number</th>
+                                <th style="min-width: 100px;">Status</th>
                                 <th style="min-width: 100px">Action</th>
                             </strong></tr>
                     </thead>
@@ -62,7 +62,6 @@
                                     <?php endif ?>
                                 </td>
                                 <td>
-
                                     <?= $v['nama_instansi']; ?>
                                 </td>
                                 <td>

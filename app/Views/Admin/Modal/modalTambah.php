@@ -1,7 +1,7 @@
 <!-- Modal Tambah -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div class="modal-content bg-white">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">+ Add New User</h5>
                 <button type="button" class="close tombol-tutup" data-dismiss="modal" aria-label="Close">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputNamaInstansi" class="form-label">Name Of Agency</label>
+                    <label for="inputNamaInstansi" class="form-label">Educational Institutions Name</label>
                     <input type="text" class="form-control" name="nama_instansi" id="inputNamaInstansi" placeholder="">
                     <div class="invalid-feedback errornama_instansi">
                     </div>
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputNoPembimbing" class="form-label">Supervisors Phone Number</label>
+                    <label for="inputNoPembimbing" class="form-label">Supervisor Phone Number</label>
                     <input type="number" class="form-control" name="no_pembimbing" id="inputNoPembimbing" placeholder="08xxxx"
                         pattern="[0-9]{4}[0-9]{4}[0-9]{5}">
                     <div class="invalid-feedback errorno_pembimbing">

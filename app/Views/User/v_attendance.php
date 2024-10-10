@@ -35,7 +35,7 @@
                             <div id="my_camera" class="mx-auto rounded overflow-hidden"></div>
                         </div>
                         <div class="col d-flex align-items-center" style="margin-left: 20px; margin-top:40px;">
-                            <button type="button" id="takephoto">
+                            <button type="button" id="takephoto" style="border:2px solid black;">
                                 <a href="#hasil">
                                     <i class="fa-solid fa-camera"></i>
                                 </a>
@@ -50,7 +50,7 @@
                     <div class="wrapper-attendance">
                         <div class="hasilWrapper" id="hasil">
                             <h3>Image Results :</h3>
-                            <div id="results" class=""></div>
+                            <div id="results" class="results"></div>
                             <input type="hidden" id="photoStore" name="photoStore" value="">
                             <img name="foto" for="absen" class="screenshot" src="<?= base_url('uploadFoto/profile.png') ?>" alt="">
                         </div>

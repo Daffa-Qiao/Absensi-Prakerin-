@@ -87,7 +87,7 @@
     </div>
 
     <!-- DataTales Example -->
-    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">List Absensi</div>
+    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">List Absence</div>
     <div class="card shadow mb-2">
         <div class="card-body border-bottom">
             <div class="table-responsive">

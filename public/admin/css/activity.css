@@ -206,16 +206,16 @@
   height: auto !important;
 }
 
-/* img.screenshot {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+img.screenshot {
+  /* -webkit-transform: scaleX(-1);
+  transform: scaleX(-1); */
   position: relative;
-} */
+}
 
 canvas {
   display: none;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+  /* -webkit-transform: scaleX(-1);
+  transform: scaleX(-1); */
   height: 220px;
   width: 300px;
 }
@@ -230,6 +230,9 @@ video {
   border: 2px solid;
   object-fit: contain;
   z-index: 1;
+}
+.results {
+  transform: scaleX(-1); 
 }
 
 .body-dua-activity .image .imageWrapper {

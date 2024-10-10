@@ -23,7 +23,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom styles for this template -->
     <link href="<?= base_url('admin'); ?>/css/sb-admin-2.min.css" rel="stylesheet" />
     <!-- Custom styles for this page -->
@@ -309,7 +310,6 @@
 
             <hr class="sidebar-divider my-0" />
 
-
             <!-- Nav Item - Dashboard -->
             <li class="nav-item <?= (isset($aktif_dashboard)) ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= site_url('admin/dashboard'); ?>" style="width:270px !important">
@@ -457,7 +457,7 @@
                                 <img src="<?= base_url('uploadFoto/' . $namaFile); ?>" class="headerImg">
                             </div>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in bg-white" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="<?= site_url('admin/profile'); ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400" aria-hidden="true"></i>
                                     Profile

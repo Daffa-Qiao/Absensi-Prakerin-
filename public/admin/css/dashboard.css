@@ -29,6 +29,11 @@ body[data-theme="pink"] {
     background-color: var(--bs-body-bg);
 }
 
+/* hr.solid {
+    border-top: 3px solid #FFFFFF;
+    margin-left: 10px;
+} */
+
 .wrapper-addUser {
     font-size: 20px;
     font-weight: 400;

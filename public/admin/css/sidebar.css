@@ -32,11 +32,12 @@ body[data-bs-theme="pink"] {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    width: 21%;
+    width: 19%;
     position: fixed;
     height: 100%;
     transition: all 2s ease;
     z-index: 2;
+    overflow-x: hidden;
 }
 
 .wrapperNav {

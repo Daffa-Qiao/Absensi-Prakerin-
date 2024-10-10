@@ -14,7 +14,7 @@
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
+                            <div class="col mr-0">
                                 <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
                                     SCHOOL
                                 </div>
@@ -22,8 +22,8 @@
                                     <?= $totalSekolah ?>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <i class="fas fa-school fa-2x text-gray-300"></i>
+                            <div class="col-auto mr-4">
+                                <i class="fas fa-building-columns fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
+                            <div class="col mr-0">
                                 <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
                                     UNIVERSITY
                                 </div>
@@ -41,19 +41,19 @@
                                     <?= $totalUniv ?>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <i class="fas fa-school fa-2x text-gray-300"></i>
+                            <div class="col-auto mr-4">
+                                <i class="fas fa-building-columns fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xl font-weight-bold text-warning text-uppercase mb-1">
+                            <div class="col mr-0">
+                                <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
                                     TOTAL EDUCATION 
                                     <br>INSTITUTIONS
                                 </div>
@@ -61,8 +61,8 @@
                                     <?= $totalUser; ?>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <i class="fas fa-user-check fa-2x text-gray-300"></i>
+                            <div class="col-auto mr-4">
+                            <i class="fas fa-building-columns fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                 <div class="card border-left-info shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
-                            <div class="col mr-3">
+                            <div class="col mr-0">
                                 <div class="text-xl font-weight-bold text-info text-uppercase mb-1" style="width: 100px;">
                                     STUDENT
                                 </div>
@@ -80,8 +80,8 @@
                                     <?= $totalSiswa ?>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                            <div class="col-auto mr-4">
+                                <i class="fas fa-user fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                 <div class="card border-left-info shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
+                            <div class="col mr-0">
                                 <div class="text-xl font-weight-bold text-info text-uppercase mb-1">
                                     COLLEGE STUDENT
                                 </div>
@@ -99,19 +99,19 @@
                                     <?= $totalMahasiswa ?>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                            <div class="col-auto mr-4">
+                                <i class="fas fa-user fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card border-left-info shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xl font-weight-bold text-warning text-uppercase mb-1">
+                            <div class="col mr-0">
+                                <div class="text-xl font-weight-bold text-info text-uppercase mb-1">
                                     TOTAL COLLAGE 
                                     <br>/ STUDENT
                                 </div>
@@ -119,8 +119,8 @@
                                     <?= $totalSuperAdmin; ?>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <i class="fa-regular fa-rectangle-list fa-2x text-gray-300"></i>
+                            <div class="col-auto mr-4">
+                                <i class="fas fa-user-check fa-2x text-gray-300"></i>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
             </div>
         </div>
     </div>
-        <div class="title text-dark font-weight-bold px-1 rounded-top mt-2 pl-3">Absence Update <?= date('F Y') ?></div> 
+        <div class="title text-dark font-weight-bold px-1 rounded-top mt-2 pl-3">Attendance Update <?= date('F Y') ?></div> 
     <div class="card shadow mb-2">
         <div class="card-body border-bottom">
             <div class="table-responsive">
@@ -136,7 +136,7 @@
                     <thead class="border">
                         <tr>
                             <th class="">User</th>
-                            <th class="" style="width: 100px;">Attended</th>
+                            <th class="" style="width: 100px;">Attend</th>
                             <th class="" style="width: 100px;">Permit</th>
                             <th class="" style="width: 100px;">Sick</th>
                         </tr>

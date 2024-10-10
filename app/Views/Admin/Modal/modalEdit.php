@@ -1,7 +1,7 @@
 <!-- Modal Edit -->
 <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalEditLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div class="modal-content bg-white">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalEditLabel">Edit User</h5>
                 <button type="button" class="close tombol-tutup-edit" data-dismiss="modal" aria-label="Close">
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary tombol-tutup-edit" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-secondary tombol-tutup-edit" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary" id="tombolEdit">Update</button>
             </div>
 
