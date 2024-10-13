@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Jul 2024 pada 10.28
--- Versi server: 10.4.28-MariaDB
--- Versi PHP: 8.0.28
+-- Generation Time: Oct 13, 2024 at 12:51 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `absensi`
+-- Table structure for table `absensi`
 --
 
 CREATE TABLE `absensi` (
@@ -46,16 +46,22 @@ CREATE TABLE `absensi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data untuk tabel `absensi`
+-- Dumping data for table `absensi`
 --
 
 INSERT INTO `absensi` (`id`, `nama_lengkap`, `email`, `nim_nis`, `jenis_user`, `instansi_pendidikan`, `nama_instansi`, `status`, `keterangan`, `lokasi`, `checkin_time`, `checkout_time`, `foto_profile`, `foto_absen`, `waktu_absen`) VALUES
-(918, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Izin', 'asdad', NULL, '13:52', NULL, 'profile.png', '2024.07.25 - 13.56.34.jpeg', '2024-07-25');
+(918, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Izin', 'asdad', NULL, '13:52', NULL, 'profile.png', '2024.07.25 - 13.56.34.jpeg', '2024-07-25'),
+(920, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '10:01', NULL, 'profile.png', '2024.09.09 - 10.01.41.jpeg', '2024-09-09'),
+(921, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Izin', 'pulang', NULL, '10:02', NULL, 'profile.png', '2024.09.09 - 10.03.02.jpeg', '2024-09-09'),
+(922, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Sakit', 'SAKIT PUSING', NULL, '10:42', NULL, 'profile.png', '2024.09.09 - 10.42.42.jpeg', '2024-09-09'),
+(923, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Alpa', 'cabut', NULL, '10:58', NULL, 'profile.png', '2024.09.09 - 10.58.36.jpeg', '2024-09-09'),
+(924, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '11:06', NULL, 'profile.png', '2024.09.09 - 11.06.43.jpeg', '2024-09-09'),
+(925, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '19:21', NULL, 'profile.png', '2024.09.25 - 19.21.34.jpeg', '2024-09-25');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `instansi`
+-- Table structure for table `instansi`
 --
 
 CREATE TABLE `instansi` (
@@ -65,7 +71,7 @@ CREATE TABLE `instansi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `instansi`
+-- Dumping data for table `instansi`
 --
 
 INSERT INTO `instansi` (`id`, `nama_instansi`, `foto_instansi`) VALUES
@@ -78,12 +84,13 @@ INSERT INTO `instansi` (`id`, `nama_instansi`, `foto_instansi`) VALUES
 (7, 'SMKN 2 JKT48', '2024.01.02 - 12.48.18.jpeg'),
 (8, 'UNIVERSITAS NEGERI JAKARTA', '2024.01.18 - 16.26.48.jpeg'),
 (9, 'UNIVERSITAS BINA NUSANTARA', '2024.03.01 - 15.46.34.jpeg'),
-(10, 'SMK MUHAMMADIYAH 4 JAKARTA', '2024.03.01 - 15.48.36.jpeg');
+(10, 'SMK MUHAMMADIYAH 4 JAKARTA', '2024.03.01 - 15.48.36.jpeg'),
+(11, 'SMKN 1 KOTA BEKASI', '2024.10.10 - 19.12.51.jpeg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `laporan`
+-- Table structure for table `laporan`
 --
 
 CREATE TABLE `laporan` (
@@ -105,7 +112,7 @@ CREATE TABLE `laporan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `member`
+-- Table structure for table `member`
 --
 
 CREATE TABLE `member` (
@@ -132,7 +139,7 @@ CREATE TABLE `member` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `member`
+-- Dumping data for table `member`
 --
 
 INSERT INTO `member` (`member_id`, `username`, `password`, `email`, `nama_lengkap`, `nim_nis`, `no_hp`, `foto`, `jenis_kelamin`, `jenis_user`, `instansi_pendidikan`, `nama_instansi`, `level`, `token`, `is_verifikasi`, `tanggal_bergabung`, `updated_at`, `nama_pembimbing`, `no_pembimbing`, `status`) VALUES
@@ -140,11 +147,11 @@ INSERT INTO `member` (`member_id`, `username`, `password`, `email`, `nama_lengka
 (54, 'bagoes', '12345678', 'bagoessholehm.s.n@gmail.com', 'Bagoes Sholeh', '2214312221', '085714108993', 'profile.png', 'Male', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Admin', NULL, 'yes', '2024-07-16', '2024-07-25 08:14:41', 'Dela Chaerani', '081290624643', 'Terminated'),
 (55, 'celsi', '12345678', 'chelsearamadhani@gmail.com', 'Chelsea Ramadhani', '12222222', '087872825833', 'profile.png', 'Female', 'Student', 'School', 'SMKD1', 'User', NULL, 'yes', '2024-07-16', '2024-07-25 07:03:58', '', '', 'Written Agreement'),
 (56, 'sdsjj', '12345678', 'sssa@gmail.com', 'Nur Aini', '2214312', '081290624643', 'profile.png', 'Female', 'Student', 'School', 'SMK SSDD', 'User', NULL, 'yes', '2024-07-16', '2024-07-16 04:17:16', '', '', 'Good'),
-(57, 'sds', '12345678', 'chelsearamadhani91@gmail.com', 'Chelsea Ramadhani', '2214315', '085714108997', 'profile.png', 'Female', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'User', NULL, 'yes', '2024-07-18', '2024-07-25 07:04:25', '', '', 'Terminated'),
+(57, 'sds', '12345678', 'chelsearamadhani91@gmail.com', 'Chelsea Ramadhani', '2214315', '085714108997', 'profile.png', 'Female', 'College Student', 'University', 'UNIVERSITAS GAJAH MADA', 'User', NULL, 'yes', '2024-07-18', '2024-10-10 12:05:38', '', '', 'Terminated'),
 (58, '', '', '', '', '', '', '', 'Male', NULL, '', '', 'User', NULL, 'no', '2024-07-25', '2024-07-25 06:29:59', '', '', 'Good');
 
 --
--- Trigger `member`
+-- Triggers `member`
 --
 DELIMITER $$
 CREATE TRIGGER `set_jenis_user_trigger` BEFORE UPDATE ON `member` FOR EACH ROW BEGIN
@@ -172,64 +179,64 @@ DELIMITER ;
 --
 
 --
--- Indeks untuk tabel `absensi`
+-- Indexes for table `absensi`
 --
 ALTER TABLE `absensi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `instansi`
+-- Indexes for table `instansi`
 --
 ALTER TABLE `instansi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `laporan`
+-- Indexes for table `laporan`
 --
 ALTER TABLE `laporan`
   ADD PRIMARY KEY (`id_laporan`),
   ADD KEY `userLaporan` (`member_id`);
 
 --
--- Indeks untuk tabel `member`
+-- Indexes for table `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`member_id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `absensi`
+-- AUTO_INCREMENT for table `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=919;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=926;
 
 --
--- AUTO_INCREMENT untuk tabel `instansi`
+-- AUTO_INCREMENT for table `instansi`
 --
 ALTER TABLE `instansi`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `laporan`
+-- AUTO_INCREMENT for table `laporan`
 --
 ALTER TABLE `laporan`
   MODIFY `id_laporan` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `member`
+-- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
   MODIFY `member_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `laporan`
+-- Constraints for table `laporan`
 --
 ALTER TABLE `laporan`
   ADD CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`);

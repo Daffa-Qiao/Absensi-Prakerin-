@@ -170,7 +170,7 @@ class Admin extends BaseController
     {
         $user = new MemberModel();
         $instansi = new Instansi();
-        $dataInstansi = $user->select('nama_instansi, instansi_pendidikan')->where('instansi_pendidikan', 'Sekolah')->distinct('nama_instansi')->get()->getResult();
+        $dataInstansi = $user->select('nama_instansi, instansi_pendidikan')->where('instansi_pendidikan', 'School')->distinct('nama_instansi')->get()->getResult();
 
         foreach ($dataInstansi as $v) {
             $jumlahSiswa[$v->nama_instansi] = $user->where('nama_instansi', $v->nama_instansi)->countAllResults();
@@ -182,7 +182,7 @@ class Admin extends BaseController
             $data = [
                 'namaFile' => $namaFile,
                 'jumlahSiswa' => $jumlahSiswa,
-                'halaman' => 'Admin | Sekolah',
+                'halaman' => 'Admin | School',
                 'title' => 'Educational Institutions',
                 'aktif_instansi' => 'active',
                 'aktif_sekolah' => 'active',
