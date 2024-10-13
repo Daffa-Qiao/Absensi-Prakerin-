@@ -22,20 +22,27 @@
                 id="myForm">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="absenNimNis">Full Name : </label>
+                        <label for="absenNimNis">Name : </label>
                         <input type="text" class="form-control" name="super_nama_lengkap" id="superNamaLengkap" placeholder="">
                         <div class=" invalid-feedback errornama_lengkap">
                         </div>
                     </div>
                     
                     <div class="mb-3">
-                        <label for="activityStatus">Status : </label>
+                        <label for="activityStatus">Status</label>
                         <select name="status" id="activityStatus" class="custom-select">
                             <option value="" hidden></option>
                             <option value="Progres">Progres</option>
                             <option value="Closed">Closed</option>
                         </select>
                         <div class="invalid-feedback errorStatus">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="activityStatus">Location</label>
+                        <input type="location" name="location" id="inputLocation" class="form-control">
+                        <div class="invalid-feedback errorLocation">
                         </div>
                     </div>
 

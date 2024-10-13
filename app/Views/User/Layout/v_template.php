@@ -103,11 +103,11 @@
                         <li class="nav-link" id="<?= (isset($aktif_attendance)) ? 'aktif' : '' ?>">
                             <a href="<?= site_url('user/attendance') ?>"> Attendance Form </a>
                         </li>
-                        <li class="nav-link" id="<?= (isset($aktif_permission)) ? 'aktif' : '' ?>">
-                            <a href="<?= site_url('user/permission') ?>"> Permission Form</a>
-                        </li>
                         <li class="nav-link" id="<?= (isset($aktif_activity)) ? 'aktif' : '' ?>">
                             <a href="<?= site_url('user/activity') ?>"> Activity Form</a>
+                        </li>
+                        <li class="nav-link" id="<?= (isset($aktif_permission)) ? 'aktif' : '' ?>">
+                            <a href="<?= site_url('user/permission') ?>"> Permission Form</a>
                         </li>
                         <li class="nav-link" id="<?= (isset($aktif_history)) ? 'aktif' : '' ?>">
                             <a href="<?= site_url('user/historyAttendace') ?>"> History Attendance </a>

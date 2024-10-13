@@ -35,7 +35,7 @@
                     <div class="wrapper-bukti">
                         <div class="wrapper-izin">
                             <select name="menu" id="menu" onchange="updateValue()">
-                                <option value="" hidden>Reason:</option>
+                                <option value="" hidden>Reasons :</option>
                                 <option value="Izin">Permissions</option>
                                 <option value="Sakit">Sick</option>
                             </select>
@@ -58,7 +58,7 @@
                     <div class="wrapper">
                         <div class="textareaWrapper">
                             <h3>Description :</h3>
-                            <textarea name="keterangan" id="" cols="30" rows="10" placeholder="Lorem Ipsum ...."></textarea>
+                            <textarea name="keterangan" id="" cols="30" rows="10" placeholder="Description..."></textarea>
                         </div>
                         <div class="kbWrapper">
                             <div class="kordinatWrapper">

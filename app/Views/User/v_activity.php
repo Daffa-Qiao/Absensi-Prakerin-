@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                             <div class="col-6 ml-4" style="border:2px solid black;">
-                                <h3 style="margin:10px;">Documentation Results :</h3>
+                                <h3 style="margin:10px;">Image Result :</h3>
                                 <div id="results" class=""></div>
                                 <input type="hidden" id="photoStore" name="photoStore" value="">
                                 <img name="foto" for="activity" class="screenshot responsive" id="output" src="<?= base_url('uploadFoto/activityprofile.png') ?>" alt="" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);">

@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputNamaInstansi" class="form-label">Educational Institutions Name</label>
+                    <label for="inputNamaInstansi" class="form-label">Name of Educational Institutions</label>
                     <input type="text" class="form-control" name="nama_instansi" id="inputNamaInstansi" placeholder="">
                     <div class="invalid-feedback errornama_instansi">
                     </div>
