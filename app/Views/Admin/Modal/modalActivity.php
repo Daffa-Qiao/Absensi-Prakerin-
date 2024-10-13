@@ -22,9 +22,9 @@
                 id="myForm">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="absenNimNis">Name : </label>
-                        <input type="text" class="form-control" name="super_nama_lengkap" id="superNamaLengkap" placeholder="">
-                        <div class=" invalid-feedback errornama_lengkap">
+                        <label for="absenNimNis">NIM/MIS</label>
+                        <input type="text" class="form-control" name="nim_nis" id="inputNimNis" placeholder="">
+                        <div class="invalid-feedback errornim_nis">
                         </div>
                     </div>
                     
@@ -61,18 +61,18 @@
                     </div>
 
                     <div class="mb-3">
-                        <label>Photo : </label>
+                        <label>Photo</label>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="absenFoto" name="foto"
                                 accept=".jpg, .jpeg, .png">
-                            <label class="custom-file-label" for="absenFoto" data-browse="Pilih">Pilih file</label>
+                            <label class="custom-file-label" for="absenFoto" data-browse="Choose">Choose File</label>
                             <div class="invalid-feedback errorFoto">
                             </div>
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="absenKeterangan">Description : </label>
+                        <label for="absenKeterangan">Description</label>
                         <textarea name="keterangan" id="absenKeterangan" cols="30" rows="5" class="form-control"
                             placeholder="Description must be filled in if the status is permit or sick"></textarea>
                         <div class="invalid-feedback errorKeterangan">

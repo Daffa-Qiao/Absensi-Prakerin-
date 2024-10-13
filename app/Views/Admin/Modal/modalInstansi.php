@@ -12,21 +12,21 @@
                     <div class="wrapper-text d-flex flex-column justify-content-center">
                         <input type="hidden" id="id_instansi">
                         <div class="mb-3">
-                            <label for="instansiNama" class="text-dark mt-1">Educational Institutions Name</label>
+                            <label for="instansiNama" class="text-dark mt-1">Name of Educational Institutions</label>
                             <input type="text" name="instansi_nama" class="form-control" id="instansiNama" readonly />
                             <div class="invalid-feedback"></div>
                         </div>
                         <div class="mb-3">
-                            <label for="instansiJumlah" class="text-dark mt-1">Student Total : </label>
+                            <label for="instansiJumlah" class="text-dark mt-1">Student Total</label>
                             <input type="text" name="instansi_jumlah" class="form-control" id="instansiJumlah" readonly />
                             <div class="invalid-feedback"></div>
                         </div>
                         <div class="mb-3">
-                            <label for="instansiPendidikan" class="text-dark mt-1">Educational Institutions :</label>
+                            <label for="instansiPendidikan" class="text-dark mt-1">Educational Institutions</label>
                             <input type="text" name="instansi_pendidikan" class="form-control" id="instansiPendidikan" readonly />
 
                         </div>
-                        <label for="" class="text-dark">Educational Institutions Logo : </label>
+                        <label for="" class="text-dark">Logo of Educational Institutions</label>
                         <div class="logo d-flex justify-content-center p-3 border rounded">
                             <div class="wrapper-logo w-75 d-flex align-items-end justify-content-around">
                                 <label for="logo" class="btn btn-dark mb-0 py-1 px-3">Select File</label>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary bg-gradient-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary bg-gradient-primary" id="simpanInstansi">Save changes
+                    <button type="submit" class="btn btn-primary bg-gradient-primary" id="simpanInstansi">Save Changes
                     </button>
                 </div>
             </form>

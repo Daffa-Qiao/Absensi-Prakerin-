@@ -97,8 +97,8 @@
                             <th>No</th>
                             <th style="min-width: 190px" class="text-center">Date</th>
                             <th style="min-width: 200px">Name</th>
-                            <th style="min-width: 200px">Educational Institutions </th>
-                            <th style="min-width: 90px">Student/College Student</th>
+                            <th style="min-width: 200px">Name of Educational Institutions</th>
+                            <th style="min-width: 90px">Educational Institutions</th>
                             <th style="min-width: 70px">Check-In</th>
                             <th style="min-width: 80px">Check-Out</th>
                             <th>Status</th>

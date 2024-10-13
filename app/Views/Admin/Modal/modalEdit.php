@@ -81,19 +81,19 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="editNamaInstansi" class="form-label">Educational Institutions Name :</label>
+                    <label for="editNamaInstansi" class="form-label">Name of Educational Institutions</label>
                     <input type="text" class="form-control" name="edit_nama_instansi" id="editNamaInstansi" placeholder="">
                     <div class="invalid-feedback errorEdit_nama_instansi">
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="editNamaPembimbing" class="form-label">Name Of Supervising Teacher :</label>
+                    <label for="editNamaPembimbing" class="form-label">Name Of Supervisor Teacher</label>
                     <input type="text" class="form-control" name="edit_nama_pembimbing" id="editNamaPembimbing" placeholder="">
                     <div class="invalid-feedback errorEdit_nama_Pembimbing">
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="editNoPembimbing" class="form-label">Supervising Teacher Phone :</label>
+                    <label for="editNoPembimbing" class="form-label">Supervisor Phone Number</label>
                     <input type="number" class="form-control" name="edit_no_pembimbing" id="editNoPembimbing" placeholder="">
                     <div class="invalid-feedback errorEdit_no_pembimbing">
                     </div>

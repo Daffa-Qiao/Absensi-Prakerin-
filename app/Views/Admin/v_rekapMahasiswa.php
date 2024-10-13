@@ -113,12 +113,12 @@
                         <th style="vertical-align: middle; border: 1px solid black; padding: 4px; text-align: center;"
                             rowspan="2">NIM/NIS</th>
                         <th style="vertical-align: middle; border: 1px solid black; padding: 4px; text-align: center;"
-                            rowspan="2">School Name</th>
+                            rowspan="2">Name of Educational Institutions</th>
                         <th colspan="5" style="border: 1px solid black; padding: 4px; text-align: center;">Total Absences</th>
                     </tr>
                     <tr>
                         <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">A</th>
-                        <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">AP</th>
+                        <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">AB</th>
                         <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">S</th>
                         <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">P</th>
                         <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">TA</th>

@@ -22,7 +22,7 @@
                 id="myForm">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="absenNimNis">NIM / NIS : </label>
+                        <label for="absenNimNis">NIM / NIS</label>
                         <input type="text" name="absen_nim_nis" class="form-control autoDropdown" id="absenNimNis" />
                         <div class="invalid-feedback errorNim_nis">
 
@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="absenStatus">Status : </label>
+                        <label for="absenStatus">Status</label>
                         <select name="status" id="absenStatus" class="custom-select">
                             <option value="" hidden></option>
                             <option value="Masuk">Attend</option>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="absenKeterangan">Description : </label>
+                        <label for="absenKeterangan">Description</label>
                         <textarea name="keterangan" id="absenKeterangan" cols="30" rows="5" class="form-control"
                             placeholder="Description must be filled in if the status is permit or sick"></textarea>
                         <div class="invalid-feedback errorKeterangan">
@@ -51,25 +51,25 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label>Photo : </label>
+                        <label>Photo</label>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="absenFoto" name="foto"
                                 accept=".jpg, .jpeg, .png">
-                            <label class="custom-file-label" for="absenFoto" data-browse="Pilih">Pilih file</label>
+                            <label class="custom-file-label" for="absenFoto" data-browse="Choose">Choose File</label>
                             <div class="invalid-feedback errorFoto">
 
                             </div>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="inputCheckin">Check-In : </label>
+                        <label for="inputCheckin">Check-In</label>
                         <input type="time" name="checkin" id="inputCheckin" class="form-control">
                         <div class="invalid-feedback errorCheckin">
 
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="tanggal">Date : </label>
+                        <label for="tanggal">Date</label>
                         <input type="date" name="tanggal" class="date form-control" data-toggle="datepicker"
                             autocomplete="none" id="inputTanggal" />
                         <div class=" invalid-feedback errorTanggal">

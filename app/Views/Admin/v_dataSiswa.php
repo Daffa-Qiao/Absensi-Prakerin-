@@ -25,8 +25,7 @@
                                 <th>Username</th>
                                 <th style="min-width: 150px">Gender</th>
                                 <th>Profile</th>
-                                <th>Educational Institutions</th>
-                                <th>Name of Educational Institutions</th>
+                                <th style="min-width: 250px">Name of Educational Institutions</th>
                                 <th style="min-width: 100px">NIM / NIS</th>
                                 <th style="min-width: 200px">Date Join</th>
                                 <th style="min-width: 200px">Name of Supervisor Teacher</th>
@@ -61,9 +60,6 @@
                                     <?php if ($v['foto'] != '') : ?>
                                         <img src="<?= base_url('uploadFoto/' . $v['foto']) ?>" alt="" onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto']) ?>')">
                                     <?php endif ?>
-                                </td>
-                                <td>
-                                    
                                 </td>
                                 <td>
                                     <?= $v['nama_instansi']; ?>

@@ -203,7 +203,7 @@ class Admin extends BaseController
     {
         $user = new MemberModel();
         $instansi = new Instansi();
-        $dataInstansi = $user->select('nama_instansi, instansi_pendidikan')->where('instansi_pendidikan', 'Universitas')->distinct('nama_instansi')->get()->getResult();
+        $dataInstansi = $user->select('nama_instansi, instansi_pendidikan')->where('instansi_pendidikan', 'University')->distinct('nama_instansi')->get()->getResult();
 
         foreach ($dataInstansi as $v) {
             $jumlahSiswa[$v->nama_instansi] = $user->where('nama_instansi', $v->nama_instansi)->countAllResults();

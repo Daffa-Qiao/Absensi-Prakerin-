@@ -16,8 +16,8 @@
                     <thead class="border">
                         <tr>
                             <th class="text-center">No</th>
-                            <th style="min-width: 200px">Fullname</th>
-                            <th style="min-width: 100px">NIM / NIS</th>
+                            <th style="min-width: 200px">Name</th>
+                            <th style="min-width: 100px">NIM/NIS</th>
                             <th>Username</th>
                             <th>Email</th>
                             <th style="width: 210px; min-width: 250px;">Password</th>

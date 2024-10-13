@@ -13,7 +13,7 @@
             <div class="modal-body">
                 <input type="hidden" name="id" id="inputID">
                 <div class="mb-3">
-                    <label for="inputCheckout">Check-Out : </label>
+                    <label for="inputCheckout">Check-Out</label>
                     <input type="time" name="checkout" id="inputCheckout" class="form-control">
                     <div class="invalid-feedback errorCheckout">
 

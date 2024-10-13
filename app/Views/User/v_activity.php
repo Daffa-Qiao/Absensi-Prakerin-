@@ -71,7 +71,6 @@
                                 </select>
                                 <select class="form-select border-dark mt-3" aria-label="Default select example" id="lantai">
                                    <option disabled selected>Floor</option>
-                                    
                                 </select>
                                 <div class="buttonWrapper">
                                     <button type="submit" class="btn btn-primary" name="mulai" value="Start Time" style="border:2px solid black;">Start Time</button>
