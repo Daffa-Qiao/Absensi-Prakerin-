@@ -22,15 +22,16 @@
                 id="myForm">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="laporanNimNis">Full Name</label>
-                       <select name="nim_nis" id="laporanNimNis" class="form-control">
+                        <label for="laporanNimNis">NIM/NIS</label>
+                        <input type="text" name="absen_nim_nis" class="form-control autoDropdown" id="absenNimNis" />
+                       <!-- <select name="nim_nis" id="laporanNimNis" class="form-control">
                         <?php foreach ($dataUser as $usr): ?>
                         <option value="" hidden></option>
                         <option value="<?= $usr['nim_nis'] ?>">
                             <?= $usr['nama_lengkap'] ?>
                         </option>
                         <?php endforeach ?>
-                    </select>
+                    </select> -->
                     <div class="invalid-feedback errornim_nis">
                         </div>
                     </div>

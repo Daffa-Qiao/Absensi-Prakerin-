@@ -121,7 +121,7 @@
                             <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">AB</th>
                             <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">S</th>
                             <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">P</th>
-                            <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">TA</th>
+                            <th colspan="1" style="border: 1px solid black; padding: 4px; text-align: center;">T</th>
                         </tr>
                     </thead>
 

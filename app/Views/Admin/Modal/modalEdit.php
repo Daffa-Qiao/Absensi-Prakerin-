@@ -87,7 +87,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="editNamaPembimbing" class="form-label">Name Of Supervisor Teacher</label>
+                    <label for="editNamaPembimbing" class="form-label">Name of Supervisor Teacher</label>
                     <input type="text" class="form-control" name="edit_nama_pembimbing" id="editNamaPembimbing" placeholder="">
                     <div class="invalid-feedback errorEdit_nama_Pembimbing">
                     </div>

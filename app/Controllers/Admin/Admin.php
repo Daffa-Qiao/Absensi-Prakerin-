@@ -150,7 +150,7 @@ class Admin extends BaseController
         $aktif_dataUser = 'aktif';
         $aktif_dataMahasiswa = 'aktif';
         $halaman = 'Admin | Student Data';
-        $title = 'Collage Student Data';
+        $title = 'College Student Data';
 
         $data = [
             'dataMahasiswa' => $dataMahasiswa,

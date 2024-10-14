@@ -17,7 +17,7 @@
                         <th class="text-center" style="min-width: 100px;">Description</th>
                         <th class="text-center" style="min-width: 100px">Checkin</th>
                         <th class="text-center" style="min-width: 100px">Checkout</th>
-                        <th class="text-center" style="min-width: 100px;">Status</th>
+                        <!-- <th class="text-center" style="min-width: 100px;">Status</th> -->
                         <th class="text-center" style="min-width: 180px;">Date</th>
                     </tr>
                 </thead>

@@ -58,7 +58,7 @@
                                     <br>INSTITUTIONS
                                 </div>
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="aktif">
-                                    <?= $totalUser; ?>
+                                    <?= $totalSekolah+$totalUniv; ?>
                                 </div>
                             </div>
                             <div class="col-auto mr-4">
@@ -135,7 +135,7 @@
                 <table class="table table-bordered" id="dTable" width="100%" cellspacing="0">
                     <thead class="border">
                         <tr>
-                            <th class="">User</th>
+                            <th class="">Student/College Student</th>
                             <th class="" style="width: 100px;">Attend</th>
                             <th class="" style="width: 100px;">Permit</th>
                             <th class="" style="width: 100px;">Sick</th>

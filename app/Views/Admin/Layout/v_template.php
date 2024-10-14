@@ -557,13 +557,13 @@
     // LOGOUT SWAL
     function logout() {
         Swal.fire({
-            title: "Yakin ingin keluar?",
+            title: "Are you sure?",
             icon: "warning",
             showCancelButton: true,
-            cancelButtonText: "Batal",
+            cancelButtonText: "Cancel",
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Ya, keluar!"
+            confirmButtonText: "Yes"
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location.href = "<?= site_url('/logout'); ?>";
@@ -775,14 +775,14 @@
 
     function hapus($id) {
         Swal.fire({
-            title: "Yakin ingin menghapus?",
-            text: "Data yang dihapus tidak dapat dikembalikan!",
+            title: "Are you sure you want to delete data?",
+            text: "Deleted data cannot be restored!!",
             icon: "warning",
             showCancelButton: true,
-            cancelButtonText: 'Batal',
+            cancelButtonText: 'Cancel',
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Ya, hapus!",
+            confirmButtonText: "Yes",
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location.href = "<?= site_url('Admin/Modal/hapus') ?>/" + $id;
@@ -1031,14 +1031,14 @@
 
     function hapus_absen($id) {
         Swal.fire({
-            title: "Yakin ingin menghapus?",
-            text: "Data yang dihapus tidak dapat dikembalikan!",
+            title: "Are you sure you want to delete data?",
+            text: "Deleted data cannot be restored!",
             icon: "warning",
             showCancelButton: true,
-            cancelButtonText: 'Batal',
+            cancelButtonText: 'Cancel',
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Ya, hapus!",
+            confirmButtonText: "Yes",
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location.href = "<?= site_url('Admin/Modal/hapus_absen') ?>/" + $id;
@@ -1140,14 +1140,14 @@
     });
     function hapus_laporan($id) {
         Swal.fire({
-            title: "Yakin ingin menghapus?",
-            text: "Data yang dihapus tidak dapat dikembalikan!",
+            title: "Are you sure you want to delete data?",
+            text: "Deleted data cannot be restored!",
             icon: "warning",
             showCancelButton: true,
-            cancelButtonText: 'Batal',
+            cancelButtonText: 'Cancel',
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Ya, hapus!",
+            confirmButtonText: "Yes",
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location.href = "<?= site_url('Admin/Modal/hapus_laporan') ?>/" + $id;

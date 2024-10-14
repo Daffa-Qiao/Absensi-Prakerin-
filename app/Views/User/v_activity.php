@@ -190,10 +190,10 @@
 
         // filter lantai
         var lokasi_dan_lantai = {
-            "Gedung Karya": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
-            "Gedung Karsa": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-            "Gedung Cipta": [1, 2, 3, 4, 5, 6, 7],
-            "Merdeka Timur": [1, 2, 3]
+            "Gedung Karya": [1, 2, "LPSE", "Masjid", "P5", "P6", "Mataram", "Parkiran", "Kantin", "Server", 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, "Lift Karya"],
+            "Gedung Karsa": [1, 2, 3, 4, 5, 6, 7, 8, 9, "Lift Karsa"],
+            "Gedung Cipta": [1, 2, 3, 4, 5, 6, 7, "Daycare", "Lift Cipta", "Nanggala"],
+            "Merdeka Timur": [1, 2, 3, "DC"]
         };
         document.getElementById('lokasi').addEventListener('change', function () {
             var selectedLocation = this.value;
