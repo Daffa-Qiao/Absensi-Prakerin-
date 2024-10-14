@@ -30,10 +30,10 @@
 
     .custom-tambahkan {
       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-      transition-duration : 0.5s;
+      transition-duration: 0.5s;
     }
 
-    
+
 
     @media screen and (max-width: 571px) {}
   </style>
@@ -86,10 +86,10 @@
                 </select>
               </div>
               <div class="col-13 my-2 d-flex justify-content-center align-items-end">
-            <a class="btn btn-secondary" href="<?= site_url('admin/rekap-aktifitas-siswa'); ?>">
-              <i class="bi bi-arrow-repeat"></i>
-            </a>
-          </div>
+                <a class="btn btn-secondary" href="<?= site_url('admin/rekap-aktifitas-siswa'); ?>">
+                  <i class="bi bi-arrow-repeat"></i>
+                </a>
+              </div>
             </div>
           </div>
           <!-- col 2 -->
@@ -117,6 +117,7 @@
           <thead class="border">
             <tr>
               <th data-f-bold="true" data-a-h="left" class="text-center">No</th>
+              <th data-f-bold="true" style="min-width: 190px" class="text-center">Date</th>
               <th data-f-bold="true" style="min-width: 190px" class="text-center">Name</th>
               <th data-f-bold="true" style="min-width: 120px" class="text-center">Name of Educational Institutions</th>
               <th data-f-bold="true" style="min-width: 170px" class="text-center">Location</th>
@@ -125,16 +126,17 @@
               <th data-f-bold="true" style="min-width: 120px" class="text-center">Documentation</th>
               <th data-f-bold="true" style="min-width: 170px" class="text-center">Description</th>
               <th data-f-bold="true" style="min-width: 80px" class="text-center">Status</th>
+              <th data-f-bold="true" style="min-width: 140px" class="text-center">Action</th>
             </tr>
           </thead>
           <tbody class="border">
             <?php foreach ($dataLaporan as $v) {
-              if ($v['status'] == 'Masuk') {
-                $status = 'hadir';
-              } else if ($v['status'] == 'Izin') {
-                $status = 'izin';
-              } else {
-                $status = 'sakit';
+              if ($v['status'] == 'Progres') {
+                $status = 'proses';
+              } else if ($v['status'] == 'Closed') {
+                $status = 'selesai';
+              } else{
+                $status= 'proses';
               }
 
             ?>
@@ -143,19 +145,31 @@
                   <?= $nomor; ?>
                 </td>
                 <td>
-                  <?= tanggal_indo($v['waktu_absen']) ?>
+                  <?= tanggal_indo($v['waktu_laporan']) ?>
                 </td>
                 <td>
                   <?= $v['nama_lengkap']; ?>
                 </td>
                 <td>
-                  <?= $v['jenis_user']; ?>
+                  <?= $v['nama_instansi']; ?>
                 </td>
                 <td>
-                  <?= $v['checkin_time']; ?>
+
+                  <?= $v['lokasi']; ?>
                 </td>
                 <td>
-                  <?= $v['checkout_time']; ?>
+                  <?= $v['waktu_mulai']; ?>
+                </td>
+                <td>
+                  <?= $v['waktu_selesai']; ?>
+                </td>
+                <td>
+                  <?php if ($v['foto_laporan'] != '') : ?>
+                    <img src="<?= base_url('uploadFoto/' . $v['foto_laporan']) ?>" alt="" onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto_laporan']) ?>')">
+                  <?php endif ?>
+                </td>
+                <td>
+                  <?= $v['kegiatan']; ?>
                 </td>
                 <td>
                   <div class="status <?= $status ?>">
@@ -163,16 +177,15 @@
                   </div>
                 </td>
                 <td>
-                  <?= $v['keterangan']; ?>
-                </td>
-                <td data-exclude="true">
-                  <?php if ($v['foto_absen'] != '') : ?>
-                    <img src="<?= base_url('uploadFoto/' . $v['foto_absen']) ?>" id="" alt="" onclick="tampilkanPopup('<?= base_url('uploadFoto/' . $v['foto_absen']) ?>')">
+                  <?php if (session('id_laporan') != $v['id_laporan']) : ?>
+                    <a class="btn btn-danger btn-circle mb-1" onclick="hapus_laporan(<?= $v['id_laporan'] ?>)">
+                      <i class="bi bi-trash" style="color:black"></i>
+                    </a>
                   <?php endif ?>
-                </td>
-                <td>
+                  <a href="#" class="btn btn-warning btn-circle mb-1" data-toggle="modal" data-target="#modalEditLaporan" onclick="editLaporan(<?= $v['id_laporan'] ?>)">
+                    <i class="bi bi-pencil-square" style="color:black"></i>
+                  </a>
 
-                  <?= $v['lokasi']; ?>
                 </td>
               </tr>
             <?php
@@ -197,6 +210,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.jqueryui.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
   <?php if (session()->getFlashdata('swal_icon')) : ?>
@@ -245,7 +259,7 @@
     });
     document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
     document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
-    
+
     $('#Pdf').click(function() {
       $('#toPdf').click();
     });

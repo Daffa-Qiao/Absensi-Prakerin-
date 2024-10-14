@@ -39,6 +39,7 @@
         * {
             font-family: "Poppins", sans-serif;
         }
+
         .custom-sidebar {
             width: 290px !important;
 
@@ -58,7 +59,7 @@
             height: 50px;
             border-radius: 25%;
             vertical-align: middle;
-            cursor: pointer;    
+            cursor: pointer;
         }
 
         .title {
@@ -247,7 +248,7 @@
         }
 
         td .status.alpa {
-            background-color:red;
+            background-color: red;
             color: black;
         }
 
@@ -268,6 +269,14 @@
         }
 
         td .status.terminated {
+            background-color: #E53636;
+            color: black;
+        }
+        td .status.proses {
+            background-color: #FF8F00;
+            color: black;
+        }
+        td .status.selesai {
             background-color: #E53636;
             color: black;
         }
@@ -403,14 +412,14 @@
 
             <?php if (session('redirected') == 'superadmin') : ?>
                 <li class="nav-item <?= (isset($aktif_superAdmin)) ? 'active' : '' ?>">
-                    <a class="nav-link" href="<?= site_url('admin/super-admin'); ?>"  style="width:270px !important">
+                    <a class="nav-link" href="<?= site_url('admin/super-admin'); ?>" style="width:270px !important">
                         <i class="fa-solid fa-user-gear"></i>
                         <span>Super Admin</span></a>
                 </li>
             <?php endif ?>
 
             <li class="nav-item <?= (isset($aktif_listSuperAdmin)) ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= site_url('admin/list-super-admin'); ?>"  style="width:270px !important">
+                <a class="nav-link" href="<?= site_url('admin/list-super-admin'); ?>" style="width:270px !important">
                     <i class="bi bi-person-lines-fill"></i>
                     <span>List Super Admin</span></a>
             </li>
@@ -531,6 +540,7 @@
 <!-- js gue -->
 <script src="<?= base_url('admin'); ?>/js/modal-tambah.js"></script>
 <script src="<?= base_url('admin'); ?>/js/modal-edit.js"></script>
+<script src="<?= base_url('admin'); ?>/js/modal-aktifitas.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
@@ -1018,6 +1028,7 @@
             }
         });
     });
+
     function hapus_absen($id) {
         Swal.fire({
             title: "Yakin ingin menghapus?",
@@ -1036,23 +1047,113 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-    const theme = localStorage.getItem('theme') || 'blue'; // Ambil tema dari localStorage atau default ke 'blue'
-    
-    const themeColors = {
-      blue: 'linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%)',
-      green: 'linear-gradient(181deg, #81A263 85%, rgba(48, 142, 115, 1) 100%)',
-      orange: 'linear-gradient(181deg, #ECB159 85%, #B77452 100%)',
-      pink: 'linear-gradient(181deg, #FA7070 85%, #D9D9D9 100%)'
-    }
+        const theme = localStorage.getItem('theme') || 'blue'; // Ambil tema dari localStorage atau default ke 'blue'
 
-    if (themeColors[theme]) {
-      document.documentElement.style.setProperty('--bs-body-bg', themeColors[theme]);
-      document.body.style.backgroundColor = themeColors[theme];
-    }
-     });
+        const themeColors = {
+            blue: 'linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%)',
+            green: 'linear-gradient(181deg, #81A263 85%, rgba(48, 142, 115, 1) 100%)',
+            orange: 'linear-gradient(181deg, #ECB159 85%, #B77452 100%)',
+            pink: 'linear-gradient(181deg, #FA7070 85%, #D9D9D9 100%)'
+        }
 
-    
-    
+        if (themeColors[theme]) {
+            document.documentElement.style.setProperty('--bs-body-bg', themeColors[theme]);
+            document.body.style.backgroundColor = themeColors[theme];
+        }
+    });
+    $("#tombolActivity").on("click", function() {
+        var $tanggal = $("#inputTanggal").val();
+        var $nim_nis = $("#laporanNimNis").val();
+        var $status = $("#laporanStatus").val();
+        var $lokasi = $("#inputLokasi").val();
+        var $foto = $("#laporanFoto").val();
+        var $keterangan = $("#laporanKeterangan").val();
+        var $laporan_mulai = $('#laporanMulai').val();
+        var $laporan_selesai = $("#laporanSelesai").val();
+
+        $.ajax({
+            url: "<?= site_url('Admin/Modal/tambahAktifitas') ?>",
+            type: "POST",
+            data: {
+                tanggal: $tanggal,
+                laporan_nim_nis: $nim_nis,
+                status: $status,
+                keterangan: $keterangan,
+                lokasi: $lokasi,
+                waktu_mulai: $laporan_mulai,
+                waktu_selesai: $laporan_selesai,
+                foto: $foto
+            },
+            dataType: 'json',
+            success: function(response) {
+                // jika ada error
+                if (response.error) {
+                    if ($('#laporanFoto').val() == '') {
+                        $('#laporanFoto').addClass('is-invalid');
+                        $('.errorFoto').html('Foto harus diupload');
+                    } else {
+                        $('#laporanFoto').removeClass('is-invalid');
+                    }
+
+                    if (response.error.tanggal) {
+                        $('#inputTanggal').addClass('is-invalid');
+                        $('.errorTanggal').html(response.error.tanggal);
+                    }
+                    if (response.error.laporan_nim_nis) {
+                        $('#laporanNimNis').addClass('is-invalid');
+                        $('.errorNim_nis').html(response.error.laporan_nim_nis);
+                    }
+                    if (response.error.status) {
+                        $('#laporanStatus').addClass('is-invalid');
+                        $('.errorStatus').html(response.error.status);
+                    }
+                    if (response.error.keterangan) {
+                        $('#laporanKeterangan').addClass('is-invalid');
+                        $('.errorKeterangan').html(response.error.keterangan);
+                    }
+                    if (response.error.waktu_mulai) {
+                        $('#inputMulai').addClass('is-invalid');
+                        $('.errorWaktuMulai').html(response.error.waktu_mulai);
+                    }
+                    if (response.error.waktu_selesai) {
+                        $('#inputSelesai').addClass('is-invalid');
+                        $('.errorWaktuSelesai').html(response.error.waktu_selesai);
+                    }
+                    if (response.error.tanggal) {
+                        $('#inputTanggal').addClass('is-invalid');
+                        $('.errortanggal').html(response.error.waktu_selesai);
+                    }
+                    // value
+                } else {
+                    /**  jika sukses */
+                    if ($('#laporanFoto').val() == '') {
+                        $('#laporanFoto').addClass('is-invalid');
+                        $('.errorFoto').html('Foto harus diupload');
+                    } else {
+                        $('#laporanFoto').removeClass('is-invalid');
+                        $('#myForm').submit();
+                    }
+                }
+            },
+        });
+        hapusValidasiAktifitas();
+    });
+    function hapus_laporan($id) {
+        Swal.fire({
+            title: "Yakin ingin menghapus?",
+            text: "Data yang dihapus tidak dapat dikembalikan!",
+            icon: "warning",
+            showCancelButton: true,
+            cancelButtonText: 'Batal',
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ya, hapus!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "<?= site_url('Admin/Modal/hapus_laporan') ?>/" + $id;
+            }
+        });
+    }
 </script>
 
 </html>

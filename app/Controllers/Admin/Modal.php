@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\MemberModel;
 use App\Models\Absensi;
 use App\Models\Instansi;
+use App\Models\Laporan;
 
 class Modal extends BaseController
 {
@@ -78,6 +79,18 @@ class Modal extends BaseController
                     'required' => 'Educational Institutions must be filled in',
                 ]
             ],
+            'nama_pembimbing' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Name of Supervisor Teacher must be filled in',
+                ]
+            ],
+            'no_pembimbing' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Supervisor Phone Number must be filled in',
+                ]
+            ]
         ];
 
         $validasi->setRules($aturan);
@@ -89,6 +102,8 @@ class Modal extends BaseController
             $no_hp = $this->request->getPost('no_hp');
             $email = $this->request->getPost('email');
             $instansi = $this->request->getPost('instansi');
+            $nama_guru = $this->request->getPost('nama_pembimbing');
+            $no_guru=$this->request->getPost('no_pembimbing');
             $nama_instansi = strtoupper($this->request->getPost('nama_instansi'));
 
             $data = [
@@ -102,6 +117,8 @@ class Modal extends BaseController
                 'no_hp' => $no_hp,
                 'instansi_pendidikan' => $instansi,
                 'nama_instansi' => $nama_instansi,
+                'nama_pembimbing' => $nama_guru,
+                'no_pembimbing'=> $no_guru,
                 'is_verifikasi' => 'yes'
             ];
             $user = new MemberModel();
@@ -122,6 +139,8 @@ class Modal extends BaseController
                     'email' => $validasi->getError('email'),
                     'instansi' => $validasi->getError('instansi'),
                     'nama_instansi' => $validasi->getError('nama_instansi'),
+                    'nama_pembimbing' => $validasi->getError('nama_pembimbing'),
+                    'no_pembimbing' => $validasi->getError('no_pembimbing')
                 ],
             ];
         }
@@ -199,6 +218,19 @@ class Modal extends BaseController
                     'required' => 'Educational institutions must be filled in',
                 ]
             ],
+
+            'edit_nama_pembimbing' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Educational institutions must be filled in',
+                ]
+            ],
+            'edit_no_pembimbing' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Educational institutions must be filled in',
+                ]
+            ],
         ];
 
         $validasi->setRules($aturan);
@@ -212,6 +244,8 @@ class Modal extends BaseController
             $email = $this->request->getPost('edit_email');
             $instansi = $this->request->getPost('edit_instansi');
             $nama_instansi = strtoupper($this->request->getPost('edit_nama_instansi'));
+            $nama_guru = $this->request->getPost('edit_nama_pembimbing');
+            $no_guru = $this->request->getPost('edit_no_pembimbing');
 
             $data = [
                 'member_id' => $id,
@@ -224,6 +258,8 @@ class Modal extends BaseController
                 'no_hp' => $no_hp,
                 'instansi_pendidikan' => $instansi,
                 'nama_instansi' => $nama_instansi,
+                'nama_pembimbing'=> $nama_guru,
+                'no_pembimbing'=> $no_guru,
                 'foto_instansi' => null,
             ];
             $user = new MemberModel();
@@ -233,7 +269,6 @@ class Modal extends BaseController
 
             $hasil_edit['sukses'] = true;
             notif_swal('success', 'Berhasil Edit User');
-
         } else {
             $hasil_edit = [
                 'error' => [
@@ -246,6 +281,8 @@ class Modal extends BaseController
                     'edit_email' => $validasi->getError('edit_email'),
                     'edit_instansi' => $validasi->getError('edit_instansi'),
                     'edit_nama_instansi' => $validasi->getError('edit_nama_instansi'),
+                    'edit_nama_pembimbing'=> $validasi->getError('edit_nama_pembimbing'),
+                    'edit_no_pembimbing'=> $validasi->getError('edit_no_pembimbing')
                 ],
             ];
         }
@@ -528,5 +565,136 @@ class Modal extends BaseController
             notif_swal('warning', 'Silahkan pilih file logo');
             return redirect()->back();
         }
+    }
+    public function tambahAktifitas()
+    {
+        $validasi = \Config\Services::validation();
+        $aturan = [
+            'tanggal' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Date of absence must be filled in',
+                ]
+            ],
+            'laporan_nim_nis' => [
+                'rules' => 'required|is_not_unique[member.nim_nis]',
+                'errors' => [
+                    'required' => 'NIM / NIS must be filled in',
+                    'is_not_unique' => 'NIM / NIS not registered',
+                ]
+            ],
+            'status' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Activity status must be filled in',
+                ]
+            ],
+            'waktu_mulai' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Start time must be filled',
+                ]
+            ],
+            'waktu_selesai' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'End time must be filled',
+                ]
+            ],
+            'lokasi'=>[
+                'rules'=>'required',
+                'errors'=>[
+                    'required'=>'Location must be filled',
+                ]
+            ]
+        ];
+        $validasi->setRules($aturan);
+        if ($validasi->withRequest($this->request)->run()) {
+            $hasil['sukses'] = true;
+        } else {
+            $hasil = [
+                'error' => [
+                    'tanggal' => $validasi->getError('tanggal'),
+                    'laporan_nama_lengkap' => $validasi->getError('laporan_nama_lengkap'),
+                    'laporan_nim_nis' => $validasi->getError('laporan_nim_nis'),
+                    'laporan_jenis_user' => $validasi->getError('laporan_jenis_user'),
+                    'lokasi'=> $validasi->getError('lokasi'),
+                    'status' => $validasi->getError('status'),
+                    'waktu_mulai' => $validasi->getError('waktu_mulai'),
+                    'waktu_selesai'=>$validasi -> getError('waktu_selesai'),
+                    'keterangan' => $validasi->getError('keterangan'),
+                    'foto' => $validasi->getError('foto'),
+                ]
+            ];
+        }
+        return json_encode($hasil);
+    }
+    public function tambahAktifitasProcess()
+    {
+        $rules = $this->validate([
+            'foto' => [
+                'rules' => 'is_image[foto]|ext_in[foto,jpg,png,jpeg]',
+                'errors' => [
+                    'is_image' => 'Foto tidak valid',
+                    'ext_in' => 'Hanya .jpg, .jpeg, dan .png yang dapat diupload'
+                ]
+            ]
+        ]);
+        if (!$rules) {
+            notif_swal('error', 'Foto tidak valid');
+            return redirect()->back();
+        }
+        $tanggal = $this->request->getPost('tanggal');
+        $status = $this->request->getPost('status');
+        $nim_nis = $this->request->getPost('nim_nis');
+        $keterangan = $this->request->getPost('keterangan');
+        $lokasi = $this->request->getPost('lokasi');
+        $waktu_mulai = $this->request->getVar('waktu_mulai');
+        $waktu_selesai= $this->request->getVar('waktu_selesai');
+        $foto = $this->request->getFile('foto');
+
+        if ($foto->isValid()) {
+            $namaFile = date("Y.m.d") . " - " . date("H.i.s") . ".png";
+            $foto->move(FCPATH . "uploadFoto", $namaFile);
+        } else {
+            $namaFile = '';
+        }
+        $user = new MemberModel();
+        $infoUser = $user->where('nim_nis', $nim_nis)->first();
+        $data = [
+            'nim_nis' => $nim_nis,
+            'nama_lengkap' => $infoUser['nama_lengkap'],
+            'jenis_user' => $infoUser['jenis_user'],
+            'status' => $status,
+            'lokasi' => $lokasi,
+            'kegiatan' => $keterangan,
+            'waktu_laporan' => $tanggal,
+            'foto_profile' => $infoUser['foto'],
+            'nama_instansi' => $infoUser['nama_instansi'],
+            'instansi_pendidikan' => $infoUser['instansi_pendidikan'],
+            'waktu_mulai' => $waktu_mulai,
+            'waktu_selesai'=> $waktu_selesai,
+            'foto_laporan' => $namaFile
+        ];
+        $tambahLaporan = new Laporan();
+        $tambahLaporan->save($data);
+
+        notif_swal('success', 'Berhasil Tambah Aktivitas');
+        return redirect()->to('admin/rekap-aktifitas-siswa');
+    }
+    public function hapus_laporan($id)
+    {
+        $laporan  = new Laporan();
+        $dataLaporan = $laporan->find($id);
+        $file = (FCPATH . 'uploadFoto/' . $dataLaporan['foto_laporan']);
+        if (file_exists($file)) {
+            if ($dataLaporan['foto_laporan'] != '') {
+                unlink($file);
+            }
+        }
+        $laporan->delete($id);
+        notif_swal('success', 'Terhapus');
+
+        return redirect()->back();
     }
 }

@@ -1,0 +1,528 @@
+INFO - 2024-10-14 08:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 08:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 08:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 08:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 08:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 08:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 09:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 10:38:04 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin\Modal.php on line 657.
+ 1 APPPATH\Controllers\Admin\Modal.php(657): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Modal.php', 657)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 10:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 10:44:08 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin\Modal.php on line 449.
+ 1 APPPATH\Controllers\Admin\Modal.php(449): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Modal.php', 449)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAbsensiProcess()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 10:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 10:48:27 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin\Modal.php on line 658.
+ 1 APPPATH\Controllers\Admin\Modal.php(658): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Modal.php', 658)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+ERROR - 2024-10-14 10:49:21 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4`.`laporan`, CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`)) in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `la...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `la...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `la...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `la...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(672): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-10-14 10:49:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`ci4`.`laporan`, CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(672): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 10:49:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`ci4`.`laporan`, CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.21.jpeg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.21.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(672): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 10:49:21 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4`.`laporan`, CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.21.jpeg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.21.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.21.jpeg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(672): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 10:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-14 10:49:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4`.`laporan`, CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`)) in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `la...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `la...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `la...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `la...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(672): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-10-14 10:49:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`ci4`.`laporan`, CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(672): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 10:49:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`ci4`.`laporan`, CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.49.jpeg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.49.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(672): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 10:49:49 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ci4`.`laporan`, CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.49.jpeg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.49.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 10.49.49.jpeg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(672): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 10:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 10:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 10:57:18 --> ErrorException: Undefined array key "waktu_absen"
+in APPPATH\Views\Admin\v_rekapAktifitasSsw.php on line 146.
+ 1 APPPATH\Views\Admin\v_rekapAktifitasSsw.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "waktu_absen"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php', 146)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAktifitasSsw', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(545): view('Admin/v_rekapAktifitasSsw', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_aktifitasSiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 11:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 11:00:43 --> ErrorException: Undefined array key "keterangan"
+in APPPATH\Views\Admin\v_rekapAktifitasSsw.php on line 176.
+ 1 APPPATH\Views\Admin\v_rekapAktifitasSsw.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "keterangan"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php', 176)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAktifitasSsw', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(545): view('Admin/v_rekapAktifitasSsw', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_aktifitasSiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 11:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-14 11:08:41 --> mysqli_sql_exception: Column 'lokasi' cannot be null in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `la...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `la...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `la...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `la...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(673): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-10-14 11:08:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'lokasi' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :lokasi:, :kegiatan:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(673): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 11:08:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'lokasi' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.08.40.jpeg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.08.40.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :lokasi:, :kegiatan:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(673): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 11:08:41 --> [Caused by] mysqli_sql_exception: Column 'lokasi' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.08.40.jpeg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.08.40.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.08.40.jpeg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :lokasi:, :kegiatan:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(673): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 11:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-14 11:10:09 --> mysqli_sql_exception: Column 'lokasi' cannot be null in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `la...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `la...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `la...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `la...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(673): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-10-14 11:10:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'lokasi' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :lokasi:, :kegiatan:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(673): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 11:10:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'lokasi' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.10.09.jpeg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.10.09.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :lokasi:, :kegiatan:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(673): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 11:10:09 --> [Caused by] mysqli_sql_exception: Column 'lokasi' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.10.09.jpeg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.10.09.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.10.09.jpeg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :lokasi:, :kegiatan:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(673): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 11:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-14 11:13:41 --> mysqli_sql_exception: Column 'lokasi' cannot be null in C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `la...', 0)
+#1 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `la...')
+#2 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `la...')
+#3 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `la...', Array, false)
+#4 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\Absensi-Prakerin-\app\Controllers\Admin\Modal.php(680): CodeIgniter\BaseModel->save(Array)
+#9 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+#10 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+#11 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Absensi-Prakerin-\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Absensi-Prakerin-\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prak...')
+#14 {main}
+CRITICAL - 2024-10-14 11:13:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'lokasi' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :lokasi:, :kegiatan:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\Modal.php(680): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 11:13:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'lokasi' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.13.40.jpeg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.13.40.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :lokasi:, :kegiatan:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\Modal.php(680): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 11:13:41 --> [Caused by] mysqli_sql_exception: Column 'lokasi' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.13.40.jpeg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.13.40.jpeg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (\'2214312221\', \'Bagoes Sholeh\', \'Student\', \'Progres\', NULL, \'tes\', \'2024-10-14\', \'profile.png\', \'SMKN 1 KOTA BEKASI\', \'School\', \'2024.10.14 - 11.13.40.jpeg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `laporan` (`nim_nis`, `nama_lengkap`, `jenis_user`, `status`, `lokasi`, `kegiatan`, `waktu_laporan`, `foto_profile`, `nama_instansi`, `instansi_pendidikan`, `foto_laporan`) VALUES (:nim_nis:, :nama_lengkap:, :jenis_user:, :status:, :lokasi:, :kegiatan:, :waktu_laporan:, :foto_profile:, :nama_instansi:, :instansi_pendidikan:, :foto_laporan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\Modal.php(680): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->tambahAktifitasProcess()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 11:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 11:37:25 --> ErrorException: Undefined array key "member_id"
+in APPPATH\Views\Admin\v_rekapAktifitasSsw.php on line 181.
+ 1 APPPATH\Views\Admin\v_rekapAktifitasSsw.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "member_id"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php', 181)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAktifitasSsw', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(545): view('Admin/v_rekapAktifitasSsw', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_aktifitasSiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 11:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 11:37:39 --> ErrorException: Undefined array key "laporan_id"
+in APPPATH\Views\Admin\v_rekapAktifitasSsw.php on line 181.
+ 1 APPPATH\Views\Admin\v_rekapAktifitasSsw.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "laporan_id"', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php', 181)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAktifitasSsw', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(545): view('Admin/v_rekapAktifitasSsw', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_aktifitasSiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 11:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:48:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 11:48:24 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin\Modal.php on line 304.
+ 1 APPPATH\Controllers\Admin\Modal.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Modal.php', 304)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->hapus('4')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+CRITICAL - 2024-10-14 11:49:59 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin\Modal.php on line 304.
+ 1 APPPATH\Controllers\Admin\Modal.php(304): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Absensi-Prakerin-\\app\\Controllers\\Admin\\Modal.php', 304)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Modal->hapus('4')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Modal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 11:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 11:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 12:18:31 --> ErrorException: Undefined variable $status
+in APPPATH\Views\Admin\v_rekapAktifitasSsw.php on line 173.
+ 1 APPPATH\Views\Admin\v_rekapAktifitasSsw.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php', 173)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAktifitasSsw', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(545): view('Admin/v_rekapAktifitasSsw', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_aktifitasSiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 12:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-14 12:19:06 --> ErrorException: Undefined variable $status
+in APPPATH\Views\Admin\v_rekapAktifitasSsw.php on line 173.
+ 1 APPPATH\Views\Admin\v_rekapAktifitasSsw.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php', 173)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Absensi-Prakerin-\\app\\Views\\Admin\\v_rekapAktifitasSsw.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/v_rekapAktifitasSsw', [], true)
+ 5 APPPATH\Controllers\Admin\Admin.php(545): view('Admin/v_rekapAktifitasSsw', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Admin\Admin->rekap_aktifitasSiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Absensi-Prakerin-\\public\\index.php')
+INFO - 2024-10-14 12:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-14 12:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

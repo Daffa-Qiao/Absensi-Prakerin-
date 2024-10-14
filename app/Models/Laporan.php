@@ -20,7 +20,8 @@ class Laporan extends Model
         'lokasi',
         'foto_profile',
         'foto_laporan',
-        'waktu_laporan'
+        'waktu_mulai',
+        'waktu_selesai'
     ];
 
     public function getTotalLaporanByStatus($nimUser, $status)

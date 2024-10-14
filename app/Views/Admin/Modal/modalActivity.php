@@ -18,21 +18,28 @@
                     </span>
                 </button>
             </div>
-            <form action="<?= site_url('data-absenProcess'); ?>" method="post" enctype="multipart/form-data"
+            <form action="<?= site_url('data-aktifitasProcess'); ?>" method="post" enctype="multipart/form-data"
                 id="myForm">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="absenNimNis">NIM/MIS</label>
-                        <input type="text" class="form-control" name="nim_nis" id="inputNimNis" placeholder="">
-                        <div class="invalid-feedback errornim_nis">
+                        <label for="laporanNimNis">Full Name</label>
+                       <select name="nim_nis" id="laporanNimNis" class="form-control">
+                        <?php foreach ($dataUser as $usr): ?>
+                        <option value="" hidden></option>
+                        <option value="<?= $usr['nim_nis'] ?>">
+                            <?= $usr['nama_lengkap'] ?>
+                        </option>
+                        <?php endforeach ?>
+                    </select>
+                    <div class="invalid-feedback errornim_nis">
                         </div>
                     </div>
                     
                     <div class="mb-3">
                         <label for="activityStatus">Status</label>
-                        <select name="status" id="activityStatus" class="custom-select">
+                        <select name="status" id="laporanStatus" class="custom-select">
                             <option value="" hidden></option>
-                            <option value="Progres">Progres</option>
+                            <option value="Progress">Progress</option>
                             <option value="Closed">Closed</option>
                         </select>
                         <div class="invalid-feedback errorStatus">
@@ -41,21 +48,21 @@
 
                     <div class="mb-3">
                         <label for="activityStatus">Location</label>
-                        <input type="location" name="location" id="inputLocation" class="form-control">
+                        <input type="text" name="lokasi" id="inputLokasi" class="form-control">
                         <div class="invalid-feedback errorLocation">
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="startTime">Start Time</label>
-                        <input type="time" name="start" id="inputStart" class="form-control">
+                        <label for="waktuMulai">Start Time</label>
+                        <input type="time" name="waktu_mulai" id="laporanMulai" class="form-control">
                         <div class="invalid-feedback errorStart">
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="finishTime">Finish Time</label>
-                        <input type="time" name="finish" id="inputFinish" class="form-control">
+                        <label for="waktuSelesai">Finish Time</label>
+                        <input type="time" name="waktu_selesai" id="laporanSelesai" class="form-control">
                         <div class="invalid-feedback errorFinish">
                         </div>
                     </div>
@@ -63,7 +70,7 @@
                     <div class="mb-3">
                         <label>Photo</label>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="absenFoto" name="foto"
+                            <input type="file" class="custom-file-input" id="laporanFoto" name="foto"
                                 accept=".jpg, .jpeg, .png">
                             <label class="custom-file-label" for="absenFoto" data-browse="Choose">Choose File</label>
                             <div class="invalid-feedback errorFoto">
@@ -73,17 +80,24 @@
 
                     <div class="mb-3">
                         <label for="absenKeterangan">Description</label>
-                        <textarea name="keterangan" id="absenKeterangan" cols="30" rows="5" class="form-control"
-                            placeholder="Description must be filled in if the status is permit or sick"></textarea>
+                        <textarea name="keterangan" id="laporanKeterangan" cols="30" rows="5" class="form-control"
+                            placeholder="Description must be filled"></textarea>
                         <div class="invalid-feedback errorKeterangan">
                         </div>
                     </div>
+                    <div class="mb-3">
+                        <label for="tanggal">Date</label>
+                        <input type="date" name="tanggal" class="date form-control" data-toggle="datepicker"
+                            autocomplete="none" id="inputTanggal" />
+                        <div class=" invalid-feedback errorTanggal">
 
+                        </div>
+                    </div>
                 </div>
             </form>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary tombol-tutup-absen" data-dismiss="modal"
-                    id="tombol-tutup-absen">Close</button>
+                    id="tombol-tutup-aktifitas">Close</button>
                 <button type="button" class="btn btn-primary tombol-submit-activity" id="tombolActivity">Submit</button>
             </div>
         </div>

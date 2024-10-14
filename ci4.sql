@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2024 at 12:51 PM
+-- Generation Time: Oct 14, 2024 at 07:32 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -56,7 +56,9 @@ INSERT INTO `absensi` (`id`, `nama_lengkap`, `email`, `nim_nis`, `jenis_user`, `
 (922, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Sakit', 'SAKIT PUSING', NULL, '10:42', NULL, 'profile.png', '2024.09.09 - 10.42.42.jpeg', '2024-09-09'),
 (923, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Alpa', 'cabut', NULL, '10:58', NULL, 'profile.png', '2024.09.09 - 10.58.36.jpeg', '2024-09-09'),
 (924, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '11:06', NULL, 'profile.png', '2024.09.09 - 11.06.43.jpeg', '2024-09-09'),
-(925, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '19:21', NULL, 'profile.png', '2024.09.25 - 19.21.34.jpeg', '2024-09-25');
+(925, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '19:21', NULL, 'profile.png', '2024.09.25 - 19.21.34.jpeg', '2024-09-25'),
+(926, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '10:46', NULL, 'profile.png', '2024.10.14 - 10.46.13.jpeg', '2024-10-14'),
+(927, '', '', '', NULL, '', '', '', '', NULL, '', '15:40', '', '', '2024-10-14');
 
 -- --------------------------------------------------------
 
@@ -106,8 +108,23 @@ CREATE TABLE `laporan` (
   `foto_profile` varchar(255) NOT NULL,
   `waktu_laporan` date NOT NULL,
   `lokasi` varchar(255) NOT NULL,
-  `member_id` int(5) NOT NULL
+  `waktu_mulai` varchar(25) NOT NULL,
+  `waktu_selesai` varchar(25) DEFAULT NULL,
+  `foto_laporan` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `laporan`
+--
+
+INSERT INTO `laporan` (`id_laporan`, `nama_lengkap`, `email`, `nim_nis`, `jenis_user`, `instansi_pendidikan`, `nama_instansi`, `status`, `kegiatan`, `foto_profile`, `waktu_laporan`, `lokasi`, `waktu_mulai`, `waktu_selesai`, `foto_laporan`) VALUES
+(5, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'tes1', 'profile.png', '2024-10-14', 'karya', '', NULL, '2024.10.14 - 11.54.15.png'),
+(6, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Progres', 'tes4', 'profile.png', '2024-10-16', 'Cipta', '', NULL, '2024.10.14 - 12.05.01.png'),
+(7, 'Chelsea Ramadhani', '', '12222222', 'Student', 'School', 'SMKD1', 'Progres', 'tes5', 'profile.png', '2024-10-14', 'karya', '', NULL, '2024.10.14 - 12.06.46.png'),
+(8, 'Nur Aini', '', '2214312', 'Student', 'School', 'SMK SSDD', 'Progres', 'tes', 'profile.png', '2024-10-14', 'Cipta', '', NULL, '2024.10.14 - 12.10.51.png'),
+(10, 'Chelsea Ramadhani', '', '12222222', 'Student', 'School', 'SMKD1', 'Progress', 'tes6', 'profile.png', '2024-10-14', 'Merdeka Timur', '', NULL, '2024.10.14 - 12.21.11.png'),
+(11, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'tes7', 'profile.png', '2024-10-14', 'Merdeka Timur', '', NULL, '2024.10.14 - 12.28.27.png'),
+(12, 'Chelsea Ramadhani', '', '12222222', 'Student', 'School', 'SMKD1', 'Closed', 'tes8', 'profile.png', '0000-00-00', 'Merdeka Timur', '13:30', '14:30', '2024.10.14 - 12.30.43.png');
 
 -- --------------------------------------------------------
 
@@ -145,7 +162,7 @@ CREATE TABLE `member` (
 INSERT INTO `member` (`member_id`, `username`, `password`, `email`, `nama_lengkap`, `nim_nis`, `no_hp`, `foto`, `jenis_kelamin`, `jenis_user`, `instansi_pendidikan`, `nama_instansi`, `level`, `token`, `is_verifikasi`, `tanggal_bergabung`, `updated_at`, `nama_pembimbing`, `no_pembimbing`, `status`) VALUES
 (39, 'daffa.reivan', '12345678', 'daffa.sweet100@gmail.com', 'Daffa Reivan', '141141', '085894861350', 'profile.png', 'Male', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Super Admin', NULL, 'yes', '2024-07-15', '2024-07-25 07:06:26', 'Chelsea Ramadhani', '085714108993', 'Written Agreement'),
 (54, 'bagoes', '12345678', 'bagoessholehm.s.n@gmail.com', 'Bagoes Sholeh', '2214312221', '085714108993', 'profile.png', 'Male', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Admin', NULL, 'yes', '2024-07-16', '2024-07-25 08:14:41', 'Dela Chaerani', '081290624643', 'Terminated'),
-(55, 'celsi', '12345678', 'chelsearamadhani@gmail.com', 'Chelsea Ramadhani', '12222222', '087872825833', 'profile.png', 'Female', 'Student', 'School', 'SMKD1', 'User', NULL, 'yes', '2024-07-16', '2024-07-25 07:03:58', '', '', 'Written Agreement'),
+(55, 'celsi', '12345678', 'chelsearamadhani@gmail.com', 'Chelsea Ramadhani', '12222222', '087872825833', 'profile.png', 'Female', 'Student', 'School', 'SMKD1', 'User', NULL, 'yes', '2024-07-16', '2024-10-14 02:11:43', 'tes', '08238238291', 'Written Agreement'),
 (56, 'sdsjj', '12345678', 'sssa@gmail.com', 'Nur Aini', '2214312', '081290624643', 'profile.png', 'Female', 'Student', 'School', 'SMK SSDD', 'User', NULL, 'yes', '2024-07-16', '2024-07-16 04:17:16', '', '', 'Good'),
 (57, 'sds', '12345678', 'chelsearamadhani91@gmail.com', 'Chelsea Ramadhani', '2214315', '085714108997', 'profile.png', 'Female', 'College Student', 'University', 'UNIVERSITAS GAJAH MADA', 'User', NULL, 'yes', '2024-07-18', '2024-10-10 12:05:38', '', '', 'Terminated'),
 (58, '', '', '', '', '', '', '', 'Male', NULL, '', '', 'User', NULL, 'no', '2024-07-25', '2024-07-25 06:29:59', '', '', 'Good');
@@ -194,8 +211,7 @@ ALTER TABLE `instansi`
 -- Indexes for table `laporan`
 --
 ALTER TABLE `laporan`
-  ADD PRIMARY KEY (`id_laporan`),
-  ADD KEY `userLaporan` (`member_id`);
+  ADD PRIMARY KEY (`id_laporan`);
 
 --
 -- Indexes for table `member`
@@ -211,7 +227,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=926;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=928;
 
 --
 -- AUTO_INCREMENT for table `instansi`
@@ -223,23 +239,13 @@ ALTER TABLE `instansi`
 -- AUTO_INCREMENT for table `laporan`
 --
 ALTER TABLE `laporan`
-  MODIFY `id_laporan` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_laporan` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
   MODIFY `member_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `laporan`
---
-ALTER TABLE `laporan`
-  ADD CONSTRAINT `userLaporan` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

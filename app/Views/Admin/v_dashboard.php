@@ -116,7 +116,7 @@
                                     <br>/ STUDENT
                                 </div>
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="aktif">
-                                    <?= $totalSuperAdmin; ?>
+                                    <?= $totalSiswa+$totalMahasiswa; ?>
                                 </div>
                             </div>
                             <div class="col-auto mr-4">

@@ -74,7 +74,7 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('rekap-aktifitas-mahasiswa', 'Admin\Admin::rekap_aktifitasMahasiswa');
     $routes->post('rekap-aktifitas-mahasiswa', 'Admin\Admin::rekap_aktifitasMahasiswaFilter');
 });
-
+$routes->add('data-aktifitasProcess', 'Admin\Modal::tambahAktifitasProcess');
 $routes->add('data-absenProcess', 'Admin\Modal::tambahAbsensiProcess');
 
 $routes->post('print/pdf', 'print\pdf::generatePDF');
