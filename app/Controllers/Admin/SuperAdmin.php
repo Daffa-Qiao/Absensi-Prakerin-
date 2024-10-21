@@ -142,7 +142,7 @@ class SuperAdmin extends BaseController
             $absensi->where('nim_nis', $dataNim_Nis)->set(['nim_nis' => $nim_nis])->update();
 
             $hasil_super['sukses'] = true;
-            notif_swal('success', 'Berhasil Edit User');
+            notif_swal('success', 'Data edited succesfully');
         } else {
             $hasil_super = [
                 'error' => [

@@ -46,7 +46,7 @@
                 <div class="wrapperInput form-floating">
                     <input id="inputEmail"
                         class="form-control <?= ($validator->hasError('email')) ? 'is-invalid' : '' ?>" type="email"
-                        name="email" placeholder="Masukkan Email" value="<?= set_value('email') ?>" required />
+                        name="email" placeholder="Input Email" value="<?= set_value('email') ?>" required />
                     <label for="inputEmail">Email</label>
                     <div class="invalid-feedback">
                         <?php if (isset($validation['email'])): ?>
@@ -57,7 +57,7 @@
                 <div class="wrapperInput form-floating">
                     <input id="inputPassword"
                         class="form-control <?= ($validator->hasError('password')) ? 'is-invalid' : '' ?>"
-                        type="password" name="password" placeholder="Masukkan Password"
+                        type="password" name="password" placeholder="Input Password"
                         value="<?= set_value('password'); ?>" required />
                     <label for="inputPassword">Password</label>
                     <div class="invalid-feedback">
@@ -69,7 +69,7 @@
                 <div class="wrapperInput form-floating">
                     <input id="inputPasswordKonf"
                         class="form-control <?= ($validator->hasError('konfirmasi_password')) ? 'is-invalid' : '' ?>"
-                        type="password" name="konfirmasi_password" placeholder="Masukkan Password" required />
+                        type="password" name="konfirmasi_password" placeholder="Input Password" required />
                     <label for="inputPasswordKonf">Confirm Password</label>
                     <div class="invalid-feedback">
                         <?php if (isset($validation['konfirmasi_password'])): ?>

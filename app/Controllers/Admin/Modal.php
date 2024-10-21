@@ -268,7 +268,7 @@ class Modal extends BaseController
             $absensi->where('nim_nis', $dataNim_Nis)->set(['nim_nis' => $nim_nis])->update();
 
             $hasil_edit['sukses'] = true;
-            notif_swal('success', 'Berhasil Edit User');
+            notif_swal('success', 'Data edited successfully');
         } else {
             $hasil_edit = [
                 'error' => [
@@ -461,7 +461,7 @@ class Modal extends BaseController
         $tambahAbsensi = new Absensi();
         $tambahAbsensi->save($data);
 
-        notif_swal('success', 'Berhasil Tambah Absen');
+        notif_swal('success', 'Data uploaded succesfully');
         return redirect()->to('admin/data-absen');
     }
 
@@ -502,7 +502,7 @@ class Modal extends BaseController
             $absensi->save($data);
 
             $hasil['sukses'] = true;
-            notif_swal('success', 'Berhasil Checkout');
+            notif_swal('success', 'Checkout Successfully');
         } else {
             $hasil = [
                 'error' => [
@@ -559,7 +559,7 @@ class Modal extends BaseController
             } else if (!$dataInstansi) {
                 $instansi->insert($data);
             }
-            notif_swal('success', 'Berhasil upload logo');
+            notif_swal('success', 'Uploaded logo succesfully');
             return redirect()->back();
         } else {
             notif_swal('warning', 'Silahkan pilih file logo');
@@ -679,7 +679,7 @@ class Modal extends BaseController
         $tambahLaporan = new Laporan();
         $tambahLaporan->save($data);
 
-        notif_swal('success', 'Berhasil Tambah Aktivitas');
+        notif_swal('success', 'Data uploaded succesfully');
         return redirect()->to('admin/rekap-aktifitas-siswa');
     }
     public function hapus_laporan($id)

@@ -35,7 +35,7 @@ class Admin extends BaseController
         }
 
         $jumlahSekolah = $user->getJumlahInstansi('School');
-        $jumlahUniv = $user->getJumlahInstansi('College School');
+        $jumlahUniv = $user->getJumlahInstansi('University');
         $totalSiswa = $user->getUser('Student');
         $totalMahasiswa = $user->getUser('College Student');
         $totalUser = $user->where('is_verifikasi', 'yes')->countAllResults();

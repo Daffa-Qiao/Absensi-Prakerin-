@@ -60,14 +60,67 @@
             cursor: pointer;
             border: 2px solid transparent;
         }
+        td .status {
+            border-radius: 1rem;
+            padding: .4rem 0;
+        }
 
-        /* .theme-colors .color.blue {
-            background-color: var(--blue);
+        td .status.hadir {
+            background-color: #86e49d;
+            color: black;
+        }
+
+        td .status.izin {
+            background-color: #f6c23e;
+            color: white;
+        }
+
+        td .status.sakit {
+            background-color: #d893a3;
+            color: black;
+        }
+
+        td .status.alpa {
+            background-color: red;
+            color: black;
+        }
+
+        td .status.baik {
+            background-color: #00FF7F;
+            border-radius: 1rem;
+            padding: .4rem 0;
+        }
+
+        td .status.teguran-lisan {
+            background-color: #FFFF00;
+            color: black;
+        }
+
+        td .status.teguran-tertulis {
+            background-color: #FF8F00;
+            color: black;
+        }
+
+        td .status.terminated {
+            background-color: #E53636;
+            color: black;
+        }
+        td .status.proses {
+            background-color: #FF8F00;
+            color: black;
+        }
+        td .status.selesai {
+            background-color: #E53636;
+            color: black;
+        }
+
+        .theme-colors .color.blue {
+            background-color: #01A2EC;
         }
 
         .theme-colors .color.green {
-            background-color: var(--green);
-        } */
+            background-color: #81A263;
+        }
 
 
         .theme-colors .color.orange {
@@ -75,7 +128,7 @@
         }
 
         .theme-colors .color.pink {
-            background-color: #DC3545;
+            background-color: #FA7070;
         }
     </style>
 </head>
@@ -306,8 +359,8 @@ const getPreferredTheme = () => {
 
 const setTheme = theme => {
   const themeColors = {
-    blue: 'linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%)',
-    green: 'linear-gradient(181deg, #81A263 85%, rgba(48, 142, 115, 1) 100%)',
+    blue: 'linear-gradient(181deg, #01A2EB 85%, #99D9F5 100%)',
+    green: 'linear-gradient(181deg, #81A263 85%, #308E73 100%)',
     orange: 'linear-gradient(181deg, #ECB159 85%, #B77452 100%)',
     pink: 'linear-gradient(181deg, #FA7070 85%, #D9D9D9 100%)'
   }

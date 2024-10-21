@@ -21,7 +21,7 @@ class NoAuthFilter implements FilterInterface {
                 return redirect()->to('admin/dashboard');
             } else if($userRole['level'] == 'User') {
                 if($session->getFlashdata('sudah_verifikasi')) {
-                    notif_swal('success', 'Berhasil Verifikasi Akun');
+                    notif_swal('success', 'Account Verification Successfully');
                 }
                 return redirect()->to('user/my-profile');
             }

@@ -49,15 +49,15 @@ class Auth extends BaseController
 
                     if ($dataAkun['level'] == 'Super Admin') {
                         session()->set('redirected', 'superadmin');
-                        notif_swal('success', 'Selamat Datang');
+                        notif_swal('success', 'Welcome Super Admin!');
                         return redirect()->to('admin/dashboard');
                     } else if ($dataAkun['level'] == 'Admin') {
                         session()->set('redirected', 'admin');
-                        notif_swal('success', 'Selamat Datang');
+                        notif_swal('success', 'Welcome Admin!');
                         return redirect()->to('admin/dashboard');
                     } else if ($dataAkun['level'] == 'User') {
                         session()->set('redirected', 'user');
-                        notif_swal('success', 'Selamat Datang');
+                        notif_swal('success', 'Welcome User!');
                         return redirect()->to('user/my-profile');
                     }
                 }
@@ -640,7 +640,7 @@ class Auth extends BaseController
             set_cookie('cookie_username', $memberInfo['username'], 3600 * 24 * 30);
             set_cookie('cookie_password', $memberInfo['password'], 3600 * 24 * 30);
 
-            notif_swal('success', 'Berhasil Verifikasi Akun');
+            notif_swal('success', 'Account Verification Successfully');
             return redirect()->to('user/my-profile')->withCookies();
         }
     }
@@ -652,7 +652,7 @@ class Auth extends BaseController
             $userInput = $this->request->getVar('email');
 
             if ($userInput == '') {
-                $err = 'Masukkan Username atau Email untuk melakukan reset password';
+                $err = 'Enter Username or Email to reset password';
             }
 
             if (empty($err)) {

@@ -36,7 +36,7 @@
                 <div class="mb-3 mt-2">
                     <div class="form-floating">
                         <input type="text" name="token" id="inputOTP" class="form-control"
-                            style="background-color: #d9d9d9; border-radius: 15px;" placeholder="Masukkan OTP" required>
+                            style="background-color: #d9d9d9; border-radius: 15px;" placeholder="Input OTP code" required>
                         <label for="inputOTP">Input OTP code</label>
                     </div>
                 </div>

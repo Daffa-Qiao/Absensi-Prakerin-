@@ -1,9 +1,9 @@
 :root {
-    --bs-body-bg: linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%); /* Default theme */
+    --bs-body-bg: linear-gradient(181deg, #01A2EB 85%, #99D9F5 100%); /* Default theme */
 }
 
 body[data-bs-theme="blue"] {
-    --bs-body-bg: linear-gradient(181deg, #00a2e9 85%, rgba(255, 255, 255, 0.63) 100%);
+    --bs-body-bg: linear-gradient(181deg, #01A2EB 85%, #99D9F5 100%);
 }
 
 body[data-bs-theme="green"] {

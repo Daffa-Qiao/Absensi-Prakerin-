@@ -10,15 +10,14 @@
                 <thead>
                     <tr>
                         <th class="text-center" style="min-width: 50px;">No</th>
-                        <th class="text-center" style="min-width: 210px;">Name of Educational Institutions</th>
-                        <th class="text-center" style="min-width: 150px;">Name</th>
+                        <th class="text-center" style="min-width: 180px;">Date</th>
+                        <th class="text-center" style="min-width: 150px;">Name</th> 
                         <th class="text-center" style="min-width: 150px;">Location</th>
                         <th class="text-center" style="min-width: 100px;">Attendance Image</th>
                         <th class="text-center" style="min-width: 100px;">Description</th>
                         <th class="text-center" style="min-width: 100px">Checkin</th>
                         <th class="text-center" style="min-width: 100px">Checkout</th>
-                        <!-- <th class="text-center" style="min-width: 100px;">Status</th> -->
-                        <th class="text-center" style="min-width: 180px;">Date</th>
+                        <th class="text-center" style="min-width: 100px;">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,10 +35,8 @@
                             <td>
                                 <?= $nomor; ?>
                             </td>
-                            <td class="align-middle">
-                                <div class="status <?= (isset($status)) ? $status : '' ?>">
-                                    <?= $value['status']; ?>
-                                </div>
+                            <td>
+                                <?= tanggal_indo($value['waktu_absen']) ?>
                             </td>
                             <td>
                                 <?= $nama_lengkap ?>
@@ -62,8 +59,10 @@
                             <td>
                                 <?= $value['checkout_time']; ?>
                             </td>
-                            <td>
-                                <?= tanggal_indo($value['waktu_absen']) ?>
+                            <td class="align-middle">
+                                <div class="status <?= (isset($status)) ? $status : '' ?>">
+                                    <?= $value['status']; ?>
+                                </div>
                             </td>
                         </tr>
                         <?php

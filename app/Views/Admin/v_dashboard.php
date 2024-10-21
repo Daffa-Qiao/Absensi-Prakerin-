@@ -9,7 +9,7 @@
 <!-- Begin Page Content -->
 <div class="container-fluid p-0">
     <div class="container-fluid d-flex mt-3 p-0">
-        <div class="row row-cols-2">
+        <div class="row row-cols-2 mx-3">
             <div class="col-md-4 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">

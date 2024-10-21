@@ -21,7 +21,7 @@
         <div class="containerInput">
             <form action="<?= route_to('/resetpassword'); ?>" method="post">
                 <div class=" wrapperJudul">
-                    <label>Masukkan Password Baru</label>
+                    <label>Enter New Password</label>
                 </div>
 
                 <?php if (session()->getFlashdata('error')): ?>

@@ -14,6 +14,7 @@ class User extends BaseController
 {
     protected $member;
     protected $absensi;
+    protected $laporan;
     protected $helpers = (['url', 'form', 'global_fungsi_helper']);
 
     function __construct()
@@ -72,6 +73,7 @@ class User extends BaseController
                     'foto_absen' => '',
                     'jenis_user' => $memberInfo['jenis_user'],
                 ];
+                $absensi->insert($updateData);
                 notif_swal('error', 'Missed the absence deadline');
                 return redirect()->back();
             } else {
@@ -220,7 +222,7 @@ class User extends BaseController
         $user = new MemberModel();
         $sesi_nim = session()->get('member_nim_nis');
         $jumlahBaris = 10;
-        $currentPage = $this->request->getVar('page_absensi');
+        $currentPage = $this->request->getVar('page_absensi'); 
         $dataAbsen = $absensi->where('nim_nis', $sesi_nim)->orderBy('id', 'desc')->paginate($jumlahBaris, 'absensi');
         $nama_lengkap = [];
         foreach ($dataAbsen as $v) {
@@ -290,7 +292,7 @@ class User extends BaseController
                 $member->where('member_id', $sesi_id)->set($update)->update();
                 // update sesi foto
                 session()->set('member_foto', $namaFile);
-                notif_swal('success', 'Berhasil Update Data');
+                notif_swal('success', 'Data Updated succesfully');
             }
             return redirect()->back();
         }
@@ -444,6 +446,93 @@ class User extends BaseController
             'nama_lengkap' => $nama_lengkap
         ];
         return view('User/v_historyActivity', $data);
+    }
+    public function activityProcess()
+    {
+        $laporan = new Laporan();
+        $member = new MemberModel();
+        $sesi_nis = session()->get('member_nim_nis');
+        $memberInfo = $member->where('nim_nis', $sesi_nis)->first();
+        $laporanInfo = $laporan->where('nim_nis', $sesi_nis)->orderBy('id', 'desc')->first();
+
+        $today = date('Y-m-d');
+        $currentTime = date('H:i');
+        $lokasi = 
+        $foto = $this->request->getPost('photostore');
+
+        if ($this->request->getVar('waktu_mulai')) {
+            
+                $encoded_data = $_POST['photoStore'];
+                if ($encoded_data == null) {
+                    notif_swal('error', 'Activity Photo required');
+                    return redirect()->back();
+                }
+                if ($lat == '' && $long == '') {
+                    notif_swal('error', 'Location required');
+                    return redirect()->back();
+                }
+
+                $binary_data = base64_decode($encoded_data, true);
+                $photoname = date("Y.m.d") . " - " . date("H.i.s") . '.jpeg';
+                $lokasi = ('lat: ' . $lat . ', long: ' . $long);
+                file_put_contents(FCPATH . 'uploadFoto/' . $photoname, $binary_data);
+
+                $updateData = [
+                    'kegiatan' => $keterangan,
+                    'waktu_laporan' => $today,
+                    'waktu_mulai' => $currentTime,
+                    'waktu_selesai'=> '',
+                    'nama_lengkap' => $memberInfo['nama_lengkap'],
+                    'email' => $memberInfo['email'],
+                    'instansi_pendidikan' => $memberInfo['instansi_pendidikan'],
+                    'nama_instansi' => $memberInfo['nama_instansi'],
+                    'nim_nis' => $memberInfo['nim_nis'],
+                    'lokasi' => $lokasi,
+                    'status' => 'Progress',
+                    'kegiatan' => $kegiatan,
+                    'checkin_time' => $currentTime,
+                    'foto_profile' => $memberInfo['foto'],
+                    'foto_laporan' => $photoname,
+                    'jenis_user' => $memberInfo['jenis_user'],
+                ];
+                $laporan->insert($updateData);
+                notif_swal_tiga('success', $currentTime, 'Successful Start Activity');
+                return redirect()->to('user/attendance');
+            }
+        
+
+        if ($this->request->getVar('checkout')) {
+            if ($currentTime < '14:00:00') {
+                notif_swal('error', 'Checkout time has not yet arrived');
+                return redirect()->back();
+            }
+            if ($absensiInfo == null) {
+                notif_swal('error', 'You havent checked in today');
+                return redirect()->back();
+            }
+            if ($absensiInfo['checkout_time'] != null) {
+                notif_swal('error', 'You checked in today');
+                return redirect()->back();
+            }
+            $encoded_data = $_POST['photoStore'];
+            if ($encoded_data == null) {
+                notif_swal('error', 'Must be absent with photo');
+                return redirect()->back();
+            }
+            $binary_data = base64_decode($encoded_data, true);
+            $photoname = date("Y.m.d") . " - " . date("H.i.s") . '.jpeg';
+            $lokasi = ('lat: ' . $lat . ', long: ' . $long);
+            file_put_contents(FCPATH . 'uploadFoto/' . $photoname, $binary_data);
+            $updateData = [
+                'checkout_time' => $currentTime,
+            ];
+            if ($currentTime >= '17:00:00') {
+                $absensi->where('nim_nis', $sesi_nis)->orderBy('id', 'desc')->set($updateData)->update();
+            }
+            $absensi->where('nim_nis', $sesi_nis)->orderBy('id', 'desc')->set($updateData)->update();
+            notif_swal_tiga('success', 'Check-out Successfully', $currentTime);
+            return redirect()->back();
+        }
     }
 
     public function logoSekolah()
