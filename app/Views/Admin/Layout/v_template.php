@@ -352,7 +352,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">OPTIONS:</h6>
                         <a class="collapse-item ssw <?= (isset($aktif_dataSiswa)) ? 'active text-warning' : '' ?>" href="<?= site_url('admin/data-siswa'); ?>">Student</a>
-                        <a class="collapse-item mhs <?= (isset($aktif_dataMahasiswa)) ? 'active text-info' : '' ?>" href="<?= site_url('admin/data-mahasiswa'); ?>">College Student</a>
+                        <a class="collapse-item mhs <?= (isset($aktif_dataMahasiswa)) ? 'active text-info' : '' ?>" href="<?= site_url('admin/data-mahasiswa'); ?>">College student</a>
                     </div>
                 </div>
             </li>
@@ -366,7 +366,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">OPTIONS:</h6>
-                        <a class="collapse-item ssw <?= (isset($aktif_sekolah) ? 'active text-warning' : ''); ?>" href="<?= site_url('admin/instansi-sekolah'); ?>">High School</a>
+                        <a class="collapse-item ssw <?= (isset($aktif_sekolah) ? 'active text-warning' : ''); ?>" href="<?= site_url('admin/instansi-sekolah'); ?>">School</a>
                         <a class="collapse-item mhs <?= (isset($aktif_universitas) ? 'active text-info' : ''); ?>" href="<?= site_url('admin/instansi-universitas'); ?>">University</a>
                     </div>
                 </div>
@@ -382,7 +382,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">OPTIONS:</h6>
                         <a class="collapse-item ssw <?= (isset($aktif_rekapSiswa) ? 'active text-warning' : ''); ?>" href="<?= site_url('admin/rekap-siswa'); ?>">Student</a>
-                        <a class="collapse-item mhs <?= (isset($aktif_rekapMahasiswa) ? 'active text-info' : ''); ?>" href="<?= site_url('admin/rekap-mahasiswa'); ?>">Collage Student</a>
+                        <a class="collapse-item mhs <?= (isset($aktif_rekapMahasiswa) ? 'active text-info' : ''); ?>" href="<?= site_url('admin/rekap-mahasiswa'); ?>">College student</a>
                     </div>
                 </div>
 
@@ -397,7 +397,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">OPTIONS:</h6>
                         <a class="collapse-item ssw <?= (isset($aktif_rekapAktifitasSiswa) ? 'active text-warning' : ''); ?>" href="<?= site_url('admin/rekap-aktifitas-siswa'); ?>">Student</a>
-                        <a class="collapse-item mhs <?= (isset($aktif_rekapAktifitasMahasiswa) ? 'active text-info' : ''); ?>" href="<?= site_url('admin/rekap-aktifitas-mahasiswa'); ?>">Collage Student</a>
+                        <a class="collapse-item mhs <?= (isset($aktif_rekapAktifitasMahasiswa) ? 'active text-info' : ''); ?>" href="<?= site_url('admin/rekap-aktifitas-mahasiswa'); ?>">College student</a>
                     </div>
                 </div>
             </li>

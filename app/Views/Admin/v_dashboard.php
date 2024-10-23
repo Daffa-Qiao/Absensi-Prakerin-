@@ -112,7 +112,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-0">
                                 <div class="text-xl font-weight-bold text-info text-uppercase mb-1">
-                                    TOTAL COLLAGE 
+                                    TOTAL COLLEGE 
                                     <br>/ STUDENT
                                 </div>
                                 <div class="h3 mb-0 font-weight-bold text-gray-800" name="aktif">

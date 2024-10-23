@@ -441,7 +441,7 @@ class Admin extends BaseController
         $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'College Student')->findAll();
         $dataUser = $user->where('jenis_user', 'College Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
-        $halaman = 'Admin | Collage Student Recap';
+        $halaman = 'Admin | College Student Recap';
         $title = 'Attendance Recap';
 
         $data = [
