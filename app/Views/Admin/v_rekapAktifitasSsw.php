@@ -135,8 +135,8 @@
                 $status = 'proses';
               } else if ($v['status'] == 'Closed') {
                 $status = 'selesai';
-              } else{
-                $status= 'proses';
+              } else {
+                $status = 'proses';
               }
 
             ?>

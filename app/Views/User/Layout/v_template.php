@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8" />
@@ -38,10 +38,12 @@
             font-family: "Poppins", sans-serif;
             /* background-color: var(--bs-body-bg); */
         }
-        .theme{
-            color:var(--text-color);
+
+        .theme {
+            color: var(--text-color);
             font-size: 16px;
         }
+
         .theme-selector .down,
         .theme-selector .up {
             margin-left: 170px;
@@ -60,6 +62,7 @@
             cursor: pointer;
             border: 2px solid transparent;
         }
+
         td .status {
             border-radius: 1rem;
             padding: .4rem 0;
@@ -105,10 +108,12 @@
             background-color: #E53636;
             color: black;
         }
+
         td .status.proses {
             background-color: #FF8F00;
             color: black;
         }
+
         td .status.selesai {
             background-color: #E53636;
             color: black;
@@ -314,84 +319,99 @@
 
     // theme selector
     document.addEventListener('DOMContentLoaded', function() {
-    var themeToggle = document.getElementById('themeToggle');
-    var themeColors = document.querySelector('.theme-colors');
-    var chevronUp = document.querySelector('.theme-selector .up');
-    var chevronDown = document.querySelector('.theme-selector .down');
+        var themeToggle = document.getElementById('themeToggle');
+        var themeColors = document.querySelector('.theme-colors');
+        var chevronUp = document.querySelector('.theme-selector .up');
+        var chevronDown = document.querySelector('.theme-selector .down');
 
-    // Toggle the display of the theme colors
-    themeToggle.addEventListener('click', function() {
-        if (themeColors.style.display === 'none' || themeColors.style.display === '') {
-            themeColors.style.display = 'flex';
-            chevronUp.style.display = 'none';
-            chevronDown.style.display = 'block';
-        } else {
-            themeColors.style.display = 'none';
-            chevronUp.style.display = 'block';
-            chevronDown.style.display = 'none';
-        }
-    });
+        // Toggle the display of the theme colors
+        themeToggle.addEventListener('click', function() {
+            if (themeColors.style.display === 'none' || themeColors.style.display === '') {
+                themeColors.style.display = 'flex';
+                chevronUp.style.display = 'none';
+                chevronDown.style.display = 'block';
+            } else {
+                themeColors.style.display = 'none';
+                chevronUp.style.display = 'block';
+                chevronDown.style.display = 'none';
+            }
+        });
 
-    // Add event listeners to the color divs
-    var colors = document.querySelectorAll('.theme-colors .color');
-    colors.forEach(function(colorDiv) {
-        colorDiv.addEventListener('click', function() {
-            var selectedColor = colorDiv.getAttribute('data-color');
-            document.body.style.backgroundColor = selectedColor;
+        // Add event listeners to the color divs
+        var colors = document.querySelectorAll('.theme-colors .color');
+        colors.forEach(function(colorDiv) {
+            colorDiv.addEventListener('click', function() {
+                var selectedColor = colorDiv.getAttribute('data-color');
+                document.body.style.backgroundColor = selectedColor;
+            });
         });
     });
-});
 
-// theme by bootstrap
-(() => {
-'use strict'
+    // theme by bootstrap
+    (() => {
+        'use strict'
 
-const getStoredTheme = () => localStorage.getItem('theme');
-const setStoredTheme = theme => localStorage.setItem('theme', theme);
+        const getStoredTheme = () => localStorage.getItem('theme');
+        const setStoredTheme = theme => localStorage.setItem('theme', theme);
 
-const getPreferredTheme = () => {
-  const storedTheme = getStoredTheme();
-  if (storedTheme) {
-    return storedTheme;
-  }
-  return 'blue'; 
-}
+        const getPreferredTheme = () => {
+            const storedTheme = getStoredTheme();
+            if (storedTheme) {
+                return storedTheme;
+            }
+            return 'blue';
+        }
 
-const setTheme = theme => {
-  const themeColors = {
-    blue: 'linear-gradient(181deg, #01A2EB 85%, #99D9F5 100%)',
-    green: 'linear-gradient(181deg, #81A263 85%, #308E73 100%)',
-    orange: 'linear-gradient(181deg, #ECB159 85%, #B77452 100%)',
-    pink: 'linear-gradient(181deg, #FA7070 85%, #D9D9D9 100%)'
-  }
-  const textColors = {
-    blue: '#00a2e9', 
-    green: '#81A263', 
-    orange: '#ECB159', 
-    pink: '#FA7070'
-  };
+        const setTheme = theme => {
+            const themeColors = {
+                blue: 'linear-gradient(181deg, #01A2EB 85%, #99D9F5 100%)',
+                green: 'linear-gradient(181deg, #81A263 85%, #308E73 100%)',
+                orange: 'linear-gradient(181deg, #ECB159 85%, #B77452 100%)',
+                pink: 'linear-gradient(181deg, #FA7070 85%, #D9D9D9 100%)'
+            }
+            const textColors = {
+                blue: '#00a2e9',
+                green: '#81A263',
+                orange: '#ECB159',
+                pink: '#FA7070'
+            };
 
-  if (themeColors[theme]) {
-    document.documentElement.style.setProperty('--bs-body-bg', themeColors[theme]);
-    document.body.style.backgroundColor = themeColors[theme];
-    document.documentElement.style.setProperty('--text-color', textColors[theme]);
-  }
-}
+            if (themeColors[theme]) {
+                document.documentElement.style.setProperty('--bs-body-bg', themeColors[theme]);
+                document.body.style.backgroundColor = themeColors[theme];
+                document.documentElement.style.setProperty('--text-color', textColors[theme]);
+            }
+        }
 
-setTheme(getPreferredTheme());
+        setTheme(getPreferredTheme());
 
-window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const theme = toggle.getAttribute('data-bs-theme-value');
-      setStoredTheme(theme);  
-      setTheme(theme); 
-    });
-  });
-});
-})();
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const theme = toggle.getAttribute('data-bs-theme-value');
+                    setStoredTheme(theme);
+                    setTheme(theme);
+                });
+            });
+        });
+    })();
 
-
+    function finish($id) {
+        Swal.fire({
+            title: "Is your activity finished??",
+            text: "Finish time cannot be changed!",
+            icon: "warning",
+            showCancelButton: true,
+            cancelButtonText: 'Cancel',
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "<?= site_url('User/User/finishModal') ?>/" + $id;
+            }
+        });
+    }
 </script>
 
 </html>

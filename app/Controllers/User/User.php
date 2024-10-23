@@ -222,7 +222,7 @@ class User extends BaseController
         $user = new MemberModel();
         $sesi_nim = session()->get('member_nim_nis');
         $jumlahBaris = 10;
-        $currentPage = $this->request->getVar('page_absensi'); 
+        $currentPage = $this->request->getVar('page_absensi');
         $dataAbsen = $absensi->where('nim_nis', $sesi_nim)->orderBy('id', 'desc')->paginate($jumlahBaris, 'absensi');
         $nama_lengkap = [];
         foreach ($dataAbsen as $v) {
@@ -423,12 +423,12 @@ class User extends BaseController
     }
     public function historyActivity()
     {
-        $activity = new Laporan();
+        $laporan = new Laporan();
         $user = new MemberModel();
         $sesi_nim = session()->get('member_nim_nis');
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_activity');
-        $dataActivity = $activity->where('nim_nis', $sesi_nim)->orderBy('id_laporan', 'desc')->paginate($jumlahBaris, 'absensi');
+        $dataActivity = $laporan->where('nim_nis', $sesi_nim)->orderBy('id_laporan', 'desc')->paginate($jumlahBaris, 'absensi');
         $nama_lengkap = [];
         foreach ($dataActivity as $v) {
             $nimUser = $v['nim_nis'];
@@ -441,7 +441,7 @@ class User extends BaseController
             'namaFile' => session()->get('member_foto'),
             'aktif_history_activity' => 'aktif',
             'dataActivity' => $dataActivity,
-            'pager' => $activity->pager,
+            'pager' => $laporan->pager,
             'nomor' => nomor($currentPage, $jumlahBaris),
             'nama_lengkap' => $nama_lengkap
         ];
@@ -452,94 +452,89 @@ class User extends BaseController
         $laporan = new Laporan();
         $member = new MemberModel();
         $sesi_nis = session()->get('member_nim_nis');
+        $id_laporan = session()->get('id_laporan');
         $memberInfo = $member->where('nim_nis', $sesi_nis)->first();
-        $laporanInfo = $laporan->where('nim_nis', $sesi_nis)->orderBy('id', 'desc')->first();
+        $laporanInfo = $laporan->where('nim_nis', $sesi_nis)->orderBy('id_laporan', 'desc')->first();
 
         $today = date('Y-m-d');
+        $gedung = $this->request->getPost('gedung');
+        $lantai = $this->request->getPost('lantai');
+        $keterangan = $this->request->getPost('keterangan');
         $currentTime = date('H:i');
-        $lokasi = 
         $foto = $this->request->getPost('photostore');
 
         if ($this->request->getVar('waktu_mulai')) {
-            
-                $encoded_data = $_POST['photoStore'];
-                if ($encoded_data == null) {
-                    notif_swal('error', 'Activity Photo required');
-                    return redirect()->back();
-                }
-                if ($lat == '' && $long == '') {
-                    notif_swal('error', 'Location required');
-                    return redirect()->back();
-                }
-
-                $binary_data = base64_decode($encoded_data, true);
-                $photoname = date("Y.m.d") . " - " . date("H.i.s") . '.jpeg';
-                $lokasi = ('lat: ' . $lat . ', long: ' . $long);
-                file_put_contents(FCPATH . 'uploadFoto/' . $photoname, $binary_data);
-
-                $updateData = [
-                    'kegiatan' => $keterangan,
-                    'waktu_laporan' => $today,
-                    'waktu_mulai' => $currentTime,
-                    'waktu_selesai'=> '',
-                    'nama_lengkap' => $memberInfo['nama_lengkap'],
-                    'email' => $memberInfo['email'],
-                    'instansi_pendidikan' => $memberInfo['instansi_pendidikan'],
-                    'nama_instansi' => $memberInfo['nama_instansi'],
-                    'nim_nis' => $memberInfo['nim_nis'],
-                    'lokasi' => $lokasi,
-                    'status' => 'Progress',
-                    'kegiatan' => $kegiatan,
-                    'checkin_time' => $currentTime,
-                    'foto_profile' => $memberInfo['foto'],
-                    'foto_laporan' => $photoname,
-                    'jenis_user' => $memberInfo['jenis_user'],
-                ];
-                $laporan->insert($updateData);
-                notif_swal_tiga('success', $currentTime, 'Successful Start Activity');
-                return redirect()->to('user/attendance');
-            }
-        
-
-        if ($this->request->getVar('checkout')) {
-            if ($currentTime < '14:00:00') {
-                notif_swal('error', 'Checkout time has not yet arrived');
-                return redirect()->back();
-            }
-            if ($absensiInfo == null) {
-                notif_swal('error', 'You havent checked in today');
-                return redirect()->back();
-            }
-            if ($absensiInfo['checkout_time'] != null) {
-                notif_swal('error', 'You checked in today');
-                return redirect()->back();
-            }
+            $lokasi = ($gedung . ' Lantai ' . $lantai);
             $encoded_data = $_POST['photoStore'];
             if ($encoded_data == null) {
-                notif_swal('error', 'Must be absent with photo');
+                notif_swal('error', 'Activity Photo required');
                 return redirect()->back();
             }
+            if ($gedung == '' && $lantai == '') {
+                notif_swal('error', 'Location required');
+                return redirect()->back();
+            }
+
             $binary_data = base64_decode($encoded_data, true);
             $photoname = date("Y.m.d") . " - " . date("H.i.s") . '.jpeg';
-            $lokasi = ('lat: ' . $lat . ', long: ' . $long);
             file_put_contents(FCPATH . 'uploadFoto/' . $photoname, $binary_data);
+
             $updateData = [
-                'checkout_time' => $currentTime,
+                'kegiatan' => $keterangan,
+                'nama_lengkap' => $memberInfo['nama_lengkap'],
+                'email' => $memberInfo['email'],
+                'instansi_pendidikan' => $memberInfo['instansi_pendidikan'],
+                'nama_instansi' => $memberInfo['nama_instansi'],
+                'nim_nis' => $memberInfo['nim_nis'],
+                'lokasi' => $lokasi,
+                'status' => 'Progress',
+                'waktu_mulai' => $currentTime,
+                'waktu_selesai' => '',
+                'foto_profile' => $memberInfo['foto'],
+                'foto_laporan' => $photoname,
+                'jenis_user' => $memberInfo['jenis_user'],
             ];
-            if ($currentTime >= '17:00:00') {
-                $absensi->where('nim_nis', $sesi_nis)->orderBy('id', 'desc')->set($updateData)->update();
-            }
-            $absensi->where('nim_nis', $sesi_nis)->orderBy('id', 'desc')->set($updateData)->update();
-            notif_swal_tiga('success', 'Check-out Successfully', $currentTime);
-            return redirect()->back();
+            $laporan->insert($updateData);
+            notif_swal_tiga('success', $currentTime, 'Start Activity Successfully');
+            return redirect()->to('user/activity');
+        }
+
+
+        if ($this->request->getVar('waktu_selesai')) {
+            $updateData = [
+                'waktu_selesai' => $currentTime,
+                'status' => "Closed",
+            ];
+            $laporan->where('id_laporan')->orderBy('id_laporan', 'desc')->set($updateData)->update();
         }
     }
+    public function finish($id)
+    {
+        $laporan = new Laporan();
+        $data = $laporan->find($id);
 
+        return json_encode($data);
+    }
+
+    public function finishModal($id)
+    {
+        $laporan  = new Laporan();
+        $currentTime = date('H:i');
+        $data = [
+            'id_laporan' => $id,
+            'waktu_selesai' => $currentTime,
+            'status' => 'Closed'
+        ];
+        $laporan = new Laporan();
+        $laporan->save($data);
+
+        notif_swal_tiga('success', 'Finished Activity Successfully', $currentTime);
+        return redirect()->back();
+    }
     public function logoSekolah()
     {
         $instansi = new Instansi();
         $user = new MemberModel();
         $sesi_nim = session()->get('member_nim_nis');
-        
     }
 }

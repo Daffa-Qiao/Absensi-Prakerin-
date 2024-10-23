@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="body-dua-activity">
-            <form id="myForm" action="<?= site_url('user/activityProccess') ?>" method="post" enctype="multipart/form-data">
+            <form id="myForm" action="<?= site_url('user/activityProcess') ?>" method="post" enctype="multipart/form-data">
                 <div class="grid-satu-activity">
                     <div class="row justify-content-md-center">
                         <div class="container">
@@ -53,7 +53,7 @@
                                     <span id="file-chosen" class="filename customFileChosen">No file selected</span>
                                 </div>
                             </div>
-                            <input name="foto_absen" type="file" id="upload" accept=".png, .jpg, .jpeg" style="display: none;" onchange="updateFileDetails()"/>
+                            <input name="foto_laporan" type="file" id="upload" accept=".png, .jpg, .jpeg" style="display: none;" onchange="updateFileDetails()" />
                         </div>
                     </div>
                 </div>
@@ -61,20 +61,20 @@
                     <div class="container" style="justIfy-content:start">
                         <div class="row custom-row">
                             <div class="col-6" style="border:2px solid black; width:49%">
-                                <textarea rows="8" placeholder="Description...." style="width: 100%; padding:10px 15px; margin-top:5px; border:2px solid black"></textarea>
-                                <select class="form-select border border-dark data-container" id="lokasi" aria-label="multiple select example">
+                                <textarea rows="8" placeholder="Description...." style="width: 100%; padding:10px 15px; margin-top:5px; border:2px solid black" id="" name="keterangan"></textarea>
+                                <select class="form-select border border-dark data-container" id="gedung" name="gedung" aria-label="multiple select example">
                                     <option disabled selected>Location</option>
                                     <option value="Gedung Karya">Karya</option>
                                     <option value="Gedung Karsa">Karsa</option>
                                     <option value="Gedung Cipta">Cipta</option>
                                     <option value="Merdeka Timur">Merdeka Timur</option>
                                 </select>
-                                <select class="form-select border-dark mt-3" aria-label="Default select example" id="lantai">
-                                   <option disabled selected>Floor</option>
+                                <select class="form-select border-dark mt-3" aria-label="Default select example" name="lantai" id="lantai">
+                                    <option disabled selected>Floor</option>
                                 </select>
                                 <div class="buttonWrapper">
-                                    <button type="submit" class="btn btn-primary" name="mulai" value="Start Time" style="border:2px solid black;">Start Time</button>
-                                    <button type="submit" class="btn btn-success" name="selesai" value="End Time" style="border:2px solid black;">End Time</button>
+                                    <button type="submit" class="btn btn-primary" name="waktu_mulai" value="Start Time" style="border:2px solid black;">Start Time</button>
+                                    <button type="submit" class="btn btn-success" name="waktu_selesai" value="End Time" style="border:2px solid black;">End Time</button>
                                 </div>
                             </div>
                             <div class="col-6 ml-4" style="border:2px solid black;">
@@ -126,49 +126,17 @@
             buttonFoto = true; // Tombol telah diklik
         });
 
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            if (!buttonFoto) {
-                event.preventDefault(); // Mencegah submit formulir
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Harus absen dengan foto',
+        // document.getElementById('myForm').addEventListener('submit', function(event) {
+        //     if (!buttonFoto) {
+        //         event.preventDefault(); // Mencegah submit formulir
+        //         Swal.fire({
+        //             icon: 'error',
+        //             title: 'Harus absen dengan foto',
 
-                })
-            }
-        });
+        //         })
+        //     }
+        // });
 
-        // maps
-        const getLocationButton = document.getElementById("getLocation");
-        const latitudeInput = document.getElementById("latitude");
-        const longitudeInput = document.getElementById("longitude");
-
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                const latitude = position.coords.latitude;
-                const longitude = position.coords.longitude;
-                const accuracy = position.coords.accuracy;
-
-                // Memasukkan nilai latitude dan longitude ke dalam input
-                latitudeInput.value = latitude;
-                longitudeInput.value = longitude;
-                var map = L.map("map").setView([latitude, longitude], 130);
-                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    maxZoom: 19,
-                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                }).addTo(map);
-                var marker = L.marker([latitude, longitude]).addTo(map);
-                var circle = L.circle([latitude, longitude], {
-                    radius: accuracy
-                }).addTo(map);
-                map.fitBounds(circle.getBounds())
-
-                var googleStreets = L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}', {
-                    maxZoom: 20,
-                    subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-                }).addTo(map)
-
-            });
-        }
         //Tanggal
         let dateToday = document.getElementById("date-today");
 
@@ -189,50 +157,50 @@
         }, 1000);
 
         // filter lantai
-        var lokasi_dan_lantai = {
+        var gedung_dan_lantai = {
             "Gedung Karya": [1, 2, "LPSE", "Masjid", "P5", "P6", "Mataram", "Parkiran", "Kantin", "Server", 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, "Lift Karya"],
             "Gedung Karsa": [1, 2, 3, 4, 5, 6, 7, 8, 9, "Lift Karsa"],
             "Gedung Cipta": [1, 2, 3, 4, 5, 6, 7, "Daycare", "Lift Cipta", "Nanggala"],
             "Merdeka Timur": [1, 2, 3, "DC"]
         };
-        document.getElementById('lokasi').addEventListener('change', function () {
+        document.getElementById('gedung').addEventListener('change', function() {
             var selectedLocation = this.value;
-            var floor = lokasi_dan_lantai[selectedLocation];
+            var floor = gedung_dan_lantai[selectedLocation];
             updateLokasi(floor);
         });
-    
+
         function updateLokasi(floor) {
             var lantaiDropdown = document.getElementById('lantai');
             lantaiDropdown.innerHTML = "";
 
-        floor.forEach(function(floorNumber) {
-            var option = document.createElement('option');
-            option.value = floorNumber;
-            option.text = floorNumber;
-            lantaiDropdown.add(option);
-        });
+            floor.forEach(function(floorNumber) {
+                var option = document.createElement('option');
+                option.value = floorNumber;
+                option.text = floorNumber;
+                lantaiDropdown.add(option);
+            });
 
-    }
+        }
 
         // Upload Foto
         function updateFileDetails() {
-        const fileInput = document.getElementById('upload');
-        const fileChosen = document.getElementById('file-chosen');
-        
-        if (fileInput.files.length > 0) {
-            // Menampilkan nama file di samping Add File
-            fileChosen.textContent = fileInput.files[0].name;
+            const fileInput = document.getElementById('upload');
+            const fileChosen = document.getElementById('file-chosen');
 
-            // Menampilkan gambar pratinjau di Documentation Results
-            var output = document.getElementById('output');
-            output.src = URL.createObjectURL(fileInput.files[0]);
-            output.onload = function() {
-                URL.revokeObjectURL(output.src); // free memory
-            };
-        } else {
-            fileChosen.textContent = 'No file selected';
+            if (fileInput.files.length > 0) {
+                // Menampilkan nama file di samping Add File
+                fileChosen.textContent = fileInput.files[0].name;
+
+                // Menampilkan gambar pratinjau di Documentation Results
+                var output = document.getElementById('output');
+                output.src = URL.createObjectURL(fileInput.files[0]);
+                output.onload = function() {
+                    URL.revokeObjectURL(output.src); // free memory
+                };
+            } else {
+                fileChosen.textContent = 'No file selected';
+            }
         }
-    }
     </script>
 
 </main>

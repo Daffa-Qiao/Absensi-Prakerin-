@@ -27,10 +27,10 @@
                             $status = 'proses';
                         } else if ($value['status'] == 'Closed') {
                             $status = 'selesai';
-                        } else{
-                            $status= 'proses';
+                        } else {
+                            $status = 'proses';
                         }
-                        ?>
+                    ?>
                         <tr>
                             <td>
                                 <?= $nomor; ?>
@@ -57,7 +57,14 @@
                                 <?= $value['waktu_mulai']; ?>
                             </td>
                             <td>
-                                <?= $value['waktu_selesai']; ?>
+                                <?php
+                                if ($value['waktu_selesai'] == null) {
+                                    $id = $value['id_laporan'];
+                                    echo '<a class="btn btn-danger btn-circle mb-1"onclick="finish(' . $id . ')">Finish Time</a>';
+                                } else {
+                                    echo $value['waktu_selesai'];
+                                }
+                                ?>
                             </td>
                             <td class="align-middle">
                                 <div class="status <?= (isset($status)) ? $status : '' ?>">
@@ -65,12 +72,12 @@
                                 </div>
                             </td>
                         </tr>
-                        <?php
+                    <?php
                         $nomor++;
                     } ?>
                 </tbody>
             </table>
-            <?= $pager->links('absensi', 'absensitable') ?>
+            <?= $pager->links('laporan', 'absensitable') ?>
         </div>
     </div>
 </main>

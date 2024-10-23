@@ -103,7 +103,7 @@ class Modal extends BaseController
             $email = $this->request->getPost('email');
             $instansi = $this->request->getPost('instansi');
             $nama_guru = $this->request->getPost('nama_pembimbing');
-            $no_guru=$this->request->getPost('no_pembimbing');
+            $no_guru = $this->request->getPost('no_pembimbing');
             $nama_instansi = strtoupper($this->request->getPost('nama_instansi'));
 
             $data = [
@@ -118,7 +118,7 @@ class Modal extends BaseController
                 'instansi_pendidikan' => $instansi,
                 'nama_instansi' => $nama_instansi,
                 'nama_pembimbing' => $nama_guru,
-                'no_pembimbing'=> $no_guru,
+                'no_pembimbing' => $no_guru,
                 'is_verifikasi' => 'yes'
             ];
             $user = new MemberModel();
@@ -258,8 +258,8 @@ class Modal extends BaseController
                 'no_hp' => $no_hp,
                 'instansi_pendidikan' => $instansi,
                 'nama_instansi' => $nama_instansi,
-                'nama_pembimbing'=> $nama_guru,
-                'no_pembimbing'=> $no_guru,
+                'nama_pembimbing' => $nama_guru,
+                'no_pembimbing' => $no_guru,
                 'foto_instansi' => null,
             ];
             $user = new MemberModel();
@@ -281,8 +281,8 @@ class Modal extends BaseController
                     'edit_email' => $validasi->getError('edit_email'),
                     'edit_instansi' => $validasi->getError('edit_instansi'),
                     'edit_nama_instansi' => $validasi->getError('edit_nama_instansi'),
-                    'edit_nama_pembimbing'=> $validasi->getError('edit_nama_pembimbing'),
-                    'edit_no_pembimbing'=> $validasi->getError('edit_no_pembimbing')
+                    'edit_nama_pembimbing' => $validasi->getError('edit_nama_pembimbing'),
+                    'edit_no_pembimbing' => $validasi->getError('edit_no_pembimbing')
                 ],
             ];
         }
@@ -601,10 +601,10 @@ class Modal extends BaseController
                     'required' => 'End time must be filled',
                 ]
             ],
-            'lokasi'=>[
-                'rules'=>'required',
-                'errors'=>[
-                    'required'=>'Location must be filled',
+            'lokasi' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Location must be filled',
                 ]
             ]
         ];
@@ -618,10 +618,10 @@ class Modal extends BaseController
                     'laporan_nama_lengkap' => $validasi->getError('laporan_nama_lengkap'),
                     'laporan_nim_nis' => $validasi->getError('laporan_nim_nis'),
                     'laporan_jenis_user' => $validasi->getError('laporan_jenis_user'),
-                    'lokasi'=> $validasi->getError('lokasi'),
+                    'lokasi' => $validasi->getError('lokasi'),
                     'status' => $validasi->getError('status'),
                     'waktu_mulai' => $validasi->getError('waktu_mulai'),
-                    'waktu_selesai'=>$validasi -> getError('waktu_selesai'),
+                    'waktu_selesai' => $validasi->getError('waktu_selesai'),
                     'keterangan' => $validasi->getError('keterangan'),
                     'foto' => $validasi->getError('foto'),
                 ]
@@ -650,7 +650,7 @@ class Modal extends BaseController
         $keterangan = $this->request->getPost('keterangan');
         $lokasi = $this->request->getPost('lokasi');
         $waktu_mulai = $this->request->getVar('waktu_mulai');
-        $waktu_selesai= $this->request->getVar('waktu_selesai');
+        $waktu_selesai = $this->request->getVar('waktu_selesai');
         $foto = $this->request->getFile('foto');
 
         if ($foto->isValid()) {
@@ -673,7 +673,7 @@ class Modal extends BaseController
             'nama_instansi' => $infoUser['nama_instansi'],
             'instansi_pendidikan' => $infoUser['instansi_pendidikan'],
             'waktu_mulai' => $waktu_mulai,
-            'waktu_selesai'=> $waktu_selesai,
+            'waktu_selesai' => $waktu_selesai,
             'foto_laporan' => $namaFile
         ];
         $tambahLaporan = new Laporan();

@@ -21,7 +21,7 @@ $routes->group('user/', ['filter' => 'authuser'], function ($routes) {
     $routes->get('setting', 'User\User::setting');
     $routes->post('setting', 'User\User::settingProcess');
     $routes->get('activity', 'User\User::activity');
-    $routes->add('activityProccess', 'User\User::activityProcess');
+    $routes->add('activityProcess', 'User\User::activityProcess');
 });
 $routes->get('/', 'User\Auth::login', ['filter' => 'noauth']);
 $routes->group('/', ['filter' => 'noauth'], function ($routes) {
