@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2024 at 07:32 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 28 Okt 2024 pada 04.44
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `absensi`
+-- Struktur dari tabel `absensi`
 --
 
 CREATE TABLE `absensi` (
@@ -46,24 +46,26 @@ CREATE TABLE `absensi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `absensi`
+-- Dumping data untuk tabel `absensi`
 --
 
 INSERT INTO `absensi` (`id`, `nama_lengkap`, `email`, `nim_nis`, `jenis_user`, `instansi_pendidikan`, `nama_instansi`, `status`, `keterangan`, `lokasi`, `checkin_time`, `checkout_time`, `foto_profile`, `foto_absen`, `waktu_absen`) VALUES
-(918, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Izin', 'asdad', NULL, '13:52', NULL, 'profile.png', '2024.07.25 - 13.56.34.jpeg', '2024-07-25'),
+(918, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Izin', 'asdad', NULL, '13:52', '15:42', 'profile.png', '2024.07.25 - 13.56.34.jpeg', '2024-07-25'),
 (920, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '10:01', NULL, 'profile.png', '2024.09.09 - 10.01.41.jpeg', '2024-09-09'),
-(921, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Izin', 'pulang', NULL, '10:02', NULL, 'profile.png', '2024.09.09 - 10.03.02.jpeg', '2024-09-09'),
-(922, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Sakit', 'SAKIT PUSING', NULL, '10:42', NULL, 'profile.png', '2024.09.09 - 10.42.42.jpeg', '2024-09-09'),
-(923, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Alpa', 'cabut', NULL, '10:58', NULL, 'profile.png', '2024.09.09 - 10.58.36.jpeg', '2024-09-09'),
-(924, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '11:06', NULL, 'profile.png', '2024.09.09 - 11.06.43.jpeg', '2024-09-09'),
+(921, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Izin', 'pulang', NULL, '10:02', '15:42', 'profile.png', '2024.09.09 - 10.03.02.jpeg', '2024-09-09'),
+(922, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Sakit', 'SAKIT PUSING', NULL, '10:42', '15:42', 'profile.png', '2024.09.09 - 10.42.42.jpeg', '2024-09-09'),
+(923, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Alpa', 'cabut', NULL, '10:58', '15:42', 'profile.png', '2024.09.09 - 10.58.36.jpeg', '2024-09-09'),
+(924, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '11:06', '15:42', 'profile.png', '2024.09.09 - 11.06.43.jpeg', '2024-09-09'),
 (925, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '19:21', NULL, 'profile.png', '2024.09.25 - 19.21.34.jpeg', '2024-09-25'),
 (926, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', NULL, '10:46', NULL, 'profile.png', '2024.10.14 - 10.46.13.jpeg', '2024-10-14'),
-(927, '', '', '', NULL, '', '', '', '', NULL, '', '15:40', '', '', '2024-10-14');
+(927, '', '', '', NULL, '', '', '', '', NULL, '', '15:40', '', '', '2024-10-14'),
+(928, 'Chelsea Ramadhani', '', '2214315', 'College Student', 'University', 'UNIVERSITAS GAJAH MADA', 'Alpa', 'ada acra keluarga', NULL, '15:14', NULL, 'profile.png', '2024.10.21 - 14.12.45.jpeg', '2024-10-21'),
+(929, 'Daffa Reivan', 'daffa.sweet100@gmail.com', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Masuk', '', 'lat: -6.1693543, long: 106.8244864', '10:40', NULL, 'profile.png', '2024.10.22 - 10.40.46.jpeg', '2024-10-22');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `instansi`
+-- Struktur dari tabel `instansi`
 --
 
 CREATE TABLE `instansi` (
@@ -73,7 +75,7 @@ CREATE TABLE `instansi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `instansi`
+-- Dumping data untuk tabel `instansi`
 --
 
 INSERT INTO `instansi` (`id`, `nama_instansi`, `foto_instansi`) VALUES
@@ -92,7 +94,7 @@ INSERT INTO `instansi` (`id`, `nama_instansi`, `foto_instansi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `laporan`
+-- Struktur dari tabel `laporan`
 --
 
 CREATE TABLE `laporan` (
@@ -106,7 +108,7 @@ CREATE TABLE `laporan` (
   `status` varchar(25) NOT NULL,
   `kegiatan` text NOT NULL,
   `foto_profile` varchar(255) NOT NULL,
-  `waktu_laporan` date NOT NULL,
+  `waktu_laporan` date DEFAULT current_timestamp(),
   `lokasi` varchar(255) NOT NULL,
   `waktu_mulai` varchar(25) NOT NULL,
   `waktu_selesai` varchar(25) DEFAULT NULL,
@@ -114,22 +116,27 @@ CREATE TABLE `laporan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `laporan`
+-- Dumping data untuk tabel `laporan`
 --
 
 INSERT INTO `laporan` (`id_laporan`, `nama_lengkap`, `email`, `nim_nis`, `jenis_user`, `instansi_pendidikan`, `nama_instansi`, `status`, `kegiatan`, `foto_profile`, `waktu_laporan`, `lokasi`, `waktu_mulai`, `waktu_selesai`, `foto_laporan`) VALUES
-(5, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'tes1', 'profile.png', '2024-10-14', 'karya', '', NULL, '2024.10.14 - 11.54.15.png'),
+(5, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'tes1', 'profile.png', '2024-10-14', 'karya', '', '11:35', '2024.10.14 - 11.54.15.png'),
 (6, 'Bagoes Sholeh', '', '2214312221', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Progres', 'tes4', 'profile.png', '2024-10-16', 'Cipta', '', NULL, '2024.10.14 - 12.05.01.png'),
 (7, 'Chelsea Ramadhani', '', '12222222', 'Student', 'School', 'SMKD1', 'Progres', 'tes5', 'profile.png', '2024-10-14', 'karya', '', NULL, '2024.10.14 - 12.06.46.png'),
 (8, 'Nur Aini', '', '2214312', 'Student', 'School', 'SMK SSDD', 'Progres', 'tes', 'profile.png', '2024-10-14', 'Cipta', '', NULL, '2024.10.14 - 12.10.51.png'),
 (10, 'Chelsea Ramadhani', '', '12222222', 'Student', 'School', 'SMKD1', 'Progress', 'tes6', 'profile.png', '2024-10-14', 'Merdeka Timur', '', NULL, '2024.10.14 - 12.21.11.png'),
-(11, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'tes7', 'profile.png', '2024-10-14', 'Merdeka Timur', '', NULL, '2024.10.14 - 12.28.27.png'),
-(12, 'Chelsea Ramadhani', '', '12222222', 'Student', 'School', 'SMKD1', 'Closed', 'tes8', 'profile.png', '0000-00-00', 'Merdeka Timur', '13:30', '14:30', '2024.10.14 - 12.30.43.png');
+(11, 'Daffa Reivan', '', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'tes7', 'profile.png', '2024-10-14', 'Merdeka Timur', '', '11:35', '2024.10.14 - 12.28.27.png'),
+(12, 'Chelsea Ramadhani', '', '12222222', 'Student', 'School', 'SMKD1', 'Closed', 'tes8', 'profile.png', '0000-00-00', 'Merdeka Timur', '13:30', '14:30', '2024.10.14 - 12.30.43.png'),
+(13, 'Daffa Reivan', 'daffa.sweet100@gmail.com', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'tes', 'profile.png', '0000-00-00', 'Gedung Karya1', '11:23', '11:35', '2024.10.22 - 11.23.53.jpe'),
+(14, 'Daffa Reivan', 'daffa.sweet100@gmail.com', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'tes4', 'profile.png', '0000-00-00', 'Gedung Karsa1', '11:27', '11:35', '2024.10.22 - 11.27.07.jpe'),
+(16, 'Daffa Reivan', 'daffa.sweet100@gmail.com', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'tes', 'profile.png', '2024-10-22', 'Gedung Karsa Lantai 1', '12:59', '12:59', '2024.10.22 - 12.59.29.jpe'),
+(17, 'Daffa Reivan', 'daffa.sweet100@gmail.com', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Closed', 'asdokasdkoa', 'profile.png', '2024-10-22', 'Merdeka Timur Lantai DC', '13:00', '13:01', '2024.10.22 - 13.00.19.jpe'),
+(18, 'Daffa Reivan', 'daffa.sweet100@gmail.com', '141141', 'Student', 'School', 'SMKN 1 KOTA BEKASI', 'Progress', 'tes', 'profile.png', '2024-10-22', 'Gedung Cipta Lantai Nanggala', '13:02', '', '2024.10.22 - 13.02.07.jpe');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member`
+-- Struktur dari tabel `member`
 --
 
 CREATE TABLE `member` (
@@ -156,7 +163,7 @@ CREATE TABLE `member` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `member`
+-- Dumping data untuk tabel `member`
 --
 
 INSERT INTO `member` (`member_id`, `username`, `password`, `email`, `nama_lengkap`, `nim_nis`, `no_hp`, `foto`, `jenis_kelamin`, `jenis_user`, `instansi_pendidikan`, `nama_instansi`, `level`, `token`, `is_verifikasi`, `tanggal_bergabung`, `updated_at`, `nama_pembimbing`, `no_pembimbing`, `status`) VALUES
@@ -165,10 +172,11 @@ INSERT INTO `member` (`member_id`, `username`, `password`, `email`, `nama_lengka
 (55, 'celsi', '12345678', 'chelsearamadhani@gmail.com', 'Chelsea Ramadhani', '12222222', '087872825833', 'profile.png', 'Female', 'Student', 'School', 'SMKD1', 'User', NULL, 'yes', '2024-07-16', '2024-10-14 02:11:43', 'tes', '08238238291', 'Written Agreement'),
 (56, 'sdsjj', '12345678', 'sssa@gmail.com', 'Nur Aini', '2214312', '081290624643', 'profile.png', 'Female', 'Student', 'School', 'SMK SSDD', 'User', NULL, 'yes', '2024-07-16', '2024-07-16 04:17:16', '', '', 'Good'),
 (57, 'sds', '12345678', 'chelsearamadhani91@gmail.com', 'Chelsea Ramadhani', '2214315', '085714108997', 'profile.png', 'Female', 'College Student', 'University', 'UNIVERSITAS GAJAH MADA', 'User', NULL, 'yes', '2024-07-18', '2024-10-10 12:05:38', '', '', 'Terminated'),
-(58, '', '', '', '', '', '', '', 'Male', NULL, '', '', 'User', NULL, 'no', '2024-07-25', '2024-07-25 06:29:59', '', '', 'Good');
+(59, 'nulnul', '12345678', 'iuwe@gmail.com', 'Inul', '123335', '089010121212', 'profile.png', 'Male', 'Student', 'School', 'SMK', 'User', NULL, 'yes', '2024-10-14', '2024-10-14 08:00:57', 'smk', '88889090909', 'Good'),
+(60, 'ipul', '12345678', 'saipul@gmail.com', 'Saipul', '98765555', '08901012345', 'profile.png', 'Male', 'Student', 'School', 'SMK', 'User', NULL, 'yes', '2024-10-14', '2024-10-14 08:19:49', 'smk', '88889090908', 'Good');
 
 --
--- Triggers `member`
+-- Trigger `member`
 --
 DELIMITER $$
 CREATE TRIGGER `set_jenis_user_trigger` BEFORE UPDATE ON `member` FOR EACH ROW BEGIN
@@ -196,56 +204,56 @@ DELIMITER ;
 --
 
 --
--- Indexes for table `absensi`
+-- Indeks untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `instansi`
+-- Indeks untuk tabel `instansi`
 --
 ALTER TABLE `instansi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `laporan`
+-- Indeks untuk tabel `laporan`
 --
 ALTER TABLE `laporan`
   ADD PRIMARY KEY (`id_laporan`);
 
 --
--- Indexes for table `member`
+-- Indeks untuk tabel `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`member_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `absensi`
+-- AUTO_INCREMENT untuk tabel `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=928;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=930;
 
 --
--- AUTO_INCREMENT for table `instansi`
+-- AUTO_INCREMENT untuk tabel `instansi`
 --
 ALTER TABLE `instansi`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `laporan`
+-- AUTO_INCREMENT untuk tabel `laporan`
 --
 ALTER TABLE `laporan`
-  MODIFY `id_laporan` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_laporan` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `member`
+-- AUTO_INCREMENT untuk tabel `member`
 --
 ALTER TABLE `member`
-  MODIFY `member_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `member_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
