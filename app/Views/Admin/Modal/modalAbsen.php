@@ -22,8 +22,15 @@
                 id="myForm">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="absenNimNis">NIM / NIS</label>
-                        <input type="text" name="absen_nim_nis" class="form-control autoDropdown" id="absenNimNis" />
+                        <label for="absenNimNis">Full Name</label>
+                        <select name="absen_nim_nis"  id="absenNimNis"  class="custom-select">
+                            <option value="" hidden></option>
+                        <?php foreach ($dataUser as $usr) : ?>
+                            <option value="<?= $usr['nim_nis'] ?>">
+                                <?= $usr['nama_lengkap'] ?>
+                            </option>
+                        <?php endforeach ?>
+                        </select>
                         <div class="invalid-feedback errorNim_nis">
 
                         </div>
