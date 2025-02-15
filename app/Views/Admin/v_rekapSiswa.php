@@ -44,38 +44,6 @@
 <div class="container-fluid p-0">
     <div class="card mt-3">
         <div class="card-body m-auto py-2" style="width: 90%">
-            <form action="<?= route_to('/rekap-siswa'); ?>" method="post" id="filterForm">
-                <div class="row text-center justify-content-center ">
-                    <div class="col-sm-4 col-md-4">
-                        <div class="form-group basic mb-0 my-2">
-                            <div class="input-wrapper">
-                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Start Date :
-                                </label>
-                                <input type="date" class="form-control start_date" id="Fdatepicker" name="start_date"
-                                    placeholder="Tanggal Awal"
-                                    value="<?= (isset($start_date) ? $start_date : ''); ?>" />
-                                <input type="text" id="tanggalA" hidden>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-4 my-2">
-                        <div class="form-group basic mb-0">
-                            <div class="input-wrapper">
-                                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">End Date :
-                                </label>
-                                <input type="date" class="form-control end_date" id="Ldatepicker" name="end_date"
-                                    placeholder="Tanggal Akhir" value="<?= (isset($end_date) ? $end_date : ''); ?>" />
-                                <input type="text" id="tanggalB" hidden>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-1 col-md-1 my-2 d-flex justify-content-center align-items-end">
-                        <a class="btn btn-secondary" href="<?= site_url('admin/rekap-siswa'); ?>">
-                            <i class="fa-solid fa-rotate-left"></i>
-                        </a>
-                    </div>
-                </div>
-            </form>
             <div class="row text-center justify-content-center py-2">
                 <div class="col-sm-2 col-md-4 d-flex flex-column align-items-end pb-2">
                 <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Name :</label>

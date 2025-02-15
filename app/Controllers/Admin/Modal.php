@@ -125,7 +125,7 @@ class Modal extends BaseController
             $user->save($data);
 
             $hasil['sukses'] = true;
-            notif_swal('success', 'Successfully Add User');
+            notif_swal('success', 'Successfully Add Activity');
         } else {
             // $hasil['sukses'] = false;
             $hasil = [

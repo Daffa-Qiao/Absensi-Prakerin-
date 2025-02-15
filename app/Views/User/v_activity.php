@@ -74,7 +74,6 @@
                                 </select>
                                 <div class="buttonWrapper">
                                     <button type="submit" class="btn btn-primary" name="waktu_mulai" value="Start Time" style="border:2px solid black;">Start Time</button>
-                                    <button type="submit" class="btn btn-success" name="waktu_selesai" value="End Time" style="border:2px solid black;">End Time</button>
                                 </div>
                             </div>
                             <div class="col-6 ml-4" style="border:2px solid black;">

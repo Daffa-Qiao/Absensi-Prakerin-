@@ -330,12 +330,19 @@
 
             <!-- Heading -->
 
-            <li class="nav-item <?= (isset($aktif_dataAbsen)) ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= site_url('admin/data-absen'); ?>" style="width: 270px !important">
-                    <i class="bi bi-pencil-square"></i>
-                    <span>Attendance Data</span></a>
+            <li class="nav-item <?= (isset($aktif_dataAbsen) ? $aktif_dataAbsen : '');?>">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAttendance" aria-expanded="true" aria-controls="collapseAttendance" style="width: 270px !important">
+                    <i class="bi bi-person-fill"></i>
+                    <span>Attendance Data</span>
+                </a>
+                <div id="collapseAttendance" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">OPTIONS:</h6>
+                        <a class="collapse-item ssw <?= (isset($aktif_dataAbsenSiswa)) ? 'active text-warning' : '' ?>" href="<?= site_url('admin/data-absen-siswa'); ?>">Student</a>
+                        <a class="collapse-item mhs <?= (isset($aktif_dataAbsenMahasiswa)) ? 'active text-info' : '' ?>" href="<?= site_url('admin/data-absen-mahasiswa'); ?>">College student</a>
+                    </div>
+                </div>
             </li>
-
             <!-- <li class="nav-item <?= (isset($aktif_dataLaporan)) ? 'active' : '' ?>">
                 <a class="nav-link" href="<?= site_url('admin/data-laporan'); ?>" style="width: 270px !important">
                     <i class="fa-regular fa-clipboard" aria-hidden="true"></i>

@@ -71,12 +71,26 @@
                     <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Name :</label>
                     <select name="namaLengkap" id="select" class="form-control">
                         <option value="all">Show All :</option>
-                        <?php foreach ($dataUser as $usr) : ?>
+                        <?php foreach ($dataUser as $usr): ?>
                             <option value="<?= $usr['nama_lengkap'] ?>">
                                 <?= $usr['nama_lengkap'] ?>
                             </option>
                         <?php endforeach ?>
                     </select>
+                </div>
+                <div class="col-sm-4 col-md-5 my-2 d-flex justify-content-center">
+                    <button class=" but-gap btn btn-warning bg-gradient-warning dropdown-toggle col-sm-4 col-md-4 col-lg-5"
+                        type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa-solid fa-file-export"></i> Export File
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <label class="dropdown-item d-flex justify-content-between fs-6 m-0" id="Pdf" for="toPdf">Pdf<i
+                                class="fa-regular fa-file-pdf text-center d-flex align-items-center" style="color: #ff0033"></i></label>
+                        <label class="toExcel dropdown-item d-flex justify-content-between fs-6 m-0" id="Excel"
+                            for="toExcel">Excel<i class="fa-regular fa-file-excel text-center d-flex align-items-center"
+                                style="color: #3f8230; width: 16px"></i>
+                        </label>
+                    </div>
                 </div>
                 <div class="col-sm-4 col-md-5 my-3 d-flex justify-content-center">
                     <button type="button" class="but-gap btn btn-primary bg-gradient-primary col-6 btnTambah fw-bold text-dark" data-toggle="modal" data-target="#modalAbsen" attr-href="{{route('absen.tambah')}}"><i class="bi bi-pencil-square"></i> ADD ABSENCE</button>
@@ -87,7 +101,7 @@
     </div>
 
     <!-- DataTales Example -->
-    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">List Absence</div>
+    <div class="title text-dark font-weight-bold px-1 rounded-top mt-5 pl-3">List Absence Student</div>
     <div class="card shadow mb-2">
         <div class="card-body border-bottom">
             <div class="table-responsive">
@@ -113,7 +127,7 @@
                                 $status = 'hadir';
                             } else if ($v['status'] == 'Izin') {
                                 $status = 'izin';
-                            } else if ($v['status'] == 'Sakit')  {
+                            } else if ($v['status'] == 'Sakit') {
                                 $status = 'sakit';
                             } else {
                                 $status = 'alpa';
@@ -127,7 +141,7 @@
                                     <?= tanggal_indo($v['waktu_absen']) ?>
                                 </td>
                                 <td>
-                                    <?= $nama_lengkap[$v['nim_nis']] ?>
+                                    <?= $v['nama_lengkap'] ?>
                                 </td>
                                 <td>
                                     <?= $v['nama_instansi']; ?>
@@ -206,7 +220,7 @@
         })
     <?php endif; ?>
 
-    
+
 
     function checkout($id) {
         $.ajax({
@@ -295,11 +309,75 @@
     //         }
     //     });
     // });
+    let today = new Date();
+    let day = `${today.getDate() < 10 ? "0" : ""}${today.getDate()}`;
+    let month = `${today.getMonth() + 1 < 10 ? "0" : ""}${today.getMonth() + 1}`;
+    let year = today.getFullYear();
+    let hours = today.getHours();
+    let minutes = `${today.getMinutes() < 10 ? "0" : ""}${today.getMinutes()}`;
+    let seconds = `${today.getSeconds() < 10 ? "0" : ""}${today.getSeconds()}`;
 
-    
+    let current_time = `${day}-${month}-${year}, ${hours}.${minutes}.${seconds}`;
 
+
+    $(document).ready(function() {
+        const table = $('#dTableSsw').DataTable({
+            dom: "lBfrtip",
+            'columnDefs': [{
+                "targets": [1],
+                "className": "text-center"
+            }, ],
+            buttons: [{
+                    extend: 'excelHtml5',
+                    title: `LOG ACTIVITY`,
+                    exportOptions: {
+                        columns: ':visible:not(.hilang)'
+                    }
+                },
+                {
+                    extend: 'pdfHtml5',
+                    title: `LOG ACTIVITY`,
+                    exportOptions: {
+                        columns: ':visible:not(.hilang)'
+                    }
+                }
+            ],
+        });
+        document.querySelector(".buttons-pdf").setAttribute("id", "toPdf");
+        document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
+
+        $('#Pdf').click(function() {
+            $('#toPdf').click();
+        });
+
+        $('#select').on('change', function() {
+            var dropdown = $('#select').val();
+            if (dropdown === "all") {
+                table.columns(2).search('').draw();
+            } else if (name === dropdown) {
+                table.columns(2).search(dropdown).draw();
+            } else {
+                table.columns(2).search(dropdown).draw();
+            }
+        });
+
+        $('.start_date, .end_date').on("change", function() {
+            var startDateValue = $('.start_date').val();
+            var endDateValue = $('.end_date').val();
+            var filterForm = $('#filterForm');
+            // Periksa apakah kedua nilai ada
+            if (startDateValue && endDateValue) {
+                filterForm.submit();
+            }
+        });
+
+        $('#filterForm').on('submit', function(e) {
+            e.preventDefault();
+        })
+    });
 </script>
 
 
+<script src="<?= base_url('admin'); ?>/js/table2excel.js"></script>
 <!-- End of Main Content -->
 <?= $this->endSection(); ?>

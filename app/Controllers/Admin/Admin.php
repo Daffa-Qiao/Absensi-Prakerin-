@@ -63,31 +63,24 @@ class Admin extends BaseController
         return view('Admin/v_dashboard', $data);
     }
 
-    public function data_absen()
+    public function data_absen_siswa()
     {
         $absensi = new Absensi();
         $user = new MemberModel();
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_absensi');
-        $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->findAll();
-        $nama_lengkap = [];
-        foreach ($dataAbsen as $v) {
-            $nimUser = $v['nim_nis'];
-            $data = $user->where('nim_nis', $nimUser)->get()->getRowArray();
-            $nama_lengkap[$nimUser] = $data ? $data['nama_lengkap'] : $v['nama_lengkap'];
-        }
-        $dataUser = $user->orderBy('nama_lengkap', 'asc')->where('is_verifikasi', 'yes')->findAll();
+        $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->findAll();
+        $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
-        $aktif_dataAbsen = 'aktif';
-        $halaman = 'Admin | Attendance Data';
+        $aktif_dataAbsenSiswa = 'aktif';
+        $halaman = 'Admin | Attendance Data Siswa';
         $title = 'Attendance Data';
 
         $data = [
-            'nama_lengkap' => $nama_lengkap,
             'dataUser' => $dataUser,
             'dataAbsen' => $dataAbsen,
             'nomor' => $nomor,
-            'aktif_dataAbsen' => $aktif_dataAbsen,
+            'aktif_dataAbsenSiswa' => $aktif_dataAbsenSiswa,
             'halaman' => $halaman,
             'title' => $title,
             'titleSuperAdmin' => 'Super Admin',
@@ -96,7 +89,7 @@ class Admin extends BaseController
         return view('Admin/v_dataAbsen', $data);
     }
 
-    public function data_absen_filter()
+    public function data_absen_siswa_filter()
     {
         $startDate = $this->request->getPost('start_date');
         $endDate = $this->request->getPost('end_date');
@@ -112,7 +105,51 @@ class Admin extends BaseController
         ];
         session()->setFlashdata('data', $data);
 
-        return redirect()->to('admin/data-absen');
+        return redirect()->to('admin/data-absen-siswa');
+    }
+    public function data_absen_mahasiswa()
+    {
+        $absensi = new Absensi();
+        $user = new MemberModel();
+        $jumlahBaris = 10;
+        $currentPage = $this->request->getVar('page_absensi');
+        $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'College Student')->findAll();
+        $dataUser = $user->where('jenis_user', 'College Student')->orderBy('nama_lengkap', 'asc')->findAll();
+        $nomor = nomor($currentPage, $jumlahBaris);
+        $aktif_dataAbsenMahasiswa = 'aktif';
+        $halaman = 'Admin | Attendance Data Siswa';
+        $title = 'Attendance Data';
+
+        $data = [
+            'dataUser' => $dataUser,
+            'dataAbsen' => $dataAbsen,
+            'nomor' => $nomor,
+            'aktif_dataAbsenSiswa' => $aktif_dataAbsenMahasiswa,
+            'halaman' => $halaman,
+            'title' => $title,
+            'titleSuperAdmin' => 'Super Admin',
+        ];
+
+        return view('Admin/v_dataAbsenMahasiswa', $data);
+    }
+
+    public function data_absen_mahasiswa_filter()
+    {
+        $startDate = $this->request->getPost('start_date');
+        $endDate = $this->request->getPost('end_date');
+
+        // Load model
+        $absensi = new Absensi();
+        $dataAbsen = $absensi->getDataByDateRange($startDate, $endDate);
+
+        $data = [
+            'dataFilter' => $dataAbsen,
+            'start_date' => $startDate,
+            'end_date' => $endDate
+        ];
+        session()->setFlashdata('data', $data);
+
+        return redirect()->to('admin/data-absen-mahasiswa');
     }
 
     public function data_siswa()
@@ -542,7 +579,7 @@ class Admin extends BaseController
         $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
         $nomor = nomor($currentPage, $jumlahBaris);
         $aktif_rekapAktifitasSiswa = 'aktif';
-        $halaman = 'Admin | Acvitivy Recap';
+        $halaman = 'Admin | Activity Recap';
         $title = 'Log Activity';
 
         $data = [

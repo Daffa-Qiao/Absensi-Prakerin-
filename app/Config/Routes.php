@@ -54,8 +54,10 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('profile', 'Admin\Admin::profile_Admin');
     $routes->post('profile', 'Admin\Admin::profile_AdminProcess');
     $routes->get('dashboard', 'Admin\Admin::dashboard');
-    $routes->get('data-absen', 'Admin\Admin::data_absen');
-    $routes->post('data-absen', 'Admin\Admin::data_absen_filter');
+    $routes->get('data-absen-siswa', 'Admin\Admin::data_absen_siswa');
+    $routes->post('data-absen-siswa', 'Admin\Admin::data_absen_siswa_filter');
+    $routes->get('data-absen-mahasiswa', 'Admin\Admin::data_absen_mahasiswa');
+    $routes->post('data-absen-mahasiswa', 'Admin\Admin::data_absen_mahasiswa_filter');
     $routes->get('data-siswa', 'Admin\Admin::data_siswa');
     $routes->get('data-mahasiswa', 'Admin\Admin::data_mahasiswa');
     $routes->get('instansi-sekolah', 'Admin\Admin::instansi_sekolah');
