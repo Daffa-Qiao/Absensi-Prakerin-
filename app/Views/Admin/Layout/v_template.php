@@ -40,20 +40,6 @@
             font-family: "Poppins", sans-serif;
         }
 
-        .custom-sidebar {
-            width: 290px !important;
-
-        }
-
-        .custom-sidebar .nav-item {
-            width: 100%;
-        }
-
-        .custom-sidebar .nav-link {
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
         img.instansi {
             width: 50px;
             height: 50px;
@@ -293,11 +279,15 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion custom-sidebar" id="accordionSidebar" style="height: 100vh; position: sticky; top: 0; right: 0; z-index: 1;">
+        <ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
             <a class="ml-10 sidebar-brand d-flex align-items-center justify-content-center" href="#" style="cursor: default;">
                 <div class="sidebar-brand-icon">
-                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <?php if (!empty($logo_instansi)) : ?>
+                        <img src="<?= $logo_instansi; ?>" style="width: 50px; height: 50px; border-radius: 50%;">
+                    <?php else : ?>
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                    <?php endif; ?>
                 </div>
 
                 <div class="sidebar-brand-text mx-3">
@@ -321,7 +311,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item <?= (isset($aktif_dashboard)) ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= site_url('admin/dashboard'); ?>" style="width:270px !important">
+                <a class="nav-link" href="<?= site_url('admin/dashboard'); ?>">
                     <i class="bi bi-speedometer2"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -331,7 +321,7 @@
             <!-- Heading -->
 
             <li class="nav-item <?= (isset($aktif_dataAbsen) ? $aktif_dataAbsen : '');?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAttendance" aria-expanded="true" aria-controls="collapseAttendance" style="width: 270px !important">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAttendance" aria-expanded="true" aria-controls="collapseAttendance">
                     <i class="bi bi-person-fill"></i>
                     <span>Attendance Data</span>
                 </a>
@@ -351,7 +341,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_dataUser)) ? 'active' : '' ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="width: 270px !important">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="bi bi-person-fill"></i>
                     <span>User Data</span>
                 </a>
@@ -366,7 +356,7 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item <?= (isset($aktif_instansi) ? $aktif_instansi : ''); ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities" style="width: 270px !important">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="bi bi-bank2"></i>
                     <span>Educational Institutions</span>
                 </a>
@@ -381,7 +371,7 @@
 
             <!-- Divider -->
             <li class="nav-item <?= (isset($aktif_rekapAbsensi) ? 'active' : ''); ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="width: 270px !important">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     <i class="bi bi-card-list"></i>
                     <span>Attendance Recap</span>
                 </a>
@@ -396,7 +386,7 @@
             </li>
 
             <li class="nav-item <?= (isset($aktif_rekapAktifitas) ? $aktif_rekapAktifitas : ''); ?>">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseUtilities" style="width: 270px !important">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="bi bi-clipboard-data"></i>
                     <span>Log Activity</span>
                 </a>
@@ -419,14 +409,14 @@
 
             <?php if (session('redirected') == 'superadmin') : ?>
                 <li class="nav-item <?= (isset($aktif_superAdmin)) ? 'active' : '' ?>">
-                    <a class="nav-link" href="<?= site_url('admin/super-admin'); ?>" style="width:270px !important">
+                    <a class="nav-link" href="<?= site_url('admin/super-admin'); ?>">
                         <i class="fa-solid fa-user-gear"></i>
                         <span>Super Admin</span></a>
                 </li>
             <?php endif ?>
 
             <li class="nav-item <?= (isset($aktif_listSuperAdmin)) ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= site_url('admin/list-super-admin'); ?>" style="width:270px !important">
+                <a class="nav-link" href="<?= site_url('admin/list-super-admin'); ?>">
                     <i class="bi bi-person-lines-fill"></i>
                     <span>List Super Admin</span></a>
             </li>

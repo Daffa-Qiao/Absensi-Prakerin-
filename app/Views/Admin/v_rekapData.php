@@ -105,7 +105,7 @@
 
     <div class="header1">
         <p><b>MONTHLY ATTENDANCE SUMMARY</b></p>
-        <p><b><?= date('F Y') ?></b></p>
+        <p><b><?= strtoupper(date('F Y', strtotime($tahun . '-' . $bulan))) ?></b></p>
     </div>
 
     <table id="table">
@@ -120,11 +120,7 @@
             </tr>
             <tr>
                 <?php
-                $currentMonth = date('m');
-                $currentYear = date('Y');
-                $numDays = cal_days_in_month(CAL_GREGORIAN, $currentMonth, $currentYear);
-
-                for ($day = 1; $day <= $numDays; $day++) {
+                for ($day = 1; $day <= $jumlahTanggal; $day++) {
                     echo "<th>$day</th>";
                 }
                 ?>
@@ -154,7 +150,7 @@
                     <td><?= $nama_instansi ?></td>
 
                     <?php
-                    for ($day = 1; $day <= $numDays; $day++) {
+                    for ($day = 1; $day <= $jumlahTanggal; $day++) {
                         if ($day < 10) {
                             $day = '0' . $day;
                         }

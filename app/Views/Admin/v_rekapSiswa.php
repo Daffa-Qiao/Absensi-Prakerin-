@@ -44,22 +44,52 @@
 <div class="container-fluid p-0">
     <div class="card mt-3">
         <div class="card-body m-auto py-2" style="width: 90%">
-            <div class="row text-center justify-content-center py-2">
-                <div class="col-sm-2 col-md-4 d-flex flex-column align-items-end pb-2">
-                <label for="" class="w-100 d-flex align-items-start m-0 text-dark">Name :</label>
-                    <select name="namaLengkap" id="select" class="form-control">
-                        <option value="all">Show All :</option>
-                        <?php foreach ($dataUser as $usr): ?>
-                        <option value="<?= $usr['nama_lengkap'] ?>">
-                            <?= $usr['nama_lengkap'] ?>
-                        </option>
-                        <?php endforeach ?>
-                    </select>
+            <form action="" method="get">
+                <div class="row text-center justify-content-center py-2">
+                    <div class="col-sm-2 col-md-4 d-flex flex-column align-items-end pb-2">
+                        <label for="namaLengkap" class="w-100 d-flex align-items-start m-0 text-dark">Name :</label>
+                        <select name="namaLengkap" id="namaLengkap" class="form-control">
+                            <option value="all">Show All</option>
+                            <?php 
+                            $selectedNama = isset($namaLengkap) ? $namaLengkap : 'all';
+                            foreach ($dataUser as $usr): ?>
+                            <option value="<?= $usr['nama_lengkap'] ?>" <?= ($selectedNama == $usr['nama_lengkap']) ? 'selected' : '' ?>>
+                                <?= $usr['nama_lengkap'] ?>
+                            </option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                    <div class="col-sm-2 col-md-2 d-flex flex-column align-items-end pb-2">
+                        <label for="bulan" class="w-100 d-flex align-items-start m-0 text-dark">Bulan :</label>
+                        <select name="bulan" id="bulan" class="form-control">
+                            <?php 
+                            $selectedBulan = isset($bulan) ? $bulan : date('m');
+                            for ($i = 1; $i <= 12; $i++): 
+                                $value = str_pad($i, 2, '0', STR_PAD_LEFT);
+                            ?>
+                                <option value="<?= $value ?>" <?= ($selectedBulan == $value) ? 'selected' : '' ?>>
+                                    <?= date('F', mktime(0, 0, 0, $i, 10)) ?>
+                                </option>
+                            <?php endfor; ?>
+                        </select>
+                    </div>
+                    <div class="col-sm-2 col-md-2 d-flex flex-column align-items-end pb-2">
+                        <label for="tahun" class="w-100 d-flex align-items-start m-0 text-dark">Tahun :</label>
+                        <select name="tahun" id="tahun" class="form-control">
+                            <?php 
+                            $selectedTahun = isset($tahun) ? $tahun : date('Y');
+                            for ($i = date('Y'); $i >= date('Y') - 5; $i--): 
+                            ?>
+                                <option value="<?= $i ?>" <?= ($selectedTahun == $i) ? 'selected' : '' ?>><?= $i ?></option>
+                            <?php endfor; ?>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 col-md-4 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary bg-gradient-primary col-6 rounded-pill btnTambah custom-tambahkan custom-text fw-bold text-dark">Filter</button>
+                        <button type="button" class="btn btn-warning bg-gradient-warning col-6 rounded-pill btnTambah custom-tambahkan custom-text fw-bold text-dark ms-2" id="buttonPdf" for="toPdf"><i class="bi bi-file-earmark-pdf"></i> EXPORT FILE</button>
+                    </div>
                 </div>
-                <div class="col-sm-4 col-md-5 my-3 d-flex justify-content-center">
-                <button type="button" class="btn btn-warning bg-gradient-warning col-6 rounded-pill btnTambah custom-tambahkan custom-text fw-bold text-dark custom-tambahkan" id="buttonPdf" for="toPdf"><i class="bi bi-file-earmark-pdf"></i> EXPORT FILE</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
@@ -128,7 +158,11 @@
                         } ?>
                     </tbody>
                     <!-- untuk pdf -->
-                    <form action="<?= base_url('/print/pdf'); ?>" method="post" id="printPDF"></form>
+                    <form action="<?= base_url('/print/pdf'); ?>" method="post" id="printPDF" target="_blank">
+                        <input type="hidden" name="bulan" id="pdf_bulan">
+                        <input type="hidden" name="tahun" id="pdf_tahun">
+                        <input type="hidden" name="namaLengkap" id="pdf_namaLengkap">
+                    </form>
                 </table>
             </div>
         </div>
@@ -244,10 +278,9 @@ $(document).ready(function() {
     document.querySelector(".buttons-excel").setAttribute("id", "toExcel");
 
     document.getElementById("buttonPdf").addEventListener("click", function() {
-        <?php
-            session()->set('dataAbsen', $dataAbsen);
-            ?>
-
+        document.getElementById('pdf_bulan').value = document.getElementById('bulan').value;
+        document.getElementById('pdf_tahun').value = document.getElementById('tahun').value;
+        document.getElementById('pdf_namaLengkap').value = document.getElementById('namaLengkap').value;
         $('#printPDF').submit();
     });
 

@@ -55,12 +55,18 @@ class Absensi extends Model
         }
     }
 
-    public function getTotalAbsensiByStatus($nimUser, $status)
+    public function getTotalAbsensiByStatus($nimUser, $status, $bulan = null, $tahun = null)
     {
-        return $this->where('nim_nis', $nimUser)
-            ->where('status', $status)
-            ->where('DATE_FORMAT(waktu_absen, "%Y-%m")', date('Y-m'))
-            ->countAllResults();
+        $this->where('nim_nis', $nimUser)
+            ->where('status', $status);
+
+        if ($bulan && $tahun) {
+            $this->where("DATE_FORMAT(waktu_absen, '%Y-%m')", "$tahun-$bulan");
+        } else {
+            $this->where("DATE_FORMAT(waktu_absen, '%Y-%m')", date('Y-m'));
+        }
+
+        return $this->countAllResults();
     }
 
     public function getDataByDateRange($startDate, $endDate)
@@ -94,11 +100,10 @@ class Absensi extends Model
             ->get()
             ->getResultArray();
     }
-    public function getStatusByDateSsw($nimUser, $date = null)
+    public function getStatusByDateSsw($nimUser, $tahun, $bulan, $date = null)
     {
-        $currentYearMonth = date('Y-m');
-        $fullDate = $currentYearMonth . '-' . $date;
+        $fullDate = $tahun . '-' . $bulan . '-' . $date;
         return $this->select('status, waktu_absen')->where('nim_nis', $nimUser)
-            ->where('DATE_FORMAT(waktu_absen, "%Y-%m-%d")', date($fullDate))->get()->getRow();
+            ->where('DATE(waktu_absen)', $fullDate)->get()->getRow();
     }
 }

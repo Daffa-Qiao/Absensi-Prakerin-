@@ -417,18 +417,38 @@ class Admin extends BaseController
     {
         $absensi = new Absensi();
         $user = new MemberModel();
+
+        $bulan = $this->request->getVar('bulan') ?? date('m');
+        $tahun = $this->request->getVar('tahun') ?? date('Y');
+        $namaLengkap = $this->request->getVar('namaLengkap');
+
         $jumlahBaris = 10;
         $currentPage = $this->request->getVar('page_absensi');
-        //$dataAbsen = $absensi->select('nama_lengkap, nim_nis, nama_instansi, status, waktu_absen')->orderBy('id', 'desc')->where('jenis_user', 'Student')->distinct('nim_nis')->get()->getResult();
+        
         $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
-        $absensiInfo = $absensi->where("DATE_FORMAT(waktu_absen,'%Y-%m')", date('Y-m'))->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
+        
+        $absensiQuery = $absensi->where("DATE_FORMAT(waktu_absen, '%Y-%m')", "$tahun-$bulan")
+                               ->select('nim_nis, jenis_user')
+                               ->distinct('nim_nis');
+        
+        if ($namaLengkap && $namaLengkap !== 'all') {
+            $nim_nis_result = $user->where('nama_lengkap', $namaLengkap)->first();
+            if ($nim_nis_result) {
+                $absensiQuery->where('nim_nis', $nim_nis_result['nim_nis']);
+            } else {
+                $absensiQuery->where('nim_nis', null);
+            }
+        }
+
+        $absensiInfo = $absensiQuery->get()->getResult();
+
         $totalAbsensi = [];
         foreach ($absensiInfo as $nim_nis) {
             $nimUser = $nim_nis->nim_nis;
-            $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
-            $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
-            $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
-            $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
+            $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk', $bulan, $tahun);
+            $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin', $bulan, $tahun);
+            $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit', $bulan, $tahun);
+            $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa', $bulan, $tahun);
         }
 
         $nomor = nomor($currentPage, $jumlahBaris);
@@ -440,13 +460,15 @@ class Admin extends BaseController
             'dataUser' => $dataUser,
             'dataAbsen' => $absensiInfo,
             'totalAbsensi' => $totalAbsensi,
-
             'nomor' => $nomor,
             'aktif_rekapSiswa' => $aktif_rekapSiswa,
             'aktif_rekapAbsensi' => 'active',
             'halaman' => $halaman,
             'title' => $title,
             'user' => $user,
+            'bulan' => $bulan,
+            'tahun' => $tahun,
+            'namaLengkap' => $namaLengkap,
         ];
         return view('Admin/v_rekapSiswa', $data);
     }
@@ -651,58 +673,69 @@ class Admin extends BaseController
 
     public function rekapAbsensi()
     {
-        // Instansiasi model
-        $absensi = new Absensi();
-        $user = new MemberModel();
-        $bulanIni = date('Y-m');
-        $jumlahBaris = 10;
-        $currentPage = $this->request->getVar('page_laporan');
-        $dataAbsen = $absensi->orderBy('waktu_absen', 'desc')->orderBy('id', 'desc')->where('jenis_user', 'Student')->findAll();
-        $dataUser = $user->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
-        $nomor = nomor($currentPage, $jumlahBaris);
-        // Dapatkan semua data user
-        $dataUser = $user->findAll();
-        $absensiInfo = $absensi->where("DATE_FORMAT(waktu_absen,'%Y-%m')", $bulanIni)->select('nim_nis, jenis_user')->distinct('nim_nis')->get()->getResult();
+        $absensiModel = new Absensi();
+        $userModel = new MemberModel();
+
+        $bulan = $this->request->getVar('bulan') ?? date('m');
+        $tahun = $this->request->getVar('tahun') ?? date('Y');
+        $namaLengkap = $this->request->getVar('namaLengkap');
+
+        $dataUser = $userModel->where('jenis_user', 'Student')->orderBy('nama_lengkap', 'asc')->findAll();
+
+        $absensiQuery = $absensiModel->where("DATE_FORMAT(waktu_absen, '%Y-%m')", "$tahun-$bulan")
+            ->select('nim_nis, jenis_user')
+            ->distinct('nim_nis');
+
+        if ($namaLengkap && $namaLengkap !== 'all') {
+            $nim_nis_result = $userModel->where('nama_lengkap', $namaLengkap)->first();
+            if ($nim_nis_result) {
+                $absensiQuery->where('nim_nis', $nim_nis_result['nim_nis']);
+            } else {
+                $absensiQuery->where('nim_nis', null);
+            }
+        }
+
+        $absensiInfo = $absensiQuery->get()->getResult();
+
         $totalAbsensi = [];
-        foreach ($absensiInfo as $nim_nis) {
-            $nimUser = $nim_nis->nim_nis;
-            $totalAbsensi[$nimUser]['masuk'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Masuk');
-            $totalAbsensi[$nimUser]['izin'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Izin');
-            $totalAbsensi[$nimUser]['sakit'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Sakit');
-            $totalAbsensi[$nimUser]['alpa'] = $absensi->getTotalAbsensiByStatus($nimUser, 'Alpa');
+        foreach ($absensiInfo as $item) {
+            $nimUser = $item->nim_nis;
+            $totalAbsensi[$nimUser]['masuk'] = $absensiModel->getTotalAbsensiByStatus($nimUser, 'Masuk', $bulan, $tahun);
+            $totalAbsensi[$nimUser]['izin'] = $absensiModel->getTotalAbsensiByStatus($nimUser, 'Izin', $bulan, $tahun);
+            $totalAbsensi[$nimUser]['sakit'] = $absensiModel->getTotalAbsensiByStatus($nimUser, 'Sakit', $bulan, $tahun);
+            $totalAbsensi[$nimUser]['alpa'] = $absensiModel->getTotalAbsensiByStatus($nimUser, 'Alpa', $bulan, $tahun);
         }
 
-        // Array untuk menyimpan rekap absensi
-        $rekapAbsensi = [];
-
-        // Looping melalui semua user untuk menghitung absensi "Masuk"
-        foreach ($dataUser as $user) {
-            $nim_nis = $user['nim_nis'];
-
-            // Menghitung total absensi "Masuk"
-            $totalMasuk = $absensi->where('nim_nis', $nim_nis)
-                ->where('status', 'Masuk')
-                ->countAllResults();
-
-            // Menyimpan hasil ke dalam array
-            $rekapAbsensi[$nim_nis] = [
-                'nama_lengkap' => $user['nama_lengkap'],
-                'totalMasuk' => $totalMasuk
-            ];
+        $weekend = [];
+        $numDays = cal_days_in_month(CAL_GREGORIAN, $bulan, $tahun);
+        for ($day = 1; $day <= $numDays; $day++) {
+            $date = "$tahun-$bulan-$day";
+            $dayOfWeek = date('N', strtotime($date));
+            if ($dayOfWeek == 6 || $dayOfWeek == 7) {
+                $weekend[] = str_pad($day, 2, '0', STR_PAD_LEFT);
+            }
         }
 
-        // Data yang akan dikirimkan ke view
+        $allUsers = $userModel->findAll();
+        $userMap = [];
+        foreach ($allUsers as $user) {
+            $userMap[$user['nim_nis']] = $user;
+        }
+        
         $data = [
-            'rekapAbsensi' => $rekapAbsensi,
             'dataAbsen' => $absensiInfo,
+            'totalAbsensi' => $totalAbsensi,
             'dataUser' => $dataUser,
-            'user' => $user,
-            'nomor' => $nomor,
+            'userMap' => $userMap,
+            'absensiModel' => $absensiModel,
+            'weekend' => $weekend,
+            'bulan' => $bulan,
+            'tahun' => $tahun,
+            'namaLengkap' => $namaLengkap,
             'halaman' => 'Admin | Rekap Absensi',
             'title' => 'Rekap Absensi',
         ];
 
-        // Memuat view dengan data rekap absensi
         return view('Admin/v_rekapData', $data);
     }
 }

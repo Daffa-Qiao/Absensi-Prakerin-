@@ -80,3 +80,4 @@ $routes->add('data-aktifitasProcess', 'Admin\Modal::tambahAktifitasProcess');
 $routes->add('data-absenProcess', 'Admin\Modal::tambahAbsensiProcess');
 
 $routes->post('print/pdf', 'print\pdf::generatePDF');
+$routes->post('print/pdf/detailed', 'print\pdf::generateDetailedPDF');
